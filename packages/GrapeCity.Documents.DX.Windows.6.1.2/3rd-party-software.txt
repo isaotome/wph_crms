@@ -1,0 +1,6 @@
+This document lists third party software used in this product.
+
+----------------------------------------------------------------
+SharpDX
+http://sharpdx.org/
+MIT License

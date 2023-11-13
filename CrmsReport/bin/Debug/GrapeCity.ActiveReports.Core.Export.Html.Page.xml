@@ -1,0 +1,2100 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GrapeCity.ActiveReports.Core.Export.Html.Page</name>
+    </assembly>
+    <members>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.CheckBoxEmailRenderer">
+            <summary>
+            This class is responsible for rendering the CheckBox control to html suitable for email.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.ImageEmailRenderer">
+            <summary>
+            This class is responsible for rendering the Image control to html suitable for email.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.ItemRegion">
+            <summary>
+            Represents RI's region in the HTML table, required for Email RE
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.ItemRegion.LayoutArea">
+            <summary>
+            Returns <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> associated with region or null if region is empty (placeholder)
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.ItemRegion.Region">
+            <summary>
+            Region
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.ListEmailRenderer">
+            <summary>
+            Email renderer of the <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IList"/> report item
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.Region">
+            <summary>
+            Represents rectangular area of html table cells, required for Email RE
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.Region.LastRow">
+            <summary>
+            Last row of the rectangular area
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.Region.LastColumn">
+            <summary>
+            Last column of the rectangular area
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.Region.FirstRow">
+            <summary>
+            First row of the rectangular area
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.Region.FirstColumn">
+            <summary>
+            First column of the rectangular area
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.Region.IsSpanned">
+            <summary>
+            Returns true if this region is spanned by columns or rows
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.ReportItemContainerEmailRenderer">
+            <summary>
+            Base class for report item containers Email renderers.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.ReportItemContainerEmailRenderer.GetItemRegions(GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,System.Collections.Generic.IList{System.Single},System.Collections.Generic.IList{System.Single})">
+            <summary>
+            Returns collection of <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.ItemRegion"/> associated with child report items of the specified <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/>
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.ReportItemContainerEmailRenderer.GetItemRegion(System.Single,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,System.Collections.Generic.IList{System.Single},System.Collections.Generic.IList{System.Single})">
+            <summary>
+            Returns <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.ItemRegion"/> for the specified <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/>
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.ReportItemContainerEmailRenderer.FindItemRegion(System.Single,System.Single,System.Single,System.Single,System.Collections.Generic.IList{System.Single},System.Collections.Generic.IList{System.Single})">
+            <summary>
+            Returns <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.Region"/> for the rectangular area with specified coordinates
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.ReportItemContainerEmailRenderer.GetCoordinates(System.Single,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,System.Collections.Generic.ICollection{System.Single}@,System.Collections.Generic.ICollection{System.Single}@)">
+            <summary>
+            Retrieves coordinates of the direct child items of the specified <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/>
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.ReportItemImageEmailRenderer">
+            <summary>
+            Renders a report item to an image and creates the necessary html.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.SubreportEmailRenderer">
+            <summary>
+            This class is responsible for rendering the Subreport control
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.SubreportEmailRenderer.Render(GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.RenderInfo)">
+            <summary>
+            Renders the Subreport control to html.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.TableEmailRenderer">
+            <summary>
+            This class is responsible for rendering an IGrid-based control (Table or Matrix)
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.EmailRenderers.TextboxEmailRenderer">
+            <summary>
+            This class is responsible for rendering the Textbox control to html.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.CheckBoxHtmlRenderer">
+            <summary>
+            This class is responsible for rendering the CheckBox control to html
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.DocumentMapHtmlRenderer">
+            <summary>
+            This class is responsible for rendering the interactive html toc tree view if the report has a document map.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.DocumentMapHtmlRenderer.#ctor(GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingExtensionContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.DocumentMapHtmlRenderer"/> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.DocumentMapHtmlRenderer.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IMetadataDictionary,GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter)">
+            <summary>
+            Rendering the bookmark map to Html.
+            </summary>
+            <param name="bookmarkMap">The bookmark map to be rendered.</param>
+            <param name="writer"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.DocumentMapHtmlRenderer.WriteCustomUlTag(System.String,System.String)">
+            <summary>
+            Writes a custom UL tag with the attribute and value specified.
+            </summary>
+            <param name="attributeName">the name of the attribute to set</param>
+            <param name="attributeValue">the value to set the attribute to</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.DocumentMapHtmlRenderer.HasSubTrees(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IMetadataDictionaryEntry)">
+            <summary>
+            Checks if there are any TOC subtrees.
+            </summary>
+            <param name="entry">the <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IMetadataDictionaryEntry"/> to extract the node information from</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.DocumentMapHtmlRenderer.AddDocumentMapNodes(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IMetadataDictionaryEntry)">
+            <summary>
+            Adds Child node entries to the html document map.
+            </summary>
+            <param name="entry">the <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IMetadataDictionaryEntry"/> to extra the node information from</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.DocumentMapHtmlRenderer.GetTocScript">
+            <summary>
+            Gets the tocScript.js from the embedded resources
+            </summary>
+            <returns>a String value for the script.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.DocumentMapHtmlRenderer.GetTocStyles">
+            <summary>
+            Gets the tocStyle.css from the embedded resources
+            </summary>
+            <returns>a String value for the special toc css styles</returns>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.ImageHtmlRenderer">
+            <summary>
+            This class is responsible for rendering the Image control
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.LineHtmlRenderer">
+            <summary>
+            This class is responsible for rendering the Line control
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.LineHtmlRenderer.Render(GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.RenderInfo)">
+            <summary>
+            Renders the Line control to html.
+            </summary>
+            <param name="context">the <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContext"/> used to pass information between renderers</param>
+            <param name="layoutArea">the <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> containing the information to render.</param>
+            <param name="renderInfo"></param>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.ITestRenderingContext">
+            <summary>
+            Rendering context for unit tests.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.ListContentHtmlRenderer">
+            <summary>
+            This class is responsible for rendering ListContent. ListContent is the content inside each instance of the list items.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.ListContentHtmlRenderer.Render(GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.RenderInfo)">
+            <summary>
+            Renders the ListContent virtual report item to html.
+            </summary>
+            <param name="context">the <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContext"/> used to pass information between renderers</param>
+            <param name="layoutArea">the <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> containing the information to render.</param>
+            <param name="renderInfo"></param>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.ListHtmlRenderer">
+            <summary>
+            This class is responsible for rendering the List control
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.ListHtmlRenderer.Render(GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.RenderInfo)">
+            <summary>
+            Renders the List control to html.
+            </summary>
+            <param name="context">the <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContext"/> used to pass information between renderers</param>
+            <param name="layoutArea">the <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> containing the information to render.</param>
+            <param name="renderInfo"></param>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.RectangleHtmlRenderer">
+            <summary>
+            This class is responsible for rendering the Rectangle control
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.RectangleHtmlRenderer.Render(GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.RenderInfo)">
+            <summary>
+            Renders the Rectangle control to html.
+            </summary>
+            <param name="context">the <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContext"/> used to pass information between renderers</param>
+            <param name="layoutArea">the <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> containing the information to render.</param>
+            <param name="renderInfo"></param>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.ReportItemImageHtmlRenderer">
+            <summary>
+            Renders a report item to an image and creates the necessary html.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.SubreportHtmlRenderer">
+            <summary>
+            This class is responsible for rendering the Subreport control
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.SubreportHtmlRenderer.Render(GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.RenderInfo)">
+            <summary>
+            Renders the Subreport control to html.
+            </summary>
+            <param name="context">the <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContext"/> used to pass information between renderers</param>
+            <param name="layoutArea">the <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> containing the information to render.</param>
+            <param name="renderInfo"></param>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.TableHtmlRenderer">
+            <summary>
+            This class is responsible for rendering the Table control
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.TextboxHtmlRenderer">
+            <summary>
+            This class is responsible for rendering the Textbox control to html.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.CheckBoxRenderer">
+            <summary>
+            Base class for Html and Email checkbox renderers
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.ImageRenderer">
+            <summary>
+            This class is responsible for rendering the Image control
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.ImageRenderer.Render(GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.RenderInfo)">
+            <summary>
+            Renders the Image control to html.
+            </summary>
+            <param name="context">the <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderingExtensionContext"/> used to pass information between renderers</param>
+            <param name="layoutArea">the <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> containing the information to render.</param>
+            <param name="renderInfo"></param>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.RenderInfo">
+            <summary>
+            Holds span and rendering info for a table cell
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.RenderInfo.Attributes">
+            <summary>
+            Attributes for table cell content.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.ReportItemImageRenderer">
+            <summary>
+            Renders a report item to an image and creates the necessary html.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.ReportItemRendererBase">
+            <summary>
+            Base class for all html and email renderers.  Contains common code used by all.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.ReportItemRendererBase.Render(GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.RenderInfo)">
+            <summary>
+            Renders the specific control.
+            </summary>
+            <param name="context">the <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderingExtensionContext"/> used to pass information between renderers</param>
+            <param name="layoutArea">the <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> containing the information to render.</param>
+            <param name="renderInfo">controls aspect of rendering</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.ReportItemRendererBase.WriteOpeningTag(GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.RenderInfo,System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Writes the opening tag for a report item. This will set the style class name and the inline size/posiiton style for all report items.
+            </summary>
+            <param name="context">the <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContext"/> used to pass information between renderers</param>
+            <param name="layoutArea">the <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> containing the information to render.</param>
+            <param name="renderInfo"></param>
+            <param name="tag"></param>
+            <param name="attributes"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.ReportItemRendererBase.RenderTocEntry(GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Adds an empty anchor tag if the layout area has a toc associated with it.
+            </summary>
+            <param name="context">the <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContext"/> used to pass information between renderers</param>
+            <param name="layoutArea">the <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> to check as toc entry.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.ReportItemRendererBase.RenderTocBookmark(GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Adds an anchor tag for TOC navigation.
+            </summary>
+            <param name="context">the <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContext"/> used to pass information between renderers</param>
+            <param name="layoutArea">the <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> to check as toc entry.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.ReportItemRendererBase.RenderBookmarkBeginTag(GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext,System.String)">
+             <summary>
+             Renders the starting anchor tag for a bookmark in the report.
+             </summary>
+            <remarks>Fix for CR# 25251: It's possible to have both a bookmark and an action. We were not setting the bookmark correctly if there was an action.</remarks>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.TableRenderer">
+            <summary>
+            Contains base methods for rendering a grid control to html.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.TableRenderer.Render(GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.RenderInfo)">
+            <summary>
+            Renders the grid control to html.
+            </summary>
+            <param name="context">the <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContext"/> used to pass information between renderers</param>
+            <param name="layoutArea">the <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> containing the information to render.</param>
+            /// <param name="renderInfo"></param>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.TextboxRenderer">
+            <summary>
+            Contains base methods for rendering a textbox control to html.
+            </summary>
+            <summary>
+            Contains text-processing methods for rendering a textbox control to html.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.TextboxRenderer.Render(GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.RenderInfo)">
+            <summary>
+            Renders the Textbox control to html.
+            </summary>
+            <param name="context">the <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContext"/> used to pass information between renderers</param>
+            <param name="layoutArea">the <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> containing the information to render.</param>
+            <param name="renderInfo"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.TextboxRenderer.GetTextAlignValue(System.String,System.String,GrapeCity.ActiveReports.Extensibility.Rendering.Components.ITextBox)">
+            <summary>
+            Gets the proper css value for the text align style.
+            </summary>
+            <param name="textAlign">the text align string to transform.</param>
+            <param name="direction">the text direction string used to determine the alignment.</param>
+            <param name="textbox">the textbox for which to get the value when determining alignment.</param>
+            <returns>the css text align value</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.TextboxRenderer.GetTextJustifyValue(System.String)">
+            <summary>
+            Gets the proper css value for the text justify style.
+            </summary>
+            <param name="textJustify">the text decoration string to transform</param>
+            <returns>the css text decoration value.</returns>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Core.RenderingExtensionCore">
+            <summary>
+            Contains methods used by the rendering extension core code.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.RenderingExtensionCore.WriteHead(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IMetadataDictionary,GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext)">
+            <summary>
+            Writes out the head tag information in to the <see cref="P:GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext.HeadWriter"/>
+            </summary>
+            <remarks>if the style information is to be embedded this will be done after all the style information has been generated; 
+            Otherwise this will be done immediately following the writing of the opening tags.</remarks>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.RenderingExtensionCore.CloseReportContainerDiv(GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext)">
+            <summary>
+            Closes the div tag for the full report
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.RenderingExtensionCore.OpenReportContainerDiv(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IMetadataDictionary,GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext)">
+            <summary>
+            Creates the div tag for the full report.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.RenderingExtensionCore.WriteTocDiv(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IMetadataDictionary,GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext)">
+            <summary>
+            Renders the document map if there is one.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.RenderingExtensionCore.WriteOpeningTags(GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext)">
+            <summary>
+            Writes the opening set of tags, up to the opening head tag.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Core.RenderingExtensionCore.RenderEval(System.Single,System.Single,System.Single,GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext,System.Boolean)">
+            <summary>
+            Adds the eval banner div section to a report at the specified location
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContextInternal.HtmlSettings">
+            <summary>
+            Gets the <see cref="P:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContextInternal.HtmlSettings"/> to use while rendering the report.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContextInternal.ReportDrillthroughContext">
+            <summary>
+            Returns name of the report being rendered. Used to provide LinkProvider with current report name.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContextInternal.GetImageName(System.String,GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext)">
+            <summary>i
+            Returns a unique name for report item images.
+            </summary>
+            <param name="name">The name of the control to create the name for</param>
+            <param name="pageContext"></param>
+            <returns>A string representing the base name of the image</returns>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContextInternal.ImageManager">
+            <summary>
+            Gets the <see cref="T:GrapeCity.ActiveReports.Rendering.Html.IImageManager" /> being used to manage images for the layout.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContextInternal.GetImageStream">
+            <summary>
+            Gets the <see cref="T:System.IO.Stream" /> to render data to.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContextInternal.StyleManager">
+            <summary>
+            Gets the <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Html.IStyleManager" /> the report is using to store styles.
+            </summary>
+            <value>a <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Html.IStyleManager" /> containing the style for the report.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContextInternal.LinkProvider">
+            <summary>
+            Returns a link provider to use when creating href links.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContextInternal.BookmarkDictionary">
+            <summary>
+            Returns a <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IMetadataDictionary" /> containing the bookmarks for the report.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContextInternal.GetRenderer(GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea)">
+            <summary>
+            Gets the <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.ReportItemRendererBase" /> for a specified <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea" />.
+            </summary>
+            <param name="area">The <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea" /> to get the renderer for.</param>
+            <returns>A <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Core.Renderers.ReportItemRendererBase" /> for the specified <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea" />.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContextInternal.GetImageRenderer(GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea)">
+            <summary>
+            Gets the <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.IImageRenderer" /> for a specified <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea" />.
+            </summary>
+            <param name="area">The <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea" /> to get the renderer for.</param>
+            <returns>A <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.IImageRenderer" /> for the specified <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea" />.</returns>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContextInternal.IncludeQueryString">
+            <summary>
+            Determines whether the query string should be used when creating a stream for an image.
+            </summary>
+            <remarks>Only true when WebViewer is being used.</remarks>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:GrapeCity.ActiveReports.Export.Html.Page.ReportDrillthroughContext" -->
+        <member name="P:GrapeCity.ActiveReports.Export.Html.Page.ReportDrillthroughContext.CurrentDrillthroughSequence">
+            <summary>
+            Returns the names of the reports/subreports in current rendering sequence.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.IImageManager">
+            <summary>
+            Specifies a manager interface for the <see cref="T:GrapeCity.ActiveReports.Rendering.Html.HtmlRenderingExtension" /> to use to manage images between renderers.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.IImageManager.GetBackgroundImageKey(System.String,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext)">
+            <summary>
+            Gets an image from the layoutArea and creates a seconday stream for it. The images key is returned.
+            If the image being asked for has already been created the the existing key is returned.
+            </summary>
+            <param name="layoutArea">The <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea" /> containing the image</param>
+            <param name="context">The <see cref="T:GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext" /> containing the shared information for rendering</param>
+            <param name="mimeType">a string value representing the mime type for the background image.</param>
+            <returns>A string value representing key id for the image.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.IImageManager.GetImageSrc(System.String)">
+            <summary>
+            Gets the relaive uri for the image based off of the key.
+            </summary>
+            <param name="key">The key for the image to look up.</param>
+            <returns>A string value for the relavie uri for the image stream.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.IImageManager.GetImageSize(System.String)">
+            <summary>
+            Gets image size in twips.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.IStyleManager">
+            <summary>
+            Specifies a manager interface for the <see cref="T:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRendering" /> to use to manage styles between renderers.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.IStyleManager.GetStyle(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IStyle,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext,GrapeCity.ActiveReports.Core.Export.Html.Page.Renderers.RenderOptions)">
+            <summary>
+            Returns a style name to use for the report item.
+            </summary>
+            <param name="style">The <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IStyle" /> to get the name for</param>
+            <param name="context">The <see cref="T:GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext" /> containing the shared information for page rendering</param>
+            <param name="layoutArea">The <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea" /> containing the style information</param>
+            <param name="renderFlags"></param>
+            <returns>A string value representing the name of the style</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.IStyleManager.GetStyleName(System.String,System.Int32)">
+            <summary>
+            Gets the name for a preformatted style string. If the style exist then the stored name will be returned. If the style does not exist it will be added and the new name returned.
+            </summary>
+            <param name="preformattedStyle">The preformatted style string to get a name for.</param>
+            <param name="pageNumber"></param>
+            <returns>The name for the style.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.IStyleManager.GetStyleName(System.String,System.Int32,System.String)">
+            <summary>
+            Gets the name for a preformatted style string. If the style exist then the stored name will be returned. If the style does not exist it will be added and the new name returned.
+            </summary>
+            <param name="preformattedStyle">The preformatted style string to get a name for.</param>
+            <param name="pageNumber"></param>
+            <param name="styleSuffix">Suffix of the style name.</param>
+            <returns>The name for the style.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.IStyleManager.HasStyle(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IStyle,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext,GrapeCity.ActiveReports.Core.Export.Html.Page.Renderers.RenderOptions)">
+            <summary>
+            Returns <c>True</c> if the Style has been maintain; otherwise, <c>False</c>.
+            </summary>
+            <param name="style">The <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IStyle"/> to get the name for</param>
+            <param name="layoutArea">The <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> to build the style from.</param>
+            <param name="context">The <see cref="T:GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext"/> used to pass shared information.</param>
+            <param name="renderFlags"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.DefaultInteractivityRenderer.RoundUp(System.Double)">
+            <summary>
+            Rounds a decimal value. 
+            The number of significant decimal places (precision) in the return value is DEFAULT_DECIMALS
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.DefaultInteractivityRenderer.GetShapeName(GrapeCity.ActiveReports.Extensibility.Rendering.Interactivity.ImageMapShape)">
+            <summary>
+            Gets the converted html string name for the shape to use in the image map area attribute.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Tools.DefaultLinkProvider">
+            <summary>
+            A class to provider the default link and target values for the action links and document map entries.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Html.Page.Tools.DefaultLinkProvider.DataAttributeName">
+            <summary>
+            Returns <b>false</b> if data should be embedded as JS/links, as "data" attribute - returns true. 
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.DefaultLinkProvider.DocumentMapLink(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IMetadataDictionaryEntry)">
+            <summary>
+            Creates a href value for a document map.
+            </summary>
+            <param name="dictionaryEntry"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.DefaultLinkProvider.DocumentMapTarget(System.String)">
+            <summary>
+            Creates an anchor target value for a document map target.
+            </summary>
+            <param name="targetName"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.DefaultLinkProvider.BookmarkLink(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IMetadataDictionaryEntry)">
+            <summary>
+            Creates a href value for a bookmark link
+            </summary>
+            <param name="dictionaryEntry"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.DefaultLinkProvider.BookmarkLinkTarget(System.String)">
+            <summary>
+            Creates an anchor target value for a bookmark link target
+            </summary>
+            <param name="targetName"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.DefaultLinkProvider.Hyperlink(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IAction)">
+            <summary>
+            Creates a href value for a hyperlink.
+            </summary>
+            <param name="action"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.DefaultLinkProvider.DrillthroughLink(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IAction)">
+            <summary>
+            Creates a href value for a drillthrough link
+            </summary>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.DefaultLinkProvider.GetHrefID(System.String)">
+            <summary>
+            Returns an href id for a string value passed in. If the value exists in the collect its id will be returned, if not a new one is created.
+            </summary>
+            <param name="value">A string value to get the id for.</param>
+            <returns>An Int ID for the href value.</returns>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Tools.FindProcessor">
+            <summary>
+            Summary description for FindProcessor.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.FindProcessor.FindString(GrapeCity.ActiveReports.Extensibility.Layout.ILayoutTree,GrapeCity.ActiveReports.Core.Export.Html.Page.SearchSettings,GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter)">
+            <summary>
+            Execute command.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.FindProcessor.AreaContainsString(GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,System.String,System.Boolean,System.Boolean,System.String@)">
+            <summary>
+            Determine whether string contains in specified layout area.
+            </summary>
+            <param name="searchString"></param>
+            <param name="area"></param>
+            <param name="findWholeWord"></param>
+            <param name="isCaseSensitive"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.FindProcessor.StringToWordList(System.String)">
+            <summary>
+            Split text on words.
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.FindProcessor.SearchStringInText(System.String@,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Search string in specified text.
+            </summary>
+            <param name="searchString"></param>
+            <param name="text"></param>
+            <param name="isCaseSensitive"></param>
+            <param name="findWholeWord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.FindProcessor.GenerateRegexPattern(System.String,System.Boolean)">
+            <summary>
+            Generates pattern for regular expression coming from sought text and sign whole-word
+            </summary>
+            <param name="searchString"></param>
+            <param name="findWholeWord"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.A">
+            <summary>
+            String representation for html tag 'A'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Area">
+            <summary>
+            String representation for html tag 'Area'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Body">
+            <summary>
+            String representation for html tag 'Body'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Br">
+            <summary>
+            String representation for html tag 'Br'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Col">
+            <summary>
+            String representation for html tag 'Col'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Colgroup">
+            <summary>
+            String representation for html tag 'Colgroup'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Div">
+            <summary>
+            String representation for html tag 'Div'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Head">
+            <summary>
+            String representation for html tag 'Head'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Html">
+            <summary>
+            String representation for html tag 'Html'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Img">
+            <summary>
+            String representation for html tag 'Img'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Li">
+            <summary>
+            String representation for html tag 'Li'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Map">
+            <summary>
+            String representation for html tag 'Map'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.P">
+            <summary>
+            String representation for html tag 'P'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Style">
+            <summary>
+            String representation for html tag 'Style'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Span">
+            <summary>
+            String representation for html tag 'Span'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Table">
+            <summary>
+            String representation for html tag 'Table'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Title">
+            <summary>
+            String representation for html tag 'Title'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Td">
+            <summary>
+            String representation for html tag 'Td'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Th">
+            <summary>
+            String representation for html tag 'Th'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Tr">
+            <summary>
+            String representation for html tag 'Tr'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Ul">
+            <summary>
+            String representation for html tag 'Ul'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.thead">
+            <summary>
+            String representation for html tag 'THead'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Frameset">
+            <summary>
+            String representation for html tag 'Frameset'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Frame">
+            <summary>
+            String representation for html tag 'Frame'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Noframes">
+            <summary>
+            String representation for html tag 'Noframes'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterTag.Meta">
+            <summary>
+            String representation for html tag 'Meta'. For internal use only.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Alt">
+            <summary>
+            String representation for html attribute 'Alt'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Class">
+            <summary>
+            String representation for html attribute 'Class'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Colspan">
+            <summary>
+            String representation for html attribute 'Colspan'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Coords">
+            <summary>
+            String representation for html attribute 'Coords'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Rowspan">
+            <summary>
+            String representation for html attribute 'Rowspan'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Height">
+            <summary>
+            String representation for html attribute 'Height'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Href">
+            <summary>
+            String representation for html attribute 'Href'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Id">
+            <summary>
+            String representation for html attribute 'Id'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Name">
+            <summary>
+            String representation for html attribute 'Name'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Onclick">
+            <summary>
+            String representation for html attribute 'Onclick'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Shape">
+            <summary>
+            String representation for html attribute 'Shape'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Src">
+            <summary>
+            String representation for html attribute 'Src'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Style">
+            <summary>
+            String representation for html attribute 'Style'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Title">
+            <summary>
+            String representation for html attribute 'Title'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Width">
+            <summary>
+            String representation for html attribute 'Width'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Usemap">
+            <summary>
+            String representation for html attribute 'Usemap'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Data">
+            <summary>
+            String representation for html attribute 'Data'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Target">
+            <summary>
+            String representation for html attribute 'Target'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Cols">
+            <summary>
+            String representation for html attribute 'Cols'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Valign">
+            <summary>
+            String representation for html attribute 'VAlign'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Bgcolor">
+            <summary>
+            String representation for html attribute 'BGColor'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Align">
+            <summary>
+            String representation for html attribute 'Align'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Cellpadding">
+            <summary>
+            String representation for html attribute 'Cellpading'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Cellspacing">
+            <summary>
+            String representation for html attribute 'Cellspacing'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.Border">
+            <summary>
+            String representation for html attribute 'Border'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.FrozenBorderOverflow">
+            <summary>
+            String representation for html attribute 'FrozenBorderOverflow'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.FrozenBorderStyle">
+            <summary>
+            String representation for html attribute 'FrozenBorderStyle'. For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlTextWriterAttribute.FrozenCellStyle">
+            <summary>
+            String representation for html attribute 'FrozenCellStyle'. For internal use only.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlUtils.GetFontLineSpacing(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IStyle,GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContextInternal)">
+            <summary>
+            Get default line spacing for a font. In points.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlUtils.GetTranslatedLength(System.Single,GrapeCity.ActiveReports.PageReportModel.Length.Unit)">
+            <summary>
+            Converts a float length (twips value) to a well-formed string value using the setting's units.
+            </summary>
+            <param name="length">a float value representing the length to convert in twips.</param>
+            <param name="units"></param>
+            <returns>A well formed string representing the length, with unit designator, in the units specified by the settings.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlUtils.RoundByUnits(System.Single,GrapeCity.ActiveReports.PageReportModel.Length.Unit,System.Boolean,System.Single)">
+            <summary>
+            Rounds specified value in twips in terms of given length unit.
+            </summary>
+            <param name="twips">The length in twips.</param>
+            <param name="unit">The unit to round by.</param>
+            <param name="roundUp">Whether round up or down.</param>
+            <returns>Value in twips.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlUtils.GetStyleString(GrapeCity.ActiveReports.Core.Export.Html.Page.Renderers.RenderOptions)">
+            <summary>
+            Returns format string for css inline style based on bit flags
+            </summary>
+            <param name="attr">bit flags indicating what should be in the style</param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlUtils.GetActualBorderWidth(System.String,GrapeCity.ActiveReports.PageReportModel.Length,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IStyle)">
+            <summary>
+            Returns an actual border width to be rendered taking into account border style and default border
+            </summary>
+            <param name="borderStyle">The border style.</param>
+            <param name="borderWidth">The border width.</param>
+            <param name="style">The style.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlUtils.ConvertBorderStyle(System.Nullable{GrapeCity.ActiveReports.PageReportModel.BorderDrawingStyle})">
+            <summary>
+            Converts <see cref="T:GrapeCity.ActiveReports.PageReportModel.BorderDrawingStyle"/> to the <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlUtils.BorderHtmlStyle"/>.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlUtils.FixBorderLineStyle(System.String)">
+            <summary>
+            Gets the proper css value for the border line style.
+            </summary>
+            <param name="lineStyle">the border line style string to transform</param>
+            <returns>the css border line style value.</returns>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlUtils.HtmlBorders.Widths">
+            <summary>
+            Border widths in twips.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlUtils.HtmlBordersOverflow.Left">
+            <summary>
+            Left width in twips.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlUtils.HtmlBordersOverflow.Top">
+            <summary>
+            Top width in twips.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlUtils.IsZero(System.Double)">
+            <summary>
+            Check if a number is zero.
+            </summary>
+            <param name="value">The number to check.</param>
+            <returns>True if the number is zero, false otherwise.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlUtils.EncodeJsString(System.String)">
+            <summary>
+            Encode sting to JSON string.
+            </summary>
+            <param name="value">string to be encoded</param>
+            <returns>encoded value</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Tools.HtmlUtils.GetBordersOverflowMatrix(GrapeCity.ActiveReports.Extensibility.Layout.IGrid,GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext)">
+            <summary>
+            Build matrix of table cell border overflows, how different cell border widths (left and top) affect the offset of neighboring cells.
+            </summary>
+            <param name="grid"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Html.Page.EmailRendering">
+            <summary>
+            Rendering extension responsible for rendering report to html format suitable for email.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.EmailRendering.#ctor(GrapeCity.ActiveReports.Drawing.ITextMetricsProvider,GrapeCity.ActiveReports.Extensibility.Rendering.IRenderersFactory)">
+            <summary>
+            Initializes a new instance of <see cref="T:GrapeCity.ActiveReports.Core.Export.Html.Page.EmailRendering" /> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.EmailRendering.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.Func{GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStreamInfo,GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStream})">
+            <summary>
+            Renders the <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport" /> to html suitable for email.
+            </summary>
+            <param name="report">The <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport" /> to render.</param>
+            <param name="getStream">The delegate provides a new <see cref="T:System.IO.Stream"/> and its <see cref="T:System.Uri"/> to use to write the data to.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.EmailRendering.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.Func{GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStreamInfo,GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStream},System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Renders the <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport" /> to html suitable for email.
+            </summary>
+            <param name="report">The <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport" /> to render.</param>
+            <param name="getStream">The delegate provides a new <see cref="T:System.IO.Stream"/> and its <see cref="T:System.Uri"/> to use to write the data to.</param>
+            <param name="settings">The settings to use when rendering the report.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.EmailRendering.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.Func{GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStreamInfo,GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStream},GrapeCity.ActiveReports.Core.Export.Html.Page.EmailSettings)">
+            <summary>
+            Renders the <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport" /> to html suitable for email.
+            </summary>
+            <param name="report">The <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport" /> to render.</param>
+            <param name="getStream">The delegate provides a new <see cref="T:System.IO.Stream"/> and its <see cref="T:System.Uri"/> to use to write the data to.</param>
+            <param name="settings">The settings to use when rendering the report.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.EmailRendering.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.Func{GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStreamInfo,GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStream},GrapeCity.ActiveReports.Core.Export.Html.Page.EmailSettings,System.Threading.CancellationToken)">
+            <summary>
+            Renders the <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport" /> to html suitable for email.
+            </summary>
+            <param name="report">The <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport" /> to render.</param>
+            <param name="getStream">The delegate provides a new <see cref="T:System.IO.Stream"/> and its <see cref="T:System.Uri"/> to use to write the data to.</param>
+            <param name="settings">The settings to use when rendering the report.</param>
+            <param name="cancel">The <see cref="T:System.Threading.CancellationToken"/> object that allows to interrupt rendering.</param>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.EmailRendering.MailMessage">
+            <summary>
+            Gets the <see cref="T:System.Net.Mail.MailMessage" /> object.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.EmailRendering.GetMailMessageObject(System.Collections.Generic.List{GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStream})">
+            <summary>
+            Gets the <see cref="T:System.Net.Mail.MailMessage" /> object.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Html.Page.EmailSettings">
+            <summary>
+            Contains settings specific to the EmailRenderingExtension.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.EmailSettings.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Core.Export.Html.Page.EmailSettings"/> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.EmailSettings.#ctor(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Core.Export.Html.Page.EmailSettings"/> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.EmailSettings.GrapeCity#ActiveReports#Extensibility#Rendering#ISettings#GetSettings">
+            <summary>
+            Returns a <see cref="T:System.Collections.Specialized.NameValueCollection" /> containing the settings for the rendering extension.
+            </summary>        
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.EmailSettings.GrapeCity#ActiveReports#Extensibility#Rendering#ISettings#ApplySettings(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Apply settings for the rendering extension.
+            </summary>
+            <param name="settings">Settings for the rendering extension.</param>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRendererFactory">
+            <summary>
+            This class is responsible for giving out the correct html renderer for a requested report item.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRendererFactory.CreateHtmlRenderers(GrapeCity.ActiveReports.Extensibility.Rendering.IRenderersFactory,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRendererFactory"/> class
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRendererFactory.GetRenderer(GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,GrapeCity.ActiveReports.PageReportModel.TargetDeviceKind)">
+            <summary>
+            Gets a renderer for the passed in <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/>. Returns null if one isn't found.
+            </summary>
+            <param name="area">the <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> to get the renderer for.</param>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRendering">
+            <summary>
+            This is the core class for the Html rendering extension. It is responsible for starting the rendering of the report and manages the rendering when dealing with single and multiple pages.
+            </summary>
+        </member>
+        <member name="E:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRendering.PageRendered">
+            <summary>
+            This event fires when new page is added to stream in streaming mode
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRendering.Search(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.Func{GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStreamInfo,GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStream},GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings,GrapeCity.ActiveReports.Core.Export.Html.Page.SearchSettings,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutTree)">
+            <summary>
+            Performs search of the specified text in the specified pages range.
+            </summary>
+            <param name="report">The report to be rendered</param>
+            <param name="getStream">The delegate provides a new <see cref="T:System.IO.Stream"/> and its <see cref="T:System.Uri"/> to use to write the data to.</param>
+            <param name="settings">The settings for rendering.</param>
+            <param name="searchSettings">The settings for search.</param>
+            <param name="layoutTree"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRendering.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.Func{GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStreamInfo,GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStream},GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings)">
+            <summary> Renders the report to html. </summary>
+            <param name="report">The report to be rendered</param>
+            <param name="getStream">The delegate provides a new <see cref="T:System.IO.Stream"/> and its <see cref="T:System.Uri"/> to use to write the data to.</param>
+            <param name="settings">The settings for rendering.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRendering.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.Func{GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStreamInfo,GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStream},GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings,System.Threading.CancellationToken)">
+            <summary> Renders the report to html. </summary>
+            <param name="report">The report to be rendered</param>
+            <param name="getStream">The delegate provides a new <see cref="T:System.IO.Stream"/> and its <see cref="T:System.Uri"/> to use to write the data to.</param>
+            <param name="settings">The settings for rendering.</param>
+            <param name="cancel">The <see cref="T:System.Threading.CancellationToken"/> object that allows to interrupt rendering.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRendering.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.Func{GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStreamInfo,GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStream},GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings,System.Threading.CancellationToken,System.IProgress{GrapeCity.ActiveReports.Rendering.Export.ProgressInfo})">
+            <summary> Renders the report to html. </summary>
+            <param name="report">The report to be rendered</param>
+            <param name="getStream">The delegate provides a new <see cref="T:System.IO.Stream"/> and its <see cref="T:System.Uri"/> to use to write the data to.</param>
+            <param name="settings">The settings for rendering.</param>
+            <param name="cancel">The <see cref="T:System.Threading.CancellationToken"/> object that allows to interrupt rendering.</param>
+            <param name="progress">The <see cref="!:IProgress"/> provider for progress updates.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRendering.RenderInStreamingMode(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.Func{GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStreamInfo,GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStream},GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings,System.Action{GrapeCity.ActiveReports.Extensibility.Rendering.Components.IMetadataDictionary})">
+            <summary>
+            Begins the process of rendering the report to html in streaming mode.
+            </summary>
+            <param name="report">The report to be rendered</param>
+            <param name="getStream">The delegate provides a new <see cref="T:System.IO.Stream"/> and its <see cref="T:System.Uri"/> to use to write the data to.</param>
+            <param name="settings">The settings for rendering.</param>
+            <param name="onComplete">Callback method.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRendering.RenderInStreamingMode(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.Func{GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStreamInfo,GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStream},GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings,System.Threading.CancellationToken,System.Action{GrapeCity.ActiveReports.Extensibility.Rendering.Components.IMetadataDictionary})">
+            <summary>
+            Begins the process of rendering the report to html in streaming mode.
+            </summary>
+            <param name="report">The report to be rendered</param>
+            <param name="getStream">The delegate provides a new <see cref="T:System.IO.Stream"/> and its <see cref="T:System.Uri"/> to use to write the data to.</param>
+            <param name="settings">The settings for rendering.</param>
+            <param name="cancel">The <see cref="T:System.Threading.CancellationToken"/> object that allows to interrupt rendering.</param>
+            <param name="onComplete">Callback method.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRendering.RenderHtmlPage(GrapeCity.ActiveReports.Extensibility.Layout.ILayoutPage,GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext,System.Single@)">
+            <summary>
+            Renders the specific page. If the extension is in single page mode it will open and close the HTML page in this method.
+            </summary>
+            <param name="page">The <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutPage"/> to be rendered</param>
+            <remarks>By opening and closing the html in this method, for single page layout, we could easily hook up single page rendering for multiple pages (if we need to).</remarks>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRendering.ProcessILayoutArea(System.Collections.IEnumerable,GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext)">
+            <summary>
+            Cycles through all the layout areas in the <see cref="T:System.Collections.IEnumerable"/> collection passed in.
+            </summary>
+            <param name="children">a <see cref="T:System.Collections.IEnumerable"/> containing all the children <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea">'s</see> for a report section.</param>
+            <param name="pageContext"></param>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderedEventArgs">
+            <summary>
+            Event args for PageRendered event in streaming mode
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderedEventArgs.PageNumber">
+            <summary>
+            Gets the page number
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderedEventArgs.IsLastInDocument">
+            <summary>
+            Gets a value indicating whether the page is last in document
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionImageManager">
+            <summary>
+            This class manages a lookup between image keys and imageName IDs so multiple images will not be saved.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionImageManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionImageManager"/> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionImageManager.GetImageKey(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IImage,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext)">
+            <summary>
+            Gets an image and creates a secondary stream for it. The images key is returned.
+            If the image being asked for has already been created the the existing key is returned.
+            </summary>
+            <param name="image">the image</param>
+            <param name="layoutArea"></param>
+            <param name="context">The <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContextInternal"/> containing the shared information for rendering</param>
+            <returns>A string value representing key id for the image.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionImageManager.GetImageSize(System.String)">
+            <summary>
+            Gets image size in Twips.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionImageManager.GetBackgroundImageKey(System.String,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext)">
+            <summary>
+            Gets an image from the layoutArea and creates a secondary stream for it. The images key is returned.
+            If the image being asked for has already been created the the existing key is returned.
+            </summary>
+            <param name="layoutArea">The <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> containing the image</param>
+            <param name="context">The <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.IHtmlRenderingExtensionContextInternal"/> containing the shared information for rendering</param>
+            <param name="mimeType">a string value representing the mime type for the background image.</param>
+            <returns>A string value representing key id for the image.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionImageManager.CreateStream(System.String,System.IO.Stream,System.String,System.Drawing.SizeF,GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext)">
+            <summary>
+            Creates a secondary stream for the image.
+            </summary>
+            <param name="imageName">image name to create image path</param>
+            <param name="drawImage">The image to draw</param>
+            <param name="mimeType">The mimeType for the image</param>
+            <param name="context">The <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderingExtensionContext"/> for shared information.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionImageManager.GenerateImageFileNamePrefix(System.String)">
+            <summary>
+            Returns a valid file name based on the key passed in.
+            </summary>
+            <remarks>if imageKey is a path or url that ends in a file name, the file name without extension is returned.
+            If imageKey does not contain a file name (url query string, hashcode) then a valid file name is returned
+            containing valid file characters from the imageKey.
+            </remarks>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionImageManager.GetImageSrc(System.String)">
+            <summary>
+            Gets the relative URI for the image based off of the key.
+            </summary>
+            <param name="key">The key for the image to look up.</param>
+            <returns>A string value for the relative uri for the image stream.</returns>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionStyleManager">
+            <summary>
+            This class is responsible for maintaining the styles used in the report. It's responsible for maintaining a unique collection of styles and providing names for styles, as well as writing out the
+            stored styles to html.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionStyleManager.WriteStyles(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter,GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext)">
+            <summary>
+            Write out the collected style information to the <see cref="T:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter"/>. This method
+            will just fill in the style string, it will not write the style opening or closing tags.
+            </summary>
+            <param name="writer">The <see cref="T:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter"/> to write the style information to.</param>
+            <remarks>At this point the writer should already have the style tag written.</remarks>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionStyleManager.GetStyle(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IStyle,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext,GrapeCity.ActiveReports.Core.Export.Html.Page.Renderers.RenderOptions)">
+            <summary>
+            Returns a style to use for the report item.
+            </summary>
+            <param name="style">The <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IStyle"/> to get the name for</param>
+            <param name="layoutArea">The <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> to build the style from.</param>
+            <param name="context">The <see cref="!:IHtmlRenderingExtensionContext"/> used to pass shared information.</param>
+            <returns>A string value representing the name of the style</returns>
+            <remarks>We pass in the <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> so we can get access to the IsFirstx, IsLastx properties
+            so we can correctly close and leave open border</remarks>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionStyleManager.GetStyleName(System.String,System.Int32)">
+            <summary>
+            Gets the name for a pre-formatted style string. If the style exist then the stored name will be returned. If the style does not exist it will be added and the new name returned.
+            </summary>
+            <param name="preformattedStyle">The pre-formatted style string to get a class name for.</param>
+            <param name="pageNumber"></param>
+            <returns>The name for the style.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionStyleManager.GetStyleName(System.String,System.Int32,System.String)">
+            <summary>
+            Gets the name for a pre-formatted style string. If the style exist then the stored name will be returned. If the style does not exist it will be added and the new name returned.
+            </summary>
+            <param name="preformattedStyle">The pre-formatted style string to get a class name for.</param>
+            <param name="pageNumber"></param>
+            <param name="styleSuffix">Suffix of the style name.</param>
+            <returns>The name for the style.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionStyleManager.HasStyle(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IStyle,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext,GrapeCity.ActiveReports.Core.Export.Html.Page.Renderers.RenderOptions)">
+            <summary>
+            Returns <c>True</c> if the Style has been maintain; otherwise, <c>False</c>.
+            </summary>
+            <param name="style">The <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IStyle"/> to get the name for</param>
+            <param name="layoutArea">The <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> to build the style from.</param>
+            <param name="context">The <see cref="!:IHtmlRenderingExtensionContext"/> used to pass shared information.</param>
+            <param name="renderFlags"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionStyleManager.AddStylesPrefix(System.String)">
+            <summary>
+            Set the prefix that is applied to all style names.
+            Note that prefix is trimmed before saving.
+            </summary>
+            <param name="prefix">Style names prefix</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionStyleManager.BuildGeneralStyleString(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IStyle,GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionStyleManager.StyleFlags,System.Func{System.String,System.String})">
+            <summary>
+            All css that depends from <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IStyle"/> only should be written here.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionStyleManager.BuildStyleString(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IStyle,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext,GrapeCity.ActiveReports.Core.Export.Html.Page.Renderers.RenderOptions)">
+            <summary>
+            Builds a style string from the passed in <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IStyle"/>.
+            </summary>
+            <param name="style">The <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IStyle"/> to build the style string from</param>
+            <param name="context"></param>
+            <param name="layoutArea"></param>
+            <param name="renderFlags"></param>
+            <returns>The name of the style</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionStyleManager.StyleBuilder.AddStyleEntry(System.String,System.String)">
+            <summary>
+            Adds an entry to the current style string.
+            </summary>
+            <param name="styleName">The string css style name</param>
+            <param name="styleValue">the string value for the style</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionStyleManager.StyleBuilder.AddQuotedStyleEntry(System.String,System.String,System.String)">
+            <summary>
+            Adds an entry to the current style string.
+            </summary>
+            <param name="styleName">The string css style name</param>
+            <param name="styleValue">the string value for the style</param>
+            <param name="extraValues">Adds additional values to the style string</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionStyleManager.GetRepeatStyleValue(System.String)">
+            <summary>
+            Gets the proper css value for the repeat value.
+            </summary>
+            <param name="repeatValue">the repeat value style string to transform.</param>
+            <returns>the css repeat value.</returns>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionDeviceCapabilities">
+            <summary>
+            This class is responsible for setting up the parameters of the device the layout will use to calculate how things will be rendered on each page.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionDeviceCapabilities.#ctor(GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionDeviceCapabilities"/> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRenderingExtensionDeviceCapabilities.SetPageInfo(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.Boolean,GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings,System.Boolean)">
+            <summary>
+            Sets page size information based on report and pagination options
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderMode">
+            <summary>
+            Html rendering modes.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderMode.Galley">
+            <summary>
+            The report will be rendered in HTML with one page header, one page footer (if they exist) and the report body will be rendered in one large section.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderMode.Paginated">
+            <summary>
+            The report will be rendered in HTML with a page head and page footer for each page (if they exist) and the positions will be determined by the report's page height.
+            </summary>
+            <remarks>Pagination in the HtmlRenderingExtension has no width limit.</remarks>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingEngine">
+            <summary>
+            Force rendering extension to use plain HTML or mix with SVG content.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingEngine.Html">
+            <summary>
+            Plain HTML/CSS output.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingEngine.Mixed">
+            <summary>
+            Mixed HTML/SVG output to improve look and feel.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings">
+            <summary>
+            Settings for the Html rendering extension.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings" /> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings.#ctor(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings"/> class.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings.Mode">
+            <summary>
+            Gets or sets the mode to use when rendering to html
+            </summary>
+            <value>A<see cref="T:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderMode" /> indicating the rendering mode to use.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings.LinkTarget">
+            <summary>
+            Gets or set the target for hyperlinks contained inside the report.By default this value is not set.
+            </summary>
+            <remarks>You can target a window by specifying the window name, or specify to open the target in a new window by setting the value to _blank.</remarks>
+            <remarks>Acceptable values are<i> WindowName</i>, _blank, _self, _parent, and _top.</remarks>
+            <value>A string value representing the LinkTarget.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings.MhtOutput">
+            <summary>
+            Gets or sets whether or not to output should be in Mht format.True indicates the output should be in Mht format; otherwise false. The default is false.
+            </summary>
+            <value>A boolean value indicating whether or not the output should be in Mht format.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings.Fragment">
+            <summary>
+            Gets or sets whether or not the full html text will be return or just the contents contained inside the body tag.True indicates only the content inside
+            the body tag will be return; otherwise false. The default is false.
+            </summary>
+            <value>A boolean value indicating whether or not to return the full html contents, or just the contents inside the body tag.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings.StyleStream">
+            <summary>
+            Gets or sets whether or not the CSS style information will be contained inside the html file, or inside a different stream. True indicates the CSS style information will be contained in its own stream; otherwise false. The default is true.
+            </summary>
+            <value>A boolean value indicating whether or not to write the CSS style information to a different stream, or embed it in the html file.</value>
+            <remarks>When this value is set to False the full report will be rendered before being returned.</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings.EmbedImages">
+            <summary>
+            Gets or sets whether or not the images content will be contained inside the html file as Base64, or inside a different stream.
+            </summary>
+            <value>A boolean value indicating whether or not to write the images content to a different stream, or embed it in the html file.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings.OutputTOC">
+            <summary>
+            Indicates whether the report's TOC(is exists) should be added in the output.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings.OutputChart">
+            <summary> Indicates whether the charts data (if exist) should be added in the output. </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings.RenderingEngine">
+            <summary>
+            Indicates whether we should use SVG internally or not.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings.IncludePageMargins">
+            <summary>
+            Account or not page margins for report rendering.
+            
+            Can be used in Paginated mode only.
+            Added for WebViewer and HTML5 viewer - for internal use only!
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings.StartPage">
+            <summary>
+            First page
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings.EndPage">
+            <summary>
+            End page
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlSettings.StylePrefix">
+            <summary>
+            Prefix for styles.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.PreviewSettings.PreviewPages">
+            <summary>
+            Preview Page
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.PreviewSettings.StreamingEnabled">
+            <summary>
+            Specifies whether "page streaming" mode is enabled.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.PreviewSettings.WebViewer">
+            <summary>
+            Gets or sets whether or not the <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.HtmlRenderingExtension"/> is being accessed via the web viewer. If this is true, extra properties will be exposed in the settings
+            NameValueCollection
+            </summary>
+            <value>A boolean indicating if the <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.HtmlRenderingExtension"/> is being accessed via the web viewer.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.PreviewSettings.ClientId">
+            <summary>
+            ID of the target control.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.PreviewSettings.FrozenEnabled">
+            <summary>
+            Specifies whether Frozen Rows/Columns is enabled.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.SearchSettings.FindString">
+            <summary>
+            Gets or sets the find string to search for.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.SearchSettings.MatchWholeWord">
+            <summary>
+            Gets or sets if the find should match the whole word
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.SearchSettings.MatchCase">
+            <summary>
+            Gets or sets if the find should match the case
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.SearchSettings.MatchExact">
+            <summary>
+            Gets or sets if the find should match the exact phrase
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.SearchSettings.StartFind">
+            <summary>
+            Gets or sets the page to start the find search from.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.SearchSettings.EndFind">
+            <summary>
+            Gets or sets the page number to search to. If the EndFind value has not been set it will return as -1.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Html.Page.DataOutputType">
+            <summary> Describes data output type. </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Core.Export.Html.Page.DataOutputType.None">
+            <summary> Disables output. </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Core.Export.Html.Page.DataOutputType.Stream">
+            <summary> Specifies output to the separate stream. </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Html.Page.IActionLinkProvider">
+            <summary> Extension for the <see cref="T:GrapeCity.ActiveReports.Core.Export.Html.Page.ILinkProvider"/> which allows you to generate links for report item actions.</summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Html.Page.ILinkProvider">
+            <summary>
+            Interface for creating custom link provider for HTML display extension.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.ILinkProvider.DataAttributeName">
+            <summary>
+            Returns full "data" attribute name ("data-action" etc.) if data should be embedded not as JS/links but as "data" attribute. 
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.ILinkProvider.DocumentMapLink(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IMetadataDictionaryEntry)">
+            <summary>
+            Returns a string value to use as a link in a map map.
+            </summary>
+            <param name="dictionaryEntry">IMetadataDictionaryEntry of the heading map node that creates the link.</param>
+            <returns>A string value to use as the value of href.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.ILinkProvider.DocumentMapTarget(System.String)">
+            <summary>
+            Returns the string value to use as the target of the heading map.
+            </summary>
+            <param name="targetName">A string value representing the base name of the target of the caption map.</param>
+            <returns>A string value to use as the target for the value of href.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.ILinkProvider.BookmarkLink(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IMetadataDictionaryEntry)">
+            <summary>
+            Returns a string value to use as a link in a map map.
+            </summary>
+            <param name="dictionaryEntry">IMetadataDictionaryEntry of bookmark link entry to create link.</param>
+            <returns>A string value to use as the value of href.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.ILinkProvider.BookmarkLinkTarget(System.String)">
+            <summary>
+            Returns the string value to use as the Bookmarklink target.
+            </summary>
+            <param name="targetName">Bookmarklink A string value representing the base name of the target.</param>
+            <returns>A string value to use as the target for the value of href.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.ILinkProvider.Hyperlink(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IAction)">
+            <summary>
+            Returns a string value to use as a hyperlink.
+            </summary>
+            <param name="action">IAction to get the value of the hyperlink.</param>
+            <returns>String value to use as the value of href</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.ILinkProvider.DrillthroughLink(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IAction)">
+            <summary>
+            Returns a string value to use as a Drillthrough link.
+            </summary>
+            <param name="action">IAction to get the value of the drillthrough link.</param>
+            <returns>String value to use as the value of href</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.ILinkProvider.VisibilityToggleLink(GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea)">
+            <summary>
+            Returns a string value to be used as a link for display switching.
+            </summary>
+            <param name="layoutArea">ILayoutArea for items to switch.</param>
+            <returns>String value to use as the value of href</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.ILinkProvider.VisibilityToggleImageLink(GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea)">
+            <summary>
+            Returns the string value to be used as a link in the display switching image.
+            </summary>
+            <param name="layoutArea">ILayoutArea for items to switch.</param>
+            <returns>String value to use as the value of src</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.ILinkProvider.SortingToggleLink(GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea)">
+            <summary>
+            Returns the string value to use as the link to sort the switch.
+            </summary>
+            <param name="layoutArea">ILayoutArea for items to switch.</param>
+            <returns>String value to use as the value of href</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.ILinkProvider.SortingToggleImageLink(GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea)">
+            <summary>
+            Returns the string value to use as the link to sort the switch image.
+            </summary>
+            <param name="layoutArea">ILayoutArea for items to switch.</param>
+            <returns>String value to use as the value of src</returns>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Html.Page.ISlicerLinkProvider">
+            <summary> Extension for the <see cref="T:GrapeCity.ActiveReports.Core.Export.Html.Page.ILinkProvider"/> with the new slice action type links. </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.ISlicerLinkProvider.GetSlicerLink(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IAction)">
+            <summary> Returns link for the slice action. </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext.BodyWriter">
+            <summary>
+            Gets a <see cref="T:GrapeCity.ActiveReports.Rendering.Html.Tools.XhtmlTextWriter" /> to use for the html body section.
+            </summary>
+            <remarks>If the CSS style information should be embedded in the page this will return a <see cref="T:GrapeCity.ActiveReports.Rendering.Html.Tools.XhtmlTextWriter" /> created with a stand-alone stream. If the
+            css information is in its own stream it will return a <see cref="T:GrapeCity.ActiveReports.Rendering.Html.Tools.XhtmlTextWriter" />
+            created from the primary stream of the stream provider.
+            </remarks>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext.GetRelativeUri(System.Uri)">
+            <summary>
+            Gets a relative Uri based off of the primary stream's uri.
+            </summary>
+            <param name="toUri">The Uri to make relative</param>
+            <returns>A string value for the relative Uri.</returns>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext.PageWriter">
+             <summary>
+             Gets a <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Tools.XhtmlTextWriter"/> to use for the entire html page.
+             </summary>
+             <remarks>this will be a <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Tools.XhtmlTextWriter"/> created from the primary stream of the Stream provider.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext.Uri">
+            <summary>
+            Gets the uri for the main documents being linked to.
+            </summary>
+            <value>a <see cref="T:System.Uri"/> for the main document to point links to.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext.BodyWriter">
+             <summary>
+             Gets a <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Tools.XhtmlTextWriter"/> to use for the html body section.
+             </summary>
+             <remarks>If the CSS style information should be embedded in the page this will return a <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Tools.XhtmlTextWriter"/> created with a stand-alone stream. If the
+            css information is in its own stream it will return a <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Tools.XhtmlTextWriter"/>
+            created from the primary stream of the stream provider. 
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext.HeadWriter">
+             <summary>
+             Gets a <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Tools.XhtmlTextWriter"/> to use for the html head section.
+             </summary>
+             <remarks>If the CSS style information should be embedded in the page this will return a <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Tools.XhtmlTextWriter"/> created with a stand-alone stream. If the
+            css information is in its own stream it will return a <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Tools.XhtmlTextWriter"/>
+            created from the primary stream of the stream provider. 
+            </remarks>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext.GetRelativeUri(System.Uri)">
+            <summary>
+            Gets a relative Uri based off of the primary stream's uri.
+            </summary>
+            <param name="toUri">The Uri to make relative</param>
+            <returns>A string value for the relative Uri.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext.WriteImportedStyle(System.Uri)">
+            <summary>
+            Writes a style tag and sets the value to an import statment based off of the AbsoluteUri of the value passed in.
+            </summary>
+            <param name="styleUri">pointing to the css to import</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext.WriteStyleOpenTag">
+            <summary>
+            Writes an opening style tag
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext.WriteStyleEndTag">
+            <summary>
+            Writes an closing style tag
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext.OpenPageSectionDiv(GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,System.Single,System.Single,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IStyle,System.Boolean)">
+            <summary>
+            Opens the div tag for the page section (header, body footer).
+            </summary>
+            <param name="area">The <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> the div is for, used to set the div's size</param>
+            <param name="height">The height of the page section in twips.</param>
+            <param name="style"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext.ClosePageSectionDiv">
+            <summary>
+            Closes the page section div tag.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext.OpenPageTag(System.String,System.String,System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Opens the div tag for the whole page include header, body and footer.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext.OpenPageTag(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Opens the div tag for the whole page include header, body and footer.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext.OpenHtmlPage">
+            <summary>
+            Writes the opening set of tags (Html tag, Doctype, encoding, etc)
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext.CloseHtmlPage">
+            <summary>
+            Closes the Html tag
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext.ClosePageWriter">
+            <summary>
+            Closes the main page writer.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.PageRenderingContext.ClosePrimaryStream">
+            <summary>
+            Closes the primary stream.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Html.Page.Renderers.RenderOptions">
+            <summary>
+            Controls how a table cell should be rendered in html
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingExtensionContext">
+            <summary>
+            This class is a common ground for all the other html rendering extension classes to work from. It allows for needed information to be shared across several 
+            classes. It's also the main holding place for the Html text writers being used with the rendering extensions.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingExtensionContext.#ctor(System.Func{GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStreamInfo,GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlStream},GrapeCity.ActiveReports.PageReportModel.TargetDeviceKind,System.Boolean,System.Text.Encoding,GrapeCity.ActiveReports.Core.Export.Html.Page.HtmlRendererFactory,GrapeCity.ActiveReports.Drawing.ITextMetricsProvider,GrapeCity.ActiveReports.Core.Export.Html.Page.ILinkProvider)">
+            <summary>
+            Initializes a new instance of the GrapeCity.ActiveReports.HtmlExport.Page.Core.HtmlRenderingExtensionContext
+            </summary>
+            <param name="settings">the <see cref="!:GrapeCity.ActiveReports.Export.Html.Page.Settings"/> to use while rendering the report</param>
+            <param name="getStream">The delegate provides a new <see cref="T:System.IO.Stream"/> and its <see cref="T:System.Uri"/> to use to write the data to.</param>
+            <param name="report">Report to render.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingExtensionContext.NewPageContext(System.Int32,System.Boolean)">
+            <summary>
+            Initializes new page stream. This is used in streaming mode when every page is separate HTML document.
+            </summary>
+            <param name="pageNumber"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingExtensionContext.GetImageName(System.String,GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext)">
+            <summary>
+            Returns a unique name for report item images.
+            </summary>
+            <param name="name">The name of the control to create the name for</param>
+            <param name="pageContext"></param>
+            <returns>A string representing the base name of the image</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingExtensionContext.GetPageId(GrapeCity.ActiveReports.Core.Export.Html.Page.IPageRenderingContext)">
+            <summary>
+            Returns a unique page identifier if there could be an image naming conflict.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingExtensionContext.ImageManager">
+            <summary>
+            Gets the <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderingExtensionImageManager"/> being used to manage images for the layout.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingExtensionContext.GetImageStream">
+            <summary>
+            Gets the <see cref="T:System.IO.Stream" /> to render data to.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingExtensionContext.StyleUri">
+            <summary>
+            Gets the <see cref="T:System.Uri"/> of the style stream.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingExtensionContext.StyleManager">
+            <summary>
+            Gets the <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderingExtensionStyleManager"/> the report is using to store styles.
+            </summary>
+            <value>a <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderingExtensionStyleManager"/> containing the style for the report.</value>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingExtensionContext.CreateStyleStream">
+            <summary>
+            Gets the <see cref="T:System.IO.Stream"/> being used to contain the style information when its not embedded. If the stream exists it will be returned
+            If the stream has not been created one will be created and returned;
+            </summary>
+            <returns>a <see cref="T:System.IO.Stream"/> for the CSS style information.</returns>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingExtensionContext.StyleWriter">
+            <summary>
+             Gets a <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Tools.XhtmlTextWriter"/> to use for the writing styles to when using an external css file.
+            </summary>
+            /// <remarks>a <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Tools.XhtmlTextWriter"/> for the external css information.</remarks>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingExtensionContext.CloseStyleWriter">
+            <summary>
+            Closes the style writer;
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingExtensionContext.LinkProvider">
+            <summary>
+            Returns a link provider to use when creating href links.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingExtensionContext.BookmarkDictionary">
+            <summary>
+            Returns a <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IMetadataDictionary"/> containing the bookmarks for the report.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingExtensionContext.ContainsDocumentMap">
+            <summary>
+            Use this variable for rendering purposes - html core use this variable during rendering.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingExtensionContext.DocumentMapRenderer">
+            <summary>
+            Gets a <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Core.HtmlRenderers.DocumentMapHtmlRenderer"/> to render the document map to.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingExtensionContext.ReportDrillthroughContext">
+            <summary>
+            Returns a <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.ReportDrillthroughContext"/> containing current report-subreport rendering sequence.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingExtensionContext.AddDocumentMapArea(GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea,System.String)">
+             <summary>
+             Addes a <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> from the document map MetadataDictionary to a table so the control renders can look up their <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> to see if they have a bookmark linked to them.
+             </summary>
+             <param name="layoutArea">the <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> to add.</param>
+             <param name="metadataDictionaryEntryName">the name of the <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IMetadataDictionaryEntry"/> the bookmark belongs to.</param>
+            <remarks>Note that it is possible for a layout area to have multiple bookmarks mapped to it. This is why we are using the string array to track the names.</remarks>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingExtensionContext.GetDocumentMapName(GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea)">
+            <summary>
+            Checks a layout area to see if it has a document map beloging to it.
+            </summary>
+            <param name="layoutArea">the <see cref="T:GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea"/> to examine.</param>
+            <returns>If a match is found, the names of the <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IMetadataDictionaryEntry"/> are returned; otherwise an empty string array is returned. </returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingExtensionContext.Dispose">
+            <summary>
+            Implements the Dispose logic of this class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.RenderingExtensionContext.Dispose(System.Boolean)">
+             <summary>
+             Implements the Dispose logic of this class.
+             </summary>
+             <remarks>
+            When the isDisposing parameter is true, this method releases all resources held by any managed objects that this component references (namely the underlying System.Data.IDbConnection). 
+             </remarks>
+             <param name="disposing">True if this method is called by this object's Dispose method; false if the finalizer invoked this method.</param>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Html.Page.Resources.R">
+            <summary> Helper class to access embedded resources. </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Resources.R.GetResource(System.String)">
+            <summary>
+            Gets the embedded resource from the assembly based off of the passed in filename 
+            </summary>
+            <param name="fileName">the simple file name of the resource to get.</param>
+            <returns>A Stream containing the resource requested.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Resources.R.GetTextFromResource(System.String)">
+            <summary>
+            Gets a file from the embedded resources
+            </summary>
+            <param name="fileName">the name of the file to extract</param>
+            <returns>a string value representing the content of the file.</returns>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.CssConvert">
+            <summary>
+            Converts runtime style values to CSS-compatible values.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter">
+            <summary>
+            For internal use only.
+            This class enhances the HtmlTextWriter to allow for rendering of xhtml. It also has several helper members that are used to simplify coding of members that use this class.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.StyleFormat">
+            <summary>
+            The format of string data representation. For internal use only.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.#ctor(System.IO.TextWriter,System.Char)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter"/> class
+            </summary>
+            <param name="writer">the <see cref="T:System.IO.TextWriter"/> to write the information to.</param>
+            <param name="tabChar">A char value to use as the tab char.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.AddAttribute(System.String,System.String)">
+            <summary>
+            Writes out the attribute with the specified local name and value. For internal use only.
+            </summary>
+            <param name="name">The local name of the attribute.</param>
+            <param name="value">The value of the attribute.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.RenderBeginTag(System.String)">
+            <summary>
+            Writes out a start tag with the specified local name. For internal use only.
+            </summary>
+            <param name="tag">The local name of the element.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.RenderEndTag">
+            <summary>
+            Closes one element and pops the corresponding namespace scope. For internal use only.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.RenderEndTag(System.String)">
+            <summary>
+            Closes one element and pops the corresponding namespace scope. For internal use only.
+            </summary>
+            <param name="tag"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.Write(System.String)">
+            <summary>
+            Writes raw markup manually from a string. For internal use only.
+            </summary>
+            <param name="str">String containing the text to write.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.WriteLine">
+            <summary>
+            Writes the empty string. For internal use only.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.WriteLine(System.String)">
+            <summary>
+            Writes raw markup manually from a string and line terminator. For internal use only.
+            </summary>
+            <param name="str">String containing the text to write.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.AddStyleAttribute(System.String,System.String)">
+            <summary>
+            Writes out the attribute with the specified local name and value. For internal use only.
+            </summary>
+            <param name="name">The local name of the attribute.</param>
+            <param name="value">The value of the attribute.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.AddStyleValue(System.String,System.String)">
+            <summary>
+            Writes a value of specified style. For internal use only.
+            </summary>
+            <param name="name">The local name of style</param>
+            <param name="value">The value of style</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.BeginStyleAttribute">
+            <summary>
+            Writes the start of an style attribute. For internal use only.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.EndStyleAttribute">
+            <summary>
+            Writes the end of an style attribute. For internal use only.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.WriteCustomDivTag(System.String,System.String)">
+            <summary>
+            Writes a custom div tag with the attribute and value specified. For internal use only.
+            </summary>
+            <param name="attributeName">The name of the attribute to set.</param>
+            <param name="attributeValue">The value to set the attribute to write in the div tag.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.WriteCustomTag(System.String,System.String,System.String)">
+            <summary>
+             Writes a custom div tag with the attribute and value specified. For internal use only.
+            </summary>
+            <param name="tag">The custom tag.</param>
+            <param name="attributeName">The name to set the attribute to.</param>
+            <param name="attributeValue">The value to set the attribute to write in the div tag.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.WriteCustomDivTag(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Writes a custom div tag with the attributes and values specified in the <see cref="T:System.Collections.Specialized.NameValueCollection" />. For internal use only.
+            </summary>
+            <param name="attributes">A <see cref="T:System.Collections.Specialized.NameValueCollection" /> containing the attributes and values to write in the div tag.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.WriteCustomTag(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Writes a custom div tag with the attributes and values specified in the <see cref="T:System.Collections.Specialized.NameValueCollection" />. For internal use only.
+            </summary>
+            <param name="tag">The custom tag.</param>
+            <param name="attributes">A <see cref="T:System.Collections.Specialized.NameValueCollection" /> containing the attributes and values to write in the div tag.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.WriteCustomTag(System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            Writes a custom div tag with the attributes and values specified in the KeyValuePair collection. For internal use only.
+            </summary>
+            <param name="tag">The custom tag.</param>
+            <param name="attributes">>A KeyValuePair collection containing the attributes and values to write in the div tag.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.WriteAnchorTag(System.String,System.String,System.String,System.Action)">
+            <summary>
+            Writes an achor tag to the writer. For internal use only.
+            </summary>
+            <param name="href">The href value to use in the anchor.</param>
+            <param name="target">The target to set for the anchor.</param>
+            <param name="className">The class to associate with the anchor.</param>
+            <param name="func">Action to be run.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.WriteAnchorTag(System.String,System.String,System.String)">
+            <summary>
+            Writes an achor tag to the writer
+            </summary>
+            <param name="href">The href value to use in the anchor</param>
+            <param name="target">the target to set for the anchor</param>
+            <param name="value">the value to wrap the anchor around</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.WriteAnchorTag(System.String,System.String,System.String,System.String)">
+            <summary>
+            Writes an achor tag to the writer
+            </summary>
+            <param name="href">The href value to use in the anchor</param>
+            <param name="target">the target to set for the anchor</param>
+            <param name="value">the value to wrap the anchor around</param>
+            <param name="className">the class to associate with the anchor</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.WriteAnchorTag(System.String,System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Writes an achor tag to the writer
+            </summary>
+            <param name="id">The id value to use in the anchor</param>
+            <param name="value">the value to wrap the anchor around</param>
+            <param name="attributes">containing the attributes and values</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Core.Export.Html.Page.Tools.XhtmlTextWriter.HtmlEncode(System.String)">
+            <summary>
+            Encodes the specified string to be suitable for puttin into an HTML document. 
+            So that unicode characters and characters like &gt;, &lt;, and " are properly displayed in HTML browsers.
+            </summary>
+        </member>
+    </members>
+</doc>

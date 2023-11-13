@@ -1,0 +1,1072 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Titles>
+  <!-- 顧客増減分析 -->
+  <Title ID="NewCustomerList">
+  	<Name ID="CustomerCode">顧客コード</Name>
+  	<Name ID="CustomerName">顧客名</Name>
+    <Name ID="CustomerNameKana">顧客名カナ</Name>
+    <Name ID="c_CustomerRank.Name">顧客ランク</Name>
+  	<Name ID="c_CustomerKind.Name">顧客種別</Name>
+    <Name ID="c_CustomerType.Name">顧客区分</Name>
+    <Name ID="c_PaymentKind.Name">支払方法</Name>
+    <Name ID="c_Sex.Name">性別</Name>
+    <Name ID="Birthday">生年月日</Name>
+    <Name ID="c_Occupation.Name">職業</Name>
+    <Name ID="c_CarOwner.Name">車の所有</Name>
+    <Name ID="PostCode">郵便番号</Name>
+    <Name ID="Prefecture">都道府県</Name>
+    <Name ID="City">市区町村</Name>
+    <Name ID="Address1">住所１</Name>
+    <Name ID="Address2">住所２</Name>
+    <Name ID="TelNumber">電話番号</Name>
+    <Name ID="FaxNumber">FAX番号</Name>
+    <Name ID="MailAddress">メールアドレス</Name>
+    <Name ID="MobileNumber">携帯電話番号</Name>
+    <Name ID="MobileMailAddress">携帯メールアドレス</Name>
+    <Name ID="CustomerClaimCode">請求先コード</Name>
+    <Name ID="CustomerClaim.CustomerClaimName">請求先名</Name>
+    <Name ID="c_Allowance.Name">DM可否</Name>
+    <Name ID="DmMemo">DM発送備考欄</Name>
+    <Name ID="WorkingCompanyName">勤務先名</Name>
+    <Name ID="WorkingCompanyAddress">勤務先住所</Name>
+    <Name ID="WorkingCompanyTelNumber">勤務先電話番号</Name>
+    <Name ID="PositionName">役職名</Name>
+    <Name ID="CustomerEmployeeName">取引先担当者名</Name>
+    <Name ID="AccountEmployeeName">経理担当者名</Name>
+    <Name ID="DepartmentCode">部門コード</Name>
+    <Name ID="Department.DepartmentName">部門名</Name>
+    <Name ID="Employee.EmployeeName">営業担当者</Name>
+    <Name ID="Employee1.EmployeeName">サービス担当者</Name>
+    <Name ID="FirstReceiptionDate">初回来店日</Name>
+    <Name ID="LastReceiptionDate">前回来店日</Name>
+    <Name ID="Memo">備考</Name>
+  </Title>
+  <!-- 車両伝票一覧 -->
+  <Title ID="CarSalesList">
+    <Name ID="SlipNumber">伝票番号</Name>
+    <Name ID="RevisionNumber">改訂番号</Name>
+	<Name ID="c_SalesOrderStatus.Name">伝票ステータス</Name><!--Add 2023/01/11 yano #4158-->
+    <Name ID="QuoteDate">見積日</Name>
+    <Name ID="QuoteExpireDate">見積有効期限</Name>
+    <Name ID="SalesOrderDate">受注日</Name>
+    <Name ID="SalesDate">納車日</Name>
+    <Name ID="CustomerCode">顧客コード</Name>
+    <Name ID="Customer.CustomerName">顧客名</Name>
+    <Name ID="Department.DepartmentName">部門</Name>
+    <Name ID="Employee.EmployeeName">担当者</Name>
+    <Name ID="c_NewUsedType.Name">新中区分</Name>
+    <Name ID="MakerName">メーカー</Name>
+    <Name ID="CarBrandName">ブランド</Name>
+    <Name ID="CarName">車種</Name>
+    <Name ID="CarGradeName">グレード</Name>
+    <Name ID="SalesCarNumber">管理番号</Name>
+    <Name ID="Vin">車台番号</Name>
+    <Name ID="PaymentPlanType">ローンプラン</Name>
+	<Name ID="VoluntaryInsuranceAmount">任意保険料</Name><!--Mod 2023/01/11 yano #4158-->
+	<!--<Name ID="c_VoluntaryInsuranceType.Name">任意保険</Name>-->
+    <Name ID="SalesPrice">車両本体価格</Name>
+    <Name ID="DiscountAmount">値引金額</Name>
+    <Name ID="SalesCostTotalAmount">販売所費用合計</Name>
+    <Name ID="GrandTotalAmount">現金販売合計</Name>
+  </Title>
+  <!-- サービス伝票一覧 -->
+  <Title ID="ServiceSalesList">
+    <Name ID="SlipNumber">伝票番号</Name>
+    <Name ID="RevisionNumber">改訂番号</Name>
+    <Name ID="QuoteDate">見積日</Name>
+    <Name ID="QuoteExpireDate">見積有効期限</Name>
+    <Name ID="SalesOrderDate">受注日</Name>
+    <Name ID="SalesDate">納車日</Name>
+    <Name ID="CustomerCode">顧客コード</Name>
+    <Name ID="Customer.CustomerName">顧客名</Name>
+    <Name ID="Department.DepartmentName">部門</Name>
+    <Name ID="Employee.EmployeeName">担当者</Name>
+    <Name ID="CarBrandName">ブランド</Name>
+    <Name ID="CarName">車種</Name>
+    <Name ID="CarGradeName">グレード</Name>
+    <Name ID="EngineType">原動機型式</Name>
+    <Name ID="Vin">車台番号</Name>
+    <Name ID="ModelName">型式</Name>
+    <Name ID="Mileage">走行距離</Name>
+    <Name ID="c_MileageUnit.Name">単位</Name>
+    <Name ID="MorterViecleOfficialCode">陸自局コード</Name>
+    <Name ID="RegistrationNumberType">登録番号(種別)</Name>
+    <Name ID="RegistrationNumberKana">登録番号(かな)</Name>
+    <Name ID="RegistrationNumberPlate">登録番号(プレート)</Name>
+    <Name ID="EngineerTotalAmount">技術料合計</Name>
+    <Name ID="PartsTotalAmount">部品合計</Name>
+    <Name ID="TotalCost">原価</Name>
+    <Name ID="SubTotalAmount">整備料小計</Name>
+    <Name ID="TotalTaxAmount">消費税</Name>
+    <Name ID="ServiceTotalAmount">整備料合計</Name>
+    <Name ID="CostTotalAmount">諸費用合計</Name>
+    <Name ID="TaxableCostTotalAmount">諸費用(課税)合計</Name> <!--Add 2020/02/17 #4025 -->
+    <Name ID="GrandTotalAmount">支払合計</Name>
+  </Title>
+  <!-- 入金予定一覧 -->
+  <Title ID="ReceiptPlanList">
+    <Name ID="ReceiptPlanDate">入金予定日</Name>
+    <Name ID="DepartmentCode">部門コード</Name>
+    <Name ID="Department.DepartmentName">部門名</Name>
+    <Name ID="SlipNumber">伝票番号</Name>
+    <Name ID="CustomerClaim.CustomerClaimName">請求先</Name>
+    <Name ID="AccountCode">科目コード</Name>
+    <Name ID="Account.AccountName">科目名</Name>
+    <Name ID="Amount">金額</Name>
+    <Name ID="ReceivableBalance">売掛金残高</Name>
+  </Title>
+  <!-- 入金実績一覧 -->
+  <Title ID="ReceiptList">
+    <Name ID="JournalDate">入金日</Name>
+    <Name ID="SlipNumber">伝票番号</Name>
+    <Name ID="CustomerClaimCode">請求先コード</Name>
+    <Name ID="CustomerClaim.CustomerClaimName">請求先名</Name>
+    <Name ID="c_AccountType.Name">入金区分</Name>
+    <Name ID="Amount">金額</Name>
+  </Title>
+  <!-- 支払予定一覧-->
+  <Title ID="PaymentPlanList">
+    <Name ID="PaymentPlanDate">支払予定日</Name>
+    <Name ID="DepartmentCode">部門コード</Name>
+    <Name ID="Department.DepartmentName">部門名</Name>
+    <Name ID="SupplierPaymentCode">支払先コード</Name>
+    <Name ID="SupplierPayment.SupplierPaymentName">支払先名</Name>
+    <Name ID="SlipNumber">伝票番号</Name>
+    <Name ID="AccountCode">科目コード</Name>
+    <Name ID="Account.AccountName">科目名</Name>
+    <Name ID="Amount">金額</Name>
+    <Name ID="PaymentableBalance">支払残高</Name>
+  </Title>
+  <!-- 受付一覧-->
+  <Title ID="ReceiptionList">
+    <Name ID="ReceiptionDate">受付日</Name>
+    <Name ID="DepartmentCode">部門コード</Name>
+    <Name ID="Department.DepartmentName">部門名</Name>
+    <Name ID="CustomerCode">顧客コード</Name>
+    <Name ID="Customer.CustomerName">顧客名</Name>
+    <Name ID="c_VisitOpportunity.Name">来店きっかけ</Name>
+    <Name ID="c_ReceiptionType.Name">来店種別</Name>
+    <Name ID="Campaign.CampaignName">イベント1</Name>
+    <Name ID="Campaign1.CampaignName">イベント2</Name>
+    <Name ID="c_KnowOpportunity.Name">ショールームを知ったきっかけ</Name>
+    <Name ID="c_Purpose.Name">来店目的</Name>
+    <Name ID="c_Demand.Name">今後の展望</Name>
+    <Name ID="c_AttractivePoint">ブランドの魅力</Name>
+    <Name ID="c_Allowance.Name">アンケートの二次使用</Name>
+    <Name ID="QuestionnarieEntryDate">アンケート記入日</Name>
+    <Name ID="c_MediaOpportunity">きっかけの媒体情報</Name>
+    <Name ID="Car1.CarName">興味のある商品1</Name>
+    <Name ID="Car2.CarName">興味のある商品2</Name>
+    <Name ID="Car3.CarName">興味のある商品3</Name>
+    <Name ID="Car4.CarName">興味のある商品4</Name>
+    <Name ID="Memo1">備考1</Name>
+    <Name ID="Memo2">備考2</Name>
+    <Name ID="Memo3">備考3</Name>
+    <Name ID="Question1">自由質問1</Name>
+    <Name ID="Answer1">自由回答1</Name>
+    <Name ID="Question2">自由質問2</Name>
+    <Name ID="Answer2">自由回答2</Name>
+    <Name ID="Question3">自由質問3</Name>
+    <Name ID="Answer3">自由回答3</Name>
+    <Name ID="Question4">自由質問4</Name>
+    <Name ID="Answer4">自由回答4</Name>
+    <Name ID="Question5">自由質問5</Name>
+    <Name ID="Answer5">自由回答5</Name>
+    <Name ID="ArrivalPlanDate">入庫予定日</Name>
+    <Name ID="c_RequestContent.Name">依頼事項</Name>
+    <Name ID="RequestDetail">依頼内容</Name>
+    <Name ID="c_ReceiptionState.Name">受付状況</Name>
+    <Name ID="CarGradCode">グレードコード</Name>
+    <Name ID="Vin">車台番号</Name>
+    <Name ID="MorterViecleOfficialCode">陸運局コード</Name>
+    <Name ID="RegistrationNumberType">車両登録番号（種別）</Name>
+    <Name ID="RegistrationNumberKana">車両登録番号（かな）</Name>
+    <Name ID="RegistrationNumberPlate">車両登録番号（プレート）</Name>
+    <Name ID="Mileage">走行距離</Name>
+    <Name ID="c_MileageUnit.Name">走行距離単位</Name>
+    <Name ID="SalesCarNumber">管理番号</Name>	
+  </Title>
+  <!-- DM-->
+  <Title ID="CarDM">
+    <Name ID="CustomerCode">顧客コード</Name>
+    <Name ID="PostCode">郵便番号</Name>
+    <Name ID="Prefecture">住所1</Name>
+    <Name ID="City">住所2</Name>
+    <Name ID="Address1">住所3</Name>
+    <Name ID="Address2">住所4</Name>
+    <Name ID="CustomerName">名前</Name>
+    <Name ID="Employee.EmployeeName">営業担当</Name>
+    <Name ID="c_CustomerKind.Name">顧客種別</Name>
+  </Title>
+  <Title ID="ServiceDM">
+    <Name ID="CustomerCode">顧客コード</Name>
+    <Name ID="PostCode">郵便番号</Name>
+    <Name ID="Prefecture">住所1</Name>
+    <Name ID="City">住所2</Name>
+    <Name ID="Address1">住所3</Name>
+    <Name ID="Address2">住所4</Name>
+    <Name ID="CustomerName">名前</Name>
+    <Name ID="Employee1.EmployeeName">営業担当</Name>
+  </Title>
+  <!-- 車両在庫一覧-->
+  <Title ID="CarStockList">
+    <Name ID="SalesCarNumber">管理番号</Name>
+    <Name ID="Vin">車台番号</Name>
+    <Name ID="c_NewUsedType.Name">新中区分</Name>
+    <Name ID="c_CarStatus.Name">在庫ステータス</Name>
+    <Name ID="Location.DepartmentCode">部門コード</Name>
+    <Name ID="Location.Department.DepartmentName">部門名</Name>
+    <Name ID="LocationCode">在庫ロケーションコード</Name>
+    <Name ID="Location.LocationName">在庫ロケーション名</Name>
+    <Name ID="CarGrade.Car.Brand.Maker.MakerName">メーカー</Name>
+    <Name ID="CarGrade.Car.Brand.BrandName">ブランド</Name>
+    <Name ID="CarGrade.Car.CarName">車種</Name>
+    <Name ID="CarGrade.CarGradeName">グレード</Name>
+    <Name ID="Customer.CustomerName">所有者</Name>
+    <Name ID="SalesPrice">販売価格</Name>
+    <Name ID="c_ColorType.Name">系統色</Name>
+    <Name ID="ExteriorColorCode">外装色コード</Name>
+    <Name ID="ExteriorColorName">外装色名</Name>
+    <Name ID="InteriorColorCode">内装色コード</Name>
+    <Name ID="InteriorColorName">内装色名</Name>
+    <Name ID="ManufacturingYear">年式</Name>
+    <Name ID="Steering">ハンドル</Name>
+    <Name ID="IssueDate">車検証発行日</Name>
+    <Name ID="MorterViecleOfficialCode">陸運局コード</Name>
+    <Name ID="RegistrationNumberType">登録番号(種別)</Name>
+    <Name ID="RegistrationNumberKana">登録番号(かな)</Name>
+    <Name ID="RegistrationNumberPlate">登録番号(プレート)</Name>
+    <Name ID="RegistrationDate">登録日</Name>
+    <Name ID="FirstRegistrationYear">初年度登録</Name>
+    <Name ID="ModelName">型式</Name>
+    <Name ID="c_ExpireType.Name">有効期限種別</Name>
+    <Name ID="ExpireDate">有効期限</Name>
+    <Name ID="Mileage">走行距離</Name>
+    <Name ID="c_MileageUnit.Name">単位</Name>
+    <Name ID="InspectionDate">点検日</Name>
+    <Name ID="NextInspectionDate">次回点検日</Name>
+    <Name ID="SalesDate">納車日</Name>
+  </Title>
+  <!-- 部品在庫表-->
+  <Title ID="PartsStockList">
+    <Name ID="PartsNumber">部品番号</Name>
+    <Name ID="Parts.PartsNameJp">部品名</Name>
+    <Name ID="Location.DepartmentCode">部門コード</Name>
+    <Name ID="Location.Department.DepartmentName">部門名</Name>
+    <Name ID="LocationCode">ロケーションコード</Name>
+    <Name ID="Location.LocationName">ロケーション名</Name>
+    <Name ID="Quantity">数量</Name>
+  </Title>
+  <!-- デッドストック一覧-->
+  <Title ID="DeadStockPartsList">
+    <Name ID="PartsNumber">部品番号</Name>
+    <Name ID="Parts.PartsNameJp">部品名</Name>
+    <Name ID="LocationCode">ロケーションコード</Name>
+    <Name ID="Location.LocationName">ロケーション名</Name>
+    <Name ID="Quantity">数量</Name>
+    <Name ID="LastUpdateDate">最終更新日</Name>
+  </Title>
+  <!-- 発注EXCEL-->
+  <Title ID="CarPurchaseOrderList">
+    <Name ID="CarPurchaseOrderNumber">発注依頼番号</Name>
+    <Name ID="MakerOrderNumber">メーカーオーダー番号</Name>
+    <Name ID="SlipNumber">受注伝票番号</Name>
+    <Name ID="CarSalesHeader.CarGrade.ModelCode">受注モデルコード</Name>
+    <Name ID="CarSalesHeader.ModelName">受注型式</Name>
+    <Name ID="CarSalesHeader.MakerName">受注メーカー</Name>
+    <Name ID="CarSalesHeader.CarName">受注車種</Name>
+    <Name ID="CarSalesHeader.CarGradeName">受注グレード</Name>
+    <Name ID="CarSalesHeader.ExteriorColorCode">受注外装色コード</Name>
+    <Name ID="CarSalesHeader.ExteriorColorName">受注外装色名</Name>
+    <Name ID="CarSalesHeader.InteriorColorCode">受注内装色コード</Name>
+    <Name ID="CarSalesHeader.InteriorColorName">受注内装色名</Name>
+    <Name ID="CarSalesHeader.Vin">受注車台番号</Name>
+    <Name ID="SalesCarNumber">管理番号</Name>
+    <Name ID="PurchaseOrderDate">発注日</Name>
+    <Name ID="MakerShipmentPlanDate">メーカー出荷予定日</Name>
+    <Name ID="MakerShipmentDate">メーカー出荷日</Name>
+    <Name ID="InspectionDate">検査取得日</Name>
+    <Name ID="ReInspectionDate">再予備検取得日</Name>
+    <Name ID="InspectionInformation">検査情報</Name>
+    <Name ID="ArrivalPlanDate">仕入予定日</Name>
+    <Name ID="ArrangementNumber">整理番号</Name>
+    <Name ID="Office.OfficeName">インセン対象店</Name>
+    <Name ID="CarSalesHeader.Department.DepartmentName">営業所</Name>
+    <Name ID="CarSalesHeader.Employee.EmployeeName">営業担当者</Name>
+    <Name ID="SalesCar.Location.LocationName">現在地</Name>
+    <Name ID="CarSalesHeader.Customer.CustomerName">顧客名</Name>
+    <Name ID="CarSalesHeader.SalesOrderDate">受注日</Name>
+    <Name ID="RegistMonth">月内</Name>
+    <Name ID="RegistrationDate">登録日</Name>
+    <Name ID="RegistrationPlanDate">登録予定日</Name>
+    <Name ID="DocumentRequestPurchaseDate">書類購入希望日</Name>
+    <Name ID="DocumentReceiptDate">書類到着日</Name>
+    <Name ID="PaymentExpireDate">金利発生</Name>
+    <Name ID="c_Firm.Name">ファーム</Name>
+    <Name ID="FirmMargin">ファームマージン</Name>
+    <Name ID="DiscountAmount">ディスカウント価格</Name>
+    <Name ID="VehiclePrice">車両本体価格</Name>
+    <Name ID="MetallicPrice">メタリック価格</Name>
+    <Name ID="OptionPrice">オプション価格</Name>
+    <Name ID="Amount">仕入価格</Name>
+    <Name ID="PurchaseMemo">備考</Name>
+    <Name ID="Parts1">Parts1</Name>
+    <Name ID="Parts2">Parts2</Name>
+    <Name ID="Parts3">Parts3</Name>
+    <Name ID="Parts4">Parts4</Name>
+    <Name ID="Parts5">Parts5</Name>
+    <Name ID="PaymentPeriod1">金利日数1</Name>
+    <Name ID="PaymentPeriod2">金利日数2</Name>
+    <Name ID="PaymentPeriod3">金利日数3</Name>
+    <Name ID="PaymentPeriod4">金利日数4</Name>
+    <Name ID="PaymentPeriod5">金利日数5</Name>
+    <Name ID="PaymentPeriod6">金利日数6</Name>
+    <Name ID="PaymentAmount1">金利金額1</Name>
+    <Name ID="PaymentAmount2">金利金額2</Name>
+    <Name ID="PaymentAmount3">金利金額3</Name>
+    <Name ID="PaymentAmount4">金利金額4</Name>
+    <Name ID="PaymentAmount5">金利金額5</Name>
+    <Name ID="PaymentAmount6">金利金額6</Name>
+    <Name ID="RegistrationArea1">登録エリア1</Name>
+    <Name ID="RegistrationArea2">登録エリア2</Name>
+    <Name ID="Location.LocationName">入庫ロケーション</Name>
+    <Name ID="Employee.EmployeeName">仕入担当者</Name>
+    <Name ID="Supplier.SupplierName">仕入先</Name>
+    <Name ID="SupplierPayment.SupplierPaymentName">支払先</Name>
+    <Name ID="TradeInPurchaseFlag">下車仕入</Name>
+    <Name ID="TradeInBrandName">下車メーカー</Name>
+    <Name ID="TradeInCarName">下車車名</Name>
+    <Name ID="TradeInModelYear">下車年式</Name>
+    <Name ID="PurchaseDate">下車仕入日</Name>
+    <Name ID="LoanCompanyName">ローン会社</Name>
+    <Name ID="LoanFrequency">支払回数</Name>
+    <Name ID="LoanRate">ローン金利</Name>
+    <Name ID="LoanPrincipal">ローン元金</Name>
+    <Name ID="RemainAmount">残価額</Name>
+    <Name ID="RemainFinalMonth">残価最終月</Name>
+    <Name ID="AuthenticationNumber">承認No</Name>
+    <Name ID="EventCode1">イベントコード1</Name>
+    <Name ID="ReportName1">費目名1</Name>
+    <Name ID="ReportAmount1">金額1</Name>
+    <Name ID="EventCode2">イベントコード2</Name>
+    <Name ID="ReportName2">費目名2</Name>
+    <Name ID="ReportAmount2">金額2</Name>
+    <Name ID="EventCode3">イベントコード3</Name>
+    <Name ID="ReportName3">費目名3</Name>
+    <Name ID="ReportAmount3">金額3</Name>
+    <Name ID="EventCode4">イベントコード4</Name>
+    <Name ID="ReportName4">費目名4</Name>
+    <Name ID="ReportAmount4">金額4</Name>
+    <Name ID="EventCode5">イベントコード5</Name>
+    <Name ID="ReportName5">費目名5</Name>
+    <Name ID="ReportAmount5">金額5</Name>
+    <Name ID="EventCode6">イベントコード6</Name>
+    <Name ID="ReportName6">費目名6</Name>
+    <Name ID="ReportAmount6">金額6</Name>
+    <Name ID="EventCode7">イベントコード7</Name>
+    <Name ID="ReportName7">費目名7</Name>
+    <Name ID="ReportAmount7">金額7</Name>
+    <Name ID="EventCode8">イベントコード8</Name>
+    <Name ID="ReportName8">費目名8</Name>
+    <Name ID="ReportAmount8">金額8</Name>
+    <Name ID="EventCode9">イベントコード9</Name>
+    <Name ID="ReportName9">費目名9</Name>
+    <Name ID="ReportAmount9">金額9</Name>
+    <Name ID="EventCode10">イベントコード10</Name>
+    <Name ID="ReportName10">費目名10</Name>
+    <Name ID="ReportAmount10">金額10</Name>
+    <Name ID="StopFlag">預り</Name>
+  </Title>
+  <!-- 預かり一覧-->
+  <Title ID="CarStopList">
+    <Name ID="CarPurchaseOrderNumber">発注依頼番号</Name>
+    <Name ID="MakerOrderNumber">メーカーオーダー番号</Name>
+    <Name ID="SlipNumber">受注伝票番号</Name>
+    <Name ID="CarSalesHeader.CarGrade.ModelCode">受注モデルコード</Name>
+    <Name ID="CarSalesHeader.ModelName">受注型式</Name>
+    <Name ID="CarSalesHeader.MakerName">受注メーカー</Name>
+    <Name ID="CarSalesHeader.CarName">受注車種</Name>
+    <Name ID="CarSalesHeader.CarGradeName">受注グレード</Name>
+    <Name ID="CarSalesHeader.ExteriorColorCode">受注外装色コード</Name>
+    <Name ID="CarSalesHeader.ExteriorColorName">受注外装色名</Name>
+    <Name ID="CarSalesHeader.InteriorColorCode">受注内装色コード</Name>
+    <Name ID="CarSalesHeader.InteriorColorName">受注内装色名</Name>
+    <Name ID="CarSalesHeader.Vin">受注車台番号</Name>
+    <Name ID="SalesCarNumber">管理番号</Name>
+    <Name ID="PurchaseOrderDate">発注日</Name>
+    <Name ID="MakerShipmentPlanDate">メーカー出荷予定日</Name>
+    <Name ID="MakerShipmentDate">メーカー出荷日</Name>
+    <Name ID="InspectionDate">検査取得日</Name>
+    <Name ID="ReInspectionDate">再予備検取得日</Name>
+    <Name ID="InspectionInformation">検査情報</Name>
+    <Name ID="ArrivalPlanDate">仕入予定日</Name>
+    <Name ID="ArrangementNumber">整理番号</Name>
+    <Name ID="Office.OfficeName">インセン対象店</Name>
+    <Name ID="CarSalesHeader.Department.DepartmentName">営業所</Name>
+    <Name ID="CarSalesHeader.Employee.EmployeeName">営業担当者</Name>
+    <Name ID="SalesCar.Location.LocationName">現在地</Name>
+    <Name ID="CarSalesHeader.Customer.CustomerName">顧客名</Name>
+    <Name ID="CarSalesHeader.SalesOrderDate">受注日</Name>
+    <Name ID="RegistMonth">月内</Name>
+    <Name ID="RegistrationDate">登録日</Name>
+    <Name ID="RegistrationPlanDate">登録予定日</Name>
+    <Name ID="DocumentRequestPurchaseDate">書類購入希望日</Name>
+    <Name ID="DocumentReceiptDate">書類到着日</Name>
+    <Name ID="PaymentExpireDate">金利発生</Name>
+    <Name ID="c_Firm.Name">ファーム</Name>
+    <Name ID="FirmMargin">ファームマージン</Name>
+    <Name ID="DiscountAmount">ディスカウント価格</Name>
+    <Name ID="VehiclePrice">車両本体価格</Name>
+    <Name ID="MetallicPrice">メタリック価格</Name>
+    <Name ID="OptionPrice">オプション価格</Name>
+    <Name ID="Amount">仕入価格</Name>
+    <Name ID="PurchaseMemo">備考</Name>
+    <Name ID="Parts1">Parts1</Name>
+    <Name ID="Parts2">Parts2</Name>
+    <Name ID="Parts3">Parts3</Name>
+    <Name ID="Parts4">Parts4</Name>
+    <Name ID="Parts5">Parts5</Name>
+    <Name ID="PaymentPeriod1">金利日数1</Name>
+    <Name ID="PaymentPeriod2">金利日数2</Name>
+    <Name ID="PaymentPeriod3">金利日数3</Name>
+    <Name ID="PaymentPeriod4">金利日数4</Name>
+    <Name ID="PaymentPeriod5">金利日数5</Name>
+    <Name ID="PaymentPeriod6">金利日数6</Name>
+    <Name ID="PaymentAmount1">金利金額1</Name>
+    <Name ID="PaymentAmount2">金利金額2</Name>
+    <Name ID="PaymentAmount3">金利金額3</Name>
+    <Name ID="PaymentAmount4">金利金額4</Name>
+    <Name ID="PaymentAmount5">金利金額5</Name>
+    <Name ID="PaymentAmount6">金利金額6</Name>
+    <Name ID="RegistrationArea1">登録エリア1</Name>
+    <Name ID="RegistrationArea2">登録エリア2</Name>
+    <Name ID="Location.LocationName">入庫ロケーション</Name>
+    <Name ID="Employee.EmployeeName">仕入担当者</Name>
+    <Name ID="Supplier.SupplierName">仕入先</Name>
+    <Name ID="SupplierPayment.SupplierPaymentName">支払先</Name>
+    <Name ID="TradeInPurchaseFlag">下車仕入</Name>
+    <Name ID="TradeInBrandName">下車メーカー</Name>
+    <Name ID="TradeInCarName">下車車名</Name>
+    <Name ID="TradeInModelYear">下車年式</Name>
+    <Name ID="PurchaseDate">下車仕入日</Name>
+    <Name ID="LoanCompanyName">ローン会社</Name>
+    <Name ID="LoanFrequency">支払回数</Name>
+    <Name ID="LoanRate">ローン金利</Name>
+    <Name ID="LoanPrincipal">ローン元金</Name>
+    <Name ID="RemainAmount">残価額</Name>
+    <Name ID="RemainFinalMonth">残価最終月</Name>
+    <Name ID="AuthenticationNumber">承認No</Name>
+    <Name ID="EventCode1">イベントコード1</Name>
+    <Name ID="ReportName1">費目名1</Name>
+    <Name ID="ReportAmount1">金額1</Name>
+    <Name ID="EventCode1">イベントコード2</Name>
+    <Name ID="ReportName1">費目名2</Name>
+    <Name ID="ReportAmount1">金額2</Name>
+    <Name ID="EventCode1">イベントコード3</Name>
+    <Name ID="ReportName1">費目名3</Name>
+    <Name ID="ReportAmount1">金額3</Name>
+    <Name ID="EventCode1">イベントコード4</Name>
+    <Name ID="ReportName1">費目名4</Name>
+    <Name ID="ReportAmount1">金額4</Name>
+    <Name ID="EventCode1">イベントコード5</Name>
+    <Name ID="ReportName1">費目名5</Name>
+    <Name ID="ReportAmount1">金額5</Name>
+    <Name ID="EventCode1">イベントコード6</Name>
+    <Name ID="ReportName1">費目名6</Name>
+    <Name ID="ReportAmount1">金額6</Name>
+    <Name ID="EventCode1">イベントコード7</Name>
+    <Name ID="ReportName1">費目名7</Name>
+    <Name ID="ReportAmount1">金額7</Name>
+    <Name ID="EventCode1">イベントコード8</Name>
+    <Name ID="ReportName1">費目名8</Name>
+    <Name ID="ReportAmount1">金額8</Name>
+    <Name ID="EventCode1">イベントコード9</Name>
+    <Name ID="ReportName1">費目名9</Name>
+    <Name ID="ReportAmount1">金額9</Name>
+    <Name ID="EventCode1">イベントコード10</Name>
+    <Name ID="ReportName1">費目名10</Name>
+    <Name ID="ReportAmount1">金額10</Name>
+    <Name ID="StopFlag">預り</Name>
+  </Title>
+  <!-- 部品出庫集計表-->
+  <Title ID="PartsTransferList">
+    <Name ID="DepartureDate">出庫日</Name>
+    <Name ID="DepartureLocationCode">出庫ロケーションコード</Name>
+    <Name ID="DepartureLocation.LocationName">出庫ロケーション名</Name>
+    <Name ID="DepartureEmployeeCode">出庫担当者コード</Name>
+    <Name ID="DepartureEmployee.EmployeeName">出庫担当者名</Name>
+    <Name ID="ArrivalDate">入庫日</Name>
+    <Name ID="ArrivalLocationCode">入庫ロケーションコード</Name>
+    <Name ID="ArrivalLocation.LocationName">入庫ロケーション名</Name>
+    <Name ID="ArrivalEmployeeCode">入庫担当者コード</Name>
+    <Name ID="ArrivalEmployee.EmployeeName">入庫担当者名</Name>
+    <Name ID="PartsNumber">部品番号</Name>
+    <Name ID="Parts.PartsNameJp">部品名</Name>
+    <Name ID="Quantity">数量</Name>
+  </Title>
+  <!-- 部品入荷予定リスト-->
+  <Title ID="PartsPurchaseList">
+    <Name ID="PurchaseNumber">入荷伝票番号</Name>
+    <Name ID="PurchaseOrderNumber">発注番号</Name>
+    <Name ID="PurchasePlanDate">入荷予定日</Name>
+    <Name ID="PurchaseDate">入荷日</Name>
+    <Name ID="SupplierCode">仕入先コード</Name>
+    <Name ID="Supplier.SupplierName">仕入先名</Name>
+    <Name ID="EmployeeCode">担当者コード</Name>
+    <Name ID="Employee.EmployeeName">担当者名</Name>
+    <Name ID="DepartmentCode">部門コード</Name>
+    <Name ID="Department.DepartmentName">部門名</Name>
+    <Name ID="LocationCode">ロケーションコード</Name>
+    <Name ID="Location.LocationName">ロケーション名</Name>
+    <Name ID="PartsNumber">部品番号</Name>
+    <Name ID="Parts.PartsNameJp">部品名</Name>
+    <Name ID="Price">仕入単価</Name>
+    <Name ID="Quantity">数量</Name>
+    <Name ID="Amount">金額</Name>
+    <Name ID="ReceiptNumber">納品書番号</Name>
+    <Name ID="Memo">備考</Name>
+  </Title>
+  <!-- サービス日報 -->
+  <Title ID="ServiceDailyReport">
+    <Name ID="ReportDate">日付</Name>
+    <Name ID="SalesAmount">当日売上高</Name>
+    <Name ID="SalesGrossAmount">当日粗利額</Name>
+    <Name ID="ArrivalCount">当日入庫台数</Name>
+    <Name ID="SalesCount">当日出庫台数</Name>
+    <Name ID="InspectionArrivalCount">当日車検入庫台数</Name>
+    <Name ID="AnnualInspectionArrivalCount">当日12検入庫台数</Name>
+  </Title>
+  <!-- 部品平均単価 -->
+  <Title ID="PartsAverageCost">
+    <Name ID="Parts.Maker.MakerName">メーカー名</Name>
+    <Name ID="PartsNumber">部品番号</Name>
+    <Name ID="Parts.PartsNameJp">部品名</Name>
+    <Name ID="Price">平均単価</Name>
+  </Title>
+  <!-- Add 2014/08/06 車両管理 -->
+  <Title ID="CarStock">
+  <Name ID="c_NewUsedType.Name">新中区分</Name>
+  <Name ID="BrandStore">ブランド別店舗</Name>
+  <Name ID="PurchaseDate">入庫日</Name>
+	<Name ID="SalesCarNumber">管理番号</Name>
+	<Name ID="CarName">メーカー</Name>
+	<Name ID="CarGrade.Car.CarName">車種名</Name>
+	<Name ID="Vin">車台番号</Name>
+	<Name ID="PurchaseLocation.LocationName">仕入拠点</Name>
+	<Name ID="CarStockLocation.LocationName">在庫拠点</Name>
+	<Name ID="c_CarPurchaseType.Name">仕入区分</Name>
+	<Name ID="Supplier.SupplierName">仕入先</Name>
+	<Name ID="BeginningInventory">月初在庫</Name>
+	<Name ID="MonthPurchase">当月仕入</Name>
+	<Name ID="SalesDate">納車日</Name>
+	<Name ID="SlipNumber">伝票番号</Name>
+	<Name ID="Department.DepartmentName">販売店舗</Name>
+	<Name ID="SalesType">販売先区分</Name>
+	<Name ID="Customer.CustomerName">販売先</Name>
+	<Name ID="SalesPrice">車両本体</Name>
+	<Name ID="DiscountAmount">値引</Name>
+	<Name ID="ShopOptionAmount">付属品</Name>
+	<Name ID="SalesCostTotalAmount">諸費用</Name>
+	<Name ID="SalesTotalAmount">売上総合計</Name>
+	<Name ID="SalesCostAmount">売上原価</Name>
+	<Name ID="SalesProfits">粗利</Name>
+	<Name ID="ReductionTotal">仕入減少計</Name>
+	<Name ID="SelfRegistration">自社登録（中古車仕入）</Name>
+	<Name ID="OtherDealer">他ﾃﾞｰﾗｰ</Name>
+	<Name ID="DemoCar">デモカー</Name>
+	<Name ID="TemporaryCar">代車</Name>
+	<Name ID="CancelCar">仕入キャンセル</Name>
+	<Name ID="EndInventory">月末在庫</Name>
+  </Title>
+
+  <!-- Add 2014/10/17 中古車売上 新車売上 -->
+  <Title ID="CarSalesCsv">
+    <Name ID="SalesDate">納車日</Name>
+    <Name ID="Name">新中</Name>
+    <Name ID="SlipNumber">伝票番号</Name>
+    <Name ID="SalesCarNumber">管理番号</Name>
+    <Name ID="Vin">車台番号</Name>
+    <Name ID="CustomerName">顧客名</Name>
+    <Name ID="DepartmentCode">店舗ID</Name>
+    <Name ID="DepartmentName">店舗名</Name>
+    <Name ID="EmployeeName">営業担当</Name>
+    <Name ID="SalesPrice">車両本体価格</Name>
+    <Name ID="SalesPriceIncTax"></Name>
+    <Name ID="ShopOptionAmount">販売店オプション</Name>
+    <Name ID="ShopOptionAmountIncTax"></Name>
+    <Name ID="MakerOptionAmount">メーカーオプション</Name>
+    <Name ID="MakerOptionAmountIncTax"></Name>
+    <Name ID="AAAmount">AA諸費用</Name>
+    <Name ID="AAAmountIncTax"></Name>
+    <Name ID="SalesCostTotalAmount">諸費用課税</Name>
+    <Name ID="SalesCostTotalAmountIncTax"></Name>
+    <Name ID="DiscountAmount">値引</Name>
+    <Name ID="DiscountAmountIncTax"></Name>
+    <Name ID="OtherCostTotalAmount">非課税諸費用</Name>
+    <Name ID="TaxFreeTotalAmount">税金</Name>
+    <Name ID="CarLiabilityInsurance">自賠責</Name>
+    <Name ID="RecycleDeposit">リサイクル</Name>
+    <Name ID="GrandTotalAmount">販売合計</Name>
+    <Name ID="TradeInTotalAmountExcTax">下取本体</Name>
+    <Name ID="TradeInTotalAmount"></Name>
+    <!-- Mod 2019/09/04 yano #4011-->
+    <Name ID="TradeInUnexpiredCarTaxTotalAmount">未払自動車税種別割</Name>
+    <Name ID="TradeInRemainDebtTotalAmount">残債</Name>
+    <Name ID="TradeInAppropriationTotalAmount">充当合計</Name>
+    <Name ID="CarName">車種</Name>
+    <Name ID="CarBrandName">ブランド</Name>
+  </Title>
+
+  <!-- Add 2014/10/17 arc amii サービス売上 -->
+  <Title ID="ServiceSalesCsv">
+    <Name ID="DepartmentCode">部門ID</Name>
+    <Name ID="DepartmentName">部門名</Name>
+    <Name ID="WorkType">区分</Name>
+    <Name ID="rate">税率</Name>
+    <Name ID="ServiceAmount">工賃（税抜）</Name>
+    <Name ID="ServiceTaxAmount">工賃（税）</Name>
+    <Name ID="ServiceTotalAmount">工賃（税込）</Name>
+    <Name ID="PartsAmount">部品（税抜）</Name>
+    <Name ID="PartsTaxAmount">部品（税）</Name>
+    <Name ID="PartsTotalAmount">部品（税込）</Name>
+    <Name ID="TotalAmount">合計（税抜）</Name>
+    <Name ID="TotalTaxAmount">合計（税）</Name>
+    <Name ID="TotalTotalAmount">合計（税込）</Name>
+    <Name ID="ServiceCost">工賃原価</Name>
+    <Name ID="PartsCost">部品原価</Name>
+    <Name ID="Total">原価合計</Name>
+  </Title>
+  
+  <!-- Add 2014/10/17 arc amii サービス売上(社内営業) -->
+  <Title ID="OfficeSalesCsv">
+    <Name ID="DepartmentCode">部門ID</Name>
+    <Name ID="DepartmentName">部門名</Name>
+    <Name ID="CustomerClaimCode">取引先ID</Name>
+    <Name ID="CustomerClaimName">取引先名</Name>
+    <Name ID="AccountClassName">新中</Name>
+    <Name ID="ServiceAmount">工賃（税抜）</Name>
+    <Name ID="ServiceTaxAmount">工賃（税）</Name>
+    <Name ID="ServiceTotalAmount">工賃（税込）</Name>
+    <Name ID="PartsAmount">部品（税抜）</Name>
+    <Name ID="PartsTaxAmount">部品（税）</Name>
+    <Name ID="PartsTotalAmount">部品（税込）</Name>
+    <Name ID="TotalAmount">合計（税抜）</Name>
+    <Name ID="TotalTaxAmount">合計（税）</Name>
+    <Name ID="TotalTotalAmount">合計（税込）</Name>
+    <Name ID="ServiceCost">工賃原価</Name>
+    <Name ID="PartsCost">部品原価</Name>
+    <Name ID="Total">原価合計</Name>
+  </Title>
+
+  <!-- Add 2014/10/17 arc amii 振込入金 小口現金 ローン入金 -->
+  <Title ID="PaymentCsv">
+    <Name ID="JournalDate">入金日</Name>
+    <Name ID="Name">区分</Name>
+    <Name ID="OfficeCode">事業所CD</Name>
+    <Name ID="OfficeName">事業所名</Name>
+    <Name ID="DepartmentCode">計上部門CD</Name>
+    <Name ID="DepartmentName">計上部門</Name>
+    <Name ID="SlipNumber">伝票番号</Name>
+    <Name ID="CustomerClaimCode">請求先CD</Name>
+    <Name ID="CustomerClaimName">請求先名</Name>
+    <Name ID="AccountCode">科目CD</Name>
+    <Name ID="AccountName">科目名</Name>
+    <Name ID="Amount">金額</Name>
+    <Name ID="Summary">適用</Name>
+  </Title>
+
+  <!-- Add 2014/10/17 arc amii 車両仕入リスト -->
+  <Title ID="CarPurchaseCsv">
+    <Name ID="PurchaseDate">入庫日</Name>
+    <Name ID="CarPurchaseName">仕入区分</Name>
+    <Name ID="SalesCarNumber">管理番号</Name>
+    <Name ID="LocationName">ロケーション</Name>
+    <Name ID="DepartmentName">担当部門</Name>
+    <Name ID="Name">新中</Name>
+    <Name ID="Vin">車台番号</Name>
+    <Name ID="MakerName">メーカー名</Name>
+    <Name ID="CarBrandName">車種</Name>
+    <Name ID="CarName">ブランド</Name>
+    <Name ID="CarGradeName">グレード</Name>
+    <Name ID="SupplierName">仕入先</Name>
+    <Name ID="VehiclePrice">本体 （税抜）</Name>
+    <Name ID="VehicleTax">本体 (税)</Name>
+    <Name ID="VehicleAmount">本体 （税込）</Name>
+    <Name ID="AuctionFeePrice">落札料 （税抜）</Name>
+    <Name ID="AuctionFeeTax">落札料 (税)</Name>
+    <Name ID="AuctionFeeAmount">落札料 （税込）</Name>
+    <Name ID="RecyclePrice">リサイクル</Name>
+    <Name ID="CarTaxAppropriatePrice">自税充当 （税抜）</Name>
+    <Name ID="CarTaxAppropriateTax">自税充当 （税）</Name>
+    <Name ID="CarTaxAppropriateAmount">自税充当 （税込）</Name>
+    <Name ID="Amount">仕入金額 （税抜）</Name>
+    <Name ID="TaxAmount">消費税</Name>
+    <Name ID="TotalAmount">仕入金額 （税込）</Name>
+    <Name ID="EmployeeName">仕入担当</Name>
+    <Name ID="CreateEmployeeName">最終更新</Name>
+
+  </Title>
+
+  <!-- Add 2014/10/17 arc amii 仕訳_納車日使用 -->
+  <Title ID="CarSalesText">
+    <Name ID="Mark">マーク</Name>
+    <Name ID="Space1"></Name>
+    <Name ID="SalesDate2">納車日</Name>
+    <Name ID="Space2"></Name>
+    <Name ID="DrDepartmentCode">借方部門コード</Name>
+    <Name ID="DrAccountCode">借方科目コード</Name>
+    <Name ID="DrAccountSub">借方補助科目コード</Name>
+    <Name ID="DrAmount">借方金額</Name>
+    <Name ID="DrTaxAmount">借方税額</Name>
+    <Name ID="Flag1">借方</Name>
+    <Name ID="DrTaxType">借方税種別</Name>
+    <Name ID="Space3"></Name>
+    <Name ID="CrDepartmentCode">貸方部門コード</Name>
+    <Name ID="CrAccountCode">貸方科目コード</Name>
+    <Name ID="CrAccountSub">貸方補助科目コード</Name>
+    <Name ID="CrAmount">貸方金額</Name>
+    <Name ID="CrTaxAmount">貸方税額</Name>
+    <Name ID="Flag2">貸方</Name>
+    <Name ID="CrTaxType">貸方税種別</Name>
+    <Name ID="Space4"></Name>
+    <Name ID="Description">説明</Name>
+  </Title>
+  
+  <!-- Add 2014/10/17 arc amii 仕訳_伝票日付 -->
+  <Title ID="JournalText">
+    <Name ID="Mark">マーク</Name>
+    <Name ID="Space1"></Name>
+    <Name ID="JournalDate2">伝票日付</Name>
+    <Name ID="Space2"></Name>
+    <Name ID="DrDepartmentCode">借方部門コード</Name>
+    <Name ID="DrAccountCode">借方科目コード</Name>
+    <Name ID="DrAccountSub">借方補助科目コード</Name>
+    <Name ID="DrAmount">借方金額</Name>
+    <Name ID="DrTaxAmount">借方税額</Name>
+    <Name ID="Flag1">借方</Name>
+    <Name ID="DrTaxType">借方税種別</Name>
+    <Name ID="Space3"></Name>
+    <Name ID="CrDepartmentCode">貸方部門コード</Name>
+    <Name ID="CrAccountCode">貸方科目コード</Name>
+    <Name ID="CrAccountSub">貸方補助科目コード</Name>
+    <Name ID="CrAmount">貸方金額</Name>
+    <Name ID="CrTaxAmount">貸方税額</Name>
+    <Name ID="Flag2">貸方</Name>
+    <Name ID="CrTaxType">貸方税種別</Name>
+    <Name ID="Space4"></Name>
+    <Name ID="Description">説明</Name>
+  </Title>
+
+  <!-- Mod 2015/07/21 arc yano IPO対応(部品検索) 障害対応、仕様変更⑦ 理論在庫の単価、金額追加-->
+  <!-- Mod 2015/04/23 arc yano IPO対応(部品検索) 列名、列の並びの変更-->
+  <!-- Add 2014/12/04 arc yano IPO対応(部品検索) -->
+  <Title ID="PartsInventory">
+    <Name ID="LocationCode">ロケーションコード</Name>
+    <Name ID="LocationName">ロケーション名</Name>
+    <Name ID="PartsNumber">部品番号</Name>
+    <Name ID="PartsNameJp">部品名</Name>
+    <Name ID="Quantity">理論数</Name>
+    <Name ID="PostCost">単価</Name>
+    <Name ID="CalcAmount">金額</Name>
+    <!--
+    <Name ID="StandardPrice">標準原価</Name>
+    <Name ID="MoveAverageUnitPrice">移動平均原価</Name>
+    <Name ID="Price">金額</Name>
+    -->
+    <Name ID="PhysicalQuantity">実棚数</Name>
+    <Name ID="Comment">コメント</Name>
+  </Title>
+  <!-- Add 2014/12/18 arc nakayama 顧客データリスト -->
+  <Title ID="CustomerDataText">
+    <Name ID="DmFlag">営業DM可否(DM可否)</Name>
+    <Name ID="DmMemo">営業DM発送備考(DM可否)</Name>
+    <!--<Name ID="InspectGuidFlag">車検案内DM可否(DM可否)</Name>
+    <Name ID="InspectGuidMemo">車検案内発送備考(DM可否)</Name>-->
+    <Name ID="CustomerCode">顧客コード(顧客情報)</Name>
+    <Name ID="CustomerKindName">顧客種別(顧客情報)</Name>
+    <Name ID="CustomerName">顧客名(顧客情報)</Name>
+    <Name ID="DepartmentName2">営業担当部門名(顧客情報)</Name>
+    <Name ID="CarEmployeeName">営業担当者(顧客情報)</Name>
+    <Name ID="ServiceDepartmentName2">サービス担当部門名(顧客情報)</Name>
+    <Name ID="ServiceEmployeeName2">サービス担当者(顧客情報)</Name>
+    <Name ID="CustomerPostCode">郵便番号(顧客住所)</Name>
+    <Name ID="CustomerPrefecture">都道府県(顧客住所)</Name>
+    <Name ID="CustomerAddress">住所(顧客住所)</Name>
+    <Name ID="CustomerTelNumber">電話番号(顧客住所)</Name>
+    <!--Add 2015/07/17 arc nakayama #3224_「顧客データリスト」機能で携帯電話番号が出力されない-->
+    <Name ID="MobileNumber">携帯電話番号(顧客住所)</Name>
+    <!--Add 2015/12/16 arc ookubo   #3318_メールアドレスを出力項目に追加 -->
+	<Name ID="MailAddress">メールアドレス(顧客住所)</Name>
+	<Name ID="CustomerAddressReconfirmName">住所再確認(顧客住所)</Name>
+    <Name ID="DmCustomerName">顧客名(DM発送先住所)</Name>
+    <Name ID="DmPostCode">郵便番号(DM発送先住所)</Name>
+    <Name ID="DmPrefecture">都道府県(DM発送先住所)</Name>
+    <Name ID="DmCustomerDmAddress">住所(DM発送先住所)</Name>
+    <Name ID="DmTelNumber">電話番号(DM発送先住所)</Name>
+    <Name ID="SalesCarNumber">管理番号(車両情報)</Name>
+    <Name ID="MorterViecleOfficialCode">車両登録番号(車両情報)</Name>
+    <Name ID="Vin">車台番号(車両情報)</Name>
+    <Name ID="MakerName">メーカー(車両情報)</Name>
+    <Name ID="CarName">車種名(車両情報)</Name>
+    <Name ID="DtFirstRegistrationDate">初年度登録(車両情報)</Name>
+    <Name ID="RegistrationDate">登録年月日(車両情報)</Name>
+    <Name ID="NextInspectionDate">次回点検日(車両情報)</Name>
+    <Name ID="ExpireDate">車検満了日(車両情報)</Name>
+    <Name ID="CarWeight">車両重量(kg)(車両情報)</Name>
+    <Name ID="SalesDepartmentName">部門名(車両伝票)</Name>
+    <Name ID="SalesEmployeeName">担当者(車両伝票)</Name>
+    <Name ID="SalesDate">納車年月日(車両伝票)</Name>
+    <Name ID="ServiceDepartmentName">部門名(サービス伝票)</Name>
+    <Name ID="ServiceEmployeeName">担当者(サービス伝票)</Name>
+    <!--Mod 2015/07/17 arc nakayama サービス伝票納車日を入庫日に変更（ServiceSalesDate ⇒ ArrivalPlanDate）-->
+    <Name ID="ArrivalPlanDate">入庫日(サービス伝票)</Name>
+    
+  </Title>
+  <!-- Add 2015/08/03 arc nakayama 顧客データリスト(車検案内) -->
+  <Title ID="InspectGuidText">
+    <Name ID="DmFlag">営業案内DM可否(DM可否)</Name>
+    <Name ID="DmMemo">営業案内発送備考(DM可否)</Name>
+    <Name ID="InspectGuidFlag">車検案内DM可否(DM可否)</Name>
+    <Name ID="InspectGuidMemo">車検案内発送備考(DM可否)</Name>
+    <Name ID="CustomerCode">顧客コード(顧客情報)</Name>
+    <Name ID="CustomerKindName">顧客種別(顧客情報)</Name>
+    <Name ID="CustomerName">顧客名(顧客情報)</Name>
+    <Name ID="DepartmentName2">営業担当部門名(顧客情報)</Name>
+    <Name ID="CarEmployeeName">営業担当者(顧客情報)</Name>
+    <Name ID="ServiceDepartmentName2">サービス担当部門名(顧客情報)</Name>
+    <Name ID="ServiceEmployeeName2">サービス担当者(顧客情報)</Name>
+    <Name ID="CustomerPostCode">郵便番号(顧客住所)</Name>
+    <Name ID="CustomerPrefecture">都道府県(顧客住所)</Name>
+    <Name ID="CustomerAddress">住所(顧客住所)</Name>
+    <Name ID="CustomerTelNumber">電話番号(顧客住所)</Name>
+    <Name ID="MobileNumber">携帯電話番号(顧客住所)</Name>
+    <!--Add 2015/12/16 arc ookubo   #3318_メールアドレスを出力項目に追加 -->
+	  <Name ID="MailAddress">メールアドレス(顧客住所)</Name>
+	  <Name ID="CustomerAddressReconfirmName">住所再確認(顧客住所)</Name>
+    <Name ID="DmCustomerName">顧客名(DM発送先住所)</Name>
+    <Name ID="DmPostCode">郵便番号(DM発送先住所)</Name>
+    <Name ID="DmPrefecture">都道府県(DM発送先住所)</Name>
+    <Name ID="DmCustomerDmAddress">住所(DM発送先住所)</Name>
+    <Name ID="DmTelNumber">電話番号(DM発送先住所)</Name>
+    <Name ID="SalesCarNumber">管理番号(車両情報)</Name>
+    <Name ID="MorterViecleOfficialCode">車両登録番号(車両情報)</Name>
+    <Name ID="Vin">車台番号(車両情報)</Name>
+    <Name ID="MakerName">メーカー(車両情報)</Name>
+    <Name ID="CarName">車種名(車両情報)</Name>
+    <Name ID="CarGradeNamet">グレード名(車両情報)</Name>
+    <Name ID="LocationName">在庫ロケーション(車両情報)</Name>
+    <Name ID="DtFirstRegistrationDate">初年度登録(車両情報)</Name>
+    <Name ID="RegistrationDate">登録年月日(車両情報)</Name>
+    <Name ID="NextInspectionDate">次回点検日(車両情報)</Name>
+    <Name ID="ExpireDate">車検満了日(車両情報)</Name>
+    <Name ID="CarWeight">車両重量(kg)(車両情報)</Name>
+    <Name ID="SalesOrderStatusName">伝票ステータス(車両伝票)</Name>
+    <Name ID="SalesDate">納車年月日(車両伝票)</Name>
+    <Name ID="ServiceDepartmentName3">最終入庫拠点(サービス伝票)</Name>
+    <Name ID="ArrivalPlanDate">最終入庫年月日(サービス伝票)</Name>
+  </Title>
+
+  <!-- Mod 2015/08/11 arc yano #3233 売掛金帳票対応 表示項目の変更 -->
+  <!-- Add 2015/02/09 arc nakayama 売掛金管理 -->
+  <!-- del 2016/09/20 arc nakayama #3630_【製造】車両売掛金対応 サービスと車両の売掛金を分ける　このストプロはサービス専用にする-->
+  <Title ID="ReceivableManagementText">
+    <!--<Name ID="SlipTypeName">伝票タイプ</Name>-->
+    <Name ID="SlipNumber">伝票番号</Name>
+    <Name ID="SalesDate">納車日</Name>
+    <Name ID="DepartmentCode">部門コ－ド</Name>
+    <Name ID="DepartmentName">部門名</Name>
+    <Name ID="CustomerCode">顧客コ－ド</Name>
+    <Name ID="CustomerName">顧客名</Name>
+    <Name ID="CustomerClaimType">請求先区分コード</Name>
+    <Name ID="CustomerClaimTypeName">請求先区分名</Name>
+    <Name ID="CustomerClaimCode">請求先コード</Name>
+    <Name ID="CustomerClaimName">請求先名</Name>
+    <Name ID="CarriedBalance">前月繰越</Name>
+    <Name ID="PresentMonth">当月発生(諸費用以外)</Name>
+    <Name ID="Expendes">当月発生(諸費用)</Name>
+    <Name ID="TotalAmount">合計(前月繰越＋当月発生)</Name>
+    <Name ID="Payment">当月入金額(諸費用以外)</Name>
+    <Name ID="ChargesAmount">当月入金額(諸費用)</Name>    
+    <!--<Name ID="AdvancesReceived">当月前受金額</Name>-->
+    <Name ID="BalanceAmount">残高</Name>
+  </Title>
+  <!-- Add 2015/02/16 arc iijima 現金出納帳出力 -->
+  <Title ID="CashJournalOutputText">
+    <Name ID="OfficeCode">事務所コード</Name>
+    <Name ID="CashAccountCode">現金口座コード</Name>
+    <Name ID="OfficeName">事務所名</Name>
+    <Name ID="CashAccountName">現金口座名</Name>
+    <Name ID="StrLastMonthBalance">前月残高</Name>
+    <Name ID="StrThisMonthJournal">当月入金</Name>
+    <Name ID="StrThisMonthPayment">当月出金</Name>
+    <Name ID="StrThisMonthBalance">当月残高</Name>
+  </Title>  
+  
+  <!-- Add 2015/06/24 arc yano 入金実績情報抽出画面追加 -->
+  <Title ID="JournalDataText">
+    <Name ID="JournalDate">入金日</Name>
+    <Name ID="DepartmentCode">部門コード</Name>
+    <Name ID="DepartmentName">部門名</Name>
+    <Name ID="CustomerClaimCode">請求先コード</Name>
+    <Name ID="CustomerClaimName">請求先名称</Name>
+    <Name ID="SlipNumber">伝票番号</Name>
+    <Name ID="OrderStatus">伝票ステータス</Name>
+    <Name ID="SalesDate">納車日</Name>
+    <Name ID="CustomerCode">顧客コード</Name>
+    <Name ID="CustomerName">顧客名</Name>
+    <Name ID="Amount">金額</Name>
+    <Name ID="AccountType">口座種別</Name>
+    <Name ID="Summary">摘要</Name>
+    <Name ID="AccountCode">科目コード</Name>
+    <Name ID="AccountName">科目名</Name>
+  </Title>
+  
+  <!-- Add 2015/09/15 arc nakayama #3165_サービス集計表対応 サービス集計表の項目追加 -->
+  <Title ID="ServiceSalesReportText">
+    <Name ID="SalesDate">納車日</Name>
+    <Name ID="QuoteDate">見積日</Name>
+    <Name ID="ArrivalPlanDate">入庫日</Name>
+    <Name ID="WorkingEndDate">作業終了日</Name>
+    <Name ID="SlipNumber">伝票番号</Name>
+    <Name ID="ServiceWorkCode">主作業コード</Name>
+    <Name ID="WorkTypeName">区分</Name>
+    <Name ID="ServiceWorkName">主作業名</Name>
+    <Name ID="DepartmentCode">部門コード</Name>
+    <Name ID="DepartmentName">部門名</Name>
+    <Name ID="ServiceAmount">工賃売上</Name>
+    <Name ID="PartsAmount">部品売上</Name>
+    <Name ID="TaxAmount">消費税</Name>
+    <Name ID="TotalAmount">売上合計</Name>
+    <Name ID="ServiceCost">工賃原価</Name>
+    <Name ID="PartsCost">部品原価</Name>
+    <Name ID="TotalCost">原価合計</Name>
+    <Name ID="ServiceProfits">工賃粗利</Name>
+    <Name ID="PartsProfits">部品粗利</Name>
+    <Name ID="TotalProfits">粗利合計</Name>
+    <Name ID="FrontEmployeeName">フロント担当者</Name>
+    <Name ID="MechanicEmployeeName">メカニック担当者</Name>
+    <Name ID="CustomerClaimName">請求先名</Name>
+  </Title>
+ 
+  <!-- Add 2016/05/09 nishimura.akira CSサーベイ入庫 日次をなくそう -->
+  <Title ID="CSSurveyGR">
+    <Name ID="DepartmentName">拠点名</Name>
+    <Name ID="CustomerName">顧客名</Name>
+    <Name ID="Vin">車台番号</Name>
+    <Name ID="SlipNumber">伝票番号</Name>
+    <Name ID="OrderStatusName">伝票ステイタス</Name>
+    <Name ID="WorkingEndDate">作業完了日</Name>
+    <Name ID="SalesDate">納車日</Name>
+    <Name ID="MainWorkName">主作業名</Name>
+    <Name ID="FrontName">フロント担当者</Name>
+    <Name ID="SalesName">担当営業</Name>
+  </Title>
+
+  <!-- Add 2016/05/20 nishimura.akira 入金消しこみリスト 月次をなくそう -->
+  <Title ID="JournalList">
+    <Name ID="JournalDate">入金日</Name>
+    <Name ID="DepartmentCode">拠点コード</Name>
+    <Name ID="DepartmentName">拠点名</Name>
+    <Name ID="CustomerCode">顧客コード</Name>
+    <Name ID="CustomerName">顧客名</Name>
+    <Name ID="CustomerClaimCode">請求先コード</Name>
+    <Name ID="CustomerClaimName">請求先名称</Name>
+    <Name ID="BillingName">請求区分</Name>
+    <Name ID="SlipNumber">伝票番号</Name>
+    <Name ID="OrderStatusName">伝票ステイタス</Name>
+    <Name ID="SalesOrderDate">受注日</Name>
+    <Name ID="SalesDate">納車日</Name>
+    <Name ID="Amount">金額</Name>
+    <Name ID="AccountKind">口座種別</Name>
+    <Name ID="AccountCode">科目コード</Name>
+    <Name ID="AccountName">科目名</Name>
+    <Name ID="OfficeCode">事業所コード</Name>
+    <Name ID="OfficeName">事業所名</Name>
+    <Name ID="Summary">摘要</Name>
+  </Title>
+
+  <!-- Add 2016/05/20 nishimura.akira 残高リスト 月次をなくそう -->
+  <Title ID="AccountReceivableBalanceList">
+    <Name ID="SlipType">伝票種別</Name>
+    <Name ID="SlipNumber">伝票番号</Name>
+    <Name ID="SalesDate">納車日</Name>
+    <Name ID="DepartmentCode">拠点コード</Name>
+    <Name ID="DepartmentName">拠点名</Name>
+    <Name ID="Customercode">顧客ID</Name>
+    <Name ID="CustomerName">顧客名</Name>
+    <Name ID="CCTypeCode">請求先区分</Name>
+    <Name ID="CCTypeName">請求先区分名</Name>
+    <Name ID="CustomerClaimCode">請求先ID</Name>
+    <Name ID="CustomerClaimName">請求先名</Name>
+    <Name ID="Amount">発生</Name>
+    <Name ID="AtoAmount">入金額</Name>
+    <Name ID="MaeAmount">前受金</Name>
+    <Name ID="BalanceAmount">残期末</Name>
+  </Title>
+
+  <!-- Mod 2018/01/15 arc yano #3830 事業所コード、事業所名の列追加-->
+  <!-- Add 2016/05/22 nishimura.akira 入金消しこみリスト 月次をなくそう -->
+  <Title ID="CardReceiptPlanList">
+    <Name ID="JournalDate">入金日</Name>
+    <Name ID="OccurredDepartmentCode">部門コード</Name>
+    <Name ID="DepartmentName">部門名</Name>
+    <Name ID="CustomerCode">顧客コード</Name>
+    <Name ID="CustomerName">顧客名</Name>
+    <Name ID="CustomerClaimCode">請求先コード</Name>
+    <Name ID="CustomerClaimName">請求先名称</Name>
+    <Name ID="CCTypeName">請求区分</Name>
+    <Name ID="SlipNumber">伝票番号</Name>
+    <Name ID="OrderStatusName">伝票ステータス</Name>
+    <Name ID="SalesOrderDate">受注日</Name>
+    <Name ID="SalesDate">納車日</Name>
+    <Name ID="Amount">金額</Name>
+    <Name ID="ReceiptTypeName">口座種別</Name>
+    <Name ID="AccountCode">科目コード</Name>
+    <Name ID="AccountName">科目名</Name>
+    <Name ID="OfficeCode">事業所コード</Name>
+    <Name ID="OfficeName">事業所名</Name>
+    <Name ID="Summary">摘要</Name>
+  </Title>
+
+  <!-- Add 2016/07/09 nishimura.akira 移動平均単価 -->
+  <Title ID="PartsAverageCostList">
+    <Name ID="CloseMonth">締め処理月</Name>
+    <Name ID="PartsNumber">部品番号</Name>
+    <Name ID="PartsNameJP">部品名</Name>
+    <Name ID="PriceList">定価</Name>
+    <Name ID="Price">移動平均単価</Name>
+  </Title>
+
+  <!-- Add 2016/08/17 arc nakayama #3595_【大項目】車両売掛金機能改善 -->
+  <Title ID="CreditJournalCheckText">
+    <Name ID="SlipTypeName">伝票タイプ</Name>
+    <Name ID="SlipNumber">伝票番号</Name>
+    <Name ID="StatusName">伝票ステータス</Name>
+    <Name ID="OccurredDepartmentCode">部門コード</Name>
+    <Name ID="DepartmentName">部門名</Name>
+    <Name ID="SalesOrderDate">受注日</Name>
+    <Name ID="SalesDate">納車日</Name>
+    <Name ID="CustomerCode">顧客コード（決済者）</Name>
+    <Name ID="CustomerName">顧客名（決済者名）</Name>
+    <Name ID="JournalDate">決済日</Name>
+    <Name ID="CustomerClaimCode">請求先コード</Name>
+    <Name ID="CustomerClaimName">請求先名</Name>
+    <Name ID="Amount">決済金額</Name>
+    <Name ID="CompleteFlagName">入金状況</Name>
+    <Name ID="Summary">摘要</Name>
+  </Title>
+  <!-- Add 2016/09/14 arc nakayama #3630_【製造】車両売掛金対応 -->
+  <Title ID="CarReceivableManagementText">
+    <Name ID="SlipNumber">伝票番号</Name>
+    <Name ID="SalesDate">納車日</Name>
+    <Name ID="DepartmentCode">部門コード</Name>
+    <Name ID="DepartmentName">部門名</Name>
+    <Name ID="CustomerCode">顧客コード</Name>
+    <Name ID="CustomerName">顧客名</Name>
+    <Name ID="CarriedBalance">前月繰越(A)</Name>
+    <Name ID="PresentMonth">当月発生(B)</Name>
+    <Name ID="PaymentAmount">当月入金額</Name>
+    <Name ID="BalanceAmount">残高(A+B-C)</Name>
+  </Title>
+</Titles>
+

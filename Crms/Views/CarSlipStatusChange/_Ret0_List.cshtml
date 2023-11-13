@@ -1,0 +1,69 @@
+﻿@* //--------------------------------------------------------------------------------
+   // 機能：伝票戻し（進行中）
+   // 作成者：arc nakayama
+   // 作成日：2017/03/09
+   // 更新日：
+   //         2020/08/03 yano #4048 【車両伝票ステータス修正】伝票を戻す機能の非表示化
+   //         2018/08/07 yano #3911 登録済車両の車両伝票ステータス修正について
+   //--------------------------------------------------------------------------------
+*@
+@model List<CrmsDao.Get_CarSlipStatusChangeResult>
+
+
+
+<br />
+
+<table class="list">
+
+    <tr>
+        <th class="input-form-title" colspan="7">@* Mod 2018/08/07 yano #3911 *@
+            <a><b>進行中のリスト</b></a>
+        </th>
+    </tr>
+    <tr>
+        @* Add 2018/08/07 yano #3911 *@
+        <th class="input-form-title" >伝票番号</th>
+        <th class="input-form-title" >元の伝票ステータス</th>
+        <th class="input-form-title" >修正依頼者</th>
+        <th class="input-form-title" >修正開始日</th>
+        <th class="input-form-title" >最終更新者</th>
+        <th class="input-form-title" ></th>
+        <th class="input-form-title" ></th>
+       
+    </tr>
+    @foreach (var a in Model)
+    {
+    
+    <tr>
+        <!--伝票番号-->
+        <td style="white-space:nowrap;">@Html.Encode(a.SlipNumber)</td>
+        <!--SalesOrderStatus-->
+        <td style="white-space:nowrap">@Html.Encode(a.SalesOrderStatusName)</td>@* Mod 2018/08/07 yano #3911 *@
+        <!--RequestUserName-->
+        <td style="white-space:nowrap">@Html.Encode(a.RequestUserName)</td>
+        <!--Check-->
+        @{TimeSpan Span = DateTime.Now - (a.CreateDate ?? DateTime.Now);}
+
+        <!--修正開始日-->
+        @{if (Span.Days >= 5)
+          {
+              <td style="white-space:nowrap"><font style="color:#ff0000">Check!</font>@Html.Encode(a.CreateDate)</td>
+        }else{
+              <td style="white-space:nowrap">@Html.Encode(a.CreateDate)</td>
+          }
+        }
+        <!--最終更新者-->
+        <td style="white-space:nowrap">@Html.Encode(a.EmployeeName)</td>
+        <!--伝票を戻す-->
+        @if (ViewData["flgDeliveredSlipStatusChange"] != null && bool.Parse(ViewData["flgDeliveredSlipStatusChange"].ToString()) == true && (@a.SalesOrderStatus.Equals("003") || @a.SalesOrderStatus.Equals("004") || @a.SalesOrderStatus.Equals("005")))
+        {    //Mod 2020/08/03 yano #4048
+            <td style="white-space:nowrap"><a href="javascript:void(0);" onclick="document.getElementById('RequestFlag').value = '3';document.getElementById('TargetSlipNumber').value = '@a.SlipNumber';document.getElementById('SalesOrderStatus').value = '@a.SalesOrderStatus';document.getElementById('StatusChangeCode').value = '@a.StatusChangeCode'; document.forms[0].submit();">伝票を戻す</a></td>
+        }else{
+            <td style="white-space:nowrap"></td>
+        }
+        <!--表示を消す-->
+        <td style="white-space:nowrap"><a href="javascript:void(0);" onclick="document.getElementById('RequestFlag').value = '4';document.getElementById('TargetSlipNumber').value = '@a.SlipNumber';document.getElementById('SalesOrderStatus').value = '@a.SalesOrderStatus';document.getElementById('StatusChangeCode').value = '@a.StatusChangeCode';document.forms[0].submit();">表示を消す</a></td>
+    </tr>
+    }
+</table>
+<p>▲<font style="color:#ff0000">Check!</font>は5日以上の間、未処理となっている案件です。</p> @* Mod 2018/08/07 yano #3911 文言の変更*@

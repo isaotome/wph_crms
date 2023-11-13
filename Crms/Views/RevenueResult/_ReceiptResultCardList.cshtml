@@ -1,0 +1,39 @@
+﻿@* //---------------------------------------------
+   // 機能  ：カード入金実績一覧部分ビュー
+   // 作成者：arc yano
+   // 作成日：2015/01/26
+   // 更新日：
+   //---------------------------------------------
+*@
+@model CrmsDao.PaginatedList<CrmsDao.V_ReceiptList>
+
+
+<br />
+@{ Html.RenderPartial("PagerControl", @Model.PageProperty); }
+@Html.Hidden("id", ViewData["ResultCardId"] ?? "0", new { id = "resultCardid"})
+<br />
+<br />
+
+<table class="list">
+    <tr>
+        <th class="input-form-title" colspan="4">
+            カード入金実績
+        </th>
+    </tr>
+    <tr>
+        <th>入金日</th>
+        <th>伝票番号</th>
+        <th>請求先</th>
+        <th>入金額</th>
+    </tr>
+    @foreach (var receiptList in Model){
+    
+    <tr>
+        <td style="white-space:nowrap">@Html.Encode(string.Format("{0:yyyy/MM/dd}",receiptList.JournalDate))</td>
+        <td style="white-space:nowrap">@Html.Encode(receiptList.SlipNumber)</td>
+        <td style="white-space:nowrap">@Html.Encode(receiptList.CustomerClaimName)</td>
+        <td style="white-space:nowrap; text-align:right;">@Html.Encode(string.Format("{0:N0}", receiptList.Amount))</td>
+    </tr>
+    }
+</table>                            
+

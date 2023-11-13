@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="label3.Text" xml:space="preserve">&#xD;
+    <value>買主・注文申込者及び使用者名義人、連帯保証人は、販売会社が、下記の目的のため、買主・注文申込者及び使用者名義人、連帯保証人の住所、氏名など表記記載&#xD;
+の個人情報（以下「個人情報」という）を利用することに同意します。&#xD;
+1.印刷物の送付、電話、eメール等の方法による定期点検、車検・保険満期等のご案内その他のアフターサービスの適切な実施。&#xD;
+2.販売会社において取り扱う商品・サービスあるいは各種イベント・キャンペーン、タイアップ商品・サービス等について、宣伝印刷物の送付、電話、&#xD;
+eメール等の方法によりご案内すること。&#xD;
+3.商品開発あるいはお客様満足度向上策検討のため、アンケート調査を実施すること。&#xD;
+4.与信判断および与信管理。</value>&#xD;
+  </data>
+  <data name="label31.Text" xml:space="preserve">&#xD;
+    <value>買主・注文申込者は、道路運送車両法第３３条に定める譲渡証明書に記載すべき事項等、民間が発行する証明書（譲渡証明書、自動車損害賠償責任保険証明書、自動車&#xD;
+賠償責任共済証明書等）に記載すべき事項を登録情報処理機関（自動車情報管理センター等）に電磁的に提供することを承諾し、販売会社にこれを委託します。（自動車&#xD;
+損害賠償責任保険証明書及び自動車賠償責任共済証明書については、自動車の登録をＯＳＳ申請により行う場合に限る。）</value>&#xD;
+  </data>
+  <data name="label66.Text" xml:space="preserve">&#xD;
+    <value>乙は、下取車を自動車代金等の債務の一部の支払に代えて、自動車の引き渡しまでのあいだに下取書類と共に甲に引渡します。乙は、下取車について、公租公課の&#xD;
+滞納等一切の負担がないことを保証し、万一負担がある場合は、乙の責任において処理します。但し、下取車につき、甲に引渡すまでの間に状態に変化が生じた場合&#xD;
+甲と乙は、下取車価格を再度査定の上協議して定めるものとし、協議が整わない場合、乙は下取自動車の引き渡しに代えて表面記載の下取車価格に相当する金額&#xD;
+を甲に支払うものとします。</value>&#xD;
+  </data>
+  <data name="label90.Text" xml:space="preserve">&#xD;
+    <value>乙について、次の各号のいずれかに該当する事由が生じたときは、乙は甲に対する責務について当然に期限の利益を失い、甲に対し残存債務及び遅延損害金を直ちに支払わなければなりません。&#xD;
+1.自動車代金等の支払を怠ったとき。&#xD;
+2.自動車を入質、譲渡、転売、貸与または担保に供したとき。&#xD;
+3.自動車の改造、毀損等現状を変更したとき。&#xD;
+4.支払停止、保全処分（信用に関しないものは除く）、差押、または破産、民事再生法に基づく再生手続開始、特別清算開始などの申し立てがあったとき。&#xD;
+5.乙、保証人又は自動車の名義人のいずれかが反社会的勢力またはその一員であることが明らかになったとき。</value>&#xD;
+  </data>
+  <data name="label98.Text" xml:space="preserve">&#xD;
+    <value>甲が前項により自動車の引渡しを受けたときは、財団法人日本自動車査定協会による査定評価格及び乙に支払う消費税・地方消費税が生じた場合はその金額をもって、自動車代金等の債務、自動車の回収及びその処分可能までの保管に要した費用、裁判手続き等に要した費用、査定料、立替金、部品代、［整備代］、修理代その他乙の甲に対する全ての債務につき、弁済期限の到来、未到来にかかわらず、どの債務の弁済に充当されても、乙は異議を述べないものとします。</value>&#xD;
+  </data>
+  <data name="label107.Text" xml:space="preserve">&#xD;
+    <value>前項により契約が解除されたときは、乙は甲に対し直ちに自動車代金等に相当する金額の損害賠償金及びこれに対する（但書の場合は、各号の金額を控除した金額に対する）民法の法定利率による遅延損害金を支払います。但し、下記各号に該当する場合、甲はその全額を本項の支払いに充当するものとします。&#xD;
+1.乙が甲に頭金または残代金の一部を既に支払っているときはその金額。&#xD;
+2.自動車が返還された場合（甲が乙に自動車を提供したが、乙が第２条に違反したため自動車の引渡しができなかったときを含む）は、財団法人日本自動車査定協会による査定評価額及び乙に支払う消費税・地方消費税が生じた場合はその金額。但し、乙が任意に自動車を返還しないため、甲が仮処分その他自己の費用をもって自動車を回収した場合、甲は自動車の評価額から回収費用を差し引くことができるものとします。</value>&#xD;
+  </data>
+  <data name="label4.Text" xml:space="preserve">&#xD;
+    <value>買主・注文申込者及び使用者名義人、連帯保証人は販売会社が、下記の通り、書面または電子的媒体により個人情報を第三者に提供することに同意します。&#xD;
+1.提供先：販売会社において取り扱う商品の製造会社及び輸入会社並びに業務提携先。&#xD;
+2.提供内容：表記記載事項、保有する車両に関する事項、車両登録情報及び修理・整備入庫履歴。&#xD;
+3.販売会社は、提供先に対し、個人情報の適法かつ適切な取扱を求めるものとします。</value>&#xD;
+  </data>
+  <metadata name="$this.ScriptEditorPositionForUndo" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="$this.ScriptEditorPositionForRedo" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

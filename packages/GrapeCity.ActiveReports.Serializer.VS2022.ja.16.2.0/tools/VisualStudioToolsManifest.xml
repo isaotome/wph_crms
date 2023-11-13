@@ -1,0 +1,6 @@
+<FileList>
+  <File Reference = "GrapeCity.ActiveReports.Serializer.dll">
+    <ToolboxItems VSCategory="ActiveReports 16">
+    </ToolboxItems>
+  </File>
+</FileList>

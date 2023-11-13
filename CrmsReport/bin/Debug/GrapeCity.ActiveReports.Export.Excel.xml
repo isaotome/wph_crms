@@ -1,0 +1,1296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>GrapeCity.ActiveReports.Export.Excel</name>
+  </assembly>
+  <members>
+    <member name="T:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PageOrientation">
+      <summary>有効なページの向きを表します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PageOrientation.Default">
+      <summary>プリンタのデフォルト設定を示します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PageOrientation.Portrait">
+      <summary>ページを横向きで印刷します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PageOrientation.Landscape">
+      <summary>ページを横向きで印刷します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes">
+      <summary>有効な用紙サイズを指定します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Default">
+      <summary>ユーザーにより指定された用紙サイズ</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Letter">
+      <summary>レター (8.5 インチ x 11 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.LetterSmall">
+      <summary>レター小 (8.5 インチ x 11 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Tabloid">
+      <summary>タブロイド紙 (11 インチ x 17 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Ledger">
+      <summary>レジャー (17 インチ x 11 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Legal">
+      <summary>リーガル (8.5 インチ x 14 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Statement">
+      <summary>申告用紙 (5.5 インチ x 8.5 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Executive">
+      <summary>エグゼクティブ (7.25 インチ x 10.5 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.A3">
+      <summary>A3 (297 mm x 420 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.A4">
+      <summary>A4 (210 mm x 297 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.A4Small">
+      <summary>A4 小 (210 mm x 297 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.A5">
+      <summary>A5 (148 mm x 210 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.B4">
+      <summary>B4 (250 mm x 353 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.B5">
+      <summary>B5 (176 mm x 250 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Folio">
+      <summary>二つ折り (8.5 インチ x 13 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Quarto">
+      <summary>四つ折り (215 mm x 275 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Standard10x14">
+      <summary>標準紙 (10 インチ x 14 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Standard11x17">
+      <summary>標準紙 (11 インチ x 17 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Note">
+      <summary>ノート用紙 (8.5 インチ x 11 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Number9Envelope">
+      <summary>#9 封筒 (3.875 インチ x 8.875 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Number10Envelope">
+      <summary>#10 封筒 (4.125 インチ x 9.5 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Number11Envelope">
+      <summary>#11 封筒 (4.5 インチ x 10.375 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Number12Envelope">
+      <summary>#12 封筒 (4.75 インチ x 11 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Number14Envelope">
+      <summary>#14 封筒 (5 インチ x 11.5 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.CSheet">
+      <summary>C (17 インチ x 22 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.DSheet">
+      <summary>D (22 インチ x 34 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.ESheet">
+      <summary>E (34 インチ x 44 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.DLEnvelope">
+      <summary>DL 封筒 (110 mm x 220 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.C5Envelope">
+      <summary>C5 封筒 (162 mm x 229 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.C3Envelope">
+      <summary>C3 封筒 (324 mm x 458 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.C4Envelope">
+      <summary>C4 封筒 (229 mm x 324 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.C6Envelope">
+      <summary>C6 封筒 (114 mm x 162 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.C65Envelope">
+      <summary>C65 封筒 (114 mm x 229 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.B4Envelope">
+      <summary>B4 封筒 (250 mm x 353 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.B5Envelope">
+      <summary>B5 封筒 (176 mm x 250 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.B6Envelope">
+      <summary>B6 封筒 (176 mm x 125 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.ItalyEnvelope">
+      <summary>イタリア封筒 (110 mm x 230 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.MonarchEnvelope">
+      <summary>最高級封筒 (3.875 インチ x 7.5 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.PersonalEnvelope">
+      <summary>6 3/4 封筒 (3.625 インチ x 6.5 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.USStandardFanfold">
+      <summary>米国標準ファンフォールド (14.875 インチ x 11 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.GermanStandardFanfold">
+      <summary>ドイツ標準ファンフォールド (8.5 インチ x 12 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.GermanLegalFanfold">
+      <summary>ドイツ リーガル ファンフォールド (8.5 インチ x 13 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.IsoB4">
+      <summary>ISO B4 (250 mm x 353 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.JapanesePostcard">
+      <summary>日本はがき (100 mm x 148 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Standard9x11">
+      <summary>標準紙 (9 インチ x 11 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Standard10x11">
+      <summary>標準紙 (10 インチ x 11 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Standard15x11">
+      <summary>標準紙 (15 インチ x 11 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.InviteEnvelope">
+      <summary>招待封筒 (220 mm x 220 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.LetterExtra">
+      <summary>レター上質紙 (9.275 インチ x 12 インチ)。この値は PostScript ドライバ固有の値であり、用紙を節約するために Linotronic プリンタでだけ使用されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.LegalExtra">
+      <summary>リーガル上質紙 (9.275 インチ x 15 インチ)。この値は PostScript ドライバ固有の値であり、用紙を節約するために Linotronic プリンタでだけ使用されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.TabloidExtra">
+      <summary>タブロイド上質紙 (11.69 インチ x 18 インチ)。この値は PostScript ドライバ固有の値であり、用紙を節約するために Linotronic プリンタでだけ使用されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.A4Extra">
+      <summary>A4 上質紙 (236 mm x 322 mm)。この値は PostScript ドライバ固有の値であり、用紙を節約するために Linotronic プリンタでだけ使用されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.LetterTransverse">
+      <summary>レター横長 (8.275 インチ x 11 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.A4Transverse">
+      <summary>A4 回転紙 (297 mm x 210 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.LetterExtraTransverse">
+      <summary>レター上質横長 (9.275 インチ x 12 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.APlus">
+      <summary>SuperA/SuperA/A4 (227 mm x 356 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.BPlus">
+      <summary>SuperB/SuperB/A3 (305 mm x 487 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.LetterPlus">
+      <summary>レター プラス (8.5 インチ x 12.69 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.A4Plus">
+      <summary>A4 プラス (210 mm x 330 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.A5Transverse">
+      <summary>A5 横長 (148 mm x 210 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.B5Transverse">
+      <summary>JIS B5 横長 (182 mm x 257 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.A3Extra">
+      <summary>A3 上質紙 (322 mm x 445 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.A5Extra">
+      <summary>A5 上質紙 (174 mm x 235 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.B5Extra">
+      <summary>ISO B5 上質紙 (201 mm x 276 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.A2">
+      <summary>A2 (420 mm x 594 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.A3Transverse">
+      <summary>A3 横長 (297 mm x 420 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.A3ExtraTransverse">
+      <summary>A3 上質横長 (322 mm x 445 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.JapaneseDoublePostcard">
+      <summary>日本往復はがき (200 mm x 148 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.A6">
+      <summary>A6 (105 mm x 148 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.JapaneseEnvelopeKakuNumber2">
+      <summary>日本角形 #2 封筒。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.JapaneseEnvelopeKakuNumber3">
+      <summary>日本角形 #3 封筒。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.JapaneseEnvelopeChouNumber3">
+      <summary>日本長形 #3 封筒。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.JapaneseEnvelopeChouNumber4">
+      <summary>日本洋形 #4 封筒。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.LetterRotated">
+      <summary>レター回転紙 (11 インチ x 8.5 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.A3Rotated">
+      <summary>A3 回転紙 (420 mm x 297 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.A4Rotated">
+      <summary>A4 回転紙 (297 mm x 210 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.A5Rotated">
+      <summary>A5 回転紙 (210 mm x 148 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.B4JisRotated">
+      <summary>JIS B4 回転紙 (364 mm x 257 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.B5JisRotated">
+      <summary>JIS B5 回転紙 (257 mm x 182 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.JapanesePostcardRotated">
+      <summary>日本回転はがき (148 mm x 100 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.JapaneseDoublePostcardRotated">
+      <summary>日本回転往復はがき (148 mm x 200 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.A6Rotated">
+      <summary>A6 回転紙 (148 mm x 105 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.JapaneseEnvelopeKakuNumber2Rotated">
+      <summary>日本回転角形 #2 封筒。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.JapaneseEnvelopeKakuNumber3Rotated">
+      <summary>日本回転角形 #3 封筒。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.JapaneseEnvelopeChouNumber3Rotated">
+      <summary>日本回転長形 #3 封筒。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.JapaneseEnvelopeChouNumber4Rotated">
+      <summary>日本回転長形 #4 封筒。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.B6Jis">
+      <summary>JIS B6 (128 mm x 182 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.B6JisRotated">
+      <summary>JIS B6 回転紙 (182 mm x 128 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Standard12x11">
+      <summary>標準紙 (12 インチ x 11 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.JapaneseEnvelopeYouNumber4">
+      <summary>日本洋形 #4 封筒。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.JapaneseEnvelopeYouNumber4Rotated">
+      <summary>日本洋形 #4 回転封筒。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Prc16K">
+      <summary>中華人民共和国 16K (146 mm x 215 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Prc32K">
+      <summary>中華人民共和国 32K (97 mm x 151 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Prc32KBig">
+      <summary>中華人民共和国 32K 大 (97 mm x 151 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.PrcEnvelopeNumber1">
+      <summary>中華人民共和国 #1 封筒 (102 mm x 165 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.PrcEnvelopeNumber2">
+      <summary>中華人民共和国 #2 封筒 (102 mm x 176 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.PrcEnvelopeNumber3">
+      <summary>中華人民共和国 #3 封筒 (125 mm x 176 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.PrcEnvelopeNumber4">
+      <summary>中華人民共和国 #4 封筒 (110 mm x 208 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.PrcEnvelopeNumber5">
+      <summary>中華人民共和国 #5 封筒 (110 mm x 220 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.PrcEnvelopeNumber6">
+      <summary>中華人民共和国 #6 封筒 (120 mm x 230 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.PrcEnvelopeNumber7">
+      <summary>中華人民共和国 #7 封筒 (160 mm x 230 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.PrcEnvelopeNumber8">
+      <summary>中華人民共和国 #8 封筒 (120 mm x 309 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.PrcEnvelopeNumber9">
+      <summary>中華人民共和国 #9 封筒 (229 mm x 324 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.PrcEnvelopeNumber10">
+      <summary>中華人民共和国 #10 封筒 (324 mm by 458 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Prc16KRotated">
+      <summary>中華人民共和国 16K 回転紙 (146 mm x 215 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Prc32KRotated">
+      <summary>中華人民共和国 32K 回転紙 (97 mm x 151 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.Prc32KBigRotated">
+      <summary>中華人民共和国 32K 回転紙大 (97 mm x 151 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.PrcEnvelopeNumber1Rotated">
+      <summary>中華人民共和国 #1 回転封筒 (165 mm x 102 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.PrcEnvelopeNumber2Rotated">
+      <summary>中華人民共和国 #2 回転封筒 (176 mm x 102 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.PrcEnvelopeNumber3Rotated">
+      <summary>中華人民共和国 #3 回転封筒 (176 mm x 125 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.PrcEnvelopeNumber4Rotated">
+      <summary>中華人民共和国 #4 回転封筒 (208 mm x 110 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.PrcEnvelopeNumber5Rotated">
+      <summary>中華人民共和国封筒 #5 回転封筒 (220 mm x 110 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.PrcEnvelopeNumber6Rotated">
+      <summary>中華人民共和国 #6 回転封筒 (230 mm x 120 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.PrcEnvelopeNumber7Rotated">
+      <summary>中華人民共和国 #7 回転封筒 (230 mm x 160 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.PrcEnvelopeNumber8Rotated">
+      <summary>中華人民共和国 #8 回転封筒 (309 mm x 120 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.PrcEnvelopeNumber9Rotated">
+      <summary>中華人民共和国 #9 回転封筒 (324 mm x 229 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSizes.PrcEnvelopeNumber10Rotated">
+      <summary>中華人民共和国 #10 回転封筒 (458 mm x 324 mm)。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtension">
+      <summary>レポートレイアウトをエクセルファイルに描画します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings">
+      <summary>Xlsドキュメントの印刷設定を提供するのに必要な情報をカプセル化します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSecurity">
+      <summary>エクセルドキュメントのセキュリティと暗号化を提供するのに必要な情報をカプセル化します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSettings">
+      <summary>の設定クラスを示します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtension.GetSupportedSettings">
+      <summary>オーバーロードされました。現在のExcelRenderingExtensionインスタンスの設定を返します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtension.GetSupportedSettings(System.Boolean)">
+      <summary>IConfigurable.GetSupportedSettingsを実装します。</summary>
+      <param name="fpl">固定ページレイアウト。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider)">
+      <summary>レポートを描画します。</summary>
+      <param name="report">レポート。</param>
+      <param name="streams">ストリーム。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection)">
+      <summary>レポートを描画します。</summary>
+      <param name="report">レポート。</param>
+      <param name="streamProvider">ストリームプロバイダ。</param>
+      <param name="settings">設定。</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.Orientation">
+      <summary>Excelシートの印刷向きを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionPageSettings.PaperSize">
+      <summary>Excelシートの印刷用の用紙のサイズを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSecurity.Password">
+      <summary>Excelのドキュメントを開くことを可能にするために入力するパスワードを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSecurity.ProtectedBy">
+      <summary>Excelスプレッドシートをパスワードで保護するユーザー名を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSecurity.ReadOnlyRecommended">
+      <summary>ExcelファイルはReadOnlyRecommendedｆとして保存されるかを指定する値を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSecurity.WritePassword">
+      <summary>Excelファイルの書き込みパスワードを取得または設定します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSettings.ApplySettings(System.Collections.Specialized.NameValueCollection)">
+      <summary>NameValueCollectionの設定パラメータに渡された任意の設定が適用されます。</summary>
+      <param name="settings">描画拡張機能のための設定。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSettings.GetSettings">
+      <summary>エクセルへレポートを描画するための設定を取得します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSettings.FileFormat">
+      <summary>出力ファイルフォーマットとしてBiffを使用するかOpenXmlを使用するかを指定します。デフォルトはOpenXmlです。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSettings.MultiSheet">
+      <summary>単一シートを生成するか、複数シートを生成するかを指定します。デフォルト値はTrueです。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSettings.OpenXmlStandard">
+      <summary>Open XMLドキュメントの適合レベルを示します。デフォルト値はStrictです。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSettings.PageSettings">
+      <summary>エクセルファイルの印刷設定を初期化するオブジェクトを返します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSettings.Pagination">
+      <summary>改ページまたはゲラモードを示します。デフォルト値はTrueです。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSettings.Security">
+      <summary>ドキュメントセキュリティを初期化するオブジェクトを返します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSettings.UseCompression">
+      <summary>Xlsx形式のファイルをエクスポートするとき圧縮するかどうかを取得また設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSettings.UseDefaultPalette">
+      <summary>Excelのデフォルトのパレットでエクスポートドキュメントを設定または返します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Excel.Section.FileFormat">
+      <summary>出力されたファイルにおける、Excelファイル形式を設定します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.FileFormat.Xls97Plus">
+      <summary>Excelデータは、BIFF8（Microsoft Binary Interchange File Formatバージョン8）の規格を満たしたものであり、このBIFF8はMicrosoft Excel 97、2000、XP、2003に対応した形式です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.FileFormat.Xls95">
+      <summary>Excelデータは、BIFF7（Microsoft Binary Interchange File Formatバージョン7）の規格を満たしたものであり、このBIFF7はMicrosoft Excel 95に対応した形式です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.FileFormat.Xlsx">
+      <summary>MicrosoftエクセルのOpenXml形式。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Excel.Section.OpenXmlStandard">
+      <summary>Xlsx形式のファイルをエクスポートするときのOpen XMLドキュメントの適合レベルを指定します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.OpenXmlStandard.Strict">
+      <summary>ISO/IEC 29500 の厳密型 (Strict)</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.OpenXmlStandard.Transitional">
+      <summary>ISO/IEC 29500 の移行型 (Transitional)</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes">
+      <summary>標準の用紙サイズを指定します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Default">
+      <summary>用紙は指定なし。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Letter">
+      <summary>レター (8.5 インチ x 11 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.LetterSmall">
+      <summary>レター小 (8.5 インチ x 11 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Tabloid">
+      <summary>タブロイド紙 (11 インチ x 17 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Ledger">
+      <summary>レジャー (17 インチ x 11 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Legal">
+      <summary>リーガル (8.5 インチ x 14 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Statement">
+      <summary>申告用紙 (5.5 インチ x 8.5 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Executive">
+      <summary>エグゼクティブ (7.25 インチ x 10.5 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.A3">
+      <summary>A3 (297 mm x 420 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.A4">
+      <summary>A4 (210 mm x 297 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.A4Small">
+      <summary>A4 小 (210 mm x 297 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.A5">
+      <summary>A5 (148 mm x 210 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.B4">
+      <summary>B4 (250 mm x 353 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.B5">
+      <summary>B5 (176 mm x 250 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Folio">
+      <summary>二つ折り (8.5 インチ x 13 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Quarto">
+      <summary>四つ折り (215 mm x 275 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Standard10x14">
+      <summary>標準紙 (10 インチ x 14 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Standard11x17">
+      <summary>標準紙 (11 インチ x 17 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Note">
+      <summary>ノート用紙 (8.5 インチ x 11 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Number9Envelope">
+      <summary>#9 封筒 (3.875 インチ x 8.875 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Number10Envelope">
+      <summary>#10 封筒 (4.125 インチ x 9.5 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Number11Envelope">
+      <summary>#11 封筒 (4.5 インチ x 10.375 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Number12Envelope">
+      <summary>#12 封筒 (4.75 インチ x 11 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Number14Envelope">
+      <summary>#14 封筒 (5 インチ x 11.5 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.CSheet">
+      <summary>C (17 インチ x 22 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.DSheet">
+      <summary>D (22 インチ x 34 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.ESheet">
+      <summary>E (34 インチ x 44 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.DLEnvelope">
+      <summary>DL 封筒 (110 mm x 220 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.C5Envelope">
+      <summary>C5 封筒 (162 mm x 229 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.C3Envelope">
+      <summary>C3 封筒 (324 mm x 458 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.C4Envelope">
+      <summary>C4 封筒 (229 mm x 324 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.C6Envelope">
+      <summary>C6 封筒 (114 mm x 162 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.C65Envelope">
+      <summary>C65 封筒 (114 mm x 229 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.B4Envelope">
+      <summary>B4 封筒 (250 mm x 353 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.B5Envelope">
+      <summary>B5 封筒 (176 mm x 250 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.B6Envelope">
+      <summary>B6 封筒 (176 mm x 125 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.ItalyEnvelope">
+      <summary>イタリア封筒 (110 mm x 230 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.MonarchEnvelope">
+      <summary>最高級封筒 (3.875 インチ x 7.5 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.PersonalEnvelope">
+      <summary>6 3/4 封筒 (3.625 インチ x 6.5 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.USStandardFanfold">
+      <summary>米国標準ファンフォールド (14.875 インチ x 11 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.GermanStandardFanfold">
+      <summary>ドイツ標準ファンフォールド (8.5 インチ x 12 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.GermanLegalFanfold">
+      <summary>ドイツ リーガル ファンフォールド (8.5 インチ x 13 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.IsoB4">
+      <summary>ISO B4 (250 mm x 353 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.JapanesePostcard">
+      <summary>日本はがき (100 mm x 148 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Standard9x11">
+      <summary>標準紙 (9 インチ x 11 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Standard10x11">
+      <summary>標準紙 (10 インチ x 11 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Standard15x11">
+      <summary>標準紙 (15 インチ x 11 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.InviteEnvelope">
+      <summary>招待封筒 (220 mm x 220 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.LetterExtra">
+      <summary>レター上質紙 (9.275 インチ x 12 インチ)。この値は PostScript ドライバ固有の値であり、用紙を節約するために Linotronic プリンタでだけ使用されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.LegalExtra">
+      <summary>リーガル上質紙 (9.275 インチ x 15 インチ)。この値は PostScript ドライバ固有の値であり、用紙を節約するために Linotronic プリンタでだけ使用されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.TabloidExtra">
+      <summary>タブロイド上質紙 (11.69 インチ x 18 インチ)。この値は PostScript ドライバ固有の値であり、用紙を節約するために Linotronic プリンタでだけ使用されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.A4Extra">
+      <summary>A4 上質紙 (236 mm x 322 mm)。この値は PostScript ドライバ固有の値であり、用紙を節約するために Linotronic プリンタでだけ使用されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.LetterTransverse">
+      <summary>レター横長 (8.275 インチ x 11 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.A4Transverse">
+      <summary>A4 横長 (210 mm x 297 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.LetterExtraTransverse">
+      <summary>レター上質横長 (9.275 インチ x 12 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.APlus">
+      <summary>SuperA/SuperA/A4 (227 mm x 356 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.BPlus">
+      <summary>SuperB/SuperB/A3 (305 mm x 487 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.LetterPlus">
+      <summary>レター プラス (8.5 インチ x 12.69 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.A4Plus">
+      <summary>A4 プラス (210 mm x 330 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.A5Transverse">
+      <summary>A5 横長 (148 mm x 210 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.B5Transverse">
+      <summary>JIS B5 横長 (182 mm x 257 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.A3Extra">
+      <summary>A3 上質紙 (322 mm x 445 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.A5Extra">
+      <summary>A5 上質紙 (174 mm x 235 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.B5Extra">
+      <summary>ISO B5 上質紙 (201 mm x 276 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.A2">
+      <summary>A2 (420 mm x 594 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.A3Transverse">
+      <summary>A3 横長 (297 mm x 420 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.A3ExtraTransverse">
+      <summary>A3 上質横長 (322 mm x 445 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.JapaneseDoublePostcard">
+      <summary>日本往復はがき (200 mm x 148 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.A6">
+      <summary>A6 (105 mm x 148 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.JapaneseEnvelopeKakuNumber2">
+      <summary>日本角形 #2 封筒。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.JapaneseEnvelopeKakuNumber3">
+      <summary>日本角形 #3 封筒。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.JapaneseEnvelopeChouNumber3">
+      <summary>日本長形 #3 封筒。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.JapaneseEnvelopeChouNumber4">
+      <summary>日本長形 #4 封筒。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.LetterRotated">
+      <summary>レター回転紙 (11 インチ x 8.5 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.A3Rotated">
+      <summary>A3 回転紙 (420 mm x 297 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.A4Rotated">
+      <summary>A4 回転紙 (297 mm x 210 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.A5Rotated">
+      <summary>A5 回転紙 (210 mm x 148 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.B4JisRotated">
+      <summary>JIS B4 回転紙 (364 mm x 257 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.B5JisRotated">
+      <summary>JIS B5 回転紙 (257 mm x 182 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.JapanesePostcardRotated">
+      <summary>日本回転はがき (148 mm x 100 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.JapaneseDoublePostcardRotated">
+      <summary>日本回転往復はがき (148 mm x 200 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.A6Rotated">
+      <summary>A6 回転紙 (148 mm x 105 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.JapaneseEnvelopeKakuNumber2Rotated">
+      <summary>日本回転角形 #2 封筒。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.JapaneseEnvelopeKakuNumber3Rotated">
+      <summary>日本回転角形 #3 封筒。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.JapaneseEnvelopeChouNumber3Rotated">
+      <summary>日本回転長形 #3 封筒。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.JapaneseEnvelopeChouNumber4Rotated">
+      <summary>日本回転長形 #4 封筒。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.B6Jis">
+      <summary>JIS B6 (128 mm x 182 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.B6JisRotated">
+      <summary>JIS B6 回転紙 (182 mm x 128 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Standard12x11">
+      <summary>標準紙 (12 インチ x 11 インチ)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.JapaneseEnvelopeYouNumber4">
+      <summary>日本洋形 #4 封筒。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.JapaneseEnvelopeYouNumber4Rotated">
+      <summary>日本洋形 #4 回転封筒。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Prc16K">
+      <summary>中華人民共和国 16K (146 mm x 215 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Prc32K">
+      <summary>中華人民共和国 32K (97 mm x 151 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Prc32KBig">
+      <summary>中華人民共和国 32K 大 (97 mm x 151 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.PrcEnvelopeNumber1">
+      <summary>中華人民共和国 #1 封筒 (102 mm x 165 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.PrcEnvelopeNumber2">
+      <summary>中華人民共和国 #2 封筒 (102 mm x 176 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.PrcEnvelopeNumber3">
+      <summary>中華人民共和国 #3 封筒 (125 mm x 176 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.PrcEnvelopeNumber4">
+      <summary>中華人民共和国 #4 封筒 (110 mm x 208 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.PrcEnvelopeNumber5">
+      <summary>中華人民共和国 #5 封筒 (110 mm x 220 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.PrcEnvelopeNumber6">
+      <summary>中華人民共和国 #6 封筒 (120 mm x 230 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.PrcEnvelopeNumber7">
+      <summary>中華人民共和国 #7 封筒 (160 mm x 230 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.PrcEnvelopeNumber8">
+      <summary>中華人民共和国 #8 封筒 (120 mm x 309 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.PrcEnvelopeNumber9">
+      <summary>中華人民共和国 #9 封筒 (229 mm x 324 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.PrcEnvelopeNumber10">
+      <summary>中華人民共和国 #10 封筒 (324 mm x 458 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Prc16KRotated">
+      <summary>中華人民共和国 16K 回転紙 (146 mm x 215 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Prc32KRotated">
+      <summary>中華人民共和国 32K 回転紙 (97 mm x 151 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.Prc32KBigRotated">
+      <summary>中華人民共和国 32K 回転紙大 (97 mm x 151 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.PrcEnvelopeNumber1Rotated">
+      <summary>中華人民共和国 #1 回転封筒 (165 mm x 102 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.PrcEnvelopeNumber2Rotated">
+      <summary>中華人民共和国 #2 回転封筒 (176 mm x 102 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.PrcEnvelopeNumber3Rotated">
+      <summary>中華人民共和国 #3 回転封筒 (176 mm x 125 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.PrcEnvelopeNumber4Rotated">
+      <summary>中華人民共和国 #4 回転封筒 (208 mm x 110 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.PrcEnvelopeNumber5Rotated">
+      <summary>中華人民共和国封筒 #5 回転封筒 (220 mm x 110 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.PrcEnvelopeNumber6Rotated">
+      <summary>中華人民共和国 #6 回転封筒 (230 mm x 120 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.PrcEnvelopeNumber7Rotated">
+      <summary>中華人民共和国 #7 回転封筒 (230 mm x 160 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.PrcEnvelopeNumber8Rotated">
+      <summary>中華人民共和国 #8 回転封筒 (309 mm x 120 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.PrcEnvelopeNumber9Rotated">
+      <summary>中華人民共和国 #9 回転封筒 (324 mm x 229 mm)。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Section.PaperSizes.PrcEnvelopeNumber10Rotated">
+      <summary>中華人民共和国 #10 回転封筒 (458 mm x 324 mm)。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport">
+      <summary>ActiveReportsドキュメントからExcelファイルを作成するための機能を提供します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Excel.Section.XlsExportException">
+      <summary>Excelエクスポートでエラーが発生したときにスローされる例外です。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Excel.Section.XlsPageSettings">
+      <summary>XLSドキュメントの印刷設定を提供するために必要な情報をカプセル化します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Excel.Section.XlsSecurity">
+      <summary>Excelドキュメントのセキュリティと暗号化を提供するために必要な情報をカプセル化します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport.#ctor">
+      <summary>XlsExportクラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.String)">
+      <summary>指定したドキュメントをExcelファイルにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="filePath">Excelワークブックを保存するファイル名とパス。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.String,System.String)">
+      <summary>指定した範囲のドキュメントをExcelファイルにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="filePath">Excelワークブックを保存するファイル名とパス。</param>
+      <param name="pageRange">カンマで区切られたエクスポートするページ番号の範囲。各カンマの間には1つのページ番号、または範囲内の開始ページ番号と終了ページ番号の間にハイフンがあるページの範囲を含めることができます。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.IO.Stream)">
+      <summary>指定したドキュメントをExcel形式でストリームにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="outputStream">ドキュメントを保存するSystem.IO.Stream。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.IO.Stream,System.String)">
+      <summary>指定した範囲のドキュメントをExcel形式でストリームにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="outputStream">ドキュメントを保存するSystem.IO.Stream。</param>
+      <param name="pageRange">エクスポートするページを、カンマで区切って指定するか、2-8のように開始ページと終了ページを指定します。 カンマで区切られたエクスポートするページ番号の範囲。各カンマの間には1つのページ番号、または範囲内の開始ページ番号と終了ページ番号の間にハイフンがあるページの範囲を含めることができます。</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport.AutoRowHeight">
+      <summary>行内で最も大きいオブジェクトに合わせて、Excelが自動的に行の高さを調整するようにするかどうかを指定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport.DisplayGridLines">
+      <summary>ワークブック内のグリッド線を表示するかどうかを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport.FileFormat">
+      <summary>出力するExcelファイル形式のバージョンを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport.MinColumnWidth">
+      <summary>Excelファイル内における列の最少幅をインチ単位で設定または返します。最大値によって列の数が減少されます。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport.MinRowHeight">
+      <summary>Excelドキュメントで、行の最小の高さ（インチ単位）を示す値を取得または返します。より大きい値が、空のスペースに 一致するように追加された行の数を減らすことで、単一行に複数のコントロールを配置するように強制します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport.MultiSheet">
+      <summary>レポートを１枚のExcelシートとして作成するか、マルチシートのワークブックとして生成するかを指定します。Trueの場合、ActiveReportsドキュメント内の各ページは、それぞれ個別のExcelシートとしてエクスポートされます。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport.OpenXmlStandard">
+      <summary>Xlsx形式のファイルをエクスポートするときのOpen XMLドキュメントの適合レベルを指定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport.PageSettings">
+      <summary>Excelファイルの印刷設定を初期化するためにオブジェクトを返します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport.Pagination">
+      <summary>エクスポートされたXlsxドキュメントページネーションを使用するかどうかを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport.RemoveVerticalSpace">
+      <summary>出力結果から、空の行間を完全に取り除くかどうかを、取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport.Security">
+      <summary>ドキュメントのセキュリティを初期化するためにオブジェクトを返します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport.UseCellMerging">
+      <summary>セルをマージすべきかどうかを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport.UseCompression">
+      <summary>Xlsx形式のファイルをエクスポートするとき圧縮するかどうかを取得また設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport.UseDefaultPalette">
+      <summary>Excelのデフォルトのパレットでエクスポートドキュメントを設定または返します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Section.XlsExportException.#ctor(System.String)">
+      <summary>エラー メッセージを指定して、XlsExportExceptionクラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因を説明するエラーメッセージ。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Section.XlsExportException.#ctor(System.String,System.Exception)">
+      <summary>エラーメッセージ、およびこの例外の原因である内部例外への参照を指定して、XlsExportExceptionクラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因を説明するエラーメッセージ。</param>
+      <param name="innerException">現在の例外の原因であるExceptionインスタンス。innerExceptionパラメーターがnull参照(Visual Basicの場合はNothing)でない場合、現在の例外は、内部の例外を処理するcatchブロックで発生します。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Section.XlsExportException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>シリアル化したデータを指定して、XlsExportExceptionクラスの新しいインスタンスを初期化します。</summary>
+      <param name="info">
+        <para>スローされている例外に関するシリアル化済みオブジェクト データを保持しているSerializationInfo。</para>
+      </param>
+      <param name="context">転送元または転送先に関するコンテキスト情報を含んでいるStreamingContext。指定したシリアル化ストリームの転送元および転送先を記述し、そのコンテキストと追加の呼び出し元定義のコンテキストを保持するためのシリアル化の手段を記述します。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Section.XlsPageSettings.Reset">
+      <summary>XlsPageSettingsクラスのプロパティをリセットします。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Section.XlsPageSettings.Orientation">
+      <summary>Excelシートの印刷の向きを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Section.XlsPageSettings.PaperSize">
+      <summary>Excelシートの印刷用紙サイズを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Section.XlsSecurity.Password">
+      <summary>Excelのドキュメントを開くことを可能にするために入力するパスワードを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Section.XlsSecurity.ProtectedBy">
+      <summary>Excelスプレッドシートをパスワードで保護するユーザー名を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Section.XlsSecurity.ReadOnlyRecommended">
+      <summary>お勧めの読み取り専用としてExcelファイルが保存されているかどうかを示す値を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Section.XlsSecurity.WritePassword">
+      <summary>Excelファイルの書き込みパスワードを取得または設定します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,GrapeCity.ActiveReports.Export.Html.IOutputHtml,System.String)">
+      <summary>
+            指定したドキュメントをエクスポートします。
+            </summary>
+      <param name="document">エクスポートするドキュメント。</param>
+      <param name="outputHandler">出力ハンドラー</param>
+      <param name="pageRange">ページ範囲</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport.Tweak">
+      <summary>
+            内部使用のみ。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport.SheetName">
+      <summary>
+            シートの名前を示す値を設定または返します。<b>シート</b>はデフォルトです。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSettings.SheetName">
+      <summary>
+             シートの名前を示す値を設定または返します。<b>シート</b>はデフォルトです。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSettings.op_Implicit(GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSettings)~System.Collections.Specialized.NameValueCollection">
+      <summary>
+        <see cref="T:GrapeCity.ActiveReports.Export.Excel.Page.Settings"></see>から<see cref="T:System.Collections.Specialized.NameValueCollection"></see>への暗黙的な変換を実行します。
+            </summary>
+      <param name="settings">設定です。</param>
+      <returns>変換の結果。</returns>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSettings.EnableToggles">
+      <summary>            
+		トグルをテーブルの詳細またはグループから折りたたみ可能な行にエクスポートするかどうかを指定します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSettings.RightToLeft">
+      <summary>
+            シートを右から左に表示します。内容はミラされません。
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Excel.Page.ExcelTemplateGenerator.ExcelTemplateGenerator">
+      <summary>
+           データダイナミクスレポート定義からExcelテンプレートを生成できます。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.ExcelTemplateGenerator.ExcelTemplateGenerator.GenerateTemplate(GrapeCity.ActiveReports.PageReport,System.IO.FileInfo)">
+      <summary>
+            指定したレポート定義からExcelテンプレートを生成して保存します。
+            </summary>
+      <param name="definition">テンプレートの生成元のReportDefinition。</param>
+      <param name="pathToSave">テンプレートを保存するパス。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.ExcelTemplateGenerator.ExcelTemplateGenerator.GenerateTemplate(GrapeCity.ActiveReports.PageReport,System.IO.Stream)">
+      <summary>
+            指定したレポート定義からExcelテンプレートを生成して保存します。
+            </summary>
+      <param name="definition">テンプレートの生成元のReportDefinition。</param>
+      <param name="streamToSave">テンプレートを保存するストリーム。</param>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Excel.Page.ExcelTransformationDevice">
+      <summary>
+            レポートからレンダリングされたデータを含むExcelスプレッドシートを作成できます。
+            </summary>
+      <remarks>
+            RDLレポートで正しく動作しますが、ページレポートでは動作しません。データをエクスポートするために <see cref="T:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtension"></see>または<see cref="T:GrapeCity.ActiveReports.Export.Excel.Section.XlsExport"></see>を使用します。
+            </remarks>
+      <summary>
+            RDFからFPLを描画します。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.ExcelTransformationDevice.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider)">
+      <summary>
+        <see cref="T：GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport"></see>をデフォルト設定のストリームで定義されたExcelファイルに描画します。
+            </summary>
+      <param name="report">Excelにレンダリングするレポート。</param>
+      <param name="streams">Excel出力ファイルの作成に使用されるストリーム。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.ExcelTransformationDevice.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection)">
+      <summary>
+        <see cref="T：GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport"></see>を定義された設定でストリームに定義されたExcelファイルに描画します。
+            </summary>
+      <param name="report">Excelにレンダリングするレポート。</param>
+      <param name="streams">Excel出力ファイルの作成に使用されるストリーム。</param>
+      <param name="settings">出力ファイルを作成するときに使用する設定。</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelTransformationDevice.TemplateStream">
+      <summary>
+            レンダリングに使用するテンプレートを<see cref="T：System.IO.Stream"></see>として取得または設定します。
+            </summary>
+      <remarks>このプロパティの値は、nullでない場合、テンプレート設定をオーバーライドします。</remarks>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.ExcelTransformationDevice.GetSupportedSettings">
+      <summary>
+            レポートをExcelに描画するためにサポートされている設定を取得します。
+            </summary>
+      <returns></returns>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.ExcelTransformationDevice.GetSupportedSettings(System.Boolean)">
+      <summary>
+            レポートをExcelに描画するためにサポートされている設定を取得します。
+            </summary>
+      <returns></returns>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Excel.Page.Settings">
+      <summary>
+            レポートをExcelに描画するために使用される設定が含まれています。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.Settings.TemplatePropertyName">
+      <summary>
+           描画処理中に使用するテンプレートの完全パスとファイル名を指定します。 
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.Settings.ReadOnlyRecommendedPropertyName">
+      <summary>
+          保存されたExcelファイルのReadOnlyRecommendedファイルの共有フラグの値を指定します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.Settings.UseDefaultPalettePropertyName">
+      <summary>
+            UseDefaultPaletteの値を指定します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.Settings.ProtectWorkbookPasswordPropertyName">
+      <summary>
+            保存されたExcelファイルの書き込み保護パスワードの値を指定します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.Settings.Template">
+      <summary>
+            描画処理中に使用されるテンプレートのパスを取得または設定します。ページレポートではサポートされていません。RDLレポートでのみサポートされます。
+
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.Settings.ReadOnlyRecommended">
+      <summary>
+        保存されたExcelファイルのReadOnlyRecommendedファイルの共有フラグの値を取得または設定します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.Settings.UseDefaultPalette">
+      <summary>
+            Excelのデフォルトパレットでドキュメントをエクスポートするかどうかを設定または返します。
+            </summary>
+      <remarks>
+        この値をtrueに設定すると、アプリケーションはデフォルトのパレットにあるコントロールの前景色と背景色の事前定義されたカスタム色に最も近い色を使用します。
+            </remarks>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.Settings.ProtectWorkbookPassword">
+      <summary>
+           描画処理中に使用されるProtectWorkbookPasswordのパスを取得または設定します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.Settings.PaperWidth">
+      <summary>
+            出力ドキュメントに設定される用紙サイズの幅を取得または設定します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.Settings.PaperHeight">
+      <summary>
+            出力ドキュメントに設定される用紙サイズの高さを取得または設定します。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.Settings.ApplySettings(System.Collections.Specialized.NameValueCollection)">
+      <summary>
+            NameValueCollection設定パラメーターで渡された設定を適用します。
+            </summary>
+      <param name="settings">新しい設定を含む<see cref="T:System.Collections.Specialized.NameValueCollection"></see>。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.Settings.ToString">
+      <summary>
+          このインスタンスを表す<see cref="T：System.String"></see>を返します。 
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.Settings.GetSettings">
+      <summary>
+            描画拡張機能の設定を含む<see cref="T：System.Collections.Specialized.NameValueCollection"></see>を返します。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.Settings.op_Implicit(GrapeCity.ActiveReports.Export.Excel.Page.Settings)~System.Collections.Specialized.NameValueCollection">
+      <summary>
+        <see cref="T：GrapeCity.ActiveReports.Export.Excel.Page.Settings"></see>から<see cref="T：System.Collections.Specialized.NameValueCollection"></see>への暗黙的な変換を実行します。
+            </summary>
+      <param name="settings">描画拡張機能の設定。</param>
+      <returns>変換の結果。</returns>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection,System.Threading.CancellationToken)">
+      <summary>Renders the specified report.</summary>
+      <param name="report">The report.</param>
+      <param name="streamProvider">The stream provider.</param>
+      <param name="settings">The settings.</param>
+      <param name="cancel">The <see cref="T:System.Threading.CancellationToken"></see> object that allows to interrupt rendering.</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection,System.Threading.CancellationToken,System.IProgress{GrapeCity.ActiveReports.Rendering.Export.ProgressInfo})">
+      <summary>Renders the specified report.</summary>
+      <param name="report">The report.</param>
+      <param name="streamProvider">The stream provider.</param>
+      <param name="settings">The settings.</param>
+      <param name="cancel">The <see cref="T:System.Threading.CancellationToken"></see> object that allows to interrupt rendering.</param>
+      <param name="progress">The <see cref="!:IProgress"></see> is a provider for progress updates.</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.ExcelTransformationDevice.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Threading.CancellationToken)">
+      <summary>
+            Renders the <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport"></see> to the Excel file defined in streams with default settings.
+            </summary>
+      <param name="report">The report to render to Excel.</param>
+      <param name="streamProvider">The stream used to create the Excel output file.</param>
+      <param name="cancel">The <see cref="T:System.Threading.CancellationToken"></see> object that allows to interrupt rendering.</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.ExcelTransformationDevice.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection,System.Threading.CancellationToken)">
+      <summary>
+            Renders the <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport"></see> to the Excel file defined in streams with the defined settings.
+            </summary>
+      <param name="report">The report to render to Excel.</param>
+      <param name="streamProvider">The stream used to create the Excel output file.</param>
+      <param name="settings">The settings to use while creating the output file.</param>
+      <param name="cancel">The <see cref="T:System.Threading.CancellationToken"></see> object that allows to interrupt rendering.</param>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Excel.Page.ExcelDataFileFormat">
+      <summary>
+            Excel format to export plain data.
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelDataFileFormat.Csv">
+      <summary>
+            CSV format.
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelDataFileFormat.Xlsx">
+      <summary>
+            OpenXml format.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.Settings.FileFormat">
+      <summary>
+            Indicates whether to use CSV or OpenXml format for the output file. OpenXml is default.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.Settings.Xlsx">
+      <summary>
+            XLSX settings.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.Settings.Csv">
+      <summary>
+            CSV settings.
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Excel.Page.CsvSettings">
+      <summary>
+            CSV settings.
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.CsvSettings.#ctor">
+      <summary>
+            Initializes new Settings instance with default properties values.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.CsvSettings.ColumnsDelimiter">
+      <summary>
+            The string to be placed between fields in data row.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.CsvSettings.RowsDelimiter">
+      <summary>
+            The string to be placed between data rows.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.CsvSettings.QuotationSymbol">
+      <summary>
+            The quotation symbol.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.CsvSettings.Encoding">
+      <summary>
+            The result file encoding.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.CsvSettings.NoHeader">
+      <summary>
+            Determines whether CSV Header should be omitted.
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Excel.Page.XlsxSettings">
+      <summary>
+            OpenXml settings.
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Excel.Page.XlsxSettings.#ctor">
+      <summary>
+            Initializes new Settings instance with default properties values.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.XlsxSettings.Security">
+      <summary>
+            Returns a <see cref="T:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSecurity"></see> object for initializing document security.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.XlsxSettings.UseCompression">
+      <summary>
+            Gets or sets the value indicating should compression be used on exporting with Xlsx file format. True by default.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.XlsxSettings.RightToLeft">
+      <summary>
+            Show sheets right to left. Content will not be mirrored.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.XlsxSettings.OpenXmlStandard">
+      <summary>
+            Open XML conformance level.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.XlsxSettings.AllowImages">
+      <summary>
+            Export images or not.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.XlsxSettings.AutoRowsHeight">
+      <summary>
+            Export images or not.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSettings.Author">
+      <summary>
+            Gets or sets the name of the author of document.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSettings.Title">
+      <summary>
+            Gets or sets the title of the document.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelRenderingExtensionSettings.Categories">
+      <summary>
+            Gets or sets the categories of the document.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.XlsxSettings.Author">
+      <summary>
+            Gets or sets the name of the author of document.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.XlsxSettings.Title">
+      <summary>
+            Gets or sets the title of the document.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Excel.Page.XlsxSettings.Categories">
+      <summary>
+            Gets or sets the categories of the document.
+            </summary>
+    </member>
+  </members>
+</doc>

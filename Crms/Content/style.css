@@ -1,0 +1,595 @@
+* {
+	margin:0;
+	padding:0;
+	word-break:break-all;
+}
+html,body {
+	width:99%;
+	height:9%;
+	font-family:'MS UI Gothic';
+	font-size:9pt;
+	background-color:#edf4fc;
+	/*overflow-x:hidden;
+	overflow-y:auto;*/
+}
+a {
+    color:#069;
+}
+
+#main {
+	position:relative;
+}
+
+.frameborder
+{
+    border:1px solid #6693cf;
+}
+
+/* Add 2014/12/15 arc yano IPO対応(部品検索) */
+#loading {
+  position: absolute;
+  left: 50%;
+}
+
+/* ヘッダ部 */
+#header {
+	width:100%;
+	height:55px;
+ 	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#1f366c, EndColorStr=#bacded);
+	background-repeat:repeat-x;
+	background-color:#ffffff;
+	color:#fff;
+	font-size: 14pt;
+}
+
+/* ポップアップヘッダ */
+.popup-header 
+{
+	width:100%;
+	height:30px;
+	/*filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#edf4fc, EndColorStr=#b0d3ff);*/
+	background-color:#b0d3ff;
+	font-size: 12pt;
+	font-weight:bold;
+	/*margin:0px 0px;*/
+	text-align:center;
+	padding-top:5px;
+}
+/* フッター部 */
+#footer {
+	width:100%;
+	height:50px;
+}
+
+#PageTitle
+{
+    margin:5px 0px 0px 5px;
+    font-size : medium;
+    font-weight : bold;
+}
+/* ログイン日時表示部分 */
+#message {
+	width:100%;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#edf4fc, EndColorStr=#b0d3ff);
+	margin:0px 0px;
+	border-top:1px solid #6693cf;
+	/*border-right:none;
+	border-left:none;*/
+	padding:10px 0px;
+	font-size:9pt;
+	text-align:right;
+	color:#15428b;
+}
+
+/* コンテンツ表示部 */
+#contents {
+	/*border:3px solid #6693cf;
+	border-right:none;
+	border-top:none;
+	border-bottom:none;*/
+	/*margin-left:201px;*/
+	color:#15428b;
+	padding:5px 5px;
+	height:85%;
+}
+#popup-contents
+{
+    width:97%;
+    height:97%;
+    margin:0px 10px 0px 10px;
+    color:#15428b;
+}
+/* 入力フォーム用スタイル */
+tr.even td
+{
+    background-color: #f5f5f5;
+    /*background-color:#edf4fc;*/
+}
+.input-form
+{
+	width:auto;
+    border:solid 1px #6693cf;
+	border-collapse:collapse;
+	border-spacing:0px;
+	empty-cells:show;
+}
+.input-form th{
+	border:solid 1px #6693cf;
+	background-color:#b0d3ff;
+	text-align:left;
+	font-weight:normal;
+	font-size:9pt;
+	padding:3px 3px;
+	white-space:nowrap;
+}
+.input-form td
+{
+	border:solid 1px #6693cf;
+	background-color:#FFF;
+	text-align:left;
+	font-weight:normal;
+	font-size:9pt;
+	padding:3px 3px;
+	white-space:nowrap;
+	height:20px;
+}
+
+.input-form a
+{
+	color:#069;
+	text-decoration: none;
+	vertical-align:top;
+}  
+
+.input-form-slim
+{
+	width:auto;
+    border:solid 1px #6693cf;
+	border-collapse:collapse;
+	border-spacing:0px;
+	empty-cells:show;
+}
+.input-form-slim th{
+	border:solid 1px #6693cf;
+	background-color:#b0d3ff;
+	text-align:left;
+	font-weight:normal;
+	font-size:9pt;
+	white-space:nowrap;
+	padding:3px;
+}
+.input-form-slim td
+{
+	border:solid 1px #6693cf;
+	background-color:#FFF;
+	text-align:left;
+	font-weight:normal;
+	font-size:9pt;
+	white-space:nowrap;
+}
+
+.input-form-slim a
+{
+    text-decoration:none;
+}
+.input-form-slim input[type="text"] 
+{
+    border:inset 1px #6693cf;
+	font-size:10pt;
+	padding:1px 2px;
+}
+
+.input-form-title
+{
+    filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#edf4fc, EndColorStr=#b0d3ff);
+    font-weight:bold;
+}
+
+/* 明細入力フォーム用 */
+.input-form-line
+{
+	width:auto;
+    border:solid 1px #6693cf;
+	border-collapse:collapse;
+	border-spacing:0px;
+	empty-cells:show;
+}
+.input-form-line th{
+	border:solid 1px #6693cf;
+	background-color:#b0d3ff;
+	text-align:center;
+	font-weight:normal;
+	font-size:9pt;
+	/*white-space:nowrap;*/     /* Mod 2014/07/11 arc yano chrome対応 nowrap指定の削除*/
+	padding:3px;
+}
+.input-form-line td
+{
+	border:solid 1px #6693cf;
+	background-color:#FFF;
+	text-align:center;
+	font-weight:normal;
+	font-size:9pt;
+	/*white-space:nowrap;*/ /* Mod 2014/07/11 arc yano chrome対応 nowrap指定の削除*/
+}
+
+.input-form-line a
+{
+    text-decoration:none;
+}
+.input-form-line input[type="text"] 
+{
+    border:inset 1px #6693cf;
+	font-size:10pt;
+	padding:1px 2px;
+}
+
+/* 一覧表示用スタイル */
+.list {
+	border:solid 1px #6693cf;
+	border-collapse:collapse;
+	border-spacing:0px;
+	empty-cells:show;
+	width:99%;
+ }
+
+
+.list th{
+	border:solid 1px #6693cf;
+	background-color:#b0d3ff;
+	text-align:left;
+	font-weight:normal;
+	font-size:9pt;
+	padding:3px 3px;
+}
+.list td
+{
+	border:solid 1px #6693cf;
+	background-color:#FFF;
+	text-align:left;
+	font-weight:normal;
+	font-size:9pt;
+	padding:3px 3px;
+}
+.list a
+{
+	color:#069;
+	text-decoration: underline;
+	vertical-align:top;
+}
+
+.list2 {
+	border:solid 1px #6693cf;
+	border-collapse:collapse;
+	border-spacing:0px;
+	empty-cells:show;
+	width:99%;
+ }
+
+
+.list2 th{
+	border:solid 1px #6693cf;
+	background-color:#b0d3ff;
+	text-align:left;
+	font-weight:normal;
+	font-size:9pt;
+	padding:3px 3px;
+}
+.list2 td
+{
+	border:solid 1px #6693cf;
+	background-color:#FFF;
+	text-align:left;
+	font-weight:normal;
+	font-size:9pt;
+	padding:3px 3px;
+}
+.list2 a
+{
+	color:#069;
+	text-decoration: underline;
+	vertical-align:top;
+}
+/* Add 2014/09/24 arc yano #3080 (顧客検索機能の新設) */
+/* 一覧表示用スタイル */
+.srlist {
+	border:solid 1px #6693cf;
+	border-collapse:collapse;
+	border-spacing:0px;
+	empty-cells:show;
+	width:160%;
+ }
+
+.srlist th{
+	border:solid 1px #6693cf;
+	background-color:#b0d3ff;
+	text-align:left;
+	font-weight:normal;
+	font-size:9pt;
+	padding:3px 3px;
+}
+.srlist td
+{
+	border:solid 1px #6693cf;
+	background-color:#FFF;
+	text-align:left;
+	font-weight:normal;
+	font-size:9pt;
+	padding:3px 3px;
+}
+.srlist a
+{
+	color:#069;
+	text-decoration: underline;
+	vertical-align:top;
+}
+
+input[type="text"] 
+{
+	border:inset 1px #6693cf;
+	font-size:10pt;
+	height:16px;
+	/*vertical-align:top;*/
+	padding:1px 2px;
+}
+input[type="password"] 
+{
+	border:inset 1px #6693cf;
+	font-size:9pt;
+	height:16px;
+	vertical-align:top;
+	padding:1px 2px;
+}
+input[type="submit"]
+{
+  	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffebeb, EndColorStr=#ffc5c5);
+	width:100px;
+	background-repeat:repeat-x;
+	background-color:#FFEBEB;
+	border:1px solid #ffb6b6;
+}
+input[type="button"]
+{
+    filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#edf4fc, EndColorStr=#b0d3ff);
+    background: -webkit-gradient(linear, center top, center bottom, from(#edf4fc), to(#b0d3ff)); /* Add 2014/07/07 arc amii chrome対応 ボタンにグラデーションをつける為に追加 */
+	width:100px;
+	background-repeat:repeat-x;
+	background-color:#edf4fc;
+	border:1px solid #6693cf;
+	font-size:9pt;
+	color:#15428b;
+}
+input[type="image"]
+{
+    border:solid 1px #6693cf;
+}
+.numeric {
+	text-align: right;
+	ime-mode: disabled;
+	pattern :"^[0-9A-Za-z]+$";
+}
+.alphanumeric {
+	ime-mode:disabled;
+}
+
+/* 2017/02/14 arc yano #3641 */
+.money {
+    text-align:right;
+	ime-mode:disabled;
+}
+
+.readonly 
+{
+    background-color:#EEEEEE;
+}
+
+input[type="button"][disabled] {
+	color: gainsboro; /*Mod 202106/23 graytext→gainsboro yano */ /* Add 2014/07/07 arc amii chrome対応 button押下後、ボタンテキストをグレーにする為追加 */
+}
+select[disabled] {
+    background-color: #E2E2E2; /* Add 2014/07/09 arc amii chrome対応 セレクトボックスが不可の場合、背景色をグレーにする為に追加 */
+}
+
+/* Add 2014/07/24 arc yano chrome対応*/
+div#mask{
+	z-index: 10;
+	overflow: visible;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	filter: alpha(opacity = 50);
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+	display: none;
+	margin: 0px;
+	padding: 0px;
+}
+/* ログインTITLE */
+#login-message{
+	text-align:center;
+	color:#15428b;
+	font-weight:bold;
+	font-size:13pt;
+}
+
+
+/* ログインエラーメッセージ */
+#error-label 
+{
+	font-size:10pt;
+	color:Red;
+	text-align:center;
+}
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.input-validation-error
+{
+    border:solid 1px #FF0000;
+    background-color: #ffcccc;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+    margin-left:20px;
+}
+.complete-message
+{
+    font-weight:bold;
+    color:#ff0000;
+}
+
+.command
+.command2 {
+	font:9pt Verdana, Arial;
+	border-collapse:collapse;
+/*	border:solid 1px #6693cf;*/
+}
+.command td {
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#edf4fc, EndColorStr=#b0d3ff);
+    background: -webkit-gradient(linear, center top, center bottom, from(#edf4fc), to(#b0d3ff)); /* Add 2014/07/07 arc amii chrome対応 ボタンにグラデーションをつける為に追加 */
+	background-repeat:repeat-x;
+	background-color:#ffffff;
+	width:120px;
+	padding:3px 6px;
+	font-weight:bold;
+	background-color:#edf4fc;
+	color:#15428b;
+	border:1px solid #6693cf;
+	cursor:pointer;
+	height:20px;
+	text-align:left;
+	
+}
+.command2 td {
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#edf4fc, EndColorStr=#b0d3ff);
+    background: -webkit-gradient(linear, center top, center bottom, from(#edf4fc), to(#b0d3ff)); /* Add 2014/07/07 arc amii chrome対応 ボタンにグラデーションをつける為に追加 */
+	background-repeat:repeat-x;
+	background-color:#ffffff;
+	width:110px;
+	padding:3px 6px;
+	font-weight:bold;
+	background-color:#edf4fc;
+	color:#15428b;
+	border:1px solid #6693cf;
+	cursor:pointer;
+	height:20px;
+	text-align:left;
+	
+}
+.command2 td:hover
+.command2 td:hover 
+{
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffe9d2, EndColorStr=#ffbe78);
+    background-color:#edf4fc;
+}
+
+.command_btn
+{
+    width:20px;
+    height:20px;
+    vertical-align:middle;
+    border:none;
+}
+.button_error
+{
+  	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffebeb, EndColorStr=#ffc5c5);
+	background-repeat:repeat-x;
+	background-color:#FFEBEB;
+	border:1px solid #ffb6b6;
+}
+.inspection 
+{
+    background-color:White;
+    color:Black;
+    border:solid 2px black;
+    border-collapse:collapse;
+}
+.inspection th
+{
+    background-color:#AAFFAA;
+    border: solid 1px black;
+    padding: 2px 2px 2px 2px;
+}
+.inspection td
+{
+    border: solid 1px black;
+}
+
+/*Add 2015/10/08 arc nakayama #3271_変更予告画面の追加*/
+.login-form{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.login-form-title{
+    width: 500px;
+    float: left;
+    margin-right:auto;
+    margin-left:auto;
+    overflow-y:auto;
+
+}
+
+.login-form-1{
+    width: 500px;
+    height:300px;
+    float: left;
+    margin-right:auto;
+    margin-left:auto;
+    overflow-y:auto;
+
+}
+
+.login-form-1 td
+{
+	border:solid 1px #6693cf;
+	background-color:#FFF;
+	text-align:left;
+	font-weight:normal;
+	width: 500px;
+    height:300px;
+    
+     
+}
+
+/*Add 2021/05/07 yano #4045 Chrome対応*/
+#append_splash_msg {
+	top: 0px;
+	left: 0px;
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+}
+
+#append_splash_msg > #append_splash_msg_inner {
+	opacity: 0;
+	transition: opacity 1.5s ease-out;
+	-webkit-transition: opacity 1.5s ease-out;
+}
+
+#append_splash_msg.show > #append_splash_msg_inner {
+	opacity: 0.9;
+	transition: opacity 0.1s ease-in;
+	-webkit-transition: opacity 0.1s ease-in;
+}
+
+#append_splash_msg_inner {
+	padding: 0.5em;
+	font-size: 3em;
+	color: white;
+	background-color: gray;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	-webkit-transform: translateY(-50%) translateX(-50%);
+}

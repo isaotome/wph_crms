@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="label1.Text" xml:space="preserve">&#xD;
+    <value>第１条　契約の目的&#xD;
+売主は、買主に対して本契約書記載の車輌（以下、「車輌」という。）を本契約書記載の売買価格で売り渡すことを約し、買主はこれを承諾した。&#xD;
+&#xD;
+第２条　車輌の引渡し&#xD;
+１　売主は、買主の指示に基づき、本契約書記載の車輌引渡日に買主の指定する場所にて車輌を引き渡す。&#xD;
+２　前項の引渡しに要する費用は、売主の負担とする。&#xD;
+３　買主の責めに帰すべき事由によらず、車輌の引渡しに遅延が生じた場合、買主は再査定により本契約書記載の売買価格を減額することができる。&#xD;
+&#xD;
+第３条　移転登録書類&#xD;
+１　売主は、車輌所有者の印鑑証明書、委任状、譲渡証明書、有効期限内の自動車税納税証明書、その他の車輌の登録名義の変更手続に必要な書類を、売主の責任において完備し、本契約書記載の書類引渡日に買主に引き渡すものとする。&#xD;
+２　前項の書類の不備・遅延等により発生する問題についての責任は全て売主が負うものとする。&#xD;
+&#xD;
+第４条　売買代金の支払い&#xD;
+１　買主は、売主が第２条第１項により車輌を引き渡し、かつ前条第１項により車輌の登録名義の変更手続に必要な書類を買主に引き渡したときは、本契約書記載の売買代金を支払うものとする。&#xD;
+２　前項の売買代金の支払期日及び支払方法は、本契約書記載のとおりとする。&#xD;
+&#xD;
+第５条　自賠責保険料&#xD;
+１　車輌の自賠責保険料は売主の責任において当該年度分まで完納されていることを前提とする。万一完納されていないときは、未払分は売主の負担とする。&#xD;
+２　本契約書記載の売買価格には、自賠責保険未経過保険料相当額を含むものとする。&#xD;
+&#xD;
+第６条　自動車税&#xD;
+１　車輌の自動車税は売主の責任において当該年度まで完納されていることを前提とする。万一完納されていないときは、未払い分は売主の負担とする。&#xD;
+２　本契約書表面記載の売買価格には、自動車税未経過相当額を含むものとする。&#xD;
+&#xD;
+第７条　リサイクル料&#xD;
+リサイクル料は、本契約書記載の売買価格に含まれているものとする。&#xD;
+&#xD;
+第８条　消費税&#xD;
+消費税は、本契約書記載の売買価格に含まれているものとする。&#xD;
+&#xD;
+第９条　売買代金の特則&#xD;
+１　第５条第２項、第６条第２項及び第７条の規定にかかわらず、自賠責保険未経過保険料相当額、自動車税未経過相当額及びリサイクル料の合計額（以下、「リサイクル料等合計額）が売買代金よりも高額な場合、売主は、リサイクル料等合計額から売買代金を控除した金額を、手数料として買主に支払うものとする。&#xD;
+２　前項の場合、買主が売主に支払うべきリサイクル料等合計額相当額と、売主が買主に支払うべき手数料は、代金支払日に対当額をもって相殺するものとする。&#xD;
+&#xD;
+第10条　車輌の名義変更&#xD;
+売主が買主に対して、第３条記載の登録名義の変更手続に必要な書類の引渡しを完了した場合、買主は速やかに車輌の登録名義の変更手続を行うものとする。&#xD;
+&#xD;
+第11条　誠実義務&#xD;
+１　売主は、車輌につき、その使用状況、品質、傷、へこみ、不具合の有無及び程度等（以下、「使用状況等」という。）を誠実に申告しなければならない。使用状況等のうち、特に、車輌の事故歴、修復歴、改造、距離計交換、距離数巻き戻しの有無等についての表面の「確認事項」記入欄は、真実かつ正確に記入することを要するものとする。なお、事故による修復歴の定義については、一般社団法人自動車公正取引協議会の規約に準ずる。&#xD;
+２　売主は、本契約書に使用状況等を含む所要事項を正確、確実に記載、申告したこと、並びに虚偽の記載及び誤記入、記入漏れ等がないことを表明し、保証する。万一、虚偽の記載、誤記入、記入漏れ等によって発生する問題の責任はすべて売主が負うものとする。&#xD;
+３　売主は、本契約書に誤記入等を発見した場合は直ちにその旨を買主に報告し訂正しなければならない。当該訂正がなされた場合、買主は、訂正内容に応じて、再査定により本契約書記載の売買価格を減額し、又は本契約を解約（キャンセル）することができる。&#xD;
+&#xD;
+第12条　担保権等の処理&#xD;
+１　車輌につき、本契約締結後に抵当権等の担保権の設定又は差押等の事実が判明した場合には、売主は、その旨を直ちに買主に通知するとともに、売主の責任において、直ちに（遅くとも車輌引渡日の[前日]までに）抵当権等の担保権又は差押等の解除の処理を行うものとする。&#xD;
+２　前項の処理に要する費用は、売主の負担とする。&#xD;
+&#xD;
+第13条　売主による契約の解除&#xD;
+１　売主は、本契約書記載の車輌引渡日までの間にかぎり、買主に書面で通知して、本契約を解約（キャンセル）することができる。ただし、売主は、買主から手付金又は売買代金の内金を受領している場合は、それを返還するのと同時でなければこの契約を解約（キャンセル）することができない。&#xD;
+２　前項の解約（キャンセル）を申し出た場合、売主はこの売買価格の５％相当額の解約料（キャンセル料）を買主に支払わなくてはならないものとする。ただし、当該解約（キャンセル）により買主が売買価格の５％相当額を超える損害、損失又は費用等（弁護士費用を含む。以下、「損害等」という。）を被った場合には、売主は、買主の当該損害等を賠償する。&#xD;
+&#xD;
+第14条　買主による契約の解除&#xD;
+１　売主が買主に対して、第２条記載の車輌の引渡しをせず、又は第３条記載の名義変更に必要な書類の引渡しを完了しない場合は、買主は、売主に対し事前に通知・催告等をすることなく直ちに本契約を解除でき、売主は、買主から損害賠償を請求されても、一切の異議を申し立てないものとする。&#xD;
+２　売主が、車輌引渡日の[前日]までに第12条第１項の抵当権等の担保権又は差押等を解除することができなかった場合には、買主は、売主に対し事前に通知・催告等をすることなく直ちに本契約を解除でき、売主は買主から損害賠償を請求されても一切の異議を申し立てないものとする。&#xD;
+３　買主が本契約履行後、車輌につき売主の認知にかかわらず、本契約記載事項と車輌の間に相違があることが判明した場合は、買主は本契約を解除でき、売主は、買主から損害賠償を請求されても、一切の異議を申し立てないものとする。&#xD;
+４　本契約締結日から車輌の引渡しまでの間に車輌に破損等変化が生じた場合は、買主は本契約を解除できるものとする。&#xD;
+５　前各項又は次条により本契約が解除された場合、若しくは売主の事情により本契約を解除する場合、売主は、買主が本契約の履行に要した費用相当額を、買主に支払うものとする。なお、買主の売主に対するその他の損害賠償の請求を妨げない。&#xD;
+&#xD;
+第15条　解除&#xD;
+買主は、売主が以下のいずれかに該当する場合、事前に通知・催告等することなく直ちに本契約を解除できるものとする。&#xD;
+①　差押・仮差押・滞納処分・競売の申し立て等を受けたとき&#xD;
+②　破産・民事再生・特別清算等の申し立てがあったとき又は会社更生手続が開始したとき&#xD;
+③　営業の廃止・休止・変更又は解散をしたとき、若しくは解散したとみなされたとき&#xD;
+④　手形不渡り等により支払を停止したとき&#xD;
+⑤　手形の不渡り又は支払の停止をするおそれがある等、信用状態が悪化したと認められる事由があるとき&#xD;
+⑥　買主への著しい背信行為や社会的信用を損なう行為があったと認められたとき&#xD;
+&#xD;
+第16条　暴力団等反社会的勢力との取引拒否&#xD;
+　買主は、暴力団、暴力団員、暴力団関係企業・団体、総会屋、社会運動等標ぼうゴロ、特殊知能暴力集団等その他の反社会的勢力又はこれらの密接交際者、及び過去に民事・行政問題等に関し違法な行為・不当な要求行為を行った履歴のある者など（以下、「暴力団等反社会的勢力」という。）との取引を拒否できるものとし、その場合は、買主は、売主に対し事前に通知・催告等をすることなく直ちに本契約を解除でき、売主は、買主から損害賠償を請求されても、一切の異議を申し立てないものとする。&#xD;
+&#xD;
+第17条　規定外事項&#xD;
+この契約に定めのない事項又はこの契約の解釈に疑義が生じた事項がある場合には、民法その他関係法令を適用又は斟酌して、売主・買主は誠実に協議し、解決するものとする。                                                                                                                                                               以上</value>&#xD;
+  </data>
+  <metadata name="$this.ScriptEditorPositionForUndo" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="$this.ScriptEditorPositionForRedo" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

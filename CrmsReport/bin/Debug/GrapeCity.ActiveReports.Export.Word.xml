@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>GrapeCity.ActiveReports.Export.Word</name>
+  </assembly>
+  <members>
+    <member name="T:GrapeCity.ActiveReports.Export.Word.Page.DocumentCompatibilityVersion">
+      <summary>Wordドキュメントの互換性バージョンを指定します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.Page.DocumentCompatibilityVersion.Word2007">
+      <summary>Word 2007</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.Page.DocumentCompatibilityVersion.Word2010">
+      <summary>Word 2010</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.Page.DocumentCompatibilityVersion.Word2013">
+      <summary>Word 2013</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Word.Page.FileFormat">
+      <summary>Wordドキュメントの出力形式を指定します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.Page.FileFormat.HTML">
+      <summary>Wordのhtml形式。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.Page.FileFormat.OOXML">
+      <summary>WordのOpenXML形式。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Word.Page.Settings">
+      <summary>Word描画拡張に対してISettingsを実装します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Word.Page.WordRenderingExtension">
+      <summary>IRenderingExtensionを実装します。<see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport">IReport</see>をWordのHTMLドキュメントにレンダリングすることができます。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.Page.Settings.Author">
+      <summary>ドキュメントの作成者の名前を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.Page.Settings.BaseUrl">
+      <summary>ドキュメント上のハイパーリンクに使用されるベースURLを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.Page.Settings.CompanyName">
+      <summary>エクスポートしたファイルのドキュメントプロパティのために使用される会社名を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.Page.Settings.DocumentCompatibilityVersion">
+      <summary>エクスポートしたドキュメントを開くWordのバージョンを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.Page.Settings.DpiX">
+      <summary>カスタムレポートアイテムの水平解像度を取得または設定します。デフォルト値は「96」です。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.Page.Settings.DpiY">
+      <summary>カスタムレポートアイテムの垂直解像度を取得または設定します。デフォルト値は「96」です。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.Page.Settings.FileFormat">
+      <summary>出力ファイルのためWordHtml形式またはOpenXml形式を使用するかどうかを示します。デフォルトの形式はWordHtmlです。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.Page.Settings.Generator">
+      <summary>ドキュメントの作成者の名前を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.Page.Settings.PageHeight">
+      <summary>レンダリングされたドキュメントのページの高さを取得または設定します。 値は Lengthクラスに渡された値に相当します。（ "8.5インチ"、 "11センチメートル"など）。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.Page.Settings.PageSettings">
+      <summary>ページサイズとページの向きの設定を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.Page.Settings.PageWidth">
+      <summary>レンダリングされたドキュメントのページの幅を取得または設定します。 値はLengthクラスに渡された値に相当します。（ "8.5インチ"、 "11センチメートル"など）。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.Page.Settings.SecuritySettings">
+      <summary>ドキュメントの暗号化とセキュリティの設定を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.Page.Settings.Title">
+      <summary>ドキュメントのタイトルを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.Page.Settings.TOCAutoUpdate">
+      <summary>Trueの場合は、Tocコントロールを自動的に更新するマクロをドキュメントに入力します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.Page.Settings.UseMhtOutput">
+      <summary>MHTの出力が結果のWordドキュメントのために使用されるかどうかを示す値を取得または設定します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Word.Section.RtfExport">
+      <summary>ActiveReports for .NETドキュメントからRTFファイルを作成するための機能を提供します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Word.Section.RtfExportException">
+      <summary>RTFエクスポートでエラーが発生したときにスローされる例外です。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Word.Section.RtfExport.#ctor">
+      <summary>RtfExportクラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Word.Section.RtfExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.String,System.String)">
+      <summary>指定したドキュメントをRTFファイルにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="filePath">RTFファイルを保存するファイル名とパス。</param>
+      <param name="pageRange">エクスポートするページを、カンマで区切って指定するか、2-8のように開始ページと終了ページを指定します。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Word.Section.RtfExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.String)">
+      <summary>指定したドキュメントをRTFファイルにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="filePath">RTFファイルを保存するファイル名とパス。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Word.Section.RtfExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.IO.Stream)">
+      <summary>指定したドキュメントをRTFストリームにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="outputStream">RTFドキュメントを保存するSystem.IO.Stream。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Word.Section.RtfExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.IO.Stream,System.String)">
+      <summary>指定したドキュメントをRTFストリームにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="outputStream">RTFドキュメントを保存するSystem.IO.Stream。</param>
+      <param name="pageRange">エクスポートするページを、カンマで区切って指定するか、2-8のように開始ページと終了ページを指定します。</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.Section.RtfExport.EnableShapes">
+      <summary>
+        <para>この値をTrueに設定すると、図形と線はRTF形式にエクスポートされます。これを正しく表示するにはMicrosoft Wordが必要です。</para>
+        <para>※本バージョンでは、このプロパティをTrueに設定した場合の動作は未サポートです。</para>
+      </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.Section.RtfExport.Pagination">
+      <summary>エクスポートされたRTF文書でページネーションを使用するかどうかを取得または設定します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Word.Section.RtfExportException.#ctor(System.String)">
+      <summary>エラー メッセージを指定して、RtfExportExceptionクラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因を説明するエラーメッセージ。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Word.Section.RtfExportException.#ctor(System.String,System.Exception)">
+      <summary>エラーメッセージ、およびこの例外の原因である内部例外への参照を指定して、RtfExportExceptionクラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因を説明するエラーメッセージ。</param>
+      <param name="innerException">現在の例外の原因であるExceptionインスタンス。innerExceptionパラメーターがnull参照(Visual Basicの場合はNothing)でない場合、現在の例外は、内部の例外を処理するcatchブロックで発生します。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Word.Section.RtfExportException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>シリアル化したデータを指定して、RtfExportExceptionクラスの新しいインスタンスを初期化します。</summary>
+      <param name="info">
+        <para>スローされている例外に関するシリアル化済みオブジェクト データを保持しているSerializationInfo。</para>
+      </param>
+      <param name="context">転送元または転送先に関するコンテキスト情報を含んでいるStreamingContext。</param>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Word.WordPageSettings">
+      <summary>
+            ワードドキュメントの印刷設定を提供するには必要な情報をカプセル化します。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Word.WordPageSettings.ToString">
+      <summary>
+            このインスタンスを表す<see cref="T:System.String"></see>を返します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.WordPageSettings.Orientation">
+      <summary>
+            Wordドキュメントの印刷の向きを取得または設定します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSize">
+      <summary>
+            Wordドキュメントの印刷用紙サイズを取得または設定します。
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PageOrientation">
+      <summary>
+            有効な用紙の向きの値。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PageOrientation.Default">
+      <summary>
+            デフォルトのプリンタ方向。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PageOrientation.Portrait">
+      <summary>
+            縦向き。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PageOrientation.Landscape">
+      <summary>
+            横向き。
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes">
+      <summary>
+            有効な用紙サイズの値。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Default">
+      <summary>
+            用紙サイズはユーザーによって定義されます。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Letter">
+      <summary>
+            文字、8 1/2 x 11 インチです。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.LetterSmall">
+      <summary>
+            文字の小さな 8 1/2 x 11 インチです。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Tabloid">
+      <summary>
+            タブロイド、11 x 17 インチです。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Ledger">
+      <summary>
+            総勘定元帳、17 x 11 インチです。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Legal">
+      <summary>
+            法律、8 1/2 x 14 インチです。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Statement">
+      <summary>
+            ステートメント、5 1/2 x 8 1/2 インチです。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Executive">
+      <summary>
+            Executive、7 1/2 x 10 1/2 インチです。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.A3">
+      <summary>
+            A3、297 x 420 mm
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.A4">
+      <summary>
+            A4 210 x 297 mm
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.A4Small">
+      <summary>
+            A4、210 x 297 mm
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.A5">
+      <summary>
+            A5、148 x 210 mm
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.B4">
+      <summary>
+            B4、250 x 354 ミリ
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.B5">
+      <summary>
+            B5、182 x 257 ミリ
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Folio">
+      <summary>
+            フォリオ、13 インチ x 8 1/2。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Quarto">
+      <summary>
+            4 つ折版、215 x 275 mm
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Standard10x14">
+      <summary>
+            10 x 14 インチです。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Standard11x17">
+      <summary>
+            11 x 17 です。.
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Note">
+      <summary>
+            8 1/2 x 11 インチ注意してください。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Number9Envelope">
+      <summary>
+            #9 封筒 3 7/8 x 8 7/8 インチです。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Number10Envelope">
+      <summary>
+            エンベロープ #10 4 1/8 x 9 1/2 インチです。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Number11Envelope">
+      <summary>
+            エンベロープ #11 4 1/2 x 10 3/8 インチです。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Number12Envelope">
+      <summary>
+            #12 封筒 4 1/2 x 11 インチです。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Number14Envelope">
+      <summary>
+            #14 封筒 5 x 11 1/2 インチです。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.CSheet">
+      <summary>
+            C サイズ 17 x 22 インチです。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.DSheet">
+      <summary>
+            D サイズ 22 x 34 インチです。 
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.ESheet">
+      <summary>
+            E サイズ 34 x 44 インチです。 
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.DLEnvelope">
+      <summary>
+            エンベロープ DL、110 x 220 mm
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.C5Envelope">
+      <summary>
+            エンベロープ C5、162 x 229 mm
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.C3Envelope">
+      <summary>
+            エンベロープ c3 があり、324 x 458 mm
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.C4Envelope">
+      <summary>
+            エンベロープ C4、229 x 324 mm
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.C6Envelope">
+      <summary>
+            エンベロープ C6 114 x 162 mm
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.C65Envelope">
+      <summary>
+            封筒 C65、114 x 229 mm
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.B4Envelope">
+      <summary>
+            エンベロープ B4、250 x 353 mm
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.B5Envelope">
+      <summary>
+            エンベロープ B5、176 x 250 mm
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.B6Envelope">
+      <summary>
+            エンベロープ B6 176 x 125 mm
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.ItalyEnvelope">
+      <summary>
+            封筒、110 x 230 mm
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.MonarchEnvelope">
+      <summary>
+            エンベロープの最高級、3 7/8 x 7 1/2 インチです。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.PersonalEnvelope">
+      <summary>
+            封筒を 3 5/8 x 6 1/2 インチです。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.USStandardFanfold">
+      <summary>
+            U. S.標準的な連続紙、14 7/8 x 11 インチです。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.GermanStandardFanfold">
+      <summary>
+            ドイツ語版標準連続紙で、8 x 12 インチ 1/2。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.GermanLegalFanfold">
+      <summary>
+            ドイツ リーガル複写紙で、13 インチ x 8 1/2。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.IsoB4">
+      <summary>
+            ISO B4 (250 mm x 353 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.JapanesePostcard">
+      <summary>
+            日本はがき (100 mm x 148 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Standard9x11">
+      <summary>
+            標準紙 (9 インチ x 11 インチ)
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Standard10x11">
+      <summary>
+            標準紙 (10 インチ x 11 インチ)
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Standard15x11">
+      <summary>
+            標準紙 (15 インチ x 11 インチ)
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.InviteEnvelope">
+      <summary>
+            招待封筒 (220 mm x 220 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.LetterExtra">
+      <summary>
+            レター上質紙 (9.275 インチ x 12 インチ) この値は PostScript ドライバー固有の値であり、用紙を
+            節約するために Linotronic プリンターでだけ使用されます。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.LegalExtra">
+      <summary>
+            リーガル上質紙 (9.275 インチ x 15 インチ) この値は PostScript ドライバー固有の値であり、用紙
+            を節約するために Linotronic プリンターでだけ使用されます。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.TabloidExtra">
+      <summary>
+            タブロイド上質紙 (11.69 インチ x 18 インチ) この値は PostScript ドライバー固有の値であり、用紙
+            を節約するために Linotronic プリンターでだけ使用されます。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.A4Extra">
+      <summary>
+            A4 上質紙 (236 mm x 322 mm)。 この値は PostScript ドライバー固有の値であり、用紙を節約す
+            るために Linotronic プリンターでだけ使用されます。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.LetterTransverse">
+      <summary>
+            レター横長 (8.275 インチ x 11 インチ)
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.A4Transverse">
+      <summary>
+            A4 横長 (210 mm x 297 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.LetterExtraTransverse">
+      <summary>
+            レター上質横長 (9.275 インチ x 12 インチ)
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.APlus">
+      <summary>
+            SuperA/SuperA/A4 (227 mm x 356 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.BPlus">
+      <summary>
+            SuperB/SuperB/A3 (305 mm x 487 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.LetterPlus">
+      <summary>
+            レター プラス (8.5 インチ x 12.69 インチ)
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.A4Plus">
+      <summary>
+            A4 プラス (210 mm x 330 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.A5Transverse">
+      <summary>
+            A5 横長 (148 mm x 210 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.B5Transverse">
+      <summary>
+            JIS B5 横長 (182 mm x 257 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.A3Extra">
+      <summary>
+            A3 上質紙 (322 mm x 445 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.A5Extra">
+      <summary>
+            A5 上質紙 (174 mm x 235 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.B5Extra">
+      <summary>
+            ISO B5 上質紙 (201 mm x 276 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.A2">
+      <summary>
+            A2 (420 mm x 594 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.A3Transverse">
+      <summary>
+            A3 横長 (297 mm x 420 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.A3ExtraTransverse">
+      <summary>
+            A3 上質横長 (322 mm x 445 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.JapaneseDoublePostcard">
+      <summary>
+            日本往復はがき (200 mm x 148 mm)。 
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.A6">
+      <summary>
+            A6 (105 mm x 148 mm)。 
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.JapaneseEnvelopeKakuNumber2">
+      <summary>
+            日本角形 #2 封筒。 
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.JapaneseEnvelopeKakuNumber3">
+      <summary>
+            日本角形 #3 封筒。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.JapaneseEnvelopeChouNumber3">
+      <summary>
+            日本長形 #3 封筒。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.JapaneseEnvelopeChouNumber4">
+      <summary>
+            日本長形 #4 封筒。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.LetterRotated">
+      <summary>
+            レター回転紙 (11 インチ x 8.5 インチ)
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.A3Rotated">
+      <summary>
+            A3 回転紙 (420 mm x 297 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.A4Rotated">
+      <summary>
+            A4 回転紙 (297 mm x 210 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.A5Rotated">
+      <summary>
+            A5 回転紙 (210 mm x 148 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.B4JisRotated">
+      <summary>
+            JIS B4 回転紙 (364 mm x 257 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.B5JisRotated">
+      <summary>
+            JIS B5 回転紙 (257 mm x 182 mm)。 
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.JapanesePostcardRotated">
+      <summary>
+            日本回転はがき (148 mm x 100 mm)。 
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.JapaneseDoublePostcardRotated">
+      <summary>
+            日本回転往復はがき (148 mm x 200 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.A6Rotated">
+      <summary>
+            A6 回転紙 (148 mm x 105 mm)。 
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.JapaneseEnvelopeKakuNumber2Rotated">
+      <summary>
+            日本回転角形 #2 封筒。 
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.JapaneseEnvelopeKakuNumber3Rotated">
+      <summary>
+            日本回転角形 #3 封筒。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.JapaneseEnvelopeChouNumber3Rotated">
+      <summary>
+            日本回転長形 #3 封筒。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.JapaneseEnvelopeChouNumber4Rotated">
+      <summary>
+            日本回転長形 #4 封筒。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.B6Jis">
+      <summary>
+            JIS B6 (128 mm x 182 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.B6JisRotated">
+      <summary>
+            JIS B6 回転紙 (182 mm x 128 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Standard12x11">
+      <summary>
+            標準紙 (12 インチ x 11 インチ) 
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.JapaneseEnvelopeYouNumber4">
+      <summary>
+            日本洋形 #4 封筒。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.JapaneseEnvelopeYouNumber4Rotated">
+      <summary>
+            日本洋形 #4 回転封筒。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Prc16K">
+      <summary>
+            中華人民共和国 16K (146 mm x 215 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Prc32K">
+      <summary>
+            中華人民共和国 32K (97 mm x 151 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Prc32KBig">
+      <summary>
+            中華人民共和国 32K 大 (97 mm x 151 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.PrcEnvelopeNumber1">
+      <summary>
+            中華人民共和国 #1 封筒 (102 mm x 165 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.PrcEnvelopeNumber2">
+      <summary>
+            中華人民共和国 #2 封筒 (102 mm x 176 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.PrcEnvelopeNumber3">
+      <summary>
+            中華人民共和国 #3 封筒 (125 mm x 176 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.PrcEnvelopeNumber4">
+      <summary>
+            中華人民共和国 #4 封筒 (110 mm x 208 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.PrcEnvelopeNumber5">
+      <summary>
+            中華人民共和国 #5 封筒 (110 mm x 220 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.PrcEnvelopeNumber6">
+      <summary>
+            中華人民共和国 #6 封筒 (120 mm x 230 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.PrcEnvelopeNumber7">
+      <summary>
+            中華人民共和国 #7 封筒 (160 mm x 230 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.PrcEnvelopeNumber8">
+      <summary>
+            中華人民共和国 #8 封筒 (120 mm x 309 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.PrcEnvelopeNumber9">
+      <summary>
+            中華人民共和国 #9 封筒 (229 mm x 324 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.PrcEnvelopeNumber10">
+      <summary>
+            中華人民共和国 #10 封筒 (324 mm x 458 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Prc16KRotated">
+      <summary>
+            中華人民共和国 16K 回転紙 (146 mm x 215 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Prc32KRotated">
+      <summary>
+            中華人民共和国 32K 回転紙 (97 mm x 151 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.Prc32KBigRotated">
+      <summary>
+            中華人民共和国 32K 回転紙大 (97 mm x 151 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.PrcEnvelopeNumber1Rotated">
+      <summary>
+            中華人民共和国 #1 回転封筒 (165 mm x 102 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.PrcEnvelopeNumber2Rotated">
+      <summary>
+            中華人民共和国 #2 回転封筒 (176 mm x 102 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.PrcEnvelopeNumber3Rotated">
+      <summary>
+            中華人民共和国 #3 回転封筒 (176 mm x 125 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.PrcEnvelopeNumber4Rotated">
+      <summary>
+            中華人民共和国 #4 回転封筒 (208 mm x 110 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.PrcEnvelopeNumber5Rotated">
+      <summary>
+            中華人民共和国封筒 #5 回転封筒 (220 mm x 110 mm)。 
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.PrcEnvelopeNumber6Rotated">
+      <summary>
+            中華人民共和国 #6 回転封筒 (230 mm x 120 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.PrcEnvelopeNumber7Rotated">
+      <summary>
+            中華人民共和国 #7 回転封筒 (230 mm x 160 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.PrcEnvelopeNumber8Rotated">
+      <summary>
+            中華人民共和国 #8 回転封筒 (309 mm x 120 mm)。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.PrcEnvelopeNumber9Rotated">
+      <summary>
+            中華人民共和国 #9 回転封筒 (324 mm x 229 mm)。 
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Word.WordPageSettings.PaperSizes.PrcEnvelopeNumber10Rotated">
+      <summary>
+            中華人民共和国 #10 回転封筒 (458 mm x 324 mm)。
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Word.WordSecurity">
+      <summary>
+            WordSecurityィ設定を提供します。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Word.WordSecurity.ToString">
+      <summary>
+            このインスタンスを表す<see cref="T:System.String"></see>を返します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.WordSecurity.WritePassword">
+      <summary>
+       ドキュメントの編集に使用する必要なパスワードを取得または設定します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.WordSecurity.Password">
+      <summary>
+       Wordドキュメントを開くために入力するパスワードを取得または設定します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.WordSecurity.ReadOnlyRecommended">
+      <summary>
+    trueに設定すると、Wordはドキュメントを読み取り専用モードで開くことを推奨します。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Word.Page.Settings.#ctor(System.Collections.Specialized.NameValueCollection)">
+      <summary>
+           NameValueCollectionを使用して設定値を渡しているクラスの新しいインスタンスを初期化します。
+            </summary>
+      <param name="settings"></param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Word.Page.Settings.#ctor">
+      <summary>
+        <see cref="T:GrapeCity.ActiveReports.Export.Word.Page.Settings"></see> クラスの新しいインスタンスを初期化します。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Word.Page.Settings.op_Implicit(GrapeCity.ActiveReports.Export.Word.Page.Settings)~System.Collections.Specialized.NameValueCollection">
+      <summary>
+        <see cref="T:GrapeCity.ActiveReports.Export.Word.Page.Settings"></see>から<see cref="T:System.Collections.Specialized.NameValueCollection"></see>への暗黙的な変換を行います。
+            </summary>
+      <param name="settings">設定</param>
+      <returns>変換の結果。</returns>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Word.Page.WordRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider)">
+      <summary>
+指定された<see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem"></see>をWord Html形式で指定された<see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider"></see>にレンダリングします。
+</summary>
+      <param name="report">
+        レンダリングする<see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem"></see></param>
+      <param name="streams">
+        レンダリングする<see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider"></see></param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Word.Page.WordRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection)">
+      <summary>
+設定の指定された<see cref="T:System.Collections.Specialized.NameValueCollection"></see>を使用して、指定された<see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem"></see>をWord Html形式で指定された<see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider"></see>にレンダリングします。 
+</summary>
+      <param name="report">
+        レンダリングする<see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem"></see></param>
+      <param name="streams">
+        レンダリングする<see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider"></see></param>
+      <param name="settings">
+        レンダリング設定の<see cref="T:System.Collections.Specialized.NameValueCollection"></see></param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Word.Page.WordRenderingExtension.GetSupportedSettings">
+      <summary>
+        <see cref="T:GrapeCity.ActiveReports.Export.Word.Page.WordRenderingExtension"></see>の特定の設定を取得します。
+</summary>
+      <returns>
+        設定の<see cref="T:System.Collections.Specialized.NameValueCollection"></see></returns>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Word.Page.WordRenderingExtension.GetSupportedSettings(System.Boolean)">
+      <summary>
+        <see cref="T:GrapeCity.ActiveReports.Export.Word.Page.WordRenderingExtension"></see>の特定の設定を取得します。
+</summary>
+      <returns>
+        設定の<see cref="T:System.Collections.Specialized.NameValueCollection"></see></returns>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Word.Page.WordRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection,System.Threading.CancellationToken)">
+      <summary>
+            Renders specified <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem"></see> to specified <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider"></see> in Word Html format using specified <see cref="T:System.Collections.Specialized.NameValueCollection"></see> of settings.
+            </summary>
+      <param name="report">
+        <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem"></see> to render.</param>
+      <param name="streams">
+        <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider"></see> render to.</param>
+      <param name="settings">
+        <see cref="T:System.Collections.Specialized.NameValueCollection"></see> of rendering settings.</param>
+      <param name="cancel">The <see cref="T:System.Threading.CancellationToken"></see> object that allows to interrupt rendering.</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Word.Page.Settings.Categories">
+      <summary>
+            Gets or sets the categories of the document.
+            </summary>
+    </member>
+  </members>
+</doc>

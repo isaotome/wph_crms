@@ -1,0 +1,6 @@
+<FileList>
+  <File Reference = "GrapeCity.ActiveReports.SpreadBuilder.dll">
+    <ToolboxItems VSCategory="SpreadBuilder">
+    </ToolboxItems>
+  </File>
+</FileList>

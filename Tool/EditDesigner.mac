@@ -1,0 +1,28 @@
+//テキストを一行ずつ読み取って、ディスプレイフォーマットを挿入するマクロ
+
+//カーソルがどこにあってもいいように先頭を指定
+gofiletop;
+
+//using追加
+replaceallfast "using System.ComponentModel.DataAnnotations;" + "\n" + "\t", "";
+
+//カーソルを先頭に戻す
+gofiletop;
+
+
+searchdown "using System;";
+if(result){
+	insert "using System.ComponentModel.DataAnnotations;" + "\n" + "\t";
+}
+
+replaceallfast "[DisplayFormat(ConvertEmptyStringToNull = false)]" + "\n" + "\t" + "\t", "";
+
+//カーソルを先頭に戻す
+gofiletop;
+
+searchdown "public string";
+while(1){
+	if (result == 0) { break;}
+		insert "[DisplayFormat(ConvertEmptyStringToNull = false)]" + "\n" + "\t" + "\t";
+	finddown;
+}

@@ -1,0 +1,740 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GrapeCity.ActiveReports.Core.Export.Text.Page</name>
+    </assembly>
+    <members>
+        <member name="T:GrapeCity.ActiveReports.Export.Text.Page.CsvExport">
+            <summary>
+            Provides export of rendered Page and RDL reports to CSV format.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Text.Page.CsvExport.Export(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.IO.TextWriter,GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings)">
+            <summary>
+            Writes the given <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport"/> object to the given <see cref="T:System.IO.StreamWriter"/> in CSV format. 
+            </summary>
+            <param name="report">The report to be exported.</param>
+            <param name="writer">The StreamWriter to be report exported to.</param>
+            <param name="settings">Optional export settings.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Text.Page.CsvExport.Export(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.IO.TextWriter,System.Threading.CancellationToken,GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings)">
+            <summary>
+            Writes the given <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport"/> object to the given <see cref="T:System.IO.StreamWriter"/> in CSV format. 
+            </summary>
+            <param name="report">The report to be exported.</param>
+            <param name="writer">The StreamWriter to be report exported to.</param>
+            <param name="cancel">The <see cref="T:System.Threading.CancellationToken"/> object that allows to interrupt export.</param>
+            <param name="settings">Optional export settings.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Text.Page.CsvExport.GetRows(System.Collections.Generic.IEnumerable{GrapeCity.ActiveReports.Export.Text.Page.DataBuilder.DataMember},System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            Converts hierarchical data structure to flat structure to be exported to CSV.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings">
+            <summary>
+            CsvRenderingExtension settings class
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings.NoHeader">
+            <summary>
+            Determines whether CSV Header should be omitted
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings.ColumnsDelimiter">
+            <summary>
+            The string to be placed between fields in data row.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings.RowsDelimiter">
+            <summary>
+            The string to be placed between data rows.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings.QuotationSymbol">
+            <summary>
+            The quotation symbol.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings.QuotationMode">
+            <summary>
+            Gets or sets quotation mode
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings.DateTimeFormat">
+            <summary>
+            Default format for date values. See also <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings">"Custom date and time format strings"</a>.
+            Suggested to specify something like "yyyy-MM-dd".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings.NumericFormat">
+            <summary>
+            Default format for numeric values. See also <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings">"Custom numeric format strings"</a>.
+            Suggested to specify something like "0.####".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings.Target">
+            <summary>
+            Layers filtration hint.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Text.Page.DataBuilder">
+            <summary>
+            Extracts the hierarchical data from the report according to the DataElementOutput and DataElementName attributes,
+            in order to export it in a text format (csv, json, etc).
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Text.Page.DataBuilder.RenderChartDataPoint(GrapeCity.ActiveReports.Extensibility.Rendering.Components.Chart.IChartDataPoint)">
+            <summary>
+            Renders the specified <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.Chart.IChartDataPoint"/>.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Text.Page.DataOperations.Ungroup(GrapeCity.ActiveReports.Export.Text.Page.DataBuilder.DataMember)">
+            <summary>
+            Ungroup data members to be like table.
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Text.Page.JsonExport">
+            <summary>
+            Allows to export <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport"/> as json. 
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Text.Page.JsonExport.Export(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.IO.TextWriter,GrapeCity.ActiveReports.Export.Text.Page.JsonExportSettings)">
+            <summary>
+            Writes the given <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport"/> object data as Json object using the given <see cref="T:System.IO.TextWriter"/>.
+            </summary>
+            <param name="report">The report to be exported.</param>
+            <param name="writer">The writer to be report exported to.</param>
+            <param name="settings">Optional settings.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Text.Page.JsonExport.Export(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.IO.TextWriter,System.Threading.CancellationToken,GrapeCity.ActiveReports.Export.Text.Page.JsonExportSettings)">
+            <summary>
+            Writes the given <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport"/> object data as Json object using the given <see cref="T:System.IO.TextWriter"/>.
+            </summary>
+            <param name="report">The report to be exported.</param>
+            <param name="writer">The writer to be report exported to.</param>
+            <param name="cancel">The <see cref="T:System.Threading.CancellationToken"/> object that allows to interrupt rendering.</param> 
+            <param name="settings">Optional settings.</param>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Text.Page.JsonExportSettings">
+            <summary>
+            Stores settings of json export.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Text.Page.JsonExportSettings.Formatted">
+            <summary>
+            Specifies whether to format the output json text to be more readable.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Text.Page.JsonExportSettings.QuotePropertyNames">
+            <summary>
+            Specifies whether property names should be enclosed in quotation marks.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Text.Page.JsonExportSettings.Target">
+            <summary>
+            Layers filtration hint.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Text.Page.QuotationMode">
+            <summary>
+            The quotation mode for export settings.
+            </summary>	
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Text.Page.QuotationMode.AutoQuote">
+            <summary>
+            Specifies that simple values will be exported without quotes.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Text.Page.QuotationMode.AlwaysQuote">
+            <summary>
+            Specifies that the all exported values will always be quoted.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Text.Page.PaddingsType">
+            <summary> Describe how the item's paddings should be handled. </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Text.Page.PaddingsType.Adjust">
+            <summary> Adjust the paddings so that they become a multiple of the size of the font. </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Text.Page.PaddingsType.Remove">
+            <summary>Remove paddings. </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Text.Page.PaddingsType.Keep">
+            <summary>Keeps the paddings as is.</summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Text.Page.TxtSettings">
+            <summary>
+            Specifies the available setting names used with the <see cref="T:GrapeCity.ActiveReports.Export.Text.Page.TxtExport"/>.
+            For internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Text.Page.TxtSettings.CharWidthInTwips">
+            <summary>
+            ASCII art chart width in twips.
+            Default value is 120 (6 points).
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Text.Page.TxtSettings.CharHeightInTwips">
+            <summary>
+            ASCII art chart height in twips.
+            Default value is 257 (12.85 points).
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Text.Page.TxtSettings.HorizontalPaddings">
+            <summary>
+            Describe how the item's paddings should be handled.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Text.Page.TxtSettings.LineEnding">
+            <summary>
+            Gets or sets the end of a line 
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Text.Page.TxtExport">
+            <summary>
+            Allows to render <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport" /> to Txt file.
+            For internal use only.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Text.Page.TxtExport.PrepareReport(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Export.Text.Page.TxtSettings,GrapeCity.ActiveReports.ResourceLocator)">
+            <summary>
+            Performs preliminary processing of the report based on the settings 
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Text.Page.XmlExport">
+            <summary>
+            Allows to render <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport" /> to XML file.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Text.Page.XmlExport.Export(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.IO.TextWriter,GrapeCity.ActiveReports.Export.Text.Page.XmlExportSettings)">
+            <summary>
+            Writes the given <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport"/> object data as XML object using the given <see cref="T:System.IO.TextWriter"/>.
+            </summary>
+            <param name="report">The report to be exported.</param>
+            <param name="writer">The writer to be report exported to.</param>
+            <param name="settings">Optional settings.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Text.Page.XmlExport.Export(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.IO.TextWriter,System.Threading.CancellationToken,GrapeCity.ActiveReports.Export.Text.Page.XmlExportSettings)">
+            <summary>
+            Writes the given <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport"/> object data as XML object using the given <see cref="T:System.IO.TextWriter"/>.
+            </summary>
+            <param name="report">The report to be exported.</param>
+            <param name="writer">The writer to be report exported to.</param>
+            <param name="cancel">The <see cref="T:System.Threading.CancellationToken"/> object that allows to interrupt rendering.</param> 
+            <param name="settings">Optional settings.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Text.Page.XmlExport.RenderReport(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.String)">
+            <summary>
+            Renders the specified <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport"/> object at the the current position in the XML output.
+            </summary>
+            <param name="report">The report to render.</param>
+            <param name="dataElementName">A value to override <see cref="P:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport.DataElementName"/>. 
+            If null, the specified report's <see cref="P:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport.DataElementName"/> value will be used instead.
+            </param>
+            <param name="context"></param> 
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Text.Page.XmlExportSettings">
+            <summary>
+            Specifies the available setting names used with the <see cref="T:GrapeCity.ActiveReports.Export.Text.Page.XmlExport"/>.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Text.Page.XmlExportSettings.XslStylesheet">
+            <summary>
+            Gets or sets the path of the Xsl Stylesheet used during the rendering process.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Text.Page.XmlExportSettings.Formatted">
+            <summary>
+            Specifies whether to format the output xml text to be more readable.
+            </summary>
+            <remarks>Default value is <c>false</c>.</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Text.Page.XmlExportSettings.WriteEmptyAttributes">
+            <summary>
+            Gets or sets the current WriteEmptyAttributes setting.
+            </summary>
+            <remarks>Default value is <c>false</c>.</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Text.Page.XmlExportSettings.OutputHiddenMatrixMembers">
+            <summary>
+            Specifies if any hidden members in a Matrix ReportItem are written out.
+            </summary>
+            <remarks>Default value is <c>true</c>.</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Text.Page.XmlExportSettings.OutputTextboxConstantValues">
+            <summary>
+            Specifies the setting name that determines if a <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.ITextBox"/> that has a value that is 
+            literal will write that value.
+            </summary>
+            <remarks>Default value is <c>false</c>.</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Text.Page.XmlExportSettings.DefaultDateFormat">
+            <summary>
+            Internal value for date settings.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Text.TXT.ReportExtensions.RemoveSpacing(GrapeCity.ActiveReports.PageReportModel.Report,GrapeCity.ActiveReports.Export.Text.Page.TxtSettings)">
+            <summary>Removes paddings and rows heights.</summary>
+            <param name="report">The source report</param>
+            <returns>The report without spacing.</returns>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Xml.Page.DataElementOutputResults">
+            <summary>
+            Specifies the result of rendering a ReportItem to XML.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Xml.Page.DataElementOutputResults.Default">
+            <summary>
+            Specifies a default value.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Xml.Page.DataElementOutputResults.NoContent">
+            <summary>
+            Indicates the rendering output contains no content.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Xml.Page.DataElementOutputResults.StaticContent">
+            <summary>
+            Indicates that only static content will be rendered. Cannot be combined with <see cref="F:GrapeCity.ActiveReports.Export.Xml.Page.DataElementOutputResults.DynamicContent"/>.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Xml.Page.DataElementOutputResults.XmlAttribute">
+            <summary>
+            Indicates that content will be rendered as an XML attribute only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Xml.Page.DataElementOutputResults.XmlElement">
+            <summary>
+            Indicates that content will be rendered as an XML element.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Xml.Page.DataElementOutputResults.DynamicContent">
+            <summary>
+            Indicates that dynamic content will be rendered. Cannot be combined with <see cref="F:GrapeCity.ActiveReports.Export.Xml.Page.DataElementOutputResults.StaticContent"/>.
+            Must be combined with either <see cref="F:GrapeCity.ActiveReports.Export.Xml.Page.DataElementOutputResults.XmlElement"/> or <see cref="F:GrapeCity.ActiveReports.Export.Xml.Page.DataElementOutputResults.XmlAttribute"/>.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Xml.Page.FunctionalExtensions">
+            <summary>
+            Tablix renderer helper.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.FunctionalExtensions.Match``2(``0)">
+            <summary>
+            Start match block (advanced 'switch').
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TResult"></typeparam>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.FunctionalExtensions.Match``2(``0,``1)">
+            <summary>
+            The same as Match but type is defined
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TResult"></typeparam>
+            <param name="item"></param>
+            <param name="fallbackValue">The value to be returned if all patterns failed to match.</param>
+            <returns></returns>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Xml.Page.FunctionalExtensions.MatchBlock`2">
+            <summary>
+            Represents expression matching result.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TResult"></typeparam>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Xml.Page.FunctionalExtensions.MatchBlock`2.Item">
+            <summary>
+            Gets the value of the matched expression.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Xml.Page.FunctionalExtensions.MatchBlock`2.Result">
+            <summary>
+            Gets the result of successful match block.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Xml.Page.FunctionalExtensions.MatchBlock`2.End">
+            <summary>
+            Closes the match block a return the matching result.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Xml.Page.FunctionalExtensions.MatchBlock`2.Matched">
+            <summary>
+            Gets true if at least one match succeeded (Otherwise block is ignored).
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.FunctionalExtensions.MatchBlock`2.When``1(System.Func{``0,`1})">
+            <summary>
+            Matches item by type.
+            </summary>
+            <typeparam name="TExpected"></typeparam>
+            <param name="func"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.FunctionalExtensions.MatchBlock`2.When``1(``0,System.Func{``0,`1})">
+            <summary>
+            Matches the item by value.
+            </summary>
+            <typeparam name="TExpected"></typeparam>
+            <param name="value"></param>
+            <param name="func"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.FunctionalExtensions.MatchBlock`2.When``1(System.Predicate{``0},System.Func{``0,`1})">
+            <summary>
+            Matches the item by value.
+            </summary>
+            <typeparam name="TExpected"></typeparam>
+            <param name="guardCondition"> </param>
+            <param name="func"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.FunctionalExtensions.MatchBlock`2.Otherwise(System.Func{`0,`1})">
+            <summary>
+            Allows to provide fallback implementation (in case no other matches).
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Xml.Page.BandedListRenderer">
+            <summary>
+            Renders <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IBandedList"/> to the XML
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.BandedListRenderer.GroupsIsEmpty(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IItemCollection{GrapeCity.ActiveReports.Extensibility.Rendering.Components.BandedList.IBandedListGroup})">
+            <summary>
+            Returns true if specified groups collection is empty
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.BandedListRenderer.DetailsIsEmpty(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IItemCollection{GrapeCity.ActiveReports.Extensibility.Rendering.Components.IBand})">
+            <summary>
+            Returns true if specified details collection is empty
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.BandedListRenderer.BandIsEmpty(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItemContainer)">
+            <summary>
+            Returns true if specified band is empty
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Xml.Page.ChartXmlRenderer">
+            <summary>
+            Implements a renderer for Chart ReportItem.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.ChartXmlRenderer.Render(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem)">
+            <summary>
+            Renders the <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.Chart.IChart"/> ReportItem.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.ChartXmlRenderer.RenderChartSeriesMembers(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IItemCollection{GrapeCity.ActiveReports.Extensibility.Rendering.Components.Chart.IChartMember},GrapeCity.ActiveReports.Extensibility.Rendering.Components.Chart.IChart)">
+            <summary>
+            Recursively renders the specified collection, it's members, and all of the child members.
+            </summary>
+            <param name="memberCollection">The <see cref="!:IChartMemberCollection"/> to render.</param>
+            <param name="chart"></param> 
+            <param name="context"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.ChartXmlRenderer.RenderChartDataPoint(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.Chart.IChartDataPoint)">
+            <summary>
+            Renders the specified <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.Chart.IChartDataPoint"/>.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Xml.Page.CheckBoxRenderer">
+            <summary>
+            Provides a <see cref="T:GrapeCity.ActiveReports.Export.Xml.Page.ReportItemXmlRenderer"/> for a <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.ICheckBox"/>.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Xml.Page.CustomReportItemRenderer">
+            <summary>
+            Renders <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.ICustomReportItem"/> to the XML
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.CustomReportItemRenderer.GroupingIsEmpty(GrapeCity.ActiveReports.Extensibility.Rendering.DataGroupingCollection,System.Threading.CancellationToken)">
+            <summary>
+            Returns true if <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.DataGroupingCollection"/> is empty
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Xml.Page.DVChartXmlRenderer">
+            <summary>
+            Implements a renderer for DVChart ReportItem.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.DVChartXmlRenderer.Render(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem)">
+            <summary>
+            Renders the <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.DV.IChart"/> ReportItem.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Xml.Page.FixedPageRenderer">
+            <summary>
+            Renders <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItemContainer"/> to the XML
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Xml.Page.ListXmlRenderer">
+            <summary>
+            Provides a renderer for list.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.ListXmlRenderer.RenderListContents(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IList)">
+            <summary>
+            Renders the <see cref="P:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IList.Contents"/> of the provided list.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Xml.Page.MatrixXmlRenderer">
+            <summary>
+            Provides a renderer for Matrix.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.MatrixXmlRenderer.Render(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem)">
+            <summary>
+            Renders the <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.Matrix.IMatrix"/> ReportItem.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.MatrixXmlRenderer.RenderMatrixRowMemberCollection(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IItemCollection{GrapeCity.ActiveReports.Extensibility.Rendering.Components.Matrix.IMatrixMember},GrapeCity.ActiveReports.Extensibility.Rendering.Components.Matrix.IMatrix)">
+            <summary>
+            Recursively renders the specified collection, it's members, and all of the child members.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.MatrixXmlRenderer.RenderMatrixRowMember(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.Matrix.IMatrix,GrapeCity.ActiveReports.Extensibility.Rendering.Components.Matrix.IMatrixMember,System.Boolean)">
+            <summary>
+            Renders the specified row member and it's descendents
+            </summary>
+            <param name="context">The XML rendering context.</param>
+            <param name="matrix">Owner matrix.</param>
+            <param name="member">The member to render.</param>
+            <param name="renderDescendentsAndColsOnly">True to render only the descendents of or columns from this member. False will render specified member and it's descendents.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.MatrixXmlRenderer.RenderMatrixColumnMemberCollection(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IItemCollection{GrapeCity.ActiveReports.Extensibility.Rendering.Components.Matrix.IMatrixMember},System.Int32,System.Int32,GrapeCity.ActiveReports.Extensibility.Rendering.Components.Matrix.IMatrix)">
+            <summary>
+            Renders teh column groupings, and the cells in each column grouping for the specified range of rows.
+            </summary>
+            <param name="columnMemberCollection">The collection of columns to render.</param>
+            <param name="startRow">The starting row of cells that should be rendered for this grouping.</param>
+            <param name="endRow">The end/last row of cells that should be rendered for this grouping.</param>
+            <param name="context">The context, see <see cref="T:GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext"/>.</param>
+            <param name="matrix">The owner matrix.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.MatrixXmlRenderer.RenderMatrixColumnMember(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.Matrix.IMatrix,GrapeCity.ActiveReports.Extensibility.Rendering.Components.Matrix.IMatrixMember,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            Renders the specified column member and it's descendents
+            </summary>
+            <param name="context">The XML rendering context.</param>
+            <param name="matrix">Owner matrix.</param>
+            <param name="member">The member to render.</param>
+            <param name="renderDescendentsOnly">True to render only the descendents of this member. False will render specified member and it's descendents.</param>
+            <param name="startRow">The starting row of cells that should be rendered for this grouping.</param>
+            <param name="endRow">The end/last row of cells that should be rendered for this grouping.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.MatrixXmlRenderer.ContainsRenderableCells(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.Matrix.IMatrixMember,System.Boolean,GrapeCity.ActiveReports.Extensibility.Rendering.Components.Matrix.IMatrix)">
+            <summary>
+            Returns true if any cell for the specified member will render a non-empty element.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.MatrixXmlRenderer.ContainsVisibleMemberDescendents(GrapeCity.ActiveReports.Extensibility.Rendering.Components.Matrix.IMatrixMember,System.Threading.CancellationToken)">
+            <summary>
+            Returns true if any descendent of the specified member is not hidden or any descendent is static (as static members are always displayed).
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.MatrixXmlRenderer.RenderMatrixCell(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.Matrix.IMatrixCell)">
+            <summary>
+            Renders the specified <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.Matrix.IMatrixCell"/>.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.RectangleXmlRenderer.Render(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem)">
+            <summary>
+            Renders the a rectangle ReportItem.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Xml.Page.ReportItemXmlRenderer">
+            <summary>
+            Defines the interface ReportItems can use to render XML output.
+            </summary>
+            <remarks>
+            ReportItem authors can specify their <see cref="T:GrapeCity.ActiveReports.Export.Xml.Page.ReportItemXmlRenderer"/> implementation by returning an derrived implementation of <see cref="T:GrapeCity.ActiveReports.Export.Xml.Page.ReportItemXmlRenderer"/> from <see cref="!:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem.GetRenderer"/>.
+            Derrived classes must provide a default constructor that requires no arguments.
+            </remarks>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.ReportItemXmlRenderer.Render(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem)">
+            <summary>
+            Renders the specified <paramref name="reportItem"/> to the specified <paramref name="context"/>.
+            </summary>
+            <param name="context">The context used for the current rendering process.</param>
+            <param name="reportItem">The ReportItem to render.</param>
+            <returns>A value indicating if, and in what form any content was rendered for the specified <paramref name="reportItem"/>.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.ReportItemXmlRenderer.GetRenderResultHint(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem)">
+            <summary>
+            Allows derrived classes to provide an optimized way to inform the caller of how the specified <paramref name="reportItem"/> will be rendered without requiring the ReportItem to be rendered.
+            </summary>
+            <param name="reportItem">The ReportItem to render.</param>
+            <param name="context"></param>
+            <returns>A value indicating if, and in what form any content will be rendered for the specified <paramref name="reportItem"/>.</returns>
+            <remarks>This method should not render anything to the specified context's <see cref="P:GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext.Writer"/>.</remarks>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Xml.Page.ReportItemContainerRenderer">
+            <summary>
+            Renders <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItemContainer"/> to the XML
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Xml.Page.SubreportXmlRenderer">
+            <summary>
+            Implements a renderer for the Subreport ReportItem
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.SubreportXmlRenderer.Render(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem)">
+            <summary>
+            Renders a <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.ISubreport"/> object to xml.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Xml.Page.TableXmlRenderer">
+            <summary>
+            <see cref="T:GrapeCity.ActiveReports.Export.Xml.Page.ReportItemXmlRenderer"/> implementation for table.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.TableXmlRenderer.RenderTableDetailRows(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IItemCollection{GrapeCity.ActiveReports.Extensibility.Rendering.Components.Table.ITableDetail},System.String,System.String)">
+            <summary>
+            Renders the detail rows for a tabe or tablegroup.
+            </summary>
+            <remarks>
+            From Elements and Attributes in XML Rendering, Reporting Services - Designing and Creating Reports
+            <list type="table">
+            <listheader>
+                <term>RDL element</term><description>Renders as</description>
+            </listheader>
+            <item>
+                <term>DataCollectionName (Grouping)</term>
+                <description>The name of the details element. If DataCollectionName is not specified, the name of the element is the name specified in the DataElementName element plus the string _Collection. If Details has no grouping, the name of the element is Detail_Collection.</description>
+            </item>
+            <item>
+                <term>DataElementName (Grouping)</term>
+                <description>The name of the group instance element. Group instance elements are subelements of the details element. If DataElementName is not specified, the name of the element is the name of the grouping in the RDL. If Details has no grouping, the name of the element is Detail.</description>
+            </item>
+            <item>
+                <term>DetailsRows</term>
+                <description>All items in the detail rows are rendered as subelements or attributes of the group instance element.</description>
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.TableXmlRenderer.RenderReportItemsInTableRows(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,System.Collections.Generic.IEnumerable{GrapeCity.ActiveReports.Extensibility.Rendering.Components.Table.ITableRow})">
+            <summary>
+            Renders the ReportItems in the provided <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.Table.ITableRow"/>.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.TableXmlRenderer.RenderReportItemsInTableRow(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.Table.ITableRow)">
+            <summary>
+            Renders the ReportItems in the provided <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.Table.ITableRow"/>.
+            All ReportItems that will render as an attribute on the current row must be rendered before 
+            the first child ReportItem that renders as an element.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Xml.Page.TablixRenderer">
+            <summary>
+            Provides a renderer for <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.Tablix.ITablix"/>.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.TablixRenderer.Render(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem)">
+            <summary>
+            Renders the <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.Tablix.ITablix"/> report item.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Xml.Page.TextBoxRenderer">
+            <summary>
+            Provides a <see cref="T:GrapeCity.ActiveReports.Export.Xml.Page.ReportItemXmlRenderer"/> for a <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.ITextBox"/>.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Xml.Page.TextItemRenderer">
+            <summary>
+            Provides a <see cref="T:GrapeCity.ActiveReports.Export.Xml.Page.ReportItemXmlRenderer"/> for a <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.ITextItem"/>.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Xml.Page.TopDownLeftRightComparer">
+            <summary>
+            Compares reportitems by <see cref="!:TopFromRootContainer"/> for sorting items top-down-left-right. 
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext">
+            <summary>
+            Provides a context in to the XML rendering process.
+            <seealso cref="T:GrapeCity.ActiveReports.Export.Xml.Page.ReportItemXmlRenderer"/>
+            <seealso cref="T:GrapeCity.ActiveReports.Export.Text.Page.XmlExport"/>
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext.#ctor(System.Xml.XmlWriter,GrapeCity.ActiveReports.Export.Text.Page.XmlExportSettings,System.Threading.CancellationToken)">
+            <summary>
+            Allows internal callers to initialize an instance of this class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext.InitializeintrinsicRenderers">
+            <summary>
+            Initializes our intrinsic renderers.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext.Writer">
+            <summary>
+            The <see cref="T:System.Xml.XmlWriter"/> to render the ReportItem's content to.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext.XmlExportSettings">
+            <summary>
+            Returns the current settings for the renderer.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext.GetRendererFor(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem)">
+            <summary>
+            Returns a <see cref="T:GrapeCity.ActiveReports.Export.Xml.Page.ReportItemXmlRenderer"/> for the specified ReportItem.
+            </summary>
+            <param name="reportItem">The <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem"/> to obtain the renderer for.</param>
+            <returns>The <see cref="T:GrapeCity.ActiveReports.Export.Xml.Page.ReportItemXmlRenderer"/> for the specified report item for null if no renderer can be located for the item.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext.RenderReportItem(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem)">
+            <summary>
+            Provides a helper method to obtain a renderer and render the specified report item.
+            <seealso cref="M:GrapeCity.ActiveReports.Export.Xml.Page.ReportItemXmlRenderer.Render(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem)"/>
+            </summary>
+            <param name="reportItem">The <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem"/> to be rendered.</param>
+            <exception cref="!:ReportException"/>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext.GetRenderResultHint(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem)">
+            <summary>
+            A helper method to call <see cref="M:GrapeCity.ActiveReports.Export.Xml.Page.ReportItemXmlRenderer.GetRenderResultHint(GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem)"/> on the renderer for the specified report item.
+            </summary>
+            <param name="reportItem">The report item to get the result for.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext.ToXmlString(System.Object)">
+            <summary>
+            Returns a string suitable for output to xml as a value for an attribute or element or null if the value is null or cannot be converted to a string.
+            </summary>
+            <param name="value">The value to get a string representation of.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext.RenderChildren(System.Collections.Generic.IEnumerable{GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem})">
+            <summary>
+            Renders the reportitem objects contained by the specified container.
+            </summary>
+            <param name="children">The child report items to be rendered.</param>
+            <devdocs>
+            There are a couple tricky issues to deal with in here.
+            
+            1: Attributes and elements must be rendered in an order respective of their location in the report, 
+            from top-to-bottom, left-to-right.
+            
+            2: DataElementOutputStyle.ContentsOnly: May cause containers to not render an element for themselves 
+            but may render their children as attributes. This requires that all ReportItems that will render as an 
+            attribute on the current element must be rendered before the first child ReportItem 
+            that renders as an element is rendered. **This checking must be done recursively through all ContentsOnly children.
+            </devdocs>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Xml.Page.XmlExportContext.GetChildReportItems(System.Collections.Generic.IEnumerable{GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem},System.Collections.Generic.List{GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem},System.Collections.Generic.List{GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReportItem})">
+            <summary>
+            Gets all child report items of the specified container and divides them into two lists. One that render as XML elements, and another that renders as XML attributes.
+            This function searches nested ReportItem containers as needed based on <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.DataElementOutput"/>.
+            </summary>
+            <param name="children">The child report items to be rendered.</param>
+            <param name="reportItemsRenderingAsXmlAttribute">The list that all ReportItems which will render as an XML attribute are placed in.</param>
+            <param name="reportItemsRenderingAsXmlElement">The list that all ReportItems which will render as an XML element are placed in.</param>
+        </member>
+    </members>
+</doc>

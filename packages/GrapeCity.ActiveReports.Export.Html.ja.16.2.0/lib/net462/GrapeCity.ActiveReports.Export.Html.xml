@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>GrapeCity.ActiveReports.Export.Html</name>
+  </assembly>
+  <members>
+    <member name="T:GrapeCity.ActiveReports.Export.Html.Page.Settings">
+      <summary>HTML描画拡張機能を設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Html.Page.Settings.Fragment">
+      <summary>すべてのHTMLテキストか、Bodyタグ内のコンテンツのみが返されるかを取得または設定します。Bodyタグ内のコンテンツの場合はTrue、それ以外の場合はFalse。デフォルト値はFalseです。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Html.Page.Settings.LinkTarget">
+      <summary>レポート内に含まれるハイパーリンクのターゲットを取得または設定します。 デフォルトでは値が設定されていません。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Html.Page.Settings.MhtOutput">
+      <summary>レポートをMHT形式で出力するかを取得または設定します。Trueの場合、レポートをMHT形式で出力します。それ以外の場合は、False。デフォルト値はFalseです。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Html.Page.Settings.Mode">
+      <summary>Htmlに描画するときに使用するモードを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Html.Page.Settings.OutputTOC">
+      <summary>レポートの目次を出力するかどうかを指定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Html.Page.Settings.StyleStream">
+      <summary>CSSスタイル情報はHTMLファイル、または、別のストリームに含まれるかどうかを取得または設定します。Trueの場合、CSSスタイル情報は独自のストリームに含まれることを示し、それ以外の場合はFalse。デフォルト値はTrueです。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Html.Section.BookmarkStyle">
+      <summary>HtmlExport.BookmarkStyleプロパティの各値です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.Section.BookmarkStyle.None">
+      <summary>ブックマークページは作成されません。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.Section.BookmarkStyle.Html">
+      <summary>ActiveReportsのドキュメントに元々ブックマークが含まれている場合は、ドキュメントの各ページへのブックマークリンクを含むHTMLページが作成されます。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Html.Section.HtmlCharacterSet">
+      <summary>HtmlExport.CharacterSetプロパティの各値です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.Section.HtmlCharacterSet.Big5">
+      <summary>"Chinese for Taiwan Multi-byte set" です。文字セット名は "Big5" です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.Section.HtmlCharacterSet.EucJp">
+      <summary>"Extended UNIX Code Packed Format for Japanese" です。文字セット名は "EUC-JP" です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.Section.HtmlCharacterSet.HzGb2312">
+      <summary>RFC1842およびRFC1843によって定義されている "ASCII Printable Characters-BasCharacters Character Encoding" です。文字セット名は "HZ-GB-2312" です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.Section.HtmlCharacterSet.Ibm850">
+      <summary>"IBM850" です。文字セット名は "IBM850" です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.Section.HtmlCharacterSet.Iso2022Jp">
+      <summary>RFC1468で定義されている "Japanese Character Encoding for Internet Messages" です。文字セット名は "ISO-2022-JP" です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.Section.HtmlCharacterSet.Iso2022Kr">
+      <summary>RFC1557で定義されている "Korean Character Encoding for Internet Messages" です。文字セット名は "ISO-2022-KR" です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.Section.HtmlCharacterSet.Iso8859_1">
+      <summary>"Latin alphabet No. 1" です。文字セット名は "ISO-8859-1" です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.Section.HtmlCharacterSet.Iso8859_2">
+      <summary>"Latin alphabet No. 2" です。文字セット名は "ISO-8859-2" です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.Section.HtmlCharacterSet.Iso8859_5">
+      <summary>"Latin/Cyrillic alphabet" です。文字セット名は "ISO-8859-5" です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.Section.HtmlCharacterSet.Iso8859_6">
+      <summary>"Latin/Arabic alphabet" です。文字セット名は "ISO-8859-6" です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.Section.HtmlCharacterSet.Koi8r">
+      <summary>"Russian Net Character Set" です。文字セット名は "KOI8-R" です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.Section.HtmlCharacterSet.Ksc5601">
+      <summary>"Unified Hangeul"（韓国語）です。文字セット名は "KSC5601" です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.Section.HtmlCharacterSet.ShiftJis">
+      <summary>文字セット名は "shift-jis" ですjisjis "SjisjisIS"（日本語）です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.Section.HtmlCharacterSet.UnicodeUtf16">
+      <summary>RFC2781で定義されている、リトルエンディアンのUTF-16エンコードのユニコード文字セットです。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.Section.HtmlCharacterSet.UnicodeUtf8">
+      <summary>RFC3629で定義されている、UTF-8エンコードのユニコード文字セットです。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Html.Section.HtmlOutputType">
+      <summary>ドキュメントのエクスポートに使用する、HTML出力の種類です。OutputTypeで使用されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.Section.HtmlOutputType.DynamicHtml">
+      <summary>インラインスタイルを使用したHTMLをエクスポート</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.Section.HtmlOutputType.LegacyHtml">
+      <summary>w3c HTML 3.2勧告に準拠したHTMLをエクスポート</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Html.Section.HtmlExport">
+      <summary>ActiveReportsのHtmlExportのメインクラスです。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Html.Section.OutputHtmlFiles">
+      <summary>OutputHtmlFilesは、HtmlExportオブジェクトのファイルへの出力を命令するIHandleHtmlOutputの実装です。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Html.Section.HtmlExport.#ctor">
+      <summary>HtmlExportクラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Html.Section.HtmlExport.AddMetadata(System.String,System.String)">
+      <summary>HTMLメータ要素として書き込まれる指定したメタデータプロパティを追加します。</summary>
+      <param name="name">プロパティ名</param>
+      <param name="value">プロパティ値</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Html.Section.HtmlExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.String)">
+      <summary>指定したドキュメントをHTMLにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="filePath">メインのHTMLファイルを保存するファイル名とパス。複数のファイル名が生成される場合（画像、目次ページなど）、この引数の値は、他のファイル名のプレフィックスとして使用されます。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Html.Section.HtmlExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.String,System.String)">
+      <summary>指定したドキュメントをHTMLにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="filePath">メインのHTMLファイルを保存するファイル名とパス。複数のファイル名が生成される場合（画像、目次ページなど）、この引数の値は、他のファイル名のプレフィックスとして使用されます。</param>
+      <param name="pagesRange">エクスポートするページを、カンマで区切って指定するか、2-8のように開始ページと終了ページを指定します。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Html.Section.HtmlExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.IO.Stream,System.String)">
+      <summary>指定したGrapeCity.ActiveReports.Document.Documentを、MIME MHTフォーマット(インターネット·エクスプローラーから保存されるように)のHTMLにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="outputStream">MHTファイルを保存するSystem.IO.Stream。</param>
+      <param name="pagesRange">エクスポートするページを、カンマで区切って指定するか、2-8のように開始ページと終了ページを指定します。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Html.Section.HtmlExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,GrapeCity.ActiveReports.Export.Html.IOutputHtml,System.String)">
+      <summary>HTMLページ、画像、ブックマークページなどをすべて含む出力をHtmlExportがどのように格納するかを制御する高度な機能を提供します。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="outputHandler">すべてのHTML出力を受け取るIOutputHtmlの実装。</param>
+      <param name="pageRange">エクスポートするページを、カンマで区切って指定するか、2-8のように開始ページと終了ページを指定します。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Html.Section.HtmlExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.IO.Stream)">
+      <summary>指定したGrapeCity.ActiveReports.Document.Documentを、MIME MHTフォーマット(インターネット·エクスプローラーから保存されるように)のHTMLにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="outputStream">MHTファイルを保存するSystem.IO.Stream。</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Html.Section.HtmlExport.BookmarkStyle">
+      <summary>ActiveReportsドキュメントにブックマークが含まれる場合に、ブックマークのページが作成されるかどうかを設定するか返します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Html.Section.HtmlExport.CharacterSet">
+      <summary>出力後のHTMLページで使用される文字セットのエンコーディングを設定または取得します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Html.Section.HtmlExport.CreateFramesetPage">
+      <summary>HTMLページをフレームセット内に表示するかどうかを表す値を設定または取得します。フレームセットでは、ブックマークのエントリは左に、レポートドキュメントの内容は右に表示されます。出力されるファイル名では、指定したファイル名に ".frame.html" という拡張子が付けられます。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Html.Section.HtmlExport.IncludeHtmlHeader">
+      <summary>出力後のHTMLファイルに、HTML、HEAD、BODY要素などの通常のページヘッダを含むかどうかを表す値を設定または取得します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Html.Section.HtmlExport.IncludePageMargins">
+      <summary>Pageの余白が出力に含まれるかどうかを設定するか返します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Html.Section.HtmlExport.MultiPage">
+      <summary>このドキュメントに対して複数のHTMLページが生成されるかどうかを設定するか返します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Html.Section.HtmlExport.OutputType">
+      <summary>ドキュメントのエクスポートに使用する、HTML出力の種類を設定または取得します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Html.Section.HtmlExport.Pagination">
+      <summary>エクスポートされたHTMLドキュメントでページネーションを使用するかどうかを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Html.Section.HtmlExport.RemoveVerticalSpace">
+      <summary>完全に空の垂直方向の余白がある場合に、それを出力から削除するかどうかを設定するか返します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Html.Section.HtmlExport.Title">
+      <summary>HTMLページの先頭で使用されるタイトルです。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Html.Section.OutputHtmlFiles.#ctor(System.String,GrapeCity.ActiveReports.Export.Html.Section.HtmlExport)">
+      <summary>指定したfilePathをベースHTMLページとして、OutputHtmlFilesのインスタンスを初期化します。</summary>
+      <param name="filePath">メイン／開始HTMLページへのファイルパス。他のファイル名（リンクされた画像やTOCページなど）は、このファイルパスをプレフィックスとして使用します。</param>
+      <param name="htmlExport">このオブジェクトが処理している親のHtmlExportオブジェクト。</param>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Html.Section.HtmlExportException">
+      <summary>
+            ActiveReports HTMLエクスポートアセンブリでエラーが発生するときに例外がスローされます。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.Section.OutputHtmlFiles.htmlExport">
+      <summary>
+            ファイル出力を要求するHtmlExportインスタンス。  
+            HtmlExportのプロパティ設定を確認するために使用することができます。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Settings.op_Implicit(GrapeCity.ActiveReports.Export.Html.Page.Settings)~System.Collections.Specialized.NameValueCollection">
+      <summary>
+        <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Settings"></see> から <see cref="T:System.Collections.Specialized.NameValueCollection"></see>への暗黙的な変換を行います。
+            </summary>
+      <param name="settings">レンダリング拡張の設定。</param>
+      <returns>変換の結果。</returns>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Html.Page.Settings.RenderingEngine">
+      <summary>
+            SVGを内部で使用するかどうかを示します。
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Html.Page.EmailRenderingExtensionSettings">
+      <summary>
+            EmailRenderingExtensionに固有の設定が含まれています。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Html.Page.EmailRenderingExtensionSettings.#ctor">
+      <summary>
+        <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.EmailRenderingExtensionSettings"></see>クラスの新しいインスタンスを初期化します。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Html.Page.EmailRenderingExtensionSettings.#ctor(System.Collections.Specialized.NameValueCollection)">
+      <summary>
+        <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.EmailRenderingExtensionSettings"></see>クラスの新しいインスタンスを初期化します。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Settings.#ctor(System.Collections.Specialized.NameValueCollection)">
+      <summary>
+        <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Settings"></see>クラスの新しいインスタンスを初期化します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Html.Page.Settings.EmbedImages">
+      <summary>
+            画像のコンテンツがBase64としてhtmlファイル内に含まれるか、別のストリーム内に含まれるかを取得または設定します。
+            </summary>
+      <value>画像のコンテンツを別のストリームに書き込むか、htmlファイルに埋め込むかを示すブール値。</value>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Settings.GetHtmlRenderingSettings(System.Collections.Specialized.NameValueCollection,System.Boolean)">
+      <summary>
+            内部使用のみ。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Html.Page.Settings.#ctor">
+      <summary>
+        <see cref="T:GrapeCity.ActiveReports.Export.Html.Page.Settings"></see>クラスの新しいインスタンスを初期化します。
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Html.Page.EmailRenderingExtension">
+      <summary>
+           初期化されたメールメッセージを含むHTML描画拡張機能のラッパー。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Html.Section.HtmlExport.WebView">
+      <summary>
+            For internal use only. If true, the data-action attribute will be added to hyper- and bookmark links.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Html.Section.HtmlExport.OnHyperlink">
+      <summary>
+            Hyperlinks preprocessor if required.
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Html.Page.HtmlRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider)">
+      <summary>Renders the specified report.</summary>
+      <param name="report">The report.</param>
+      <param name="streams">The stream provider.</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Html.Page.HtmlRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection)">
+      <summary>Renders the specified report.</summary>
+      <param name="report">The report.</param>
+      <param name="streams">The stream provider.</param>
+      <param name="settings">The settings.</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Html.Page.HtmlRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection,System.Threading.CancellationToken)">
+      <summary>Renders the specified report.</summary>
+      <param name="report">The report.</param>
+      <param name="streams">The stream provider.</param>
+      <param name="settings">The settings.</param>
+      <param name="cancel">The <see cref="T:System.Threading.CancellationToken"></see> object that allows to interrupt rendering.</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Html.Page.HtmlRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection,System.Threading.CancellationToken,System.IProgress{GrapeCity.ActiveReports.Rendering.Export.ProgressInfo})">
+      <summary>Renders the specified report.</summary>
+      <param name="report">The report.</param>
+      <param name="streams">The stream provider.</param>
+      <param name="settings">The settings.</param>
+      <param name="cancel">The <see cref="T:System.Threading.CancellationToken"></see> object that allows to interrupt rendering.</param>
+      <param name="progress">The <see cref="!:IProgress"></see> is a provider for progress updates.</param>
+    </member>
+  </members>
+</doc>

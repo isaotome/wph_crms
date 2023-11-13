@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GrapeCity.ActiveReports.Core.Export.Image.Page</name>
+    </assembly>
+    <members>
+        <member name="T:GrapeCity.ActiveReports.Export.Image.GcCommon.BitmapGenerator">
+            <summary>
+            Image generator based on GcCommon.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Image.GcCommon.BitmapImageManager">
+            <summary>
+            Image manager to call right image loaders.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Image.GcCommon.BitmapImageManager.LoadGcImage(GrapeCity.ActiveReports.Extensibility.Rendering.ImageInfo,System.String)">
+            <summary>
+            Loader to load images.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Image.GcCommon.GcBitmapWrapper">
+            <summary>
+            Image adapter for the <see cref="T:GrapeCity.Documents.Imaging.GcBitmap" />.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Image.GcCommon.GcBitmapWrapper.Load(System.IO.Stream)">
+            <summary>
+            Loads image from stream.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Image.GcCommon.GcBitmapWrapper.Create(GrapeCity.ActiveReports.Export.Image.GcCommon.BitmapInfo,System.Drawing.SizeF)">
+            <summary>
+            Creates image by a given info.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Image.GcCommon.GcBitmapWrapper.Graphics">
+            <summary>
+            Gets the image's graphics.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Image.GcCommon.GcBitmapWrapper.Save(System.IO.Stream,GrapeCity.ActiveReports.Export.Image.Page.ImageFormats)">
+            <summary>
+            Save the image to the Stream in a specified format.
+            </summary>
+            <param name="outputStream"></param>
+            <param name="format"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Image.GcCommon.GeneratorsFactory.CreateBitmapGenerator(GrapeCity.ActiveReports.Export.Image.GcCommon.BitmapInfo,System.Func{System.Int32,System.IO.Stream},GrapeCity.ActiveReports.Extensibility.Rendering.IRenderersFactory,GrapeCity.ActiveReports.Drawing.Core.IFontsFactory,GrapeCity.ActiveReports.Rendering.Image.IImageConverterService,GrapeCity.ActiveReports.Drawing.Core.LineBreakingAlgorithm)">
+            <summary>
+            Creates images generator.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Image.GcCommon.GeneratorsFactory.CreateTiffGenerator(GrapeCity.ActiveReports.Export.Image.GcCommon.TiffInfo,System.Func{System.Int32,System.IO.Stream},GrapeCity.ActiveReports.Extensibility.Rendering.IRenderersFactory,GrapeCity.ActiveReports.Drawing.Core.IFontsFactory,GrapeCity.ActiveReports.Rendering.Image.IImageConverterService,GrapeCity.ActiveReports.Drawing.Core.LineBreakingAlgorithm)">
+            <summary>
+            Creates TIFF generator.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Image.GcCommon.TiffGenerator">
+            <summary>
+            Multipage tiff pages generator
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Image.GcCommon.TiffGeneratorBase`1">
+            <summary>
+            Multipage tiff pages generator
+            </summary>
+            <typeparam name="TWriter"><see cref="T:GrapeCity.Documents.Imaging.GcTiffWriter" /> or <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter" /> because their have no common parent.</typeparam> 
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Image.GcCommon.TiffGeneratorBase`1.Load(System.IO.Stream)">
+            <summary>
+            Loads image from stream.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Image.GcCommon.GcWicBitmapWrapper">
+            <summary>
+            Image adapter for the <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap" /> (based on Windows Imaging Component).
+            According to GcPdf team measurement it is about 10 times faster then Bitmap from ImageSharp (under Windows).
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Image.GcCommon.GcWicBitmapWrapper.Load(System.IO.Stream)">
+            <summary>
+            Loads image from stream.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Image.GcCommon.GcWicBitmapWrapper.Create(GrapeCity.ActiveReports.Export.Image.GcCommon.BitmapInfo,System.Drawing.SizeF)">
+            <summary>
+            Creates image by a given info.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Image.GcCommon.GcWicBitmapWrapper.Graphics">
+            <summary>
+            Gets the image's graphics.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Image.GcCommon.GcWicBitmapWrapper.Save(System.IO.Stream,GrapeCity.ActiveReports.Export.Image.Page.ImageFormats)">
+            <summary>
+            Save the image to the Stream in a specified format.
+            </summary>
+            <param name="outputStream"></param>
+            <param name="format"></param>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Image.GcCommon.WicTiffGenerator">
+            <summary>
+            Multipage tiff pages generator
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Image.Page.BitmapRenderersFactory">
+            <summary>
+            Factory with .NET Core based image renderer.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Image.Page.ImageRendering">
+            <summary>
+            Implements rendering of <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport"/> to bitmap image of specified format.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Image.Page.ImageRendering.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.Func{System.Int32,System.IO.Stream},GrapeCity.ActiveReports.Export.Image.Page.ImageRenderingSettings)">
+            <summary>
+            Renders report.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Image.Page.ImageRendering.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.Func{System.Int32,System.IO.Stream},GrapeCity.ActiveReports.Export.Image.Page.ImageRenderingSettings,System.Threading.CancellationToken)">
+            <summary>
+            Renders report.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Image.Page.ImageRendering.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.Func{System.Int32,System.IO.Stream},GrapeCity.ActiveReports.Export.Image.Page.ImageRenderingSettings,System.Threading.CancellationToken,System.IProgress{GrapeCity.ActiveReports.Rendering.Export.ProgressInfo})">
+            <summary>
+            Renders report.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Image.Page.ImageRenderingSettings">
+            <summary>
+            ImageRenderer settings.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Image.Page.ImageRenderingSettings.PageSettings">
+            <summary>
+            Page settings.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Image.Page.ImageRenderingSettings.Watermark">
+            <summary>
+            Page settings.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Image.Page.ImageRenderingSettings.BackgroundColor">
+            <summary>
+            Paper color.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Image.Page.ImageRenderingSettings.OutputFormat">
+            <summary>
+            Output image format
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Image.Page.ImageRenderingSettings.Target">
+            <summary>
+            Layers filtration hint.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Image.Page.ImageRenderingSettings.DpiX">
+            <summary>
+            Horizontal resolution of result image in pixels per inch.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Image.Page.ImageRenderingSettings.DpiY">
+            <summary>
+            Vertical resolution of result image in pixels per inch.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Image.Page.ImageRenderingSettings.TiffCompression">
+            <summary>
+            Gets or sets the TIFF compression type
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Image.Page.ImageRenderingSettings.JpegQuality">
+            <summary>
+            Specifies the desired image fidelity.
+            0 indicates the lowest possible fidelity.
+            100 specifies the highest fidelity.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Image.Page.ImageRenderingSettings.TiffDithering">
+            Specifies whether the image should be dithered when saving to a black and white output format, like CCITT3. 
+            This property has no effect if the TiffCompression property is set to Rle, Lzw or None(represents color output).
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Image.Page.ImageFormats">
+            <summary>
+            Supported output image formats.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Image.Page.TiffCompressionType">
+            <summary>
+            Specifies the Tagged Image File Format (TIFF) compression options
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Image.Page.Internal.BitmapRenderer">
+            <summary>
+            Allows to render to Image.
+            </summary>
+        </member>
+    </members>
+</doc>

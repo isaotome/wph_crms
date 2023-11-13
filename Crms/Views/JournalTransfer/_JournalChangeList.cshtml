@@ -1,0 +1,31 @@
+﻿@* //---------------------------------------------
+   // 機能：入金振替履歴
+   // 作成者：arc yano
+   // 作成日：2018/01/26 #3836
+   // 更新日：
+   //---------------------------------------------
+*@
+@model List<CrmsDao.W_JournalChange>
+
+<br />
+<div style ="font-size:14px">データ修正履歴</div>
+<table class="list">
+    <tr>
+        <th>更新日</th>
+        <th>更新者</th>
+        <th>変更前</th>
+        <th>変更後</th>
+        <th>ID</th>
+       
+    </tr>
+    @foreach (var a in Model){
+    
+    <tr>
+        <td style="white-space:nowrap">@Html.Encode(string.Format("{0:yyyy/MM/dd}",a.LastUpdateDate))</td>@*//更新日 *@ 
+        <td style="white-space:nowrap">@Html.Encode(a.LastUpdateEmployeeCode)</td>@*//更新者 *@
+        <td style="white-space:nowrap">@Html.Encode(a.SlipNumber_old)</td>@*//変更前伝票番号 *@
+        <td style="white-space:nowrap">@Html.Encode(a.SlipNumber_new)</td>@*//変更後伝票番号 *@
+        <td style="white-space:nowrap">@Html.Encode(a.JournalId)</td> @*//入金実績ID *@
+    </tr>
+    }
+</table>

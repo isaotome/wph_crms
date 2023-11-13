@@ -1,0 +1,44 @@
+﻿@* //---------------------------------------------
+   // 機能：入金予定一覧部分ビュー
+   // 作成者：arc yano
+   // 作成日：2015/01/26
+   // 更新日：
+   //---------------------------------------------
+*@
+@model CrmsDao.PaginatedList<CrmsDao.V_ReceiptPlanList>
+
+
+
+<br />
+@{ Html.RenderPartial("PagerControl", @Model.PageProperty); }
+@Html.Hidden("id", ViewData["PlanId"] ?? "0", new {id = "planid" })
+<br />
+<br />
+
+<table class="list">
+    <tr>
+        <th class="input-form-title" colspan="6">
+            入金予定
+        </th>
+    </tr>
+    <tr>
+        <th>伝票番号</th>
+        <th>入金予定日</th>
+        <th>請求先</th>
+        <th>請求金額</th>
+        <th>入金額</th>
+        <th>残高</th>
+       
+    </tr>
+    @foreach (var receiptPlan in Model){
+    
+    <tr>
+        <td style="white-space:nowrap">@Html.Encode(receiptPlan.SlipNumber)</td>
+        <td style="white-space:nowrap">@Html.Encode(string.Format("{0:yyyy/MM/dd}",receiptPlan.ReceiptPlanDate))</td>
+        <td style="white-space:nowrap">@Html.Encode(receiptPlan.CustomerClaimName)</td>
+        <td style="white-space:nowrap; text-align:right;">@Html.Encode(string.Format("{0:N0}", receiptPlan.Amount))</td>
+        <td style="white-space:nowrap; text-align:right;">@Html.Encode(string.Format("{0:N0}", (receiptPlan.Amount - receiptPlan.ReceivableBalance)))</td>
+        <td style="white-space:nowrap; text-align:right;">@Html.Encode(string.Format("{0:N0}", receiptPlan.ReceivableBalance))</td>
+    </tr>
+    }
+</table>

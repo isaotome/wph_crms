@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<%@ Import Namespace="CrmsDao" %>
+<%Response.Cache.SetCacheability(HttpCacheability.NoCache); %>
+<%
+    if (Session["Employee"] == null){
+        Response.Redirect("/Error/SessionTimeout/0");
+    }
+    
+    //データコンテキスト作成
+    CrmsLinqDataContext db = new CrmsLinqDataContext();
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server"></asp:ContentPlaceHolder></title>
+    <link rel="stylesheet" href="/Content/style.css" type="text/css" />
+    <link rel="stylesheet" href="/Content/jquery-ui-1.8.4.custom.css" type="text/css" />
+    <script type="text/javascript" src="/Scripts/jquery-1.4.1.js"></script>
+    <script type="text/javascript" src="/Scripts/DefConst.js<%=("?version=" + string.Format("{0:yyyyMMdd}", DateTime.Now))%>"></script><%//Add 2018/04/09 arc yano #3757%>
+    <script type="text/javascript" src="/Scripts/Common.js<%=("?version=" + string.Format("{0:yyyyMMdd}", DateTime.Now))%>"></script><%//Add 2018/04/09 arc yano #3757%>
+    <script type="text/javascript" src="/Scripts/jquery-ui-1.8.4.custom.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.ui.datepicker-ja.js<%=("?version=" + string.Format("{0:yyyyMMdd}", DateTime.Now))%>"></script><%//Add 2018/04/09 arc yano #3757%>
+    <script type="text/javascript" src="/Scripts/jquery.blockUI.js"></script>
+    <asp:ContentPlaceHolder ID="HeaderContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+
+<body>
+<%
+    ///
+    /// ページ名を取得する
+    /// 
+    
+    //相対パスの取得(~/{Controller}/{Action}/{id})
+    //string url = Request.AppRelativeCurrentExecutionFilePath;
+    string[] url = Request.RawUrl.Split('/');
+    
+    MenuControl menu = new MenuControlDao(db).GetByUrl("/" + url[1] + "/" + url[2]);
+    if (menu != null) {
+%>
+        <div id="PageTitle"><%=menu.MenuGroup.MenuGroupName %> > <%=menu.MenuName%></div><br />
+<%
+    }
+%>
+    <div id="contents">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+   </div>
+<% //Add 2014/07/24 arc yano chrome対応 モーダルダイアログを開いている間は入力操作を受け付けないように修正。%>
+<div id="mask"></div>
+    <%// Mod 2021/05/07 yano #4045 %>
+     <script type="text/javascript">
+         addEvent(this, 'load', function () { setAttribute(); });
+
+     </script>
+</body>
+</html>

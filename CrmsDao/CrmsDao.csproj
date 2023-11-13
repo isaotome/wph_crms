@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{13C1491C-59A0-408B-A0F7-036AC6CBD076}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CrmsDao</RootNamespace>
+    <AssemblyName>CrmsDao</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=4.0.2.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Crms\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountByAmountTypeDao.cs" />
+    <Compile Include="AccountReceivableBalanceListDao.cs" />
+    <Compile Include="AccountsReceivableCarDao.cs" />
+    <Compile Include="AccountsReceivableDao.cs" />
+    <Compile Include="AdditionalProperties.cs" />
+    <Compile Include="AntiqueLedgerDao.cs" />
+    <Compile Include="ApplicationDao.cs" />
+    <Compile Include="ApplicationRoleDao.cs" />
+    <Compile Include="AreaDao.cs" />
+    <Compile Include="BackGroundDemoCarDao.cs" />
+    <Compile Include="BankDao.cs" />
+    <Compile Include="BranchDao.cs" />
+    <Compile Include="CarAvailableColorDao.cs" />
+    <Compile Include="CardReceiptPlanListDao.cs" />
+    <Compile Include="CarFixedAssetsDao.cs" />
+    <Compile Include="CarPurchaseOrderDao.cs" />
+    <Compile Include="CarSalesOrderDao.cs" />
+    <Compile Include="CarSalesReportDao.cs" />
+    <Compile Include="CarStatusCheckDao.cs" />
+    <Compile Include="CarStockDao.cs" />
+    <Compile Include="CarStockListDao.cs" />
+    <Compile Include="CarTaxDao.cs" />
+    <Compile Include="CashAccountDao.cs" />
+    <Compile Include="CloseMonthControlCarStockDao.cs" />
+    <Compile Include="CSSurveyGRDao.cs" />
+    <Compile Include="DataExport.cs" />
+    <Compile Include="DepartmentWarehouseDao.cs" />
+    <Compile Include="DepreciationRateDao.cs" />
+    <Compile Include="DocumentListDao.cs" />
+    <Compile Include="EmployeeHistoryDao.cs" />
+    <Compile Include="InventoryMonthControlCarDao.cs" />
+    <Compile Include="InventoryScheduleCarDao.cs" />
+    <Compile Include="InventoryStockCarDao.cs" />
+    <Compile Include="InvoiceConsumptionTaxDao.cs" />
+    <Compile Include="MechanicRankingDao.cs" />
+    <Compile Include="PartsAverageCostListDao.cs" />
+    <Compile Include="InventoryMonthControlPartsBalanceDao.cs" />
+    <Compile Include="JournalListDao.cs" />
+    <Compile Include="Mapping.cs" />
+    <Compile Include="PartsMovingAverageCostDao.cs" />
+    <Compile Include="PartsStatusDao.cs" />
+    <Compile Include="ServiceSalesHistoryDao.cs" />
+    <Compile Include="ServiceSalesReportDao.cs" />
+    <Compile Include="ServiceWorkCustomerClaimDao.cs" />
+    <Compile Include="SupplierPaymentListDao.cs" />
+    <Compile Include="V_ALL_SalesOrderListDao.cs" />
+    <Compile Include="V_RevenueResultDao.cs" />
+    <Compile Include="V_ServiceSalesClaimCodeDao.cs" />
+    <Compile Include="CloseMonthControlDao.cs" />
+    <Compile Include="CodeData.cs" />
+    <Compile Include="CommonUtils.cs" />
+    <Compile Include="CompanyDao.cs" />
+    <Compile Include="ConfigurationSettingDao.cs" />
+    <Compile Include="CostAreaDao.cs" />
+    <Compile Include="CrmsLinq.cs">
+      <DependentUpon>CrmsLinq.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="CodeUtils.cs" />
+    <Compile Include="CrmsLinq.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrmsLinq.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDMDao.cs" />
+    <Compile Include="CustomerUpdateLogDao.cs" />
+    <Compile Include="DaoConst.cs" />
+    <Compile Include="CrmsDataContext.cs" />
+    <Compile Include="DepartmentDao.cs" />
+    <Compile Include="EmployeeDao.cs" />
+    <Compile Include="InventoryMonthControlPartsDao.cs" />
+    <Compile Include="InventoryParts_ShikakariDao.cs" />
+    <Compile Include="InventorySchedulePartsDao.cs" />
+    <Compile Include="InventoryStockDao.cs" />
+    <Compile Include="JapaneseDateUtility.cs" />
+    <Compile Include="MenuControlDao.cs" />
+    <Compile Include="MenuGroupDao.cs" />
+    <Compile Include="OutputLogData.cs" />
+    <Compile Include="OutputWriter.cs" />
+    <Compile Include="PaginatedList.cs" />
+    <Compile Include="PartsAverageCostDao.cs" />
+    <Compile Include="PartsDiscountRateDao.cs" />
+    <Compile Include="PartsInventoryWorkingDateDao.cs" />
+    <Compile Include="PartsPurchaseDao.cs" />
+    <Compile Include="PartsPurchaseOrderDao.cs" />
+    <Compile Include="PartsStockCheckDao.cs" />
+    <Compile Include="PartsStockDao.cs" />
+    <Compile Include="PaymentPlanDao.cs" />
+    <Compile Include="ProcessSessionControlDao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiptPlanDao.cs" />
+    <Compile Include="V_ReceivableManagementDao.cs" />
+    <Compile Include="SalesCarHistoryDao.cs" />
+    <Compile Include="SalesSummaryDao.cs" />
+    <Compile Include="SecurityRoleDao.cs" />
+    <Compile Include="OfficeDao.cs" />
+    <Compile Include="MakerDao.cs" />
+    <Compile Include="CustomerDao.cs" />
+    <Compile Include="CarDao.cs" />
+    <Compile Include="PartsDao.cs" />
+    <Compile Include="CarOptionDao.cs" />
+    <Compile Include="CustomerClaimDao.cs" />
+    <Compile Include="SendMail.cs" />
+    <Compile Include="SeparatedValueWriter.cs" />
+    <Compile Include="SerialNumberDao.cs" />
+    <Compile Include="ServiceDailyReportDao.cs" />
+    <Compile Include="ServiceRequestDao.cs" />
+    <Compile Include="PartsWipStockDao.cs" />
+    <Compile Include="ServiceSalesOrderDao.cs" />
+    <Compile Include="SetMenuDao.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SupplierDao.cs" />
+    <Compile Include="LoanDao.cs" />
+    <Compile Include="SalesCarDao.cs" />
+    <Compile Include="CarColorDao.cs" />
+    <Compile Include="ServiceMenuDao.cs" />
+    <Compile Include="LocationDao.cs" />
+    <Compile Include="CodeDao.cs" />
+    <Compile Include="ServiceWorkDao.cs" />
+    <Compile Include="CarClassDao.cs" />
+    <Compile Include="TaskConfigDao.cs" />
+    <Compile Include="TaskDao.cs" />
+    <Compile Include="CarGradeDao.cs" />
+    <Compile Include="BrandDao.cs" />
+    <Compile Include="PaymentKindDao.cs" />
+    <Compile Include="TaskRoleDao.cs" />
+    <Compile Include="TaskUtil.cs" />
+    <Compile Include="TransferDao.cs" />
+    <Compile Include="TransportBranchOfficeDao.cs" />
+    <Compile Include="CouponDao.cs" />
+    <Compile Include="QuoteMessageDao.cs" />
+    <Compile Include="CustomerClaimableDao.cs" />
+    <Compile Include="ServiceCostDao.cs" />
+    <Compile Include="PartsLocationDao.cs" />
+    <Compile Include="SupplierPaymentDao.cs" />
+    <Compile Include="CustomerReceiptionDao.cs" />
+    <Compile Include="V_CarMasterDao.cs" />
+    <Compile Include="V_CarPurchaseDownloadDao.cs" />
+    <Compile Include="T_CashJournalOutputDao.cs" />
+    <Compile Include="V_SalesResultDao.cs" />
+    <Compile Include="V_ServiceReceiptionHistoryDao.cs" />
+    <Compile Include="V_ServiceReceiptTargetDao.cs" />
+    <Compile Include="CampaignDao.cs" />
+    <Compile Include="CampaignCarDao.cs" />
+    <Compile Include="CarAppraisalDao.cs" />
+    <Compile Include="CarPurchaseDao.cs" />
+    <Compile Include="V_CarAppraisalDao.cs" />
+    <Compile Include="AccountDao.cs" />
+    <Compile Include="JournalDao.cs" />
+    <Compile Include="CashBalanceDao.cs" />
+    <Compile Include="SetMenuListDao.cs" />
+    <Compile Include="V_CarInventoryInProcessDao.cs" />
+    <Compile Include="V_CarInventorySummaryDao.cs" />
+    <Compile Include="InventoryScheduleDao.cs" />
+    <Compile Include="CarWeightTaxDao.cs" />
+    <Compile Include="CarLiabilityInsuranceDao.cs" />
+    <Compile Include="CarAcquisitionTaxDao.cs" />
+    <Compile Include="ConsumptionTaxDao.cs" />
+    <Compile Include="V_CarSalesDownloadDao.cs" />
+    <Compile Include="V_ServiceSalesDownloadDao.cs" />
+    <Compile Include="V_OfficeSalesDownloadDao.cs" />
+    <Compile Include="V_ReceiptTransDownloadDao.cs" />
+    <Compile Include="V_CarSalesJournalReportDao.cs" />
+    <Compile Include="V_UsedCarAutoAuctionJournalReportDao.cs" />
+    <Compile Include="V_ReceiptTransferJournalReportDao.cs" />
+    <Compile Include="V_PettyCashJournalReportDao.cs" />
+    <Compile Include="V_ReceiptLoanJournalReportDao.cs" />
+    <Compile Include="WarehouseDao.cs" />
+    <Compile Include="W_JournalChangeDao.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CrmsLinq.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>CrmsLinq.designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="CrmsLinq.dbml.layout">
+      <DependentUpon>CrmsLinq.dbml</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

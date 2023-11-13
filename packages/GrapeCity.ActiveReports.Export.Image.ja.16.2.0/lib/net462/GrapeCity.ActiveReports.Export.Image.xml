@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>GrapeCity.ActiveReports.Export.Image</name>
+  </assembly>
+  <members>
+    <member name="T:GrapeCity.ActiveReports.Export.Image.Page.ImageRenderingExtension">
+      <summary>IRenderingExtensionの実装を表します。
+画像に<see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport">IReport</see>をレンダリングすることができます。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Image.Page.Settings">
+      <summary>の設定を表します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Image.Page.ImageRenderingExtension.GetSupportedSettings">
+      <summary>現在のインスタンスの設定を返します。</summary>
+      <returns>現在のインスタンスの設定。</returns>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Image.Page.ImageRenderingExtension.GetSupportedSettings(System.Boolean)">
+      <summary>現在のインスタンスの設定を返します。</summary>
+      <returns>現在のインスタンスの設定。</returns>
+      <param name="fpl">画像描画の設定を返す。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Image.Page.Settings.#ctor(System.Collections.Specialized.NameValueCollection,System.Boolean)">
+      <summary>指定した設定を持つクラスの新しいインスタンスを初期化します。</summary>
+      <param name="settings">指定した設定の。</param>
+      <param name="fpl">FPLフラグ</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Image.Page.Settings.ApplySettings(System.Collections.Specialized.NameValueCollection)">
+      <summary>NameValueCollectionの設定で渡された任意の設定を適用します。</summary>
+      <param name="settings">描画拡張機能のための設定。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Image.Page.Settings.GetSettings">
+      <summary>の設定を返します。</summary>
+      <returns>設定の<see cref="T:System.Collections.Specialized.NameValueCollection"></see>を返します。</returns>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.Compression">
+      <summary>画像として描画されたレポートに使用する圧縮の種類を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.Dither">
+      <summary>イメージをCCITT3またはRleのような白黒の出力フォーマットに保存する場合、ディザリングするかどうかを取得または設定します。CompressionSchemeプロパティが、LzwまたはNone (カラー出力を示す)の場合、このプロパティは無効になります。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.DpiX">
+      <summary>描画する画像の水平解像度を取得または設定します。規定値は96です。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.DpiY">
+      <summary>描画する画像の垂直解像度を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.EndPage">
+      <summary>レポートの最終ページを取得または設定します。デフォールトの値、0、に設定されている場合、レポートのすべてのページが描画されます。しかし、EndPageプロパティを設定するにはStartPageプロパティを０以外の有効な値に設定する必要がございます。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.ImageType">
+      <summary>レポートを描画する画像の種類を取得または設定します。<br></br>
+サポートされているタイプはBMP、EMF、GIF、JPEG、TIFF、PNGです。<br></br></summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.MarginBottom">
+      <summary>画像の下余白の値をインチ単位で取得または設定します。<br></br>
+形式は、拡張子として "in"をもつ整数または小数です。例えば、1インチの場合は "1in"となります。デフォールトとしては、マージンは使用されません。このプロパティに設定されている値は、レポートの設定をオーバーライドします。<br></br></summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.MarginLeft">
+      <summary>画像の左余白の値をインチ単位で取得または設定します。<br></br>
+形式は、拡張子として "in"をもつ整数または小数です。例えば、1インチの場合は "1in"となります。デフォールトとしては、マージンは使用されません。このプロパティに設定されている値は、レポートの設定をオーバーライドします。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.MarginRight">
+      <summary>画像の右余白の値をインチ単位で取得または設定します。<br></br>
+形式は、拡張子として "in"をもつ整数または小数です。例えば、1インチの場合は "1in"となります。デフォールトとしては、マージンは使用されません。このプロパティに設定されている値は、レポートの設定をオーバーライドします。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.MarginTop">
+      <summary>画像の上余白の値をインチ単位で取得または設定します。<br></br>
+形式は、拡張子として "in"をもつ整数または小数です。例えば、1インチの場合は "1in"となります。デフォールトとしては、マージンは使用されません。このプロパティに設定されている値は、レポートの設定をオーバーライドします。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.PageHeight">
+      <summary>画像の高さをインチ単位で取得または設定します。<br></br>
+形式は、拡張子として "in"をもつ整数または小数です。例えば、11インチの場合は "11in"となります。このプロパティに設定されている値は、レポートの設定をオーバーライドします。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.PageWidth">
+      <summary>画像の幅をインチ単位で取得または設定します。<br></br>
+形式は、拡張子として "in"をもつ整数または小数です。例えば、８インチの場合は "8in"となります。このプロパティに設定されている値は、レポートの設定をオーバーライドします。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.Pagination">
+      <summary>デフォルトでは、レポートの各ページは別の画像として描画されます。 値をFalseに設定して、レポート全体は単一のイメージとして描画します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.PrintLayoutMode">
+      <summary>
+        <para>画像上にページのレイアウトを取得または設定します。</para>
+        <list type="bullet">
+          <item>
+            <strong>OneLogicalPageOnSinglePhysicalPage</strong>
+          </item>
+          <item>
+            <strong>TwoLogicalPagesOnSinglePhysicalPage</strong>
+          </item>
+          <item>
+            <strong>FourLogicalPagesOnSinglePhysicalPage</strong>
+          </item>
+          <item>
+            <strong>EightLogicalPagesOnSinglePhysicalPage</strong>
+          </item>
+          <item>
+            <strong>BookletMode</strong> (小冊子印刷用ページレイアウト)</item>
+        </list>
+      </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.Quality">
+      <summary>画像として描画されるレポートの品質を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.SizeToFit">
+      <summary>選択された画像サイズに入れるように、レポートページの大きさを調整します。
+
+<para><font size="2" face="Consolas"><font size="2" face="Consolas">規定値はFalseです。</font></font></para></summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.StartPage">
+      <summary>レポートの開始ページを取得または設定します。このプロパティと共にEndPageプロパティが、デフォールトの値、0に設定されている場合、レポートのすべてのページが描画されます。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.WatermarkAngle">
+      <summary>画像上のウォーターマークテキストの角度を取得または設定します。有効な値の範囲は、0から359であり、0が水平、左から右、になっています。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.WatermarkColor">
+      <summary>画像上のウォーターマークテキストの色を取得または設定します。デフォールト値は葉色ですが、Web、System、またはCustom色から任意の値を選択する事が出来ます。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.WatermarkTitle">
+      <summary>画像上にウォーターマークとして表示されるテキスト（たとえば、機密）を入力します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Image.Page.Renderers.Compression">
+      <summary>描画されたTIFF画像の圧縮方法を指定します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Image.Page.Renderers.Compression.Ccitt3">
+      <summary>CCITT Group 3圧縮を使用します。主にファクシミリで使われる圧縮形式で、白黒で出力されます。CCITT Group 3の規格は、1728 x 2376ピクセル、解像度は200 x 196 DPIです。レポートのアスペクト比がこの規格と合わない場合、下部に余白が挿入されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Image.Page.Renderers.Compression.None">
+      <summary>圧縮をせず、カラーで出力されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Image.Page.Renderers.Compression.Rle">
+      <summary>Run-Lengthエンコーディング（RLE）圧縮方式を採用したPackBits圧縮形式です。白黒で出力されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Image.Page.Renderers.Compression.Lzw">
+      <summary>ロスレス（可逆）圧縮であるLZW圧縮を使用します。カラーで出力されます。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Image.Page.Renderers.ImageType">
+      <summary>ImageRenderingExtensionでサポートされている画像のフォーマットを表します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Image.Page.Renderers.ImageType.BMP">
+      <summary>BMP形式で出力されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Image.Page.Renderers.ImageType.GIF">
+      <summary>GIF形式で出力されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Image.Page.Renderers.ImageType.JPEG">
+      <summary>JPEG形式で出力されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Image.Page.Renderers.ImageType.TIFF">
+      <summary>TIFF形式で出力されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Image.Page.Renderers.ImageType.PNG">
+      <summary>PNG形式で出力されます。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Image.Tiff.Section.CompressionScheme">
+      <summary>TiffExportコンポーネントの結果として得られるTIFF画像で使用される圧縮方法を指定する値の列挙型。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Image.Tiff.Section.CompressionScheme.None">
+      <summary>圧縮をせず、カラーで出力されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Image.Tiff.Section.CompressionScheme.Rle">
+      <summary>Run-Lengthエンコーディング（RLE）圧縮方式を採用したPackBits圧縮形式です。白黒で出力されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Image.Tiff.Section.CompressionScheme.Ccitt3">
+      <summary>CCITT Group 3圧縮を使用します。主にファクシミリで使われる圧縮形式で、白黒で出力されます。CCITT Group 3の規格は、1728 x 2376ピクセル、解像度は200 x 196 DPIです。レポートのアスペクト比がこの規格と合わない場合、下部に余白が挿入されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Image.Tiff.Section.CompressionScheme.Ccitt4">
+      <summary>Ccitt3の後継となる圧縮方式です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Image.Tiff.Section.CompressionScheme.Lzw">
+      <summary>ロスレス（可逆）圧縮であるLZW圧縮を使用します。カラーで出力されます。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Image.Tiff.Section.TiffExport">
+      <summary>ActiveReportsドキュメントからTIFFファイルを作成するための機能を提供します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Image.Tiff.Section.TiffExportException">
+      <summary>TIFFエクスポートでエラーが発生したときにスローされる例外です。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Image.Tiff.Section.TiffExport.#ctor">
+      <summary>TiffExportクラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Image.Tiff.Section.TiffExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.String,System.String)">
+      <summary>指定したドキュメントをTIFFファイルにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="filePath">TIFFファイルを保存するファイル名とパス。</param>
+      <param name="pageRange">エクスポートするページを、カンマで区切って指定するか、2-8のように開始ページと終了ページを指定します。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Image.Tiff.Section.TiffExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.String)">
+      <summary>指定したドキュメントをTIFFファイルにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="filePath">TIFFファイルを保存するファイル名とパス。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Image.Tiff.Section.TiffExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.IO.Stream)">
+      <summary>指定したドキュメントをTIFFストリームにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="outputStream">TIFFドキュメントを保存するSystem.IO.Stream。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Image.Tiff.Section.TiffExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.IO.Stream,System.String)">
+      <summary>指定したドキュメントをTIFFストリームにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="outputStream">TIFFドキュメントを保存するSystem.IO.Stream。</param>
+      <param name="pageRange">エクスポートするページを、カンマで区切って指定するか、2-8のように開始ページと終了ページを指定します。</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Tiff.Section.TiffExport.CompressionScheme">
+      <summary>TIFFファイルのエクスポート時に使用する、圧縮方法を指定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Tiff.Section.TiffExport.Dither">
+      <summary>イメージをCCITT3のような白黒の出力フォーマットに保存する場合、ディザリングするかどうかを指定します。CompressionSchemeプロパティが、LzwまたはNone
+(カラー出力を示す)の場合、このプロパティは無効になります。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Tiff.Section.TiffExport.DpiX">
+      <summary>TIFFにエクスポートするときに水平方向の解像度の値を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Tiff.Section.TiffExport.DpiY">
+      <summary>TIFFにエクスポートするときに垂直方向の解像度の値を取得または設定します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Image.Tiff.Section.TiffExportException.#ctor(System.String)">
+      <summary>エラー メッセージを指定して、TiffExportExceptionクラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因を説明するエラーメッセージ。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Image.Tiff.Section.TiffExportException.#ctor(System.String,System.Exception)">
+      <summary>エラーメッセージ、およびこの例外の原因である内部例外への参照を指定して、TiffExportExceptionクラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因を説明するエラーメッセージ。</param>
+      <param name="innerException">現在の例外の原因であるExceptionインスタンス。innerExceptionパラメーターがnull参照(Visual Basicの場合はNothing)でない場合、現在の例外は、内部の例外を処理するcatchブロックで発生します。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Image.Tiff.Section.TiffExportException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>シリアル化したデータを指定して、TiffExportExceptionクラスの新しいインスタンスを初期化します。</summary>
+      <param name="info">
+        <para>スローされている例外に関するシリアル化済みオブジェクト データを保持しているSerializationInfo。</para>
+      </param>
+      <param name="context">転送元または転送先に関するコンテキスト情報を含んでいるStreamingContext。</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Tiff.Section.TiffExport.Pagination">
+      <summary>
+            エクスポートされたTIFFト文書でページネーションを使用するかどうかを取得または設定します。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Image.Page.Settings.op_Implicit(GrapeCity.ActiveReports.Export.Image.Page.Settings)~System.Collections.Specialized.NameValueCollection">
+      <summary>
+        <see cref="T:GrapeCity.ActiveReports.Export.Image.Page.Settings"></see>から<see cref="T:System.Collections.Specialized.NameValueCollection"></see>への暗黙的な変換を行います。
+            </summary>
+      <param name="settings">レンダリング拡張設定。</param>
+      <returns>変換の結果。</returns>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Image.Page.ImageRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection)">
+      <summary>
+        <see cref="M:GrapeCity.ActiveReports.Extensibility.Rendering.IRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider)"></see> メッソドを実行します。
+</summary>
+      <param name="report">
+       画像にレンダリングする<see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport"></see></param>
+      <param name="streams">
+        <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider"></see>の実装は、レンダリングされた画像のターゲットを定義します。</param>
+      <param name="settings">
+        レンダリング設定の<see cref="T:System.Collections.Specialized.NameValueCollection"></see></param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Image.Page.Settings.GetImageRenderingSettings(System.Collections.Specialized.NameValueCollection,System.Boolean)">
+      <summary>
+            内部使用のみ。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Image.Page.ImageRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection,System.Threading.CancellationToken)">
+      <summary>
+            Implements <see cref="M:GrapeCity.ActiveReports.Extensibility.Rendering.IRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider)"></see> method.
+            </summary>
+      <param name="report">
+        <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport"></see> to render in image.</param>
+      <param name="streams">Implementation of <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider"></see> defines target of rendered image.</param>
+      <param name="settings">
+        <see cref="T:System.Collections.Specialized.NameValueCollection"></see> of rendering settings.</param>
+      <param name="cancel">The <see cref="T:System.Threading.CancellationToken"></see> object that allows to interrupt rendering.</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Image.Page.ImageRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection,System.Threading.CancellationToken,System.IProgress{GrapeCity.ActiveReports.Rendering.Export.ProgressInfo})">
+      <summary>
+            Implements <see cref="M:GrapeCity.ActiveReports.Extensibility.Rendering.ITrackableRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection,System.Threading.CancellationToken,System.IProgress{GrapeCity.ActiveReports.Rendering.Export.ProgressInfo})"></see> method.
+            </summary>
+      <param name="report">
+        <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport"></see> to render in image.</param>
+      <param name="streams">Implementation of <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider"></see> defines target of rendered image.</param>
+      <param name="settings">
+        <see cref="T:System.Collections.Specialized.NameValueCollection"></see> of rendering settings.</param>
+      <param name="cancel">The <see cref="T:System.Threading.CancellationToken"></see> object that allows to interrupt rendering.</param>
+      <param name="progress">The <see cref="!:IProgress"></see> is a provider for progress updates.</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.WatermarkFontName">
+      <summary>
+            Set the font to use for the watermark to any valid System.Drawing.Font. 
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.WatermarkFontSize">
+      <summary>
+            Sets the font size for the watermark 
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Image.Page.Settings.WatermarkFontStyle">
+      <summary>
+            Specifies the font style.
+            </summary>
+    </member>
+  </members>
+</doc>

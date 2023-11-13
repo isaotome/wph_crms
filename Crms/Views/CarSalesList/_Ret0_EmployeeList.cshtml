@@ -1,0 +1,69 @@
+﻿@* //---------------------------------------------
+   // 機能：納車リスト（担当者別）
+   // 作成者：arc nakayama
+   // 作成日：2017/03/09
+   // 更新日：
+   //---------------------------------------------
+*@
+@model CrmsDao.TotalCarSalesEmployeeList_Result
+
+<table class="list">
+    <tr>
+        <th class="input-form-title" colspan="14">
+            すべて
+        </th>
+    </tr>
+    <tr>
+        <th colspan="2">部門</th>
+        <th>7月</th>
+        <th>8月</th>
+        <th>9月</th>
+        <th>10月</th>
+        <th>11月</th>
+        <th>12月</th>
+        <th>1月</th>
+        <th>2月</th>
+        <th>3月</th>
+        <th>4月</th>
+        <th>5月</th>
+        <th>6月</th>       
+    </tr>
+    <tr>
+        <td style="white-space:nowrap; background-color:#CCFFCC">@ViewData["DepartmentCode"]</td>
+        <td style="white-space:nowrap; background-color:#CCFFCC">@ViewData["DepartmentName"]</td>
+        <td style="white-space:nowrap; background-color:#CCFFCC; font-size:20px; text-align:center"><b>@Model.TotalJul_Cnt</b></td>
+        <td style="white-space:nowrap; background-color:#CCFFCC; font-size:20px; text-align:center"><b>@Model.TotalAug_Cnt</b></td>
+        <td style="white-space:nowrap; background-color:#CCFFCC; font-size:20px; text-align:center"><b>@Model.TotalSep_Cnt</b></td>
+        <td style="white-space:nowrap; background-color:#CCFFCC; font-size:20px; text-align:center"><b>@Model.TotalOct_Cnt</b></td>
+        <td style="white-space:nowrap; background-color:#CCFFCC; font-size:20px; text-align:center"><b>@Model.TotalNov_Cnt</b></td>
+        <td style="white-space:nowrap; background-color:#CCFFCC; font-size:20px; text-align:center"><b>@Model.TotalDec_Cnt</b></td>
+        <td style="white-space:nowrap; background-color:#CCFFCC; font-size:20px; text-align:center"><b>@Model.TotalJan_Cnt</b></td>
+        <td style="white-space:nowrap; background-color:#CCFFCC; font-size:20px; text-align:center"><b>@Model.TotalFeb_Cnt</b></td>
+        <td style="white-space:nowrap; background-color:#CCFFCC; font-size:20px; text-align:center"><b>@Model.TotalMar_Cnt</b></td>
+        <td style="white-space:nowrap; background-color:#CCFFCC; font-size:20px; text-align:center"><b>@Model.TotalApr_Cnt</b></td>
+        <td style="white-space:nowrap; background-color:#CCFFCC; font-size:20px; text-align:center"><b>@Model.TotalMay_Cnt</b></td>
+        <td style="white-space:nowrap; background-color:#CCFFCC; font-size:20px; text-align:center"><b>@Model.TotalJun_Cnt</b></td>
+
+
+
+    </tr>
+    @foreach (var a in Model.list){
+    
+    <tr>
+        <td style="white-space:nowrap">@Html.Encode(a.EmployeeNumber)</td>
+        <td style="white-space:nowrap">@Html.Encode(a.EmployeeName)</td>
+        <td style="white-space:nowrap; text-align:center">@a.Jul_Cnt</td>
+        <td style="white-space:nowrap; text-align:center">@a.Aug_Cnt</td>
+        <td style="white-space:nowrap; text-align:center">@a.Sep_Cnt</td>
+        <td style="white-space:nowrap; text-align:center">@a.Oct_Cnt</td>
+        <td style="white-space:nowrap; text-align:center">@a.Nov_Cnt</td>
+        <td style="white-space:nowrap; text-align:center">@a.Dec_Cnt</td>
+        <td style="white-space:nowrap; text-align:center">@a.Jan_Cnt</td>
+        <td style="white-space:nowrap; text-align:center">@a.Feb_Cnt</td>
+        <td style="white-space:nowrap; text-align:center">@a.Mar_Cnt</td>
+        <td style="white-space:nowrap; text-align:center">@a.Apr_Cnt</td>
+        <td style="white-space:nowrap; text-align:center">@a.May_Cnt</td>
+        <td style="white-space:nowrap; text-align:center">@a.Jun_Cnt</td>
+    </tr>
+    }
+</table>

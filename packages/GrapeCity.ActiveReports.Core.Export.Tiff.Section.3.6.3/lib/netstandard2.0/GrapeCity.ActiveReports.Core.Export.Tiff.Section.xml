@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GrapeCity.ActiveReports.Core.Export.Tiff.Section</name>
+    </assembly>
+    <members>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Tiff.Section.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Tiff.Section.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Tiff.Section.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Tiff.Section.Resources.BigTiffExceptionMessage">
+            <summary>
+              Looks up a localized string similar to It seems what report is too big for uncompressed tiff, try to change CompressionScheme property from None..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Tiff.Section.Resources.CreateBitmapExceptionMessage">
+            <summary>
+              Looks up a localized string similar to The size of the bitmap is too large that there is not enough memory in system can be allocated to the bitmap..
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Tiff.Section.TiffExportException">
+            <summary>
+            Exception raised when internal error.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Tiff.Section.TiffExportException.ErrorCode">
+            <summary>
+            The error code.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Tiff.Section.TiffExport">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Tiff.Section.TiffExport.Fonts">
+            <summary>
+            Specifies custom fonts settings.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Tiff.Section.CompressionScheme">
+            <summary>
+            Used to specify the compression schemed used in the resulting tiff image of the <see cref="T:GrapeCity.ActiveReports.Core.Export.Tiff.Section.TiffExport"/> component.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Core.Export.Tiff.Section.CompressionScheme.None">
+            <summary>
+            Specifies no compression.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Core.Export.Tiff.Section.CompressionScheme.Rle">
+            <summary>
+            Specifies the RLE compression scheme
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Core.Export.Tiff.Section.CompressionScheme.Ccitt3">
+            <summary>
+            Specifies the CCITT3 compression scheme.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Core.Export.Tiff.Section.CompressionScheme.Ccitt4">
+            <summary>
+            Specifies the CCITT4 compression scheme.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Core.Export.Tiff.Section.CompressionScheme.Lzw">
+            <summary>
+            Specifies the LZW compression scheme. This compression can be used for for 1, 4, and 8 bit color depths.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.Export.Tiff.Section.TiffSettings">
+            <summary>
+            Export settings.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Tiff.Section.TiffSettings.CompressionScheme">
+            <summary>
+            Specifies the compression scheme to be used when exporting a TIFF file.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Tiff.Section.TiffSettings.Dither">
+            <summary>
+            Specifies whether the image should be dithered when saving to a black and white output format such as CCITT3.  
+            If <see cref="P:GrapeCity.ActiveReports.Core.Export.Tiff.Section.TiffSettings.CompressionScheme"/> is RLE or None (indicating color output) this property has no effect.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Tiff.Section.TiffSettings.DpiX">
+            <summary>
+            Get or set the horizonal resolution value when exporting a TIFF.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.Export.Tiff.Section.TiffSettings.DpiY">
+            <summary>
+            Get or set the vertical resolution value when exporting a TIFF.
+            </summary>
+        </member>
+    </members>
+</doc>

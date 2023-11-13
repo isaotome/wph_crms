@@ -1,0 +1,970 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5D305B77-652D-477B-86D1-70C414D8A3C0}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Crms</RootNamespace>
+    <AssemblyName>Crms</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <DisableOutOfProcTaskHost>1</DisableOutOfProcTaskHost>
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.2.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.2\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.8.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.8.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.0.2.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Gcef.Data.DataEngine, Version=2.0.186.0, Culture=neutral, PublicKeyToken=0b5e1563d2869208, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gcef.Data.DataEngine.2.0.186\lib\net40\Gcef.Data.DataEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Gcef.Data.ExpressionInfo, Version=2.0.186.0, Culture=neutral, PublicKeyToken=0b5e1563d2869208, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gcef.Data.ExpressionInfo.2.0.186\lib\net40\Gcef.Data.ExpressionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Gcef.Data.VBFunctionLib, Version=2.0.186.0, Culture=neutral, PublicKeyToken=0b5e1563d2869208, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gcef.Data.VBFunctionLib.2.0.186\lib\net40\Gcef.Data.VBFunctionLib.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports, Version=14.1.20526.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.ja.14.1.20526\lib\net462\GrapeCity.ActiveReports.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Chart, Version=14.1.20526.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Chart.ja.14.1.20526\lib\net462\GrapeCity.ActiveReports.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.DataProviders, Version=1.6.6.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.DataProviders.1.6.6\lib\net462\GrapeCity.ActiveReports.Core.DataProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Drawing.Gc, Version=1.8.2.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Drawing.Gc.1.8.2\lib\net462\GrapeCity.ActiveReports.Core.Drawing.Gc.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Drawing.Gdi, Version=1.8.2.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Drawing.Gdi.1.8.2\lib\net462\GrapeCity.ActiveReports.Core.Drawing.Gdi.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Excel.Page, Version=1.8.2.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Export.Excel.Page.1.8.2\lib\net462\GrapeCity.ActiveReports.Core.Export.Excel.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Html.Page, Version=1.8.2.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Export.Html.Page.1.8.2\lib\net462\GrapeCity.ActiveReports.Core.Export.Html.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Image.Page, Version=1.8.2.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Export.Image.Page.1.8.2\lib\net462\GrapeCity.ActiveReports.Core.Export.Image.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Pdf.Page, Version=1.8.2.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Export.Pdf.Page.1.8.2\lib\net462\GrapeCity.ActiveReports.Core.Export.Pdf.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Svg.Page, Version=1.8.2.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Export.Svg.Page.1.8.2\lib\net462\GrapeCity.ActiveReports.Core.Export.Svg.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Text.Page, Version=1.8.2.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Export.Text.Page.1.8.2\lib\net462\GrapeCity.ActiveReports.Core.Export.Text.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Word.Page, Version=1.8.2.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Export.Word.Page.1.8.2\lib\net462\GrapeCity.ActiveReports.Core.Export.Word.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Rdl, Version=1.8.2.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Rdl.1.8.2\lib\net462\GrapeCity.ActiveReports.Core.Rdl.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Rendering, Version=1.8.2.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Rendering.1.8.2\lib\net462\GrapeCity.ActiveReports.Core.Rendering.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Document, Version=14.1.20526.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Document.ja.14.1.20526\lib\net462\GrapeCity.ActiveReports.Document.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Excel, Version=14.1.20526.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Export.Excel.ja.14.1.20526\lib\net462\GrapeCity.ActiveReports.Export.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Html, Version=14.1.20526.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Export.Html.ja.14.1.20526\lib\net462\GrapeCity.ActiveReports.Export.Html.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Image, Version=14.1.20526.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Export.Image.ja.14.1.20526\lib\net462\GrapeCity.ActiveReports.Export.Image.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Pdf, Version=14.1.20526.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Export.Pdf.ja.14.1.20526\lib\net462\GrapeCity.ActiveReports.Export.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Rdf, Version=14.1.20526.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Export.Rdf.ja.14.1.20526\lib\net462\GrapeCity.ActiveReports.Export.Rdf.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Word, Version=14.1.20526.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Export.Word.ja.14.1.20526\lib\net462\GrapeCity.ActiveReports.Export.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Xml, Version=14.1.20526.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Export.Xml.ja.14.1.20526\lib\net462\GrapeCity.ActiveReports.Export.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="Grapecity.DataVisualization, Version=0.1.248.0, Culture=neutral, PublicKeyToken=171ec59c7733b360, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grapecity.DataVisualization.0.1.248\lib\net462\Grapecity.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Common, Version=3.2.0.560, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.Documents.Common.3.2.0.560\lib\net461\GrapeCity.Documents.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Common.Windows, Version=3.2.0.560, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.Documents.Common.Windows.3.2.0.560\lib\net461\GrapeCity.Documents.Common.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.DX.Windows, Version=3.2.0.560, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.Documents.DX.Windows.3.2.0.560\lib\net461\GrapeCity.Documents.DX.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Imaging, Version=3.2.0.560, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.Documents.Imaging.3.2.0.560\lib\net461\GrapeCity.Documents.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Pdf, Version=3.2.0.560, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.Documents.Pdf.3.2.0.560\lib\net461\GrapeCity.Documents.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.7.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.9.7\lib\net20\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=3.1.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.3.1.0.0\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog.Extended, Version=3.1.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.Extended.3.1.0.0\lib\net45-full\NLog.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.AppContext, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.AppContext.4.3.0\lib\net46\System.AppContext.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.3.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.Tracing.4.3.0\lib\net462\System.Diagnostics.Tracing.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Globalization.Calendars, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Globalization.Calendars.4.3.0\lib\net46\System.Globalization.Calendars.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.4.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.0\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.0\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.4.3.0\lib\net462\System.Reflection.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Extensions.4.3.0\lib\net462\System.Runtime.Extensions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.4.3.0\lib\net462\System.Runtime.InteropServices.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Xml.ReaderWriter.4.3.0\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AkakuroAuthFilterAttribute.cs" />
+    <Compile Include="Controllers\AntiqueLedgerController.cs" />
+    <Compile Include="Controllers\ApplicationRoleController.cs" />
+    <Compile Include="Controllers\AreaController.cs" />
+    <Compile Include="Controllers\AuthFilterAttribute.cs" />
+    <Compile Include="Controllers\BankController.cs" />
+    <Compile Include="Controllers\BranchController.cs" />
+    <Compile Include="Controllers\CampaignController.cs" />
+    <Compile Include="Controllers\CarAppraisalController.cs" />
+    <Compile Include="Controllers\CarInventoryController.cs" />
+    <Compile Include="Controllers\CarPurchaseController.cs" />
+    <Compile Include="Controllers\CarPurchaseListController.cs" />
+    <Compile Include="Controllers\CarPurchaseOrderController.cs" />
+    <Compile Include="Controllers\CarReceiptionController.cs" />
+    <Compile Include="Controllers\CarReceivableManagementController.cs" />
+    <Compile Include="Controllers\CarReservationCancelController.cs" />
+    <Compile Include="Controllers\CarSalesListController.cs" />
+    <Compile Include="Controllers\CarSalesOrderController.cs" />
+    <Compile Include="Controllers\CarSlipStatusChangeController.cs" />
+    <Compile Include="Controllers\CarStatusCheckController.cs" />
+    <Compile Include="Controllers\CarStockController.cs" />
+    <Compile Include="Controllers\CarStockListController.cs" />
+    <Compile Include="Controllers\CarTaxController.cs" />
+    <Compile Include="Controllers\CarUsageSettingController.cs" />
+    <Compile Include="Controllers\CashAccountController.cs" />
+    <Compile Include="Controllers\CashJournalController.cs" />
+    <Compile Include="Controllers\CashJournalOutputController.cs" />
+    <Compile Include="Controllers\CompanyController.cs" />
+    <Compile Include="Controllers\ConfigurationSettingController.cs" />
+    <Compile Include="Controllers\CreditJournalCheckController.cs" />
+    <Compile Include="Controllers\CustomerDataListController.cs" />
+    <Compile Include="Controllers\CustomerIntegrateController.cs" />
+    <Compile Include="Controllers\DataServiceReceiveController.cs" />
+    <Compile Include="Controllers\DepartmentController.cs" />
+    <Compile Include="Controllers\DepartmentWarehouseController.cs" />
+    <Compile Include="Controllers\DepositController.cs" />
+    <Compile Include="Controllers\DepreciationRateController.cs" />
+    <Compile Include="Controllers\DocumentExportController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\ExceptionFilterAttribute.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IFrameController.cs" />
+    <Compile Include="Controllers\InheritedController.cs" />
+    <Compile Include="Controllers\InspectGuidListController.cs" />
+    <Compile Include="Controllers\JournalExportController.cs" />
+    <Compile Include="Controllers\JournalDataController.cs" />
+    <Compile Include="Controllers\JournalTransferController.cs" />
+    <Compile Include="Controllers\LdapAuthentication.cs" />
+    <Compile Include="Controllers\MechanicRankingController.cs" />
+    <Compile Include="Controllers\MenuControlController.cs" />
+    <Compile Include="Controllers\MessageUtils.cs" />
+    <Compile Include="Controllers\MonthlyController.cs" />
+    <Compile Include="Controllers\PartsInventoryController.cs" />
+    <Compile Include="Controllers\PartsInventoryWorkingDateController.cs" />
+    <Compile Include="Controllers\PartsPurchaseController.cs" />
+    <Compile Include="Controllers\PartsPurchaseOrderController.cs" />
+    <Compile Include="Controllers\PartsPurchaseOrderNonGenuineController.cs" />
+    <Compile Include="Controllers\PartsShikakariReportController.cs" />
+    <Compile Include="Controllers\PartsStatusController.cs" />
+    <Compile Include="Controllers\PartsStockCheckController.cs" />
+    <Compile Include="Controllers\PartsStockController.cs" />
+    <Compile Include="Controllers\PartsTransferController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
+    <Compile Include="Controllers\RecallController.cs" />
+    <Compile Include="Controllers\ReceivableManagementController.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
+    <Compile Include="Controllers\RevenueResultController.cs" />
+    <Compile Include="Controllers\SalesReportController.cs" />
+    <Compile Include="Controllers\SalesResultController.cs" />
+    <Compile Include="Controllers\SecurityRoleController.cs" />
+    <Compile Include="Controllers\ServiceReceiptionController.cs" />
+    <Compile Include="Controllers\ServiceRequestController.cs" />
+    <Compile Include="Controllers\PartsWipStockController.cs" />
+    <Compile Include="Controllers\ServiceSalesHistoryController.cs" />
+    <Compile Include="Controllers\ServiceSalesOrderController.cs" />
+    <Compile Include="Controllers\OfficeController.cs" />
+    <Compile Include="Controllers\MakerController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\CarController.cs" />
+    <Compile Include="Controllers\CarClassController.cs" />
+    <Compile Include="Controllers\CarGradeController.cs" />
+    <Compile Include="Controllers\PartsController.cs" />
+    <Compile Include="Controllers\CarOptionController.cs" />
+    <Compile Include="Controllers\CustomerClaimController.cs" />
+    <Compile Include="Controllers\ServiceSalesSearchController.cs" />
+    <Compile Include="Controllers\ServiceSalesSlipController.cs" />
+    <Compile Include="Controllers\SetMenuController.cs" />
+    <Compile Include="Controllers\ShopDepositController.cs" />
+    <Compile Include="Controllers\SupplierController.cs" />
+    <Compile Include="Controllers\LoanController.cs" />
+    <Compile Include="Controllers\SalesCarController.cs" />
+    <Compile Include="Controllers\CarColorController.cs" />
+    <Compile Include="Controllers\ServiceMenuController.cs" />
+    <Compile Include="Controllers\ServiceCostController.cs" />
+    <Compile Include="Controllers\LocationController.cs" />
+    <Compile Include="Controllers\BrandController.cs" />
+    <Compile Include="Controllers\PartsLocationController.cs" />
+    <Compile Include="Controllers\CouponController.cs" />
+    <Compile Include="Controllers\SupplierPaymentListController.cs" />
+    <Compile Include="Controllers\TaskConfigController.cs" />
+    <Compile Include="Controllers\TaskController.cs" />
+    <Compile Include="Controllers\CarTransferController.cs" />
+    <Compile Include="Controllers\TransportBranchOfficeController.cs" />
+    <Compile Include="Controllers\QuoteMessageController.cs" />
+    <Compile Include="Controllers\ServiceWorkController.cs" />
+    <Compile Include="Controllers\PaymentKindController.cs" />
+    <Compile Include="Controllers\CustomerClaimableController.cs" />
+    <Compile Include="Controllers\SupplierPaymentController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\SetMenuListController.cs" />
+    <Compile Include="Controllers\CarWeightTaxController.cs" />
+    <Compile Include="Controllers\CarLiabilityInsuranceController.cs" />
+    <Compile Include="Controllers\CarAcquisitionTaxController.cs" />
+    <Compile Include="Controllers\CostAreaController.cs" />
+    <Compile Include="Controllers\WarehouseController.cs" />
+    <Compile Include="Controllers\ZipController.cs" />
+    <Compile Include="Controllers\ConsumptionTaxController.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OutputLogger.cs" />
+    <Compile Include="Models\ServiceSalesOrderService.cs" />
+    <Compile Include="Models\StockService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SvnRevision.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Images\cm_logo.png" />
+    <Content Include="Content\Images\wen_logo.png" />
+    <Content Include="Content\Images\we_logo.png" />
+    <Content Include="Content\perspective.css" />
+    <Content Include="Content\scale.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\tippy-bundle.iife.min.js" />
+    <Content Include="SvnRevision.txt" />
+    <Content Include="Views\AntiqueLedger\AntiqueLedgerCriteria.aspx" />
+    <Content Include="Views\CarInventory\CarInventoryCriteria.aspx" />
+    <Content Include="Views\CarInventory\CarInventoryDecidedDialog.aspx" />
+    <Content Include="Views\CarInventory\CarInventoryImportDialog.aspx" />
+    <Content Include="Views\CarPurchase\CarPurchaseImportDialog.aspx" />
+    <Content Include="Views\CarReceivableManagement\CarReceivableManagementCriteria.aspx" />
+    <Content Include="Views\CarSalesOrder\ModifiedReasonControl.ascx" />
+    <Content Include="Views\CarSlipStatusChange\CarSlipStatusChangeCriteria.aspx" />
+    <Content Include="Views\CarStatusCheck\CarStatusCheckCriteria.aspx" />
+    <Content Include="Views\CarSalesList\CarSalesDetailCriteriaDialog.aspx" />
+    <Content Include="Views\CarSalesList\CarSalesDetailEmployeeCriteriaDialog.aspx" />
+    <Content Include="Views\CarSalesList\CarSalesListCriteria.aspx" />
+    <Content Include="Views\CarStockList\CarStockListCriteria.aspx" />
+    <Content Include="Views\CarStock\CarStockCriteria.aspx" />
+    <Content Include="Views\CarStock\CarStockImportDialog.aspx" />
+    <Content Include="Views\CarStock\CarStockImportDialogForCarStock.aspx" />
+    <Content Include="Views\CarUsageSetting\CarUsageSettingCriteria.aspx" />
+    <Content Include="Views\CarUsageSetting\CarUsageSettingEntry.aspx" />
+    <Content Include="Views\CarUsageSetting\CarUsageSettingHistory.aspx" />
+    <Content Include="Views\CashJournalOutput\CashJournalOutputCriteria.aspx" />
+    <Content Include="Views\CreditJournalCheck\CreditJournalCheckCriteria.aspx" />
+    <Content Include="Views\CustomerDataList\CustomerDataListCriteria.aspx" />
+    <Content Include="Views\CustomerIntegrate\CustomerIntegrateCriteria.aspx" />
+    <Content Include="Views\DepartmentWarehouse\DepartmentWarehouseCriteria.aspx" />
+    <Content Include="Views\DepartmentWarehouse\DepartmentWarehouseEntry.aspx" />
+    <Content Include="Views\Department\DepartmentCriteriaDialog2.aspx" />
+    <Content Include="Views\Department\DepartmentCriteriaDialog3.aspx" />
+    <Content Include="Views\DepreciationRate\DepreciationRateCriteria.aspx" />
+    <Content Include="Views\DepreciationRate\DepreciationRateEntry.aspx" />
+    <Content Include="Views\DepreciationRate\DepreciationRateImportDialog.aspx" />
+    <Content Include="Views\Employee\EmployeeCriteriaDialog2.aspx" />
+    <Content Include="Views\Home\ChangePassword.aspx" />
+    <Content Include="Views\InspectGuidList\InspectGuidListImportDialog.aspx" />
+    <Content Include="Views\InspectGuidList\InspectGuidListCriteria.aspx" />
+    <Content Include="Views\JournalData\JournalDataCriteria.aspx" />
+    <Content Include="Views\JournalExport\JournalExportCriteria.aspx" />
+    <Content Include="Views\IFrame\IFrame.aspx" />
+    <Content Include="Views\JournalTransfer\JournalTransferCriteria.aspx" />
+    <Content Include="Views\Location\LocationCriteriaDialogForCarUsage.aspx" />
+    <Content Include="Views\MechanicRanking\MechanicRankingCriteria.aspx" />
+    <Content Include="Views\Office\OfficeCriteriaDialog2.aspx" />
+    <Content Include="Views\PartsInventory\PartsInventoryCriteria.aspx" />
+    <Content Include="Views\PartsInventory\PartsinventoryDataEdit.aspx" />
+    <Content Include="Views\PartsInventory\PartsInventoryImportDialog.aspx" />
+    <Content Include="Views\PartsPurchaseOrderNonGenuine\PartsPurchaseOrderNonGenuineEntry.aspx" />
+    <Content Include="Views\PartsPurchase\PartsPurchaseImportDialog.aspx" />
+    <Content Include="Views\PartsPurchase\PartsPurchaseEntry.aspx" />
+    <Content Include="Views\PartsShikakariReport\PartsShikakariReportCriteria.aspx" />
+    <Content Include="Views\PartsStatus\PartsStatusCriteria.aspx" />
+    <Content Include="Views\PartsStockCheck\PartsStockCheckCriteria.aspx" />
+    <Content Include="Views\PartsInventoryWorkingDate\PartsInventoryWorkingDateCriteria.aspx" />
+    <Content Include="Views\PartsStock\PartsStockDataEdit.aspx" />
+    <Content Include="Views\PartsWipStock\PartsWipStockCriteria.aspx" />
+    <Content Include="Views\ReceivableManagement\ReceivableManagementCriteria.aspx" />
+    <Content Include="Views\RevenueResult\_ReceiptResultCardList.cshtml" />
+    <Content Include="Views\RevenueResult\_ReceiptHistoryList.cshtml" />
+    <Content Include="Views\RevenueResult\_SumReceiptPlanList.cshtml" />
+    <Content Include="Views\CarSalesList\_Ret0_List.cshtml" />
+    <Content Include="Views\CarSalesList\_Ret1_List.cshtml" />
+    <Content Include="Views\CarSalesList\_Ret2_List.cshtml" />
+    <Content Include="Views\CarSalesList\_Ret3_List.cshtml" />
+    <Content Include="Views\CarSalesList\_Ret4_List.cshtml" />
+    <Content Include="Views\CarSalesList\_Ret0_EmployeeList.cshtml" />
+    <Content Include="Views\CarSalesList\_Ret1_EmployeeList.cshtml" />
+    <Content Include="Views\CarSalesList\_Ret2_EmployeeList.cshtml" />
+    <Content Include="Views\CarSalesList\_Ret3_EmployeeList.cshtml" />
+    <Content Include="Views\CarSalesList\_Ret4_EmployeeList.cshtml" />
+    <Content Include="Views\CarSlipStatusChange\_Ret0_List.cshtml" />
+    <Content Include="Views\CarSlipStatusChange\_Ret1_List.cshtml" />
+    <Content Include="Views\JournalTransfer\_JournalChangeList.cshtml" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\IISProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\IISProfile2.pubxml" />
+    <None Include="Properties\PublishProfiles\StagingRelease.pubxml" />
+    <Content Include="Views\RevenueResult\_ReceiptPlanList.cshtml" />
+    <Content Include="Views\RevenueResult\RevenueResultCriteria.aspx" />
+    <Content Include="Views\RevenueResult\RevenueResultDetail.aspx" />
+    <Content Include="Views\SalesResult\SalesResultCriteria.aspx" />
+    <Content Include="Views\Parts\PartsImportDialog.aspx" />
+    <Content Include="Views\ServiceSalesHistory\ServiceSalesHistoryCriteria.aspx" />
+    <Content Include="Views\ServiceSalesHistory\ServiceSalesHistoryLineCriteria.aspx" />
+    <Content Include="Views\ServiceSalesOrder\ModifiedReasonControl.ascx" />
+    <Content Include="Views\ServiceSalesSearch\ServiceSalesReportCriteriaDialog.aspx" />
+    <Content Include="Views\ServiceSalesSearch\ServiceSalesSearchCriteria.aspx" />
+    <Content Include="Views\ServiceSalesSlip\ServiceSalesSlipCriteria.aspx" />
+    <Content Include="Views\Shared\PurchaseOrderMenuControl.ascx" />
+    <Content Include="Views\ShopDeposit\ShopDepositImportDialog.aspx" />
+    <Content Include="Views\SupplierPaymentList\SupplierPaymentListCriteria.aspx" />
+    <Content Include="Views\Warehouse\WarehouseCriteria.aspx" />
+    <Content Include="Views\Warehouse\WarehouseCriteriaDialog.aspx" />
+    <Content Include="Views\Warehouse\WarehouseEntry.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Views\RevenueResult\_ReceiptResultList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Images\add.png" />
+    <Content Include="Content\Images\apply.png" />
+    <Content Include="Content\Images\build.png" />
+    <Content Include="Content\Images\cal.png" />
+    <Content Include="Content\Images\cancel.png" />
+    <Content Include="Content\Images\car.png" />
+    <Content Include="Content\Images\configure.jpg" />
+    <Content Include="Content\Images\exit.png" />
+    <Content Include="Content\Images\organizer.png" />
+    <Content Include="Content\Images\pdf.png" />
+    <Content Include="Content\menuStyle.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\Images\search.jpg" />
+    <Content Include="Content\Images\pdf_middle.gif" />
+    <Content Include="Scripts\Common.js" />
+    <Content Include="Views\ApplicationRole\ApplicationRoleCriteria.aspx" />
+    <Content Include="Views\ApplicationRole\ApplicationRoleEntry.aspx" />
+    <Content Include="Views\Area\AreaCriteria.aspx" />
+    <Content Include="Views\Area\AreaCriteriaDialog.aspx" />
+    <Content Include="Views\Area\AreaEntry.aspx" />
+    <Content Include="Views\Brand\BrandCriteria.aspx" />
+    <Content Include="Views\Brand\BrandCriteriaDialog.aspx" />
+    <Content Include="Views\Brand\BrandEntry.aspx" />
+    <Content Include="Views\CarClass\CarClassCriteria.aspx" />
+    <Content Include="Views\CarClass\CarClassCriteriaDialog.aspx" />
+    <Content Include="Views\CarClass\CarClassEntry.aspx" />
+    <Content Include="Views\CarColor\CarColorCriteria.aspx" />
+    <Content Include="Views\CarColor\CarColorCriteriaDialog.aspx" />
+    <Content Include="Views\CarColor\CarColorEntry.aspx" />
+    <Content Include="Views\CarGrade\CarGradeCriteria.aspx" />
+    <Content Include="Views\CarGrade\CarGradeCriteriaDialog.aspx" />
+    <Content Include="Views\CarGrade\CarGradeEntry.aspx" />
+    <Content Include="Views\CarOption\CarOptionCriteria.aspx" />
+    <Content Include="Views\CarOption\CarOptionCriteriaDialog.aspx" />
+    <Content Include="Views\CarOption\CarOptionEntry.aspx" />
+    <Content Include="Views\CarReceiption\CarReceiptionCriteria.aspx" />
+    <Content Include="Views\CarReceiption\CarReceiptionEntry.aspx" />
+    <Content Include="Views\Car\CarCriteria.aspx" />
+    <Content Include="Views\Car\CarCriteriaDialog.aspx" />
+    <Content Include="Views\Car\CarEntry.aspx" />
+    <Content Include="Views\Coupon\CouponCriteria.aspx" />
+    <Content Include="Views\Coupon\CouponCriteriaDialog.aspx" />
+    <Content Include="Views\Coupon\CouponEntry.aspx" />
+    <Content Include="Views\CustomerClaim\CustomerClaimCriteria.aspx" />
+    <Content Include="Views\CustomerClaim\CustomerClaimCriteriaDialog.aspx" />
+    <Content Include="Views\CustomerClaim\CustomerClaimEntry.aspx" />
+    <Content Include="Views\Customer\CustomerCriteriaDialog.aspx" />
+    <Content Include="Views\Customer\CustomerEntry.aspx" />
+    <Content Include="Views\Customer\CustomerCriteria.aspx" />
+    <Content Include="Views\Department\DepartmentCriteria.aspx" />
+    <Content Include="Views\Department\DepartmentCriteriaDialog.aspx" />
+    <Content Include="Views\Department\DepartmentEntry.aspx" />
+    <Content Include="Views\Error\GenericErrorPage.aspx" />
+    <Content Include="Views\Home\Header.aspx" />
+    <Content Include="Views\Home\Menu.aspx" />
+    <Content Include="Views\Home\Start.aspx" />
+    <Content Include="Views\Loan\LoanCriteria.aspx" />
+    <Content Include="Views\Loan\LoanCriteriaDialog.aspx" />
+    <Content Include="Views\Loan\LoanEntry.aspx" />
+    <Content Include="Views\Location\LocationCriteria.aspx" />
+    <Content Include="Views\Location\LocationCriteriaDialog.aspx" />
+    <Content Include="Views\Location\LocationEntry.aspx" />
+    <Content Include="Views\Maker\MakerCriteria.aspx" />
+    <Content Include="Views\Maker\MakerCriteriaDialog.aspx" />
+    <Content Include="Views\Maker\MakerEntry.aspx" />
+    <Content Include="Views\MenuControl\MenuControlCriteria.aspx" />
+    <Content Include="Views\MenuControl\MenuControlEntry.aspx" />
+    <Content Include="Views\CashJournal\CashJournalCriteria.aspx" />
+    <Content Include="Views\CashJournal\CashJournalEntry.aspx" />
+    <Content Include="Views\Office\OfficeCriteria.aspx" />
+    <Content Include="Views\Office\OfficeCriteriaDialog.aspx" />
+    <Content Include="Views\Office\OfficeEntry.aspx" />
+    <Content Include="Views\PartsLocation\PartsLocationCriteria.aspx" />
+    <Content Include="Views\PartsLocation\PartsLocationEntry.aspx" />
+    <Content Include="Views\Parts\PartsCriteria.aspx" />
+    <Content Include="Views\Parts\PartsCriteriaDialog.aspx" />
+    <Content Include="Views\Parts\PartsEntry.aspx" />
+    <Content Include="Views\QuoteMessage\QuoteMessageCriteria.aspx" />
+    <Content Include="Views\QuoteMessage\QuoteMessageEntry.aspx" />
+    <Content Include="Views\Recall\RecallCriteria.aspx" />
+    <Content Include="Views\Recall\RecallEntry.aspx" />
+    <Content Include="Views\SalesCar\SalesCarCriteria.aspx" />
+    <Content Include="Views\SalesCar\SalesCarCriteriaDialog.aspx" />
+    <Content Include="Views\SalesCar\SalesCarEntry.aspx" />
+    <Content Include="Views\SecurityRole\SecurityRoleEntry.aspx" />
+    <Content Include="Views\CarPurchaseOrder\CarPurchaseOrderCriteria.aspx" />
+    <Content Include="Views\CarPurchaseOrder\CarPurchaseOrderEntry.aspx" />
+    <Content Include="Views\CarPurchaseOrder\CarPurchaseOrderListEntry.aspx" />
+    <Content Include="Views\CarSalesOrder\CarSalesOrderCriteria.aspx" />
+    <Content Include="Views\Company\CompanyCriteria.aspx" />
+    <Content Include="Views\Company\CompanyCriteriaDialog.aspx" />
+    <Content Include="Views\Company\CompanyEntry.aspx" />
+    <Content Include="Views\Employee\EmployeeCriteria.aspx" />
+    <Content Include="Views\Employee\EmployeeCriteriaDialog.aspx" />
+    <Content Include="Views\Employee\EmployeeEntry.aspx" />
+    <Content Include="Views\Error\ErrorPage.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Home\Top.aspx" />
+    <Content Include="Views\PartsPurchaseOrder\PartsPurchaseOrderCriteria.aspx" />
+    <Content Include="Views\PartsPurchaseOrder\PartsPurchaseOrderEntry.aspx" />
+    <Content Include="Views\ServiceCost\ServiceCostCriteria.aspx" />
+    <Content Include="Views\ServiceCost\ServiceCostEntry.aspx" />
+    <Content Include="Views\ServiceMenu\ServiceMenuCriteria.aspx" />
+    <Content Include="Views\ServiceMenu\ServiceMenuCriteriaDialog.aspx" />
+    <Content Include="Views\ServiceMenu\ServiceMenuEntry.aspx" />
+    <Content Include="Views\ServiceReceiption\ServiceReceiptionCriteria.aspx" />
+    <Content Include="Views\ServiceReceiption\ServiceReceiptionEntry.aspx" />
+    <Content Include="Views\ServiceSalesOrder\ServiceSalesOrderCriteria.aspx" />
+    <Content Include="Views\ServiceWork\ServiceWorkCriteria.aspx" />
+    <Content Include="Views\ServiceWork\ServiceWorkCriteriaDialog.aspx" />
+    <Content Include="Views\ServiceWork\ServiceWorkEntry.aspx" />
+    <Content Include="Views\Shared\MainPage.Master" />
+    <Content Include="Views\Shared\PagerControl.ascx" />
+    <Content Include="Views\Shared\PopUpPage.Master" />
+    <Content Include="Views\Supplier\SupplierCriteria.aspx" />
+    <Content Include="Views\Supplier\SupplierCriteriaDialog.aspx" />
+    <Content Include="Views\Supplier\SupplierEntry.aspx" />
+    <Content Include="Views\Task\TaskCriteria.aspx" />
+    <Content Include="Views\TransportBranchOffice\TransportBranchOfficeCriteria.aspx" />
+    <Content Include="Views\TransportBranchOffice\TransportBranchOfficeCriteriaDialog.aspx" />
+    <Content Include="Views\TransportBranchOffice\TransportBranchOfficeEntry.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Shared\MainPage2.Master" />
+    <Content Include="Views\Shared\PopUpPage2.Master" />
+    <Content Include="Views\RevenueResult\_CarInformation.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CrmsDao\CrmsDao.csproj">
+      <Project>{13C1491C-59A0-408B-A0F7-036AC6CBD076}</Project>
+      <Name>CrmsDao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CrmsReport\CrmsReport.csproj">
+      <Project>{446FC159-C9D3-4895-9432-A1DB39B2CEAB}</Project>
+      <Name>CrmsReport</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Images\aka.jpg" />
+    <Content Include="Content\Images\akakuro.jpg" />
+    <Content Include="Content\Images\blank.gif" />
+    <Content Include="Content\Images\copy.png" />
+    <Content Include="Content\Images\delete.png" />
+    <Content Include="Content\Images\down.png" />
+    <Content Include="Content\Images\indicator.gif" />
+    <Content Include="Content\Images\info.png" />
+    <Content Include="Content\Images\insert.png" />
+    <Content Include="Content\Images\minus.gif" />
+    <Content Include="Content\Images\plus.gif" />
+    <Content Include="Content\Images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\Images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Content\Images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Content\Images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Content\Images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\Images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Content\Images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Content\Images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\Images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Content\Images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\Images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Content\Images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Content\Images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\Images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\Images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Content\Images\up.png" />
+    <Content Include="Content\jquery-ui-1.8.4.custom.css" />
+    <Content Include="Models\ExportFieldList.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\DefConst.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-ui-1.8.4.custom.min.js" />
+    <Content Include="Scripts\jquery.blockUI.js" />
+    <Content Include="Scripts\jquery.ui.datepicker-ja.js" />
+    <Content Include="Views\Account\AccountCriteriaDialog.aspx" />
+    <Content Include="Views\Bank\BankCriteria.aspx" />
+    <Content Include="Views\Bank\BankCriteriaDialog.aspx" />
+    <Content Include="Views\Bank\BankEntry.aspx" />
+    <Content Include="Views\Branch\BranchCriteriaDialog.aspx" />
+    <Content Include="Views\Campaign\CampaignCriteria.aspx" />
+    <Content Include="Views\Campaign\CampaignEntry.aspx" />
+    <Content Include="Views\Campaign\CampaignCriteriaDialog.aspx" />
+    <Content Include="Views\CarAppraisal\CarAppraisalCriteria.aspx" />
+    <Content Include="Views\CarAppraisal\CarAppraisalEntry.aspx" />
+    <Content Include="Views\CarAcquisitionTax\CarAcquisitionTaxCriteria.aspx" />
+    <Content Include="Views\CarAcquisitionTax\CarAcquisitionTaxEntry.aspx" />
+    <Content Include="Views\CarLiabilityInsurance\CarLiabilityInsuranceCriteria.aspx" />
+    <Content Include="Views\CarLiabilityInsurance\CarLiabilityInsuranceCriteriaDialog.aspx" />
+    <Content Include="Views\CarLiabilityInsurance\CarLiabilityInsuranceEntry.aspx" />
+    <Content Include="Views\CarPurchaseOrder\CarPurchaseOrderEntry2.aspx" />
+    <Content Include="Views\CarPurchaseOrder\CarPurchaseOrderRegistrationEntry.aspx" />
+    <Content Include="Views\CarPurchaseOrder\CarPurchaseOrderReservationEntry.aspx" />
+    <Content Include="Views\CarPurchase\CarPurchaseAmountDisplay.ascx" />
+    <Content Include="Views\CarPurchase\CarPurchaseAmountEntry.ascx" />
+    <Content Include="Views\CarPurchase\CarPurchaseCriteria.aspx" />
+    <Content Include="Views\CarPurchase\CarPurchaseEntry.aspx" />
+    <Content Include="Views\CarPurchaseList\CarPurchaseList.aspx" />
+    <Content Include="Views\CarReceiption\CarReceiptionHistory.aspx" />
+    <Content Include="Views\CarReservationCancel\CarReservationCancelCriteria.aspx" />
+    <Content Include="Views\CarSalesOrder\CarSalesOrderEntry.aspx" />
+    <Content Include="Views\CarSalesOrder\CarSalesOrderModifyCriteria.aspx" />
+    <Content Include="Views\CarSalesOrder\CarSalesReportEntry.aspx" />
+    <Content Include="Views\CarSalesOrder\SlipControl.ascx" />
+    <Content Include="Views\CarSalesOrder\SalesCarControl.ascx" />
+    <Content Include="Views\CarSalesOrder\CostControl.ascx" />
+    <Content Include="Views\CarSalesOrder\CustomerControl.ascx" />
+    <Content Include="Views\CarSalesOrder\InsuranceControl.ascx" />
+    <Content Include="Views\CarSalesOrder\LoanControl.ascx" />
+    <Content Include="Views\CarSalesOrder\MenuControl.ascx" />
+    <Content Include="Views\CarSalesOrder\OptionControl.ascx" />
+    <Content Include="Views\CarSalesOrder\OwnerControl.ascx" />
+    <Content Include="Views\CarSalesOrder\PaymentControl.ascx" />
+    <Content Include="Views\CarSalesOrder\RegistControl.ascx" />
+    <Content Include="Views\CarSalesOrder\TotalControl.ascx" />
+    <Content Include="Views\CarSalesOrder\UsedControl.ascx" />
+    <Content Include="Views\CarTax\CarTaxCriteria.aspx" />
+    <Content Include="Views\CarTax\CarTaxCriteriaDialog.aspx" />
+    <Content Include="Views\CarTax\CarTaxEntry.aspx" />
+    <Content Include="Views\CarTransfer\CarTransferCriteriaDialog.aspx" />
+    <Content Include="Views\CarTransfer\CarTransferEntry.aspx" />
+    <Content Include="Views\CarTransfer\CarTransferConfirm.aspx" />
+    <Content Include="Views\CarWeightTax\CarWeightTaxCriteria.aspx" />
+    <Content Include="Views\CarWeightTax\CarWeightTaxCriteriaDialog.aspx" />
+    <Content Include="Views\CarWeightTax\CarWeightTaxEntry.aspx" />
+    <Content Include="Views\CashJournal\CashJournalEdit.aspx" />
+    <Content Include="Views\CashJournal\JournalCriteria.aspx" />
+    <Content Include="Views\CashJournal\JournalEdit.aspx" />
+    <Content Include="Views\ConfigurationSetting\ConfigurationSettingCriteria.aspx" />
+    <Content Include="Views\CostArea\CostAreaCriteria.aspx" />
+    <Content Include="Views\CostArea\CostAreaCriteriaDialog.aspx" />
+    <Content Include="Views\CostArea\CostAreaEntry.aspx" />
+    <Content Include="Views\CustomerClaimable\CustomerClaimableCriteria.aspx" />
+    <Content Include="Views\CustomerClaimable\CustomerClaimableEntry.aspx" />
+    <Content Include="Views\Customer\CustomerBasicEntry.ascx" />
+    <Content Include="Views\Customer\CustomerClaimEntry.ascx" />
+    <Content Include="Views\Customer\CustomerDMEntry.ascx" />
+    <Content Include="Views\Customer\CustomerIntegrateEntry.aspx" />
+    <Content Include="Views\Customer\CustomerSalesEntry.ascx" />
+    <Content Include="Views\Customer\SupplierEntry.ascx" />
+    <Content Include="Views\Customer\SupplierPaymentEntry.ascx" />
+    <Content Include="Views\Customer\UpdateLogDisplay.ascx" />
+    <Content Include="Views\DataServiceReceive\DataServiceReceiveCriteria.aspx" />
+    <Content Include="Views\Deposit\DepositCriteria.aspx" />
+    <Content Include="Views\DocumentExport\DocumentExportCriteria.aspx" />
+    <Content Include="Views\Error\AuthenticationError.aspx" />
+    <Content Include="Views\Error\SessionTimeout.aspx" />
+    <Content Include="Views\Monthly\MonthlyCriteria.aspx" />
+    <Content Include="Views\PartsPurchase\PartsPurchaseCriteria.aspx" />
+    <Content Include="Views\PartsStock\PartsStockCriteriaDialog.aspx" />
+    <Content Include="Views\PartsStock\PartsStockCriteria.aspx" />
+    <Content Include="Views\PartsTransfer\PartsTransferConfirm.aspx" />
+    <Content Include="Views\PartsTransfer\PartsTransferCriteria.aspx" />
+    <Content Include="Views\PartsTransfer\PartsTransferEntry.aspx" />
+    <Content Include="Views\PaymentKind\PaymentKindCriteria.aspx" />
+    <Content Include="Views\PaymentKind\PaymentKindCriteriaDialog.aspx" />
+    <Content Include="Views\PaymentKind\PaymentKindEntry.aspx" />
+    <Content Include="Views\Payment\PaymentCriteria.aspx" />
+    <Content Include="Views\SalesCar\SalesCarList.aspx" />
+    <Content Include="Views\SalesReport\SalesReportCriteria.aspx" />
+    <Content Include="Views\ServiceReceiption\ServiceReceiptionHistory.aspx" />
+    <Content Include="Views\ServiceRequest\ServiceRequestCriteria.aspx" />
+    <Content Include="Views\ServiceRequest\ServiceRequestEntry.aspx" />
+    <Content Include="Views\ServiceRequest\ServiceRequestResult.aspx" />
+    <Content Include="Views\ServiceSalesOrder\ClaimableControl.ascx" />
+    <Content Include="Views\ServiceSalesOrder\CostControl.ascx" />
+    <Content Include="Views\ServiceSalesOrder\CustomerControl.ascx" />
+    <Content Include="Views\ServiceSalesOrder\LineTitleControl.ascx" />
+    <Content Include="Views\ServiceSalesOrder\MenuControl.ascx" />
+    <Content Include="Views\ServiceSalesOrder\PaymentControl.ascx" />
+    <Content Include="Views\ServiceSalesOrder\SalesCarControl.ascx" />
+    <Content Include="Views\ServiceSalesOrder\LineControl.ascx" />
+    <Content Include="Views\ServiceSalesOrder\ServiceSalesLineEntry.aspx" />
+    <Content Include="Views\ServiceSalesOrder\ServiceSalesOrderEntry.aspx" />
+    <Content Include="Views\ServiceSalesOrder\ServiceSalesOrderModifyCriteria.aspx" />
+    <Content Include="Views\ServiceSalesOrder\SlipControl.ascx" />
+    <Content Include="Views\ServiceSalesOrder\TotalControl.ascx" />
+    <Content Include="Views\ServiceSalesOrder\ServiceSalesOrderCriteriaDialog.aspx" />
+    <Content Include="Views\SetMenuList\SetMenuListCriteria.aspx" />
+    <Content Include="Views\SetMenu\SetMenuCriteria.aspx" />
+    <Content Include="Views\SetMenu\SetMenuCriteriaDialog.aspx" />
+    <Content Include="Views\SetMenu\SetMenuEntry.aspx" />
+    <Content Include="Views\Shared\CarBasicInformationDisplay.ascx" />
+    <Content Include="Views\Shared\CarBasicInformationEntry.ascx" />
+    <Content Include="Views\Shared\CarDetailInformationDisplay.ascx" />
+    <Content Include="Views\Shared\CarDetailInformationEntry.ascx" />
+    <Content Include="Views\Shared\CarInspectionDisplay.ascx" />
+    <Content Include="Views\Shared\CarInspectionEntry.ascx" />
+    <Content Include="Views\Shared\CarOwnershipChangeEntry.ascx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\SearchButtonControl.ascx" />
+    <Content Include="Views\Shared\VinErrorControl.ascx" />
+    <Content Include="Views\ShopDeposit\ShopDepositCriteria.aspx" />
+    <Content Include="Views\ShopDeposit\ShopDepositDetail.aspx" />
+    <Content Include="Views\SupplierPayment\SupplierPaymentCriteria.aspx" />
+    <Content Include="Views\SupplierPayment\SupplierPaymentCriteriaDialog.aspx" />
+    <Content Include="Views\SupplierPayment\SupplierPaymentEntry.aspx" />
+    <Content Include="Views\TaskConfig\TaskConfigCriteria.aspx" />
+    <Content Include="Views\TaskConfig\TaskConfigEntry.aspx" />
+    <Content Include="Views\Task\TaskDialog.aspx" />
+    <Content Include="Views\Task\TaskEntry.aspx" />
+    <Content Include="Views\CarTransfer\CarTransferCriteria.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="licenses.licx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52042</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>SubWCRev $(SolutionDir) $(ProjectDir)SvnRevision.txt $(ProjectDir)SvnRevision.cs</PreBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>GrapeCity.ActiveReports.Win</name>
+  </assembly>
+  <members>
+    <member name="T:GrapeCity.ActiveReports.SystemPrinter">
+      <summary>SystemPrinterクラスの設定を表します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.SystemPrinter.AbortJob">
+      <summary>StartJobメソッドによって開始されたSystemPrinter印刷ジョブを中止します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.SystemPrinter.EndJob">
+      <summary>StartJobメソッドによって開始されたSystemPrinter印刷ジョブを終了します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.SystemPrinter.EndPage">
+      <summary>StartPageメソッドによって開始されたSystemPrinter印刷ジョブの特定のページの印刷を終了します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.SystemPrinter.Escape(System.String)">
+      <summary>エスケープコードの入力を許可します。</summary>
+      <param name="code">入力するエスケープコード。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.SystemPrinter.PrintDialog">
+      <summary>SystemPrinterの印刷ダイアログを表示します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.SystemPrinter.SetupDialog">
+      <summary>SystemPrinterのセットアップダイアログを表示します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.SystemPrinter.StartJob(System.String)">
+      <summary>SystemPrinterの印刷ジョブを開始します。</summary>
+      <param name="printJob">スプーラのジョブリストに表示されるジョブ名。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.SystemPrinter.StartPage">
+      <summary>SystemPrinter印刷ジョブの特定のページの印刷を開始します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.CanDuplex">
+      <summary>印刷時にレポートの両面印刷が可能かどうかを判断します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.Collate">
+      <summary>次の部を印刷する前に、レポートの全ページを印刷するかどうかを決定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.Color">
+      <summary>カラー印刷を行うかどうかを決定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.Copies">
+      <summary>印刷部数を決定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.DpiX">
+      <summary>SystemPrinterオブジェクトの水平解像度を取得します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.DpiY">
+      <summary>SystemPrinterオブジェクトの垂直解像度を取得します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.Duplex">
+      <summary>レポートドキュメントの両面印刷設定を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.FileName">
+      <summary>ファイルへの出力に使用されるファイル名を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.FromPage">
+      <summary>印刷ジョブの開始ページを設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.Graphics">
+      <summary>プリンタへの描画に使用するGraphicsオブジェクトを取得します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.Landscape">
+      <summary>レポートを横向きに印刷するかどうかを決定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.MaxPage">
+      <summary>カスタム印刷を行うときに、印刷進捗ダイアログ内の合計ページ数を設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.PaperHeight">
+      <summary>印刷する用紙の高さを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.PaperSize">
+      <summary>ページの用紙サイズを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.PaperSizes">
+      <summary>プリンタでサポートされる用紙サイズのコレクションへの参照を返します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.PaperSource">
+      <summary>ページの給紙方法を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.PaperSources">
+      <summary>プリンタでサポートされる用紙トレイのコレクションへの参照を返します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.PaperWidth">
+      <summary>レポートの印刷に使用する用紙の幅を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.PhysicalOffsetX">
+      <summary>ページ左側の印刷不可能領域の計測結果を返します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.PhysicalOffsetY">
+      <summary>ページ上部の印刷不可能領域の計測結果を返します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.Port">
+      <summary>現在のプリンタポートを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.Ports">
+      <summary>利用可能なプリンタポートのコレクションを返します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.PrinterName">
+      <summary>使用するプリンタ名を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.PrinterNames">
+      <summary>利用可能なプリンタ名のコレクションを返します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.PrinterResolution">
+      <summary>ページのプリンタ解像度を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.PrinterResolutions">
+      <summary>利用可能なプリンタ解像度のコレクションを返します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.PrinterSettings">
+      <summary>ページに関連付けられたプリンタ設定を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.SystemPrinter.ToPage">
+      <summary>印刷する最後のページのページ番号を取得または設定します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.PrintControllerFactory">
+      <summary>
+            For internal use only.
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.RichTextService">
+      <summary>
+            For internal use only.
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.WinFormsUiService">
+      <summary>
+            For internal use only.
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.WinFormsService">
+      <summary>
+            For internal use only.
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Document.Section.ActiveReportPrintControllerWithStatusDialog">
+      <summary>
+            For internal use only.
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.ActiveReportPrintControllerWithStatusDialog.#ctor">
+      <summary>
+            Create a new instance of the ActiveReportPrintControllerWithStatusDialog class.
+            </summary>
+    </member>
+    <member name="E:GrapeCity.ActiveReports.Document.Section.ActiveReportPrintControllerWithStatusDialog.PrintAborted">
+      <summary>
+            Occurs when [print aborted].
+            </summary>
+    </member>
+    <member name="E:GrapeCity.ActiveReports.Document.Section.ActiveReportPrintControllerWithStatusDialog.PrintingProgress">
+      <summary>
+            Occurs when [printing progress].
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.ActiveReportPrintControllerWithStatusDialog.OnStartPrint(System.Drawing.Printing.PrintDocument,System.Drawing.Printing.PrintEventArgs)">
+      <summary>
+            OnStartPrint
+            </summary>
+      <param name="prnDoc"></param>
+      <param name="ppea"></param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.ActiveReportPrintControllerWithStatusDialog.OnStartPage(System.Drawing.Printing.PrintDocument,System.Drawing.Printing.PrintPageEventArgs)">
+      <summary>
+            OnStartPage
+            </summary>
+      <param name="prnDoc"></param>
+      <param name="ppea"></param>
+      <returns></returns>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.ActiveReportPrintControllerWithStatusDialog.OnEndPage(System.Drawing.Printing.PrintDocument,System.Drawing.Printing.PrintPageEventArgs)">
+      <summary>
+            OnEndPage
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.ActiveReportPrintControllerWithStatusDialog.OnEndPrint(System.Drawing.Printing.PrintDocument,System.Drawing.Printing.PrintEventArgs)">
+      <summary>
+            OnEndPrint
+            </summary>
+      <param name="prnDoc"></param>
+      <param name="ppea"></param>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.SectionDocumentExtension">
+      <summary>
+            Extensions to SectionDocument.
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.SectionDocumentExtension.CopyToClipboard(GrapeCity.ActiveReports.Document.SectionDocument,System.Int32,System.Int32)">
+      <summary>
+            Export the page(s) to Text and Rtf data, and copy it to clipboard.
+            </summary>
+      <param name="firstPageIndex">The zero-based starting page index.</param>
+      <param name="count">The number of pages copy to clipboard.</param>
+    </member>
+  </members>
+</doc>

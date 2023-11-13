@@ -1,0 +1,1353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>GrapeCity.ActiveReports.Document</name>
+  </assembly>
+  <members>
+    <member name="M:GrapeCity.ActiveReports.Document.SectionDocument.#ctor(System.String)">
+      <summary>指定した名前でSectionDocumentクラスの新しいインスタンスを作成します。</summary>
+      <param name="name">ドキュメントの名前。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.SectionDocument.ResetPrinter">
+      <summary>Printerクラスの設定を初期値に戻します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.SectionDocument.Load(System.IO.Stream)">
+      <summary>ストリームからレポートドキュメントをロードします。</summary>
+      <param name="stream">有効なレポートドキュメントを含むStreamオブジェクト。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.SectionDocument.Load(System.String)">
+      <summary>指定したファイルからドキュメントをロードします。</summary>
+      <param name="fileName">Documentファイル名。</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.SectionDocument.CacheToDisk">
+      <summary>レポート生成時やPDFエクスポート時、現在処理していないレポートのページを、メモリの代わりにハードディスクに格納するかどうかを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.SectionDocument.Content">
+      <summary>ドキュメントをWebサービスに割り当てます。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.SectionDocument.Printer">
+      <summary>ドキュメントのプリンタ設定への参照を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.SectionDocument.PrintOptions">
+      <summary>印刷オプションを表します。</summary>
+    </member>
+    <member name="E:GrapeCity.ActiveReports.Document.SectionDocument.PrintAborted">
+      <summary>ユーザーが印刷ジョブをキャンセルしたときに発生します。</summary>
+    </member>
+    <member name="E:GrapeCity.ActiveReports.Document.SectionDocument.PrintingThreadErrorEvent">
+      <summary>印刷スレッドによって例外がスローされるときに発生します。</summary>
+    </member>
+    <member name="E:GrapeCity.ActiveReports.Document.SectionDocument.PrintProgress">
+      <summary>
+        <para>レポートドキュメントの各ページが印刷されるごとに発生します。</para>
+      </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Document.Section.PagesCollection">
+      <summary>Documentオブジェクト内のページのコレクションを管理します。<!--DXMETADATA end --></summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawEllipse(System.Single,System.Single,System.Single,System.Single)">
+      <summary>ページ上に楕円を描画します。</summary>
+      <param name="left">楕円の左端の座標（インチ単位）。</param>
+      <param name="top">楕円の上端の座標（インチ単位）。</param>
+      <param name="width">楕円の幅（インチ単位）。</param>
+      <param name="height">楕円の高さ（インチ単位）。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawLine(System.Single,System.Single,System.Single,System.Single)">
+      <summary>ページ上の指定した座標に線を描画します。</summary>
+      <param name="x1">
+        <para>線の始点の水平座標（インチ単位）。</para>
+      </param>
+      <param name="y1">線の始点の垂直座標（インチ単位）。</param>
+      <param name="x2">
+        <para>線の終点の水平座標（インチ単位）。</para>
+      </param>
+      <param name="y2">線の始点の垂直座標（インチ単位）。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawBorder(GrapeCity.ActiveReports.Border,System.Single,System.Single,System.Single,System.Single)">
+      <summary>指定した座標の指定した境界線を描画します。</summary>
+      <param name="border">ページ上に描画するBorderオブジェクト。</param>
+      <param name="left">境界線の左位置（インチ単位）。</param>
+      <param name="top">境界線の上位置（インチ単位）。</param>
+      <param name="width">境界線の幅（インチ単位）。</param>
+      <param name="height">境界線の高さ（インチ単位）。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawBorder(GrapeCity.ActiveReports.Border,System.Drawing.RectangleF)">
+      <summary>指定した範囲の指定した境界線を描画します。</summary>
+      <param name="border">ページ上に描画するBorderオブジェクト。</param>
+      <param name="bounds">境界線を描画するSystem.Drawing.RectangleF座標。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawImage(System.Drawing.Image,System.Single,System.Single,System.Single,System.Single)">
+      <summary>指定した画像を指定した座標に描画します。</summary>
+      <param name="image">ページ上に描画するSystem.Drawing.Image。</param>
+      <param name="left">画像の左端の座標（インチ単位）。</param>
+      <param name="top">
+        <para>画像の上端の座標（インチ単位）。</para>
+      </param>
+      <param name="width">画像の幅（インチ単位）。</param>
+      <param name="height">画像の高さ（インチ単位）。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawImage(System.Drawing.Image,System.Single,System.Single,System.Single,System.Single,System.String,System.String)">
+      <summary>指定した画像を指定した座標に描画します。</summary>
+      <param name="image">ページ上に描画するSystem.Drawing.Image。</param>
+      <param name="left">画像の左端の座標（インチ単位）。</param>
+      <param name="top">
+        <para>画像の上端の座標（インチ単位）。</para>
+      </param>
+      <param name="width">画像の幅（インチ単位）。</param>
+      <param name="height">画像の高さ（インチ単位）。</param>
+      <param name="title">画像のタイトル。</param>
+      <param name="description">画像の説明。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawImage(System.Drawing.Image,System.Drawing.RectangleF)">
+      <summary>指定した画像を指定した矩形範囲に描画します。</summary>
+      <param name="image">ページ上に描画するSystem.Drawing.Image。</param>
+      <param name="bounds">
+        <para>描画する画像の位置とサイズを指定するRectangleF。</para>
+      </param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawImage(System.Drawing.Image,System.Single,System.Single,System.Single,System.Single,System.String)">
+      <summary>指定した画像をページ上の指定した座標に描画し、この画像領域にハイパーリンクを割り当てます。</summary>
+      <param name="image">ページ上に描画するSystem.Drawing.Image。</param>
+      <param name="left">画像の左端の座標（インチ単位）。</param>
+      <param name="top">
+        <para>画像の上端の座標（インチ単位）。</para>
+      </param>
+      <param name="width">画像の幅（インチ単位）。</param>
+      <param name="height">画像の高さ（インチ単位）。</param>
+      <param name="strLink">ハイパーリンクURL。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawImage(System.Drawing.Image,System.Single,System.Single,System.Single,System.Single,System.String,System.String,System.String)">
+      <summary>指定した画像をページ上の指定した座標に描画し、この画像領域にハイパーリンクを割り当てます。</summary>
+      <param name="image">ページ上に描画するSystem.Drawing.Image。</param>
+      <param name="left">画像の左端の座標（インチ単位）。</param>
+      <param name="top">
+        <para>画像の上端の座標（インチ単位）。</para>
+      </param>
+      <param name="width">画像の幅（インチ単位）。</param>
+      <param name="height">画像の高さ（インチ単位）。</param>
+      <param name="strLink">ハイパーリンクURL。</param>
+      <param name="title">画像のタイトル。</param>
+      <param name="description">画像の説明。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawImage(System.Drawing.Image,System.Drawing.RectangleF,System.String)">
+      <summary>指定した画像を指定した矩形範囲に描画し、この矩形範囲にハイパーリンクを割り当てます。</summary>
+      <param name="image">ページ上に描画するSystem.Drawing.Image。</param>
+      <param name="bounds">描画する画像の位置とサイズを指定するRectangleF。</param>
+      <param name="strLink">ハイパーリンクURL。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawImage(System.Drawing.Image,System.Boolean,System.Drawing.RectangleF,System.String)">
+      <summary>指定した画像を指定した矩形範囲に描画し、ページ上の領域へのハイパーリンクを割り当てます。</summary>
+      <param name="image">ページ上に描画するSystem.Drawing.Image。</param>
+      <param name="imageChanged">画像が変更されたかどうかを決定するブール値。</param>
+      <param name="text">画像の矩形範囲。</param>
+      <param name="strLink">ハイパーリンクURL。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawRect(System.Single,System.Single,System.Single,System.Single)">
+      <summary>ページ上の指定した座標に四角形を描画します。</summary>
+      <param name="left">四角形の左端の座標（インチ単位）。</param>
+      <param name="top">
+        <para>四角形の上端の座標（インチ単位）。</para>
+      </param>
+      <param name="width">四角形の幅（インチ単位）。</param>
+      <param name="height">四角形の高さ（インチ単位）。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawRect(System.Drawing.RectangleF)">
+      <summary>ページ上の指定した座標に四角形を描画します。</summary>
+      <param name="rc">四角形の矩形範囲。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawRoundRect(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+      <summary>角丸四角形を描画します。</summary>
+      <param name="left">四角形の左端の座標。</param>
+      <param name="top">四角形の上端の座標。</param>
+      <param name="width">四角形の幅。</param>
+      <param name="height">
+        <para>四角形の高さ。</para>
+      </param>
+      <param name="edgeWidth">四角形の端の幅。</param>
+      <param name="edgeHeight">四角形の端の高さ。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawRoundRect(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+      <summary>異なるコーナー半径がある角丸四角形を描画します。</summary>
+      <param name="left">四角形の左端の座標。</param>
+      <param name="top">四角形の上端の座標。</param>
+      <param name="width">四角形の幅。</param>
+      <param name="height">四角形の高さ。</param>
+      <param name="topLeftEdge">四角形の左上端の座標。</param>
+      <param name="topRightEdge">四角形の右上端の座標。</param>
+      <param name="bottomLeftEdge">四角形の左下端の座標。</param>
+      <param name="bottomRightEdge">四角形の右下端の座標。</param>
+      <param name="precision">等しいコーナーがある丸い四角形に返すパラメータを指定します。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawText(System.String,System.Single,System.Single,System.Single,System.Single)">
+      <summary>指定した文字列を指定した座標に描画します。</summary>
+      <param name="strText">ページ上に描画するテキスト文字列。</param>
+      <param name="left">テキストの左端の座標。</param>
+      <param name="top">テキストの上端の座標。</param>
+      <param name="width">テキスト領域の幅。</param>
+      <param name="height">テキスト領域の高さ。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawText(System.String,System.Drawing.RectangleF)">
+      <summary>指定した文字列を指定した矩形範囲に描画します。</summary>
+      <param name="strText">ページ上に描画するテキスト文字列。</param>
+      <param name="text">テキストの矩形範囲。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawText(System.String[],System.Single,System.Single,System.Single,System.Single)">
+      <summary>指定した文字列の配列を指定した座標に描画します。</summary>
+      <param name="astrText">ページ上に描画するテキスト文字列の配列。</param>
+      <param name="left">テキストの左端の座標。</param>
+      <param name="top">テキストの上端の座標。</param>
+      <param name="width">テキスト領域の幅。</param>
+      <param name="height">テキスト領域の高さ。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawText(System.String[],System.Drawing.RectangleF)">
+      <summary>指定した文字列の配列を指定した矩形範囲に描画します。</summary>
+      <param name="astrText">ページ上に描画するテキスト文字列の配列。</param>
+      <param name="text">テキストの矩形範囲。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawText(System.String,System.Single,System.Single,System.Single,System.Single,System.String)">
+      <summary>指定した文字列を指定した座標に描画し、テキスト領域のハイパーリンクを作成します。</summary>
+      <param name="strText">ページ上に描画するテキスト文字列。</param>
+      <param name="left">テキストの左端の座標。</param>
+      <param name="top">テキストの上端の座標。</param>
+      <param name="width">テキスト領域の幅。</param>
+      <param name="height">テキスト領域の高さ。</param>
+      <param name="strLink">ハイパーリンクURL。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawText(System.String,System.Drawing.RectangleF,System.String)">
+      <summary>指定した文字列を指定した矩形範囲に描画し、指定した領域へのハイパーリンクを作成します。</summary>
+      <param name="strText">ページ上に描画するテキスト文字列。</param>
+      <param name="text">テキストの矩形範囲。</param>
+      <param name="strLink">ハイパーリンクURL。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawText(System.String[],System.Single,System.Single,System.Single,System.Single,System.String)">
+      <summary>指定した文字列の配列を指定した座標に描画し、テキスト領域のハイパーリンクを作成します。</summary>
+      <param name="astrText">ページ上に描画するテキスト文字列の配列。</param>
+      <param name="left">テキストの左端の座標。</param>
+      <param name="top">テキストの上端の座標。</param>
+      <param name="width">テキスト領域の幅。</param>
+      <param name="height">テキスト領域の高さ。</param>
+      <param name="strLink">ハイパーリンクURL。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawText(System.String[],System.Drawing.RectangleF,System.String)">
+      <summary>指定した文字列の配列を指定した矩形範囲に描画し、指定した領域へのハイパーリンクを作成します。</summary>
+      <param name="astrText">ページ上に描画するテキスト文字列の配列。</param>
+      <param name="text">テキストの矩形範囲。</param>
+      <param name="strLink">ハイパーリンクURL。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.FillRect(System.Single,System.Single,System.Single,System.Single)">
+      <summary>指定した座標を現在のページのBackColorで塗りつぶします。</summary>
+      <param name="left">四角形の左端の座標（インチ単位）。</param>
+      <param name="top">
+        <para>四角形の上端の座標（インチ単位）。</para>
+      </param>
+      <param name="width">四角形の幅（インチ単位）。</param>
+      <param name="height">四角形の高さ（インチ単位）。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.FillRect(System.Drawing.RectangleF)">
+      <summary>指定した範囲を現在のページのBackColorで塗りつぶします。</summary>
+      <param name="rc">四角形の矩形範囲。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.Load(System.String)">
+      <summary>指定した名前のファイルからページ内容をロードします。</summary>
+      <param name="strFileName">以前に保存したページ内容を含むファイルの名前。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.Load(System.IO.Stream)">
+      <summary>指定したストリームからページ内容をロードします。</summary>
+      <param name="stm">保存済みのページ内容を含むストリームを指定します。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.MeasureParagraphHeight(System.String,System.Single)">
+      <summary>現在のページ設定を使用して、指定したテキストを指定した幅で表示したときの高さを計測します。</summary>
+      <param name="strText">
+        <para>計測するテキスト文字列。</para>
+      </param>
+      <param name="width">テキストの幅（インチ単位）。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.MeasureParagraphHeight(System.String,System.Single,System.Drawing.Font,System.Drawing.StringFormat)">
+      <summary>現在のページ設定を使用して、指定したテキストを指定した幅、フォント、フォーマットで表示したときの高さを計測します。</summary>
+      <param name="strText">
+        <para>計測するテキスト文字列。</para>
+      </param>
+      <param name="width">テキストの幅（インチ単位）。</param>
+      <param name="textFont">計測するテキストフォント。</param>
+      <param name="strFormat">計測するテキストフォーマット。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.MeasureText(System.String)">
+      <summary>選択したフォント出］テキスト文字列を決定します。</summary>
+      <param name="strText">決定するテキスト文字列。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.MeasureText(System.String,System.Drawing.Font)">
+      <summary>テキスト文字列を決定します。</summary>
+      <param name="strText">決定するテキスト。</param>
+      <param name="font">テキストのフォント。</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Page.BackColor">
+      <summary>
+        <para>形状とテキストをページ上に描画する場合に使用する背景色を指定します。</para>
+      </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Page.CharacterSpacing">
+      <summary>Pageクラスの描画メソッドで描画するテキストの文字ピッチを設定または取得します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Page.Font">
+      <summary>ページ上にテキストを表示するときに使用する現在のフォントを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Page.ForeColor">
+      <summary>ページ上のテキストと図形の表示に使用する現在の前景色を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Page.LineSpacing">
+      <summary>Pageクラスの描画メソッドで描画するテキストの行ピッチを設定または取得します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Page.Padding">
+      <summary>コントロールの枠から文字までの間の余白を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Page.PenStyle">
+      <summary>線と図形の描画に使用するペンの種類を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Page.PenWidth">
+      <summary>線と図形の描画に使用するペンの幅を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Page.RightToLeft">
+      <summary>右から左へ記述するフォントを使う地域をサポートするために、DrawTextメソッドがテキストを右から左に表示するかどうかを示す値を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Page.TextAlignment">
+      <summary>DrawTextメソッドを使用するときのテキストの配置を決定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Page.TextAngle">
+      <summary>Pageクラスの描画メソッドで描画するテキストの角度を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Page.TextJustify">
+      <summary>TextAlignmentプロパティがJustifyに設定された場合に、テキストの配置（位置揃え）を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Page.TextRenderHint">
+      <summary>描画の品質を指定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Page.VerticalText">
+      <summary>テキストを描画する場合に、文字を垂直方向に回転して描画するかどうかを示す値を設定するか返します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Page.VerticalTextAlignment">
+      <summary>DrawTextメソッドを使用するときのテキストの垂直方向の配置を決定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Page.WrapMode">
+      <summary>テキストを描画する折り返しモードを取得または設定します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.PagesCollection.#ctor(GrapeCity.ActiveReports.Document.SectionDocument)">
+      <summary>PagesCollectionクラスの新しいインスタンスを初期化します。
+<!--DXMETADATA end --></summary>
+      <param name="document">セクションドキュメント。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.PagesCollection.GetRange(System.Int32,System.Int32)">
+      <summary>指定したインデックスから指定したページ数の新しいコレクションを抽出して返します。<!--DXMETADATA end --></summary>
+      <returns>
+        <para>コレクションの指定したインデックスから開始して抽出された新しいコレクション。</para>
+      </returns>
+      <param name="index">
+        <list type="termdef">
+          <item>
+            <description>範囲の開始ページを表すインデックス。</description>
+          </item>
+        </list>
+      </param>
+      <param name="count">抽出するページ数。</param>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.IDocumentExport">
+      <summary>全てのエクスポートフィルタ用に共通のインタフェースを提供します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.IDocumentExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.String,System.String)">
+      <summary>指定したページ範囲を、HTMLにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="filePath">Htmlファイルを保存するためのファイル名とパスです。複数のファイルの名前が生成されている（画像、目次など）場合、この関数の値は他のファイル名に対して先頭に使用されます。</param>
+      <param name="pageRange">ページ番号の範囲を示します。範囲は、最初の場号と最後の番号の間に「-」を使用して示すことができます。単一のページも含めることができます。各範囲または単一のページはカンマ区きりにより分割されます。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.IDocumentExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.String)">
+      <summary>ActiveReportsのドキュメント全体を、指定したHTMLにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="filePath">Htmlファイルを保存するためのファイル名とパスです。複数のファイルの名前が生成されている（画像、目次など）場合、この関数の値は他のファイル名に対して先頭に使用されます。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.IDocumentExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.IO.Stream)">
+      <summary>ActiveReportsのドキュメント全体を、HTMLとすべてのイメージを単一のファイルに結合するMIME MHT形式(インターネット·エクスプローラーからWebアーカイブとして保存される形式)のHTMLにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="outputStream">MHTファイルを保存するSystem.IO.Steam保存先。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.IDocumentExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.IO.Stream,System.String)">
+      <summary>指定したページ範囲を、HTMLとすべてのイメージを単一のファイルに結合するMIME MHT形式(インターネット·エクスプローラーからWebアーカイブとして保存される形式)のHTMLにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="outputStream">MHTファイルを保存するSystem.IO.Steam保存先。</param>
+      <param name="pageRange">ページ番号の範囲を示します。範囲は、最初の場号と最後の番号の間に「-」を使用して示すことができます。単一のページも含めることができます。各範囲または単一のページはカンマ区きりにより分割されます。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.IDocumentExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,GrapeCity.ActiveReports.Export.Html.IOutputHtml,System.String)">
+      <summary>指定したページ範囲をoutputHandlerへエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentドキュメント。</param>
+      <param name="outputHandler">MHTファイルを保存するデスティネーションとなるSystem.IO.Stream。</param>
+      <param name="pageRange">ページ番号の範囲。各カンマの間には1つのページ番号、または範囲の開始ページ番号と終了ページ番号の間にハイフンがあるページの範囲を持つことができます。</param>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Html.IOutputHtml">
+      <summary>IOutputHtmlインタフェースは、OutputHtmlDataメソッドとFinishメソッドを含みます。これらのメソッドはHtmlExportクラスと共に使用し、データの出力、およびエクスポートが完了するタイミングを示します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Html.IOutputHtml.Finish">
+      <summary>このメソッドはHtmlExportによって呼び出され、現在のドキュメントのエクスポートが完了したことを示します。このメソッドは、実装元から、残りの出力をすべてフラッシュしたり、以前にエクスポートされたドキュメントのフレームセットページを書き出すために使用できます。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Html.IOutputHtml.OutputHtmlData(GrapeCity.ActiveReports.Export.Html.HtmlOutputInfoArgs)">
+      <summary>HtmlExportクラスによって呼び出され、データを出力します。Output Html Dataの実装では、info引数で渡されたデータを使用し、実装が必要とするように格納します。</summary>
+      <returns>HtmlExportクラスによって、データを出力するために呼び出されます。OutputHtmlDataメソッドの実装では、info引数で渡されたデータを使用し、ユーザーが必要とするように格納します。戻り値は、呼び出し元のHtmlExportクラスがデータからメインHTMLページへリンクを追加するために使用できる「ファイル名」でなければなりません。たとえば、HTMLページの作成中にHTML（img）として出力される画像がある場合、HtmlExportオブジェクトはこのメソッドを呼び出してユーザーにデータを提供し、OutputHtmlData（つまりファイル名）からの戻り値は
+src属性の値として使用されます。HTMLページの準備ができたら、OutputHtmlDataが再度呼び出されて実際のHTMLページのデータが渡されます。この場合、OutputHtmlData実装によって返されたファイル名は使用されません。</returns>
+      <param name="info">出力に関する情報。</param>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Html.HtmlOutputKind">
+      <summary>HTML出力の種類を指定します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.HtmlOutputKind.ImagePng">
+      <summary>出力はPNG画像です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.HtmlOutputKind.ImageJpg">
+      <summary>出力はJPG画像です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.HtmlOutputKind.HtmlPage">
+      <summary>出力はHTMLページです。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.HtmlOutputKind.BookmarksHtml">
+      <summary>出力は、メインHTMLページのブックマークのリストを含むHTMLページです。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Html.HtmlOutputKind.FramesetHtml">
+      <summary>出力は、TOCページまたはTOCが使えない場合の見出しページを含むHTMLページと、右側の対象ドキュメントページです。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Html.HtmlOutputInfoArgs">
+      <summary>IOutputHtmlインタフェースのOutputHtmlData関数の引数として使用されます。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Html.HtmlOutputInfoArgs.#ctor(GrapeCity.ActiveReports.Export.Html.HtmlOutputKind,System.IO.Stream)">
+      <summary>HtmlOutputInfoArgクラスの新しいインスタンスを初期化します。</summary>
+      <param name="outputKind">出力データの種類。</param>
+      <param name="outputStream">出力データのストリーム。</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Html.HtmlOutputInfoArgs.OutputKind">
+      <summary>OutputStreamプロパティに含まれる出力データの種類を返します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Html.HtmlOutputInfoArgs.OutputStream">
+      <summary>出力される実際のデータです。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Document.Section.Document.Filters.IFilteredDocument">
+      <summary>
+             SectionDocumentのフィルタリングを提供します。 
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Document.Filters.IFilteredDocument.Pages">
+      <summary>
+            ページを取得します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Document.Filters.IFilteredDocument.PagesCount">
+      <summary>
+            ページ数を取得します。
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Document.Section.Document.Filters.IFilteredPage">
+      <summary>
+            エクスポートのためにページサロゲートを提供します。 
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Document.Filters.IFilteredPage.PageIdentifier">
+      <summary>
+            所有者ページ。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Document.Filters.IFilteredPage.CanvasItems">
+      <summary>
+            CanvasItems
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Document.Filters.IFilteredPage.Fonts">
+      <summary>
+            Fonts
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Document.Filters.IFilteredPage.EvaluationBounds">
+      <summary>
+            EvaluationBounds
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Document.Filters.IFilteredPage.EvaluationMessage">
+      <summary>
+            EvaluationMessage
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Document.Filters.IFilteredPage.IsEval">
+      <summary>
+            IsEval
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Document.Filters.IFilteredPage.Bookmarks">
+      <summary>
+            Bookmarks
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Document.Filters.IFilteredPage.Margins">
+      <summary>
+            Margins
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Document.Filters.IFilteredPage.Width">
+      <summary>
+            Width
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Document.Filters.IFilteredPage.Height">
+      <summary>
+            Height
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Document.Filters.IFilteredPage.Units">
+      <summary>
+            Units
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Document.Filters.IFilteredPage.Orientation">
+      <summary>
+            Orientation
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Document.Filters.IFilteredPage.Size">
+      <summary>
+            ページのサイズを返します（インチ単位）。
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Document.Section.Document.Filters.FilteredDocumentFactory">
+      <summary>
+            ISectionDocumentExportSurrogateおよびIPageExportSurrogate用のファクトリ。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Document.Filters.FilteredDocumentFactory.FilterByPageRange(GrapeCity.ActiveReports.Document.Section.Document.Filters.IFilteredDocument,System.String)">
+      <summary>
+            ページ範囲によりフィルタリングします。
+            </summary>
+      <param name="document">ドキュメントです。</param>
+      <param name="range">範囲です。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Document.Filters.FilteredDocumentFactory.FilterByPageRange(GrapeCity.ActiveReports.Document.Section.Document.Filters.IFilteredDocument,System.String,System.Collections.Generic.IDictionary{System.Int32,System.Int32})">
+      <summary>
+            フィルタされたドキュメントを取得します。
+            </summary>
+      <param name="document"></param>
+      <param name="range"></param>
+      <param name="pagesMap">ソースページ番号とフィルタリングされたコレクションのページインデックスを指すページマップで塗りつぶすマップ。</param>
+      <returns></returns>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Document.Filters.FilteredDocumentFactory.ConvertToFilteredDocument(GrapeCity.ActiveReports.Document.SectionDocument)">
+      <summary>
+            フィルタされたドキュメントに変換します。
+            </summary>
+      <param name="document">ドキュメントです。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawTextFallback(System.String[],System.Single,System.Single,System.Single,System.Single,System.String[])">
+      <summary>
+            テキストのフォールバックを描画します。
+            </summary>
+      <param name="astrText">astrテキストです。</param>
+      <param name="left">左です。</param>
+      <param name="top">先頭です。</param>
+      <param name="width">幅です。</param>
+      <param name="height">高さです。</param>
+      <param name="astrTextFallback">astrテキストフォールバック。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawTextFallback(System.String[],System.Single,System.Single,System.Single,System.Single,System.String,System.String[])">
+      <summary>
+            テキストのフォールバックを描画します。
+            </summary>
+      <param name="astrText">astrテキストです。</param>
+      <param name="left">左です。</param>
+      <param name="top">先頭です。</param>
+      <param name="width">幅です。</param>
+      <param name="height">高さです。</param>
+      <param name="strLink">文字列リンクです。</param>
+      <param name="astrTextFallback">astrテキストフォールバック。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawEvaluationTextLink(System.String,System.String,System.Drawing.RectangleF)">
+      <summary>
+            Draws evaluation text
+            </summary>
+      <remarks>
+            内部使用のみ。
+            </remarks>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawImage(System.Drawing.Image,System.Boolean,System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+            画像を描画します。
+            </summary>
+      <param name="image">画像です。</param>
+      <param name="managedImage">trueに設定されている場合は、【管理された画像】。</param>
+      <param name="left">左です。</param>
+      <param name="top">先頭です。</param>
+      <param name="width">幅です。</param>
+      <param name="height">高さです。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawImage(System.Drawing.Image,System.Boolean,System.Drawing.RectangleF)">
+      <summary>
+            画像を描画します。
+            </summary>
+      <param name="image">画像です。</param>
+      <param name="managedImage">trueに設定されている場合は、【管理された画像】。</param>
+      <param name="bounds">境界です。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawImage(System.Drawing.Image,System.Boolean,System.Single,System.Single,System.Single,System.Single,System.String)">
+      <summary>
+            画像を描画します。
+            </summary>
+      <param name="image">画像です。</param>
+      <param name="managedImage">trueに設定されている場合は、【管理された画像】。</param>
+      <param name="left">左です。</param>
+      <param name="top">先頭です。</param>
+      <param name="width">幅です。</param>
+      <param name="height">高さです。</param>
+      <param name="strLink">文字列リンクです。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawTable(System.Drawing.RectangleF)">
+      <summary>
+            テーブルを描画します。
+            </summary>
+      <param name="bounds">境界です。</param>
+      <returns>PageTable</returns>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.SaveClip">
+      <summary>
+            クリップを保存します。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.RestoreClip">
+      <summary>
+            クリップを復元します。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.IntersectClip(System.Drawing.RectangleF)">
+      <summary>
+            クリップを交差します。
+            </summary>
+      <param name="clip">クリップです。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.IntersectClip(System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+            クリップを交差します。
+            </summary>
+      <param name="left">左です。</param>
+      <param name="top">先頭です。</param>
+      <param name="width">幅です。</param>
+      <param name="height">高さです。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawBorder(GrapeCity.ActiveReports.Border,System.Drawing.RectangleF,System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+            境界を描画します。
+            </summary>
+      <param name="border">境界です。</param>
+      <param name="bounds">境界です。</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Page.TabStops">
+      <summary>
+            ユーザー設定のタブ位置のコレクション。
+            </summary>
+      <value>タブの位置です。</value>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.SectionDocument.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+            逆シリアル化 コンストラクタ。<see cref="T:GrapeCity.ActiveReports.Document.SectionDocument"></see>　クラスの新しいインスタンスを初期化します。
+            </summary>
+      <param name="info">情報です。</param>
+      <param name="context">内容です。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.SectionDocument.Dispose(System.Boolean)">
+      <summary>
+            実装を破棄します。
+            </summary>
+      <param name="disposing"></param>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Document.DocumentTypeConverter">
+      <summary>
+            内部使用のみ。 - designtime support for SectionDocument
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.DocumentTypeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>
+            指定されたコンテキストを使用して、このコンバータが指定された型のオブジェクトをこのコンバータの型に変換できるかどうかを返します。
+            </summary>
+      <param name="context">フォーマットコンテキストを提供する<see cref="T:System.ComponentModel.ITypeDescriptorContext"></see>。</param>
+      <param name="sourceType">変換したい型を表す<see cref="T:System.Type"></see>。</param>
+      <returns>このコンバータが変換を実行できる場合は、true。それ以外の場合は、false。</returns>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.DocumentTypeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>
+            指定されたコンテキストを使用して、このコンバータがオブジェクトを指定された型に変換できるかどうかを返します。
+            </summary>
+      <param name="context">フォーマットコンテキストを提供する<see cref="T:System.ComponentModel.ITypeDescriptorContext"></see>。</param>
+      <param name="destinationType">変換したい型を表す<see cref="T:System.Type"></see>。</param>
+      <returns>このコンバータが変換を実行できる場合は、true。それ以外の場合は、false。</returns>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.DocumentTypeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>
+            指定されたコンテキストおよびカルチャ情報を使用して、指定されたオブジェクトをこのコンバーターの型に変換します。
+            </summary>
+      <param name="context">フォーマットコンテキストを提供する<see cref="T:System.ComponentModel.ITypeDescriptorContext"></see>。</param>
+      <param name="culture">現在のカルチャとして使用する<see cref="T:System.Globalization.CultureInfo"></see>。</param>
+      <param name="value">変換する<see cref="T:System.Object"></see>。</param>
+      <returns>変換された値を表す<see cref="T:System.Object"></see>。</returns>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.DocumentTypeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>
+            指定されたコンテキストおよびカルチャ情報を使用して、指定された値オブジェクトを指定された型に変換します。
+            </summary>
+      <param name="context">フォーマットコンテキストを提供する<see cref="T:System.ComponentModel.ITypeDescriptorContext"></see>。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo"></see>です。 nullが渡される場合は、現在のカルチャが想定されます。</param>
+      <param name="value">変換する<see cref="T:System.Object"></see>。</param>
+      <param name="destinationType">
+        <paramref name="value"></paramref>パラメータを変換する<see cref="T:System.Type"></see>。</param>
+      <returns>変換された値を表す<see cref="T:System.Object"></see>。</returns>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Page.WordWrap">
+      <summary>
+            折り返しモードはテキストを描画するために使用されるかどうかを定義します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Page.ScaleX">
+      <summary>
+            最小文字の縮小率を取得または設定します。
+            </summary>
+      <value>最小文字の縮小率です。</value>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.SetTextBoundsRange(System.Single,System.Single)">
+      <summary>
+            テキストの上/下境界を設定します。
+            </summary>
+      <param name="startPos"></param>
+      <param name="endPos"></param>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Document.Section.GraphicsRenderContext">
+      <summary>
+            GraphicsRenderContextは、テーブルの組み込みRenderContextです。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.GraphicsRenderContext.#ctor(System.Drawing.Graphics,System.Drawing.PointF)">
+      <summary>
+            GraphicsRenderContextを作成して初期化します。
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Document.Section.Printing.PaperKindResourceEnumConverter">
+      <summary>
+            内部使用のみ。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Printing.PaperKindResourceEnumConverter.#ctor(System.Type)">
+      <summary>
+            ResourceEnumConverterのコンストラクタ。
+            </summary>
+      <param name="type">この列挙体コンバーターに関連付ける列挙体のタイプを表すSystem.Type。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Printing.PaperKindResourceEnumConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>
+          指定された値オブジェクトを列挙体オブジェクトに変換します。
+            </summary>
+      <param name="context">形式コンテキストを提供する<see cref="T:System.ComponentModel.ITypeDescriptorContext"></see>。</param>
+      <param name="culture">変換用の<see cref="T:System.Globalization.CultureInfo"></see>パラメータ。</param>
+      <param name="value">変換するオブジェクト</param>
+      <returns>変換された値を表す<see cref="T:System.Object"></see>。</returns>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Printing.PaperKindResourceEnumConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>
+            指定された値オブジェクトを指定された宛先タイプに変換します。
+            </summary>
+      <param name="context">形式コンテキストを提供する<see cref="T:System.ComponentModel.ITypeDescriptorContext"></see>。</param>
+      <param name="culture">変換用の<see cref="T:System.Globalization.CultureInfo"></see>パラメータ。</param>
+      <param name="value">変換するオブジェクト</param>
+      <param name="destinationType">値を変換する<see cref="T:System.Type"></see></param>
+      <returns>変換された値を表す<see cref="T:System.Object"></see>。</returns>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Extensibility.Printing.ActiveReportPrintController">
+      <summary>
+            ActiveReportPrintControllerクラス。
+            </summary>
+    </member>
+    <member name="E:GrapeCity.ActiveReports.Extensibility.Printing.ActiveReportPrintController.PrintAborted">
+      <summary>
+            印刷が中止されたときに発生します。
+            </summary>
+    </member>
+    <member name="E:GrapeCity.ActiveReports.Extensibility.Printing.ActiveReportPrintController.PrintingProgress">
+      <summary>
+            印刷の進行状況が変更されたときに発生します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.ActiveReportPrintController.Cancel">
+      <summary>
+            Cancel
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Extensibility.Printing.ActiveReportPrintController.OnEndPage(System.Drawing.Printing.PrintDocument,System.Drawing.Printing.PrintPageEventArgs)">
+      <summary>
+            OnEndPage
+            </summary>
+      <param name="prnDoc"></param>
+      <param name="ppea"></param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Extensibility.Printing.ActiveReportPrintController.OnStartPage(System.Drawing.Printing.PrintDocument,System.Drawing.Printing.PrintPageEventArgs)">
+      <summary>
+            OnStartPage
+            </summary>
+      <param name="prnDoc"></param>
+      <param name="ppea"></param>
+      <returns></returns>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Extensibility.Printing.DDPaperSize">
+      <summary>
+            DDPaperSizeの概要説明。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Extensibility.Printing.DDPaperSize.#ctor(System.Drawing.Printing.PaperKind,System.String,System.Int32,System.Int32)">
+      <summary>
+            DDPaperSize
+            </summary>
+      <param name="kind"></param>
+      <param name="name"></param>
+      <param name="width"></param>
+      <param name="height"></param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Extensibility.Printing.DDPaperSize.#ctor(System.String,System.String,System.Single,System.Single)">
+      <summary>
+            DDPaperSize
+            </summary>
+      <param name="printerName"></param>
+      <param name="paperName"></param>
+      <param name="width"></param>
+      <param name="height"></param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.DDPaperSize.Kind">
+      <summary>
+            Kind
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Extensibility.Printing.PrintProgressEventArgs">
+      <summary>
+            PrintProgressEventArgs
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.PrintProgressEventArgs.CurrentPage">
+      <summary>
+            現在の印刷ページ番号を取得します。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Extensibility.Printing.PrintProgressEventArgs.#ctor(System.Int32)">
+      <summary>
+        <see cref="T:GrapeCity.ActiveReports.Extensibility.Printing.PrintProgressEventArgs"></see>クラスの新しいインスタンスを初期化します。
+            </summary>
+      <param name="currentPage">現在の印刷ページ番号。</param>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Extensibility.Printing.PrintProgressEventHandler">
+      <summary>
+            ドキュメントイベントの概要説明。
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Extensibility.Printing.PrintAbortedEventHandler">
+      <summary>
+            ドキュメントイベントの概要説明。
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Extensibility.Printing.PrintingThreadErrorEventArgs">
+      <summary>
+            PrintingThreadErrorEventArgsの概要説明。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Extensibility.Printing.PrintingThreadErrorEventArgs.#ctor(System.Exception)">
+      <summary>
+        <see cref="T:GrapeCity.ActiveReports.Extensibility.Printing.PrintingThreadErrorEventArgs"></see>クラスの新しいインスタンスを初期化します。
+            </summary>
+      <param name="exception">印刷スレッドの例外。</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.PrintingThreadErrorEventArgs.Exception">
+      <summary>
+            印刷スレッドの例外を取得します。
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Extensibility.Printing.PrintingThreadErrorEventHandler">
+      <summary>
+            ドキュメントイベントの概要説明。
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Extensibility.Printing.PageOrder">
+      <summary>
+            ページの印刷順序を指定します。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Extensibility.Printing.PageOrder.Horizontal">
+      <summary>
+            横方向の順序。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Extensibility.Printing.PageOrder.HorizontalReversed">
+      <summary>
+            横方向に対して逆向きになります。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Extensibility.Printing.PageOrder.Vertical">
+      <summary>
+            縦方向の順序。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Extensibility.Printing.PageOrder.VerticalReversed">
+      <summary>
+            縦方向に対して逆向きになります。
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Extensibility.Printing.PageScaling">
+      <summary>
+            ページの拡大・縮小を指定します。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Extensibility.Printing.PageScaling.None">
+      <summary>
+            拡大・縮小なしで印刷するモード。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Extensibility.Printing.PageScaling.Booklet">
+      <summary>
+            ブックレットを印刷するモード。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Extensibility.Printing.PageScaling.FitToPrintableArea">
+      <summary>
+            用紙のサイズに合わせてページサイズを拡大・縮小して印刷するモード。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Extensibility.Printing.PageScaling.ShrinkToPrintableArea">
+      <summary>
+            用紙のサイズに合わせて大きなページサイズを縮小して印刷し、小さなページをサイズ変更なしで印刷するモード。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Extensibility.Printing.PageScaling.MultiplePages">
+      <summary>
+            シートごとに複数のページを印刷するモード。
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Extensibility.Printing.IActiveReportPrintController">
+      <summary>
+             内部使用のみ。
+            </summary>
+    </member>
+    <member name="E:GrapeCity.ActiveReports.Extensibility.Printing.IActiveReportPrintController.PrintAborted">
+      <summary>
+            Occurs when print is aborted.
+            </summary>
+    </member>
+    <member name="E:GrapeCity.ActiveReports.Extensibility.Printing.IActiveReportPrintController.PrintingProgress">
+      <summary>
+            Occurs when printing progress is changed.
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Extensibility.Printing.IActiveReportPrintController.GetDelegates">
+      <summary>
+            Gets the delegates.
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Extensibility.Printing.Printer">
+      <summary>
+            プリンターの概要説明。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Extensibility.Printing.Printer.#ctor">
+      <summary>
+        <see cref="T:GrapeCity.ActiveReports.Extensibility.Printing.Printer"></see>クラスの新しいインスタンスを初期化します。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Extensibility.Printing.Printer.#ctor(System.Func{System.Drawing.Printing.PrintController},GrapeCity.ActiveReports.Extensibility.Printing.PrintProgressEventHandler,GrapeCity.ActiveReports.Extensibility.Printing.PrintAbortedEventHandler,System.Action{System.Exception})">
+      <summary>
+        <see cref="T:GrapeCity.ActiveReports.Extensibility.Printing.Printer"></see>クラスの新しいインスタンスを初期化します。
+            </summary>
+      <param name="printControllerInitializer">印刷コントローラー初期化子。</param>
+      <param name="printProgress">印刷中のハンドラ。</param>
+      <param name="printAborted">印刷中止のハンドラ。</param>
+      <param name="printingThreadErrorEventHandler">印刷スレッドエラーイベントのハンドラ。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Extensibility.Printing.Printer.Reinitialize">
+      <summary>
+            再初期化します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.Printer.IsVirtual">
+      <summary>
+            Determines if printer is virtual. 内部使用のみ。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.Printer.PrinterName">
+      <summary>
+            プリンター名。
+            
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.Printer.PaperWidth">
+      <summary>
+             用紙の幅。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.Printer.PaperHeight">
+      <summary>
+            用紙の高さ。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.Printer.Landscape">
+      <summary>
+            横向き。
+            
+            Printer.Landscapeのかわりに、DefaultPageSettings.Landscapeを使用して変更する場合、問題が発生される可能性があります。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.Printer.PaperSizes">
+      <summary>
+            用紙のサイズ。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.Printer.PaperKind">
+      <summary>
+            PaperKind
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.Printer.PaperSize">
+      <summary>
+            用紙のサイズ。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.Printer.VisibleBounds">
+      <summary>
+            VisibleBounds
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.Printer.PrintController">
+      <summary>
+            印刷処理をガイドする印刷コントローラーを取得または設定します。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Extensibility.Printing.Printer.SaveSettings(System.IO.BinaryWriter)">
+      <summary>
+            内部使用のみ。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Extensibility.Printing.Printer.LoadSettings(System.IO.BinaryReader)">
+      <summary>
+            内部使用のみ。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Extensibility.Printing.Printer.Dispose(System.Boolean)">
+      <summary>
+        <see cref="T:System.ComponentModel.Component"></see>によって使用されているアンマネージリソースを解放し、オプションでマネージリソースを解放します。
+            </summary>
+      <param name="disposing">マネージリソースとアンマネージリソースの両方を解放する場合はtrue、アンマネージリソースのみを解放する場合はfalse。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Extensibility.Printing.Printer.HandleAsyncPrintingError(System.Exception)">
+      <summary>
+            内部使用のみ。
+            </summary>
+      <param name="error">ドキュメントの印刷中に例外が発生しました。</param>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Extensibility.Printing.PrintOptions">
+      <summary>
+            印刷オプションを表します。
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Extensibility.Printing.PrintOptions.CreateDefault">
+      <summary>
+            デフォルトの印刷オプションを作成します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.PrintOptions.PageScaling">
+      <summary>
+            ページの拡大・縮小を表します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.PrintOptions.PagesPerSheet">
+      <summary>
+            シートごとに印刷するページを表します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.PrintOptions.PageOrder">
+      <summary>
+            各シート内の複数ページの印刷順を表します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.PrintOptions.PrintPageBorder">
+      <summary>
+            ページの境界線を印刷します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.PrintOptions.AutoRotate">
+      <summary>
+            ページ内容を用紙の方向によって回転します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.PrintOptions.Margin">
+      <summary>
+            ページの余白を取得または設定します。 
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.PrintOptions.Watermark">
+      <summary>
+            	ウォーターマークのオプションを取得または設定します。  
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Extensibility.Printing.Margin">
+      <summary>
+            ページの余白。
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Extensibility.Printing.Margin.Empty">
+      <summary>
+            空の余白を示します。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.Margin.Top">
+      <summary>
+            上部余白を示します。  
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.Margin.Bottom">
+      <summary>
+            下部余白を示します。  
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.Margin.Left">
+      <summary>
+            左部余白を示します。  
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.Margin.Right">
+      <summary>
+            右部余白を示します。  
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Extensibility.Printing.Margin.#ctor(System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+        <see cref="T:GrapeCity.ActiveReports.Extensibility.Printing.Margin"></see>クラスの新しいインスタンスを初期化します。
+            </summary>
+      <param name="left">左部余白を示します。</param>
+      <param name="right">右部余白を示します。</param>
+      <param name="top">上部余白を示します。</param>
+      <param name="bottom">下部余白を示します。</param>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Extensibility.Printing.WatermarkOptions">
+      <summary>
+            ウォーターマークのオプション。
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.WatermarkOptions.Title">
+      <summary>
+           	ウォーターマークのテキストを示します。 
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.WatermarkOptions.Font">
+      <summary>
+            ウォーターマークのフォントを取得または設定します。  
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.WatermarkOptions.Color">
+      <summary>
+            ウォーターマークの色を取得または設定します。  
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.WatermarkOptions.Angle">
+      <summary>
+            回転角度、角度、反時計回りを確認します。  
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.WatermarkOptions.DrawOver">
+      <summary>
+            Trueに設定されている場合は、ウォーターマークはページのレポートコンテンツの前面に表示されます。それ以外の場合は、ウォーターマークはページですべてのレポートコンテンツが描画される前に印刷されます。  
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.SectionDocument.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+            内部使用のみ。
+            </summary>
+      <param name="info">The information.</param>
+      <param name="context">The context.</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.SectionDocument.PrinterSettings">
+      <summary>
+            内部使用のみ。
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Document.Section.Document.Filters.BarcodeReplaceFilter">
+      <summary>
+            内部使用のみ。 Allows to replace barcode with image.
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Document.Filters.BarcodeReplaceFilter.FilterCanvasItems(System.Collections.Generic.IEnumerator{GrapeCity.ActiveReports.Document.Section.CanvasItem},System.Action{GrapeCity.ActiveReports.Document.Section.CanvasItem})">
+      <summary>
+            内部使用のみ。 Filter only barcode-related canvas items.
+            </summary>
+      <param name="initCanvasItems">Walk through barcode items.</param>
+      <returns></returns>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Document.Filters.BarcodeReplaceFilter.UpdateContext(GrapeCity.ActiveReports.Document.Section.CanvasItem)">
+      <summary>
+            内部使用のみ。 Updates context.
+            </summary>
+      <param name="canvasItem">現在の項目</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Extensibility.Printing.Printer.PrinterSettings">
+      <summary>ドキュメントを印刷するプリンターを取得または設定します。</summary>
+      <returns>ドキュメントが印刷される場所と方法を指定する<see cref="T:System.Drawing.Printing.PrinterSettings"></see>。デフォルトは<see cref="T:System.Drawing.Printing.PrinterSettings"></see> です（プロパティがデフォルト値に設定されています）。</returns>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Document.Filters.FilteredDocumentFactory.ConvertToFilteredPage(GrapeCity.ActiveReports.Core.Document.Page)">
+      <summary>
+            Converts to filtered page.
+            </summary>
+      <param name="page">The page.</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Page.TextLayoutService">
+      <summary>
+            Fot internal use only.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.Section.Page.ImagePersistenceService">
+      <summary>
+            Fot internal use only.
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawDoubleLine(System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+            Draws the double line.
+            </summary>
+      <param name="x1"></param>
+      <param name="y1"></param>
+      <param name="x2"></param>
+      <param name="y2"></param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawEllipseDoubleLine(System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+            Draws the double line ellipse.
+            </summary>
+      <param name="left">The left.</param>
+      <param name="top">The top.</param>
+      <param name="width">The width.</param>
+      <param name="height">The height.</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawRoundRectDoubleLine(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+            Draws the double line round rect.
+            </summary>
+      <param name="left">The left.</param>
+      <param name="top">The top.</param>
+      <param name="width">The width.</param>
+      <param name="height">The height.</param>
+      <param name="topLeftEdge">Top Left edge.</param>
+      <param name="topRightEdge">Top Right edge.</param>
+      <param name="bottomLeftEdge">Bottom Left edge.</param>
+      <param name="bottomRightEdge">Bottom Right Edge.</param>
+      <param name="precision">Parameter to specify when we should fail back to old round rect with equals corners</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawTextInputField(System.Drawing.RectangleF,System.String,System.Boolean,System.Boolean,GrapeCity.ActiveReports.Document.Section.InputBorderStyle,System.Single,System.Drawing.Color,System.Int32,System.Boolean,System.Boolean,System.Boolean,GrapeCity.ActiveReports.Document.Section.InputTextAlign,System.String[])">
+      <summary>
+            Draw the text input field
+            </summary>
+      <param name="bounds"></param>
+      <param name="fieldName"></param>
+      <param name="readOnly"></param>
+      <param name="required"></param>
+      <param name="borderStyle"></param>
+      <param name="borderWidth"></param>
+      <param name="borderColor"></param>
+      <param name="maxLength"></param>
+      <param name="multiline"></param>
+      <param name="password"></param>
+      <param name="spellCheck"></param>
+      <param name="alignment"></param>
+      <param name="textArray"></param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.Section.Page.DrawCheckBoxInputField(System.Drawing.RectangleF,System.String,System.Boolean,System.Boolean,GrapeCity.ActiveReports.Document.Section.InputBorderStyle,System.Single,System.Drawing.Color,System.Boolean,System.Single,GrapeCity.ActiveReports.Document.Section.InputCheckStyle)">
+      <summary>
+            Draw the checkBox input field
+            </summary>
+      <param name="bounds"></param>
+      <param name="fieldName"></param>
+      <param name="readOnly"></param>
+      <param name="required"></param>
+      <param name="borderStyle"></param>
+      <param name="borderWidth"></param>
+      <param name="borderColor"></param>
+      <param name="checked"></param>
+      <param name="checkSize"></param>
+      <param name="checkStyle"></param>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Document.PageRangeParser">
+      <summary>
+            Extension parser.
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.PageRangeParser.FilterByRange(GrapeCity.ActiveReports.Core.Document.IPagesCollection{GrapeCity.ActiveReports.Document.Section.Page},System.String,System.Collections.Generic.IDictionary{System.Int32,System.Int32})">
+      <summary>
+            Parses the ActiveReports style comma delimited "page range" string.
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Document.CompatibilityModes">
+      <summary>
+            Specify if the engine or the document should use legacy GDI/GDI+ rendering or new cross-platform based rendering implementation.
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Document.CompatibilityModes.GDI">
+      <summary>
+            Legacy GDI/GDI+ text/images rendering. Works only under Windows. Doesn't work under ASP.NET Core.
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Document.CompatibilityModes.CrossPlatform">
+      <summary>
+            Cross-platform text/images rendering.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.SectionDocument.CompatibilityMode">
+      <summary>
+            Specifies if the document should use legacy GDI/GDI+ rendering or new cross-platform based rendering implementation.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.SectionDocument.FontResolver">
+      <summary>
+            Gets or sets font resolver for <b>CrossPlatform</b><see cref="P:GrapeCity.ActiveReports.Document.SectionDocument.CompatibilityMode"></see>. <b>null</b> means the default resolver.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.SectionDocument.TextLayoutService">
+      <summary>
+            Fot internal use only.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.SectionDocument.ImagePersistenceService">
+      <summary>
+            Fot internal use only.
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.FontResolver.CustomDocumentFontsFactory">
+      <summary>
+            For internal use only.
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.IFontResolver">
+      <summary>
+            Font resolver interface. Allows to customer to specify fonts for report (and obtain the same output on all platforms).
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.IFontResolver.GetFonts(System.String,System.Boolean,System.Boolean)">
+      <summary>
+            Gets fonts for requested font family name.
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.IPrintControllerFactory">
+      <summary>
+            Optional service to execute WinForms-related function.
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.IPrintControllerFactory.CreatesPrintController">
+      <summary>
+            Creates printer dialog.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Document.SectionDocument.LineBreaking">
+      <summary>
+            For internal use only.
+            </summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Document.SectionDocument.SetLineBreaking(GrapeCity.ActiveReports.Core.Document.Drawing.Gc.LineBreakingAlgorithm)">
+      <summary>
+            For internal use only.
+            </summary>
+    </member>
+  </members>
+</doc>

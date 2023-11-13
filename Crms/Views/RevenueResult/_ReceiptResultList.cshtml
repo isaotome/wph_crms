@@ -1,0 +1,104 @@
+﻿
+@* //---------------------------------------------
+   // 機能：入金実績一覧部分ビュー
+   // 作成者：arc yano
+   // 作成日：2015/01/26
+   // 更新日：
+   //---------------------------------------------
+*@
+@model CrmsDao.RecieptPlanReSultList
+
+
+<br />
+@{ Html.RenderPartial("PagerControl", @Model.pagelist.PageProperty); }
+@Html.Hidden("id", ViewData["ResultId"] ?? "0", new { id = "resultid"})
+<br />
+<br />
+
+<!-- タイトル行 -->
+<div id="title" style="width: 1177px;">
+<table class="list" style="width:1177px">
+    <tr>
+        <th class="input-form-title" colspan="11">
+            入金実績
+        </th>
+    </tr>
+    <tr>
+        <th style="width:100px; white-space:nowrap">入金(予定)日</th>
+        <th style="width:100px; white-space:nowrap">伝票番号</th>
+        <th style="width:100px; white-space:nowrap">区分</th>
+        <th style="width:100px; white-space:nowrap">現金</th>
+        <th style="width:100px; white-space:nowrap">振込</th>
+        <th style="width:100px; white-space:nowrap">カード</th>
+        <th style="width:100px; white-space:nowrap">ローン</th>
+        <th style="width:100px; white-space:nowrap">下取仕入</th>
+        <th style="width:100px; white-space:nowrap">下取残債</th>
+        <th style="width:100px; white-space:nowrap">その他</th>
+        <th style="width:100px; white-space:nowrap">合計</th>
+       
+    </tr>
+</table>
+</div>
+@{
+    const int heightList = 306;    //実績一覧のデータ行の高さ
+    const int heightPerLine = 18;  //1行あたりの高さ
+    string height = "";
+    string overflowy = "";
+    if (Model.pagelist.Count() > (heightList / heightPerLine))
+    {
+        height = heightList + "px";
+        overflowy = "scroll";
+    }
+    else
+    {
+        height = "auto";
+        overflowy = "hidden";
+    }
+<div id="line" style="width: 1200px; height:@(height); overflow-x:hidden; overflow-y:@(overflowy)">
+
+<table class="list" style="width:1177px">
+    @foreach (var a in Model.pagelist)
+    {
+        string bgcolor = "";
+        if (a.ST.Equals("0"))
+        {
+            bgcolor = "#FFDDDD";
+        }
+        else
+        {
+            bgcolor = "#DDFFDD";
+        }
+    <tr>
+        <td style="width:100px; white-space:nowrap">@Html.Encode(string.Format("{0:yyyy/MM/dd}", a.ReceiptDate))</td>
+        <td style="width:100px; white-space:nowrap">@Html.Encode(a.SlipNumber)</td>
+        <td style="width:100px; white-space:nowrap; background-color:@(bgcolor)">@Html.Encode(a.STName)</td>
+        <td style="width:100px; white-space:nowrap; text-align:right;">@Html.Encode(string.Format("{0:N0}", !string.IsNullOrEmpty(a.AccountType) && a.AccountType.Equals("001") ? a.Amount : null))</td>
+        <td style="width:100px; white-space:nowrap; text-align:right;">@Html.Encode(string.Format("{0:N0}", !string.IsNullOrEmpty(a.AccountType) && a.AccountType.Equals("002") ? a.Amount : null))</td>
+        <td style="width:100px; white-space:nowrap; text-align:right;">@Html.Encode(string.Format("{0:N0}", !string.IsNullOrEmpty(a.AccountType) && a.AccountType.Equals("003") ? a.Amount : null))</td>
+        <td style="width:100px; white-space:nowrap; text-align:right;">@Html.Encode(string.Format("{0:N0}", !string.IsNullOrEmpty(a.AccountType) && a.AccountType.Equals("004") ? a.Amount : null))</td>
+        <td style="width:100px; white-space:nowrap; text-align:right;">@Html.Encode(string.Format("{0:N0}", !string.IsNullOrEmpty(a.AccountType) && a.AccountType.Equals("013") ? a.Amount : null))</td>
+        <td style="width:100px; white-space:nowrap; text-align:right;">@Html.Encode(string.Format("{0:N0}", !string.IsNullOrEmpty(a.AccountType) && a.AccountType.Equals("012") ? a.Amount : null))</td>
+        <td style="width:100px; white-space:nowrap; text-align:right;">@Html.Encode(string.Format("{0:N0}", !string.IsNullOrEmpty(a.AccountType) && a.AccountType.Equals("009") ? a.Amount : null))</td>
+        <td style="width:100px; white-space:nowrap; text-align:right;">@Html.Encode(string.Format("{0:N0}", a.Amount != null ? a.Amount: 0))</td>
+    </tr>
+    }
+</table>
+</div>
+}
+    <!-- 合計欄　-->
+<div id="Total" style="width: 1177px;">
+    <table class="list" style="width:1177px">
+    <tr>
+        <th style="width:320px; white-space:nowrap; text-align:right;" colspan ="3">合計</th>
+        <th style="width:100px; white-space:nowrap; text-align:right;">@Html.Encode(string.Format("{0:N0}", @Model.AmountCash))</th>
+        <th style="width:100px; white-space:nowrap; text-align:right;">@Html.Encode(string.Format("{0:N0}", @Model.AmountTransfer))</th>
+        <th style="width:100px; white-space:nowrap; text-align:right;">@Html.Encode(string.Format("{0:N0}", @Model.AmountCard))</th>
+        <th style="width:100px; white-space:nowrap; text-align:right;">@Html.Encode(string.Format("{0:N0}", @Model.AmountLoan))</th>
+        <th style="width:100px; white-space:nowrap; text-align:right;">@Html.Encode(string.Format("{0:N0}", @Model.AmountTrade))</th>
+        <th style="width:100px; white-space:nowrap; text-align:right;">@Html.Encode(string.Format("{0:N0}", @Model.AmountRemainDebt))</th>
+        <th style="width:100px; white-space:nowrap; text-align:right;">@Html.Encode(string.Format("{0:N0}", @Model.AmountOther))</th>
+        <th style="width:100px; white-space:nowrap; text-align:right;">@Html.Encode(string.Format("{0:N0}", @Model.AmountCash + @Model.AmountTransfer + @Model.AmountCard + @Model.AmountLoan + @Model.AmountOther + @Model.AmountRemainDebt + @Model.AmountTrade))</th>
+    </tr>
+</table>
+</div>               
+

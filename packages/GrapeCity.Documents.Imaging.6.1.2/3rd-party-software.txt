@@ -1,0 +1,15 @@
+This document lists third party software used in this product.
+
+----------------------------------------------------------------
+ImageSharp v2.1.2
+https://github.com/SixLabors/ImageSharp/tree/v2.1.2
+Apache License 2.0
+
+----------------------------------------------------------------
+ExCSS
+https://github.com/TylerBrinks/ExCSS
+MIT License
+
+----------------------------------------------------------------
+Unicode Data Files
+Unicode license http://www.unicode.org/copyright.html

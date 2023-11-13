@@ -1,0 +1,11 @@
+This document lists third party software used in this product.
+
+----------------------------------------------------------------
+Portable.BouncyCastle
+https://www.nuget.org/packages/Portable.BouncyCastle/
+MIT License
+
+----------------------------------------------------------------
+CMap Resources
+https://github.com/adobe-type-tools/cmap-resources
+BSD 3-Clause "New" or "Revised" License

@@ -1,0 +1,45 @@
+﻿@* //---------------------------------------------------------------------------
+   // 機能：伝票戻し（進行中）
+   // 作成者：arc nakayama
+   // 作成日：2017/03/09
+   // 更新日：2018/08/07 yano #3911 登録済車両の車両伝票ステータス修正について
+   //---------------------------------------------------------------------------
+*@
+@model List<CrmsDao.Get_CarSlipStatusChangeResult>
+
+<br />
+
+<table class="list">
+
+    <tr>
+        <th class="input-form-title" colspan="6">
+            <a><b>修正履歴</b></a>
+        </th>
+    </tr>
+     <tr>
+        @* Add 2018/08/07 yano #3911 *@
+        <th class="input-form-title" >伝票番号</th>
+        <th class="input-form-title" >元の伝票ステータス</th>
+        <th class="input-form-title" >修正依頼者</th>
+        <th class="input-form-title" >最終更新者</th>
+        <th class="input-form-title" >修正開始日</th>
+        <th class="input-form-title" ></th>
+    </tr>
+    @foreach (var a in Model){
+    
+    <tr>
+        <!--伝票番号-->
+        <td style="white-space:nowrap">@Html.Encode(a.SlipNumber)</td>
+        <!--伝票ステータス名-->
+        <td style="white-space:nowrap">@Html.Encode(a.SalesOrderStatusName)</td>@* Mod 2018/08/07 yano #3911 *@
+        <!--RequestUserName-->
+        <td style="white-space:nowrap">@Html.Encode(a.RequestUserName)</td>
+        <!--最終更新者-->
+        <td style="white-space:nowrap">@Html.Encode(a.EmployeeName)</td>
+        <!--修正日(CreateDate)-->
+        <td style="white-space:nowrap">@Html.Encode(a.CreateDate)</td>
+        <!--進行中に戻す-->
+        <td style="white-space:nowrap"><a href="javascript:void(0);" onclick="document.getElementById('RequestFlag').value = '5';getElementById('TargetSlipNumber').value = '@a.SlipNumber';document.getElementById('SalesOrderStatus').value = '@a.SalesOrderStatus';document.getElementById('StatusChangeCode').value = '@a.StatusChangeCode'; document.forms[0].submit();">進行中に戻す</a></td>
+    </tr>
+    }
+</table>

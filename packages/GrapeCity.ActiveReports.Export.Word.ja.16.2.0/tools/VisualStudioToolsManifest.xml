@@ -1,0 +1,6 @@
+<FileList>
+  <File Reference = "GrapeCity.ActiveReports.Export.Word.dll">
+    <ToolboxItems VSCategory="ActiveReports 16">
+    </ToolboxItems>
+  </File>
+</FileList>

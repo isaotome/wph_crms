@@ -1,0 +1,12 @@
+<FileList>
+  <File Reference = "GrapeCity.ActiveReports.Design.Win.dll">
+    <ToolboxItems VSCategory="ActiveReports 16">
+      <Item Type="GrapeCity.ActiveReports.Design.Designer" />
+      <Item Type="GrapeCity.ActiveReports.Design.GroupEditor.GroupEditor" />
+      <Item Type="GrapeCity.ActiveReports.Design.LayerList" />
+      <Item Type="GrapeCity.ActiveReports.Design.ReportExplorer.ReportExplorer" />
+      <Item Type="GrapeCity.ActiveReports.Design.ReportsLibrary.ReportsLibrary" />
+      <Item Type="GrapeCity.ActiveReports.Design.Toolbox.Toolbox" />
+    </ToolboxItems>
+  </File>
+</FileList>

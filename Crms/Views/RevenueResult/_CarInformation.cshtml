@@ -1,0 +1,44 @@
+﻿@* //---------------------------------------------
+   // 機能：車種情報部分ビュー
+   // 作成者：arc yano
+   // 作成日：2015/01/26
+   // 更新日：
+   //---------------------------------------------
+*@
+@model CrmsDao.SalesCar
+
+<table class="input-form" style ="width:50%">
+    <tr>
+        <th class="input-form-title" colspan="2">
+            車両情報
+        </th>
+    </tr>
+      <tr>
+        <th width="100px">
+            車種名
+        </th>
+        <td style="white-space:nowrap">
+            @* //Mod 2018/08/22 yano #3927 *@
+            @Html.Encode(((@Model != null) ? @Model.MakerName : "")  + " " + ((@Model != null) ? @Model.CarName : ""))
+            @*@Html.Encode(((@Model != null && @Model.CarGrade != null && @Model.CarGrade.Car != null &&  @Model.CarGrade.Car.Brand != null && @Model.CarGrade.Car.Brand.Maker != null) ? @Model.CarGrade.Car.Brand.Maker.MakerName : "")  + " " + ((@Model != null && @Model.CarGrade != null && @Model.CarGrade.Car != null) ? @Model.CarGrade.Car.CarName : ""))*@　
+        </td>
+    </tr>
+    <tr>
+        <th width="100px">
+            登録番号
+        </th>
+        <td style="white-space:nowrap">
+            @Html.Encode(@Model != null ? @Model.MorterViecleOfficialCode + " " + @Model.RegistrationNumberType + " " + @Model.RegistrationNumberKana + " " + @Model.RegistrationNumberPlate : "")　
+        </td>
+    </tr>
+    <tr>
+        <th width="100px">
+            車台番号
+        </th>
+        <td style="white-space:nowrap">
+            @Html.Encode(@Model != null ? @Model.Vin : "")　
+        </td>
+    </tr>
+</table>       
+
+

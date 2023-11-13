@@ -1,0 +1,52 @@
+﻿
+
+@* //---------------------------------------------
+   // 機能：入金履歴一覧部分ビュー
+   // 作成者：arc yano
+   // 作成日：2015/02/03
+   // 更新日：
+   //---------------------------------------------
+*@
+@model CrmsDao.PaginatedList<CrmsDao.V_ReceiptList>
+
+
+<br />
+@{ Html.RenderPartial("PagerControl", @Model.PageProperty); }
+@Html.Hidden("id", ViewData["HistoryId"] ?? "0", new { id = "historyid"})
+<br />
+<br />
+
+<table class="list">
+    <tr>
+        <th class="input-form-title" colspan="9">
+            入金履歴
+        </th>
+    </tr>
+    <tr>
+        <th style="white-space:nowrap">入金日</th>
+        <th style="white-space:nowrap">伝票番号</th>
+        <th style="white-space:nowrap">入金種別</th>
+        <th style="white-space:nowrap">科目</th>
+        <th style="white-space:nowrap">請求先コード</th>
+        <th style="white-space:nowrap">請求先</th>
+        <th style="white-space:nowrap">入金額</th>
+        <th style="white-space:nowrap">計上部門</th>
+        <th style="white-space:nowrap">備考</th>
+       
+    </tr>
+    @foreach (var receiptList in Model)
+    {
+    <tr>
+        <td style="white-space:nowrap">@Html.Encode(string.Format("{0:yyyy/MM/dd}", receiptList.JournalDate))</td>
+        <td style="white-space:nowrap">@Html.Encode(receiptList.SlipNumber)</td>
+        <td style="white-space:nowrap">@Html.Encode(receiptList.Name)</td>
+        <td style="white-space:nowrap">@Html.Encode(receiptList.AccountName)</td>
+        <td style="white-space:nowrap">@Html.Encode(receiptList.CustomerClaimCode)</td>
+        <td>@Html.Encode(receiptList.CustomerClaimName)</td>
+        <td style="white-space:nowrap; text-align:right;">@Html.Encode(string.Format("{0:N0}", receiptList.Amount))</td>
+        <td style="white-space:nowrap">@Html.Encode(receiptList.DepartmentName)</td>
+        <td>@Html.Encode(receiptList.Summary)</td>
+    </tr>
+    }
+</table>                            
+

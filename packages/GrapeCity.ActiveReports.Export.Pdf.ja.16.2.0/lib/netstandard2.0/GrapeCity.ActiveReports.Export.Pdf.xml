@@ -1,0 +1,1075 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>GrapeCity.ActiveReports.Export.Pdf</name>
+  </assembly>
+  <members>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Enums.DuplexMode">
+      <summary>プリンタの両面印刷モードを指定します。。両面オプションを選択する場合、選択したプリンターが両面印刷に対応している必要があります。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.DuplexMode.Simplex">
+      <summary>用紙の片面に印刷します。これはデフォルトの値です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.DuplexMode.DuplexFlipLongEdge">
+      <summary>用紙の両面（長辺とじ）に印刷します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.DuplexMode.DuplexFlipShortEdge">
+      <summary>用紙の両面（短辺とじ）に印刷します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Enums.ImageInterpolation">
+      <summary>画像の補間値です。 PDFへのエクスポート時に画像補間を有効・無効にします。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.ImageInterpolation.None">
+      <summary>補間を無効にします。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.ImageInterpolation.Auto">
+      <summary>補間を有効にします。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Enums.NumberOfCopies">
+      <summary>印刷する部数を指定します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.NumberOfCopies.Default">
+      <summary>1部印刷します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.NumberOfCopies.Two">
+      <summary>2部を印刷します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.NumberOfCopies.Three">
+      <summary>3部を印刷します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.NumberOfCopies.Four">
+      <summary>4部を印刷します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.NumberOfCopies.Five">
+      <summary>5部を印刷します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Enums.PageScaling">
+      <summary>印刷可能領域の拡大/縮小を指定します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.PageScaling.Default">
+      <summary>アプリケーションのデフォルト設定を使用します。印刷可能領域に合わせて縮小されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.PageScaling.None">
+      <summary>印刷可能領域に合わせて自動的に縮小されません。このオプションは、工学的書類または法的な書類の場合、特に便利です。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.PrintPresets">
+      <summary>PDF印刷プリセットを指定します</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.PrintPresets.#ctor">
+      <summary>クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.PrintPresets.ToString">
+      <summary>このインスタンスを表すを返します。</summary>
+      <returns>このインスタンスを表すを返します。</returns>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.PrintPresets.DuplexMode">
+      <summary>プリンタの両面印刷モードを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.PrintPresets.NumberOfCopies">
+      <summary>印刷する部数を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.PrintPresets.PageScaling">
+      <summary>印刷可能領域の拡大/縮小を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.PrintPresets.PaperSourceByPageSize">
+      <summary>ページサイズのフラグに基づいて出力トレイを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.PrintPresets.PrintPageRange">
+      <summary>印刷ページの範囲を取得または設定します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Page.DisplayMode">
+      <summary>
+        <para>プロパティの各値を指定します。</para>
+      </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.DisplayMode.None">
+      <summary>ドキュメントの要素またはサムネールのいずれも表示されません。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.DisplayMode.Outlines">
+      <summary>ドキュメントの要素を表示するように設定します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.DisplayMode.Thumbs">
+      <summary>サムネールを表示するように設定します。サムネイルとアウトラインフラグが設定されている場合、サムネイルが表示されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.DisplayMode.FullScreen">
+      <summary>フルスクリーンで表示するように設定します。ユーザーによって開かれるまで、メニューバー、ブックマークまたは他のウインドウコントロールは表示されません。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions">
+      <summary>PDFドキュメントで利用可能な許可属性を指定します。これらの値はビットごとのOR演算を使用してビット フィールドを組み合わせることができます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions.Default">
+      <summary>デフォルトの許可を指定します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions.None">
+      <summary>他の許可のいずれも設定されていないことを指定します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions.AllowPrint">
+      <summary>「印刷」を許可します。「Revision2」を指定した場合に有効となります。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions.AllowModifyContents">
+      <summary>「文書の変更」と「テキスト注釈の作成または変更」を許可します。「Revision2」を指定した場合に有効となります。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions.AllowCopy">
+      <summary>
+        <para>「テキストやグラフィックのコピーまたは抽出」を許可します。「Revision2」を指定した場合に有効となります。</para>
+      </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions.AllowModifyAnnotations">
+      <summary>「注釈とフォームフィールドの作成」と「フォームフィールドの入力または署名」を許可します。「Revision2」、「Revision3」のいずれかを指定します。「Revision3」を指定した場合、コピー・ペーストする機能は、ビット10で指定されているもの以外に制限されています。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions.AllowFillIn">
+      <summary>「フォームフィールドの入力または署名」を許可します。「Revision3」を指定した場合にのみ有効となります。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions.AllowAccessibleReaders">
+      <summary>「アクセシビリティを有効にする」を許可します。ユーザーによって、アクセシビリティまたは画面読み込みのため、文書のテキストやグラフィックを抽出ことを許可します。「Revision3」を指定した場合にのみ有効となります。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions.AllowAssembly">
+      <summary>「文書アセンブリ」を許可します。AllowModifyContentsが指定されてない場合も、ページの挿入、削除、または回転、およびブックマークとサムネールの作成などのような操作を許容する。「Revision3」を指定した場合にのみ有効となります。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion">
+      <summary>PDF準拠レベルを出力します。PDF/Aへのエクスポートを許可します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.Pdf12">
+      <summary>PDF 1.2版。 これは、Acrobat3.0のネイティブファイル形式です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.Pdf13">
+      <summary>PDF 1.3版。 これは、Acrobat3.0のネイティブファイル形式です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.Pdf14">
+      <summary>PDF 1.4版。 これは、Acrobat3.0のネイティブファイル形式です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.Pdf15">
+      <summary>PDF 1.5版。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.Pdf16">
+      <summary>PDF 1.6版。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.Pdf17">
+      <summary>PDF 1.7版。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.PDFA1b">
+      <summary>PDF/A-1bレベル。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.PDFA1a">
+      <summary>PDF/A-1aレベル。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.PDFA2b">
+      <summary>PDF/A-2bレベル。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.PDFA2u">
+      <summary>PDF/A-2uレベル。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.PDFA2a">
+      <summary>PDF/A-2aレベル。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.PDFA3b">
+      <summary>PDF/A-3bレベル。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.PDFA3u">
+      <summary>PDF/A-3uレベル。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.PDFA3a">
+      <summary>PDF/A-3aレベル。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.PDFUA1">
+      <summary>PDFUA1レベル。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Page.PdfRenderingExtension">
+      <summary>PDFレポートの作成に使用されるIRenderingExtensionの実装方法を表します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Page.Settings">
+      <summary>PDF描画拡張機能用の設定です。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.PdfRenderingExtension.GetSupportedSettings">
+      <summary>現在のPdfRenderingExtensionインスタンスの設定を返します。</summary>
+      <returns>PdfRenderingExtensionのSystem.Collections.Specialized.NameValueCollection。</returns>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.PdfRenderingExtension.GetSupportedSettings(System.Boolean)">
+      <summary>現在のPdfRenderingExtensionインスタンスの設定を返します</summary>
+      <returns>PdfRenderingExtensionのSystem.Collections.Specialized.NameValueCollection。</returns>
+      <param name="fpl">PDF描画の設定を返す。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.#ctor">
+      <summary>Settingsクラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.ApplySettings(System.Collections.Specialized.NameValueCollection)">
+      <summary>NameValueCollectionの設定で渡された任意の設定を適用します。</summary>
+      <param name="settings">描画拡張機能のための設定。</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.Application">
+      <summary>PDFビューワアプリケーションの［文書のプロパティ］ダイアログの［アプリケーション］フィールドに表示する値を返します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.Author">
+      <summary>ドキュメントの作成者名を設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.CenterWindow">
+      <summary>Trueに設定すると、ドキュメントは画面の中央に表示されます。デフォルト値はfalseです。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.DisplayMode">
+      <summary>開いたときにどのようにドキュメントを表示すべきかを指定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.DisplayTitle">
+      <summary>Trueに設定すると、ドキュメントのタイトルが設定されている場合に、ウィンドウのタイトルバーにそのタイトルが表示されます。Falseに設定すると、PDFファイル名が表示されます。デフォルト値はfalseです。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.DocumentToAddAfterReport">
+      <summary>出力の最後に挿入するPDFドキュメントへのパスを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.DocumentToAddBeforeReport">
+      <summary>出力の最初に挿入するPDFドキュメントへのパスを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.DpiX">
+      <summary>出力デバイスの水平解像度を取得します。デフォルト値は300です。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.DpiY">
+      <summary>出力デバイスの垂直解像度を取得します。デフォルト値は300です。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.Encrypt">
+      <summary>ドキュメントが暗号化されるかどうかを決定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.EndPage">
+      <summary>描画するレポートの最後のページです。デフォルト値はStartPageの値です。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.FallbackFonts">
+      <summary>元のフォントからグリフを検索するため、フォントファミリ名のカンマ区切りの文字列を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.FitWindow">
+      <summary>Trueに設定すると、ドキュメントのウィンドウ（ビューワの内部ウィンドウ）は必ず初期設定のサイズで表示されます。デフォルト値はFalseです。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.HideMenubar">
+      <summary>Trueに設定すると、ドキュメントを表示するビューワアプリケーションのメニューバーを非表示にします。デフォルト値はFalseです。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.HideToolbar">
+      <summary>Trueに設定すると、ドキュメントを表示するビューワアプリケーションのツールバーを非表示にします。デフォルト値はFalseです。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.HideWindowUI">
+      <summary>Trueに設定すると、ドキュメントウィンドウのユーザーインタフェース要素（たとえばスクロールバーやナビゲーションコントロール）を非表示にします。つまりドキュメントの内容のみを表示します。デフォルト値はFalseです。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.ImageInterpolation">
+      <summary>画像の補間値です。 PDFへのエクスポート時に画像補間を有効・無効にします。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.Keywords">
+      <summary>ドキュメントに関連したキーワードを設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.MarginBottom">
+      <summary>レポートの下余白の値をインチ単位で取得または設定します。 整数または小数の値の最後に「in」（たとえば、1in）を 含める必要があります。レポートの元の設定を上書きします。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.MarginLeft">
+      <summary>レポートの左余白の値をインチ単位で取得または設定します。 整数または小数の値の最後に「in」（たとえば、1in）を 含める必要があります。レポートの元の設定を上書きします。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.MarginRight">
+      <summary>レポートの右余白の値をインチ単位で取得または設定します。 整数または小数の値の最後に「in」（たとえば、1in）を 含める必要があります。レポートの元の設定を上書きします。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.MarginTop">
+      <summary>レポートの上余白の値をインチ単位で取得または設定します。 整数または小数の値の最後に「in」（たとえば、1in）を 含める必要があります。レポートの元の設定を上書きします。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.NeverEmbedFonts">
+      <summary>PDFドキュメントに埋め込めないフォントファミリのセミコロン区切りの文字列形式を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.OwnerPassword">
+      <summary>リーダーに入力するオーナーパスワードを設定します。これは指定されたユーザー許可にかかわらずドキュメントへのフルアクセスを許可します。オーナーパスワードを設定しない場合、セキュリティ設定を変更できません。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.PageHeight">
+      <summary>レポートのページの高さをインチ単位で取得または設定します。 整数または小数の値の最後に「in」（たとえば、1in）を 含める必要があります。レポートの元の設定を上書きします。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.PageWidth">
+      <summary>レポートのページの幅をインチ単位で取得または設定します。 整数または小数の値の最後に「in」（たとえば、1in）を 含める必要があります。レポートの元の設定を上書きします。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.Permissions">
+      <summary>ドキュメントのためのユーザー許可を指定します。PdfPermissionsの値は、ビットごとのOR演算を使用してビットフィールドを組み合わせることができます</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.PrintLayoutMode">
+      <summary>PDFドキュメント用のレイアウトモードを指定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.PrintOnOpen">
+      <summary>ドキュメントが開いた後、印刷するかどうかを示す値を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.PrintPresets">
+      <summary>PDF印刷プリセットのダイアログを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureCertificateFileName">
+      <summary>署名する証明書のファイル名を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureCertificatePassword">
+      <summary>署名する証明書のパースワードを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureCertificationLevel">
+      <summary>署名する証明書のタイプを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureContact">
+      <summary>署名者の連絡先を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureDistinguishedNameVisible">
+      <summary>証明書の識別名の表示を取得または設定します。trueを設定すると、値が書き込まれます。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureDistinguishedShowLabel">
+      <summary>証明書の識別名のラベルが表示されるかどうかを示す値を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureLocation">
+      <summary>署名場所を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureNameShowLabel">
+      <summary>証明書の名前のラベルが表示されるかどうかを示す値を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureNameVisible">
+      <summary>証明書の名前の表示を示す値を取得または設定します。trueの場合、値が書き込まれます。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureReason">
+      <summary>署名理由を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureSignDate">
+      <summary>署名日時を取得または設定します。デフォルト値は、DateTime.Nowです。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureStampBounds">
+      <summary>署名を表示する領域（署名エリア）を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureStampCustomText">
+      <summary>署名で描画するカスタムテキストを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureStampImageAlignment">
+      <summary>署名エリア内の画像に対する配置を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureStampImageFileName">
+      <summary>署名上に表示される画像の場所を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureStampImageRectangle">
+      <summary>画像が配置されるエリアを取得または設定します。デフォルトで、署名エリアの全領域が使用されます。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureStampPageIndex">
+      <summary>署名を配置するページのインデックスを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureStampTextAlignment">
+      <summary>署名エリアのテキストを左揃え、右揃えあるいは中央揃えで配置するかどうかを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureStampTextColor">
+      <summary>署名テキストの色をを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureStampTextRectangle">
+      <summary>テキストが配置されるエリアを取得または設定します。デフォルトで、署名エリアの全領域が使用されます。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureTimeStamp">
+      <summary>署名のタイムスタンプ情報（タイムスタンプサーバー場所、ログインユーザー名、パスワード）を取得します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureVisibilityType">
+      <summary>署名のタイプを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SizeToFit">
+      <summary>PDFページは選択されている用紙のサイズに合わせるかどうかを決定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.StartPage">
+      <summary>描画するレポートの最初のページです。値が0の場合は、すべてのページが描画されることを示します。 デフォルト値は1です。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.Subject">
+      <summary>ドキュメントのサブタイトルを設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.Title">
+      <summary>ドキュメントのタイトルを設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.Use128Bit">
+      <summary>Trueに設定すると、高水準の128ビットRC4暗号方式を使用します。Falseに設定すると、低水準の40ビットRC4暗号方式を使用します。 PdfPermissions列挙体の<see cref="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions.AllowFillIn">AllowFillIn</see>、<see cref="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions.AllowAccessibleReaders">AllowAccessibleReaders</see>および<see cref="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions.AllowAssembly">AllowAssembly</see>許可は、このプロパティ値がtrueに設定されている必要があります。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.UserPassword">
+      <summary>リーダーに入力するユーザーパスワードを設定します。このプロパティ値が空白の場合、ドキュメントを開いたときにパスワードを入力するダイアログは表示されません。しかし、ユーザーが指定した権限によって制限されます。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.Version">
+      <summary>出力するPDF版を設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.WatermarkAngle">
+      <summary>PDFドキュメントのウォーターマーク（透かし）角度を指定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.WatermarkColor">
+      <summary>PDFドキュメントのウォーターマーク（透かし）色を指定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.WatermarkTitle">
+      <summary>PDFドキュメントのウォーターマーク（透かし）タイトルを指定します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.DisplayMode">
+      <summary>DisplayModeプロパティの各値です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.DisplayMode.None">
+      <summary>DisplayModeのデフォールト値です。表示状態に関して何も設定しません。ユーザーによって開かれるまで、ブックマークは表示されません。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.DisplayMode.Outlines">
+      <summary>ブックマークを別ウィンドウで表示するように設定します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.DisplayMode.Thumbs">
+      <summary>サムネールを開いた状態で表示するように設定します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.DisplayMode.FullScreen">
+      <summary>フルスクリーンで表示するように設定します。ユーザーによって開かれるまで、ブックマークは表示されません。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.ImageQuality">
+      <summary>ImageQualityプロパティの値です。PDFエクスポート時の、メタファイルの品質を指定します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.ImageQuality.Lowest">
+      <summary>Windowsメタファイルを低品質でエクスポートします。（スペースを節約するために使用）</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.ImageQuality.Medium">
+      <summary>Windowsメタファイルを中程度の品質でエクスポートします。（通常の画面表示に使用）</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.ImageQuality.Highest">
+      <summary>Windowsメタファイルを高品質でエクスポートします。（印刷に最適です。）</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions">
+      <summary>PDFドキュメントで利用可能な許可属性を指定します。これらの値はビットごとのOR演算を使用してビット フィールドを組み合わせることができます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions.None">
+      <summary>読み込みはできますが、すべての属性を許可しません。値は０です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions.AllowPrint">
+      <summary>「印刷」をすべて許可します。値は4です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions.AllowModifyContents">
+      <summary>「文書の変更」と「文書アセンブリ」を許可します。値は8です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions.AllowCopy">
+      <summary>「内容のコピーまたは抽出」を許可します。値は16です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions.AllowModifyAnnotations">
+      <summary>「注釈とフォームフィールドの作成」と「フォームフィールドの入力または署名」を許可します。値は32です。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions.AllowFillIn">
+      <summary>「フォームフィールドの入力または署名」を許可します。値は256です。PdfSecurity.Use128BitプロパティをTrueに設定しておく必要があります。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions.AllowAccessibleReaders">
+      <summary>「アクセシビリティを有効にする」を許可します。値は512です。ユーザーによって、ハンドヘルドコンピュータ、スクリーンリーダーなどの様々なデバイスでPDFファイルを開くことを許可します。PdfSecurity.Use128BitプロパティをTrueに設定しておく必要があります。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions.AllowAssembly">
+      <summary>「文書アセンブリ」を許可します。AllowModifyContentsが指定されてない場合も、ページの挿入、削除、または回転、およびブックマークとサムネールの作成を許容する。値は1024です。PdfSecurity.Use128BitプロパティをTrueに設定しておく必要があります。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion">
+      <summary>PDFドキュメントのファイルフォーマットバージョンを示します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.Pdf11">
+      <summary>PDFバージョン1.1。ビューワのバージョンが古い場合に使用します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.Pdf12">
+      <summary>PDFバージョン1.2。これはAcrobat 3.0のネイティブファイルフォーマットです。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.Pdf13">
+      <summary>PDFバージョン1.3。これはAcrobat 4.0のネイティブファイルフォーマットです。DBCS（２バイトコード）文字を出力する場合は、必ずこの形式以降を指定してください。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.Pdf14">
+      <summary>PDFバージョン1.4。これはAcrobat 5.0のネイティブファイルフォーマットです。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.Pdf15">
+      <summary>PDFバージョン1.5。これはAcrobat 6.0のネイティブファイルフォーマットです。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.Pdf16">
+      <summary>PDFバージョン1.6。これはAcrobat 7.0のネイティブファイルフォーマットです。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.Pdf17">
+      <summary>PDFバージョン1.7。これはAcrobat 8.0のネイティブファイルフォーマットです。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.PDFA1b">
+      <summary>PDF/A-1bレベル。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.PDFA1a">
+      <summary>PDF/A-1aレベル。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.PDFA2b">
+      <summary>PDF/A-2bレベル。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.PDFA2u">
+      <summary>PDF/A-2uレベル。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.PDFA2a">
+      <summary>PDF/A-2aレベル。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.PDFA3b">
+      <summary>PDF/A-3bレベル。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.PDFA3u">
+      <summary>PDF/A-3uレベル。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.PDFA3a">
+      <summary>PDF/A-3aレベル。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.PDFUA1">
+      <summary>PDFUA1レベル。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions">
+      <summary>出力するPDFドキュメントの属性情報とビューワの表示形態をカプセル化します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport">
+      <summary>ActiveReportsドキュメントからPDFドキュメントを作成するための機能を提供します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExportException">
+      <summary>致命的でないPdfExport固有のアプリケーションエラーが発生したときにスローされる例外です。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity">
+      <summary>PDFドキュメントのセキュリティと暗号化を提供するのに必要な情報をカプセル化します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSigningException">
+      <summary>PDF署名に関する致命的ではないアプリケーションエラーが発生した場合の例外を表します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.Application">
+      <summary>PDFリーダーの［文書のプロパティ］ダイアログの［概要］ダブの［アプリケーション］フィールドに表示する値を返します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.Author">
+      <summary>ドキュメントの作成者名を設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.CenterWindow">
+      <summary>Trueに設定すると、ドキュメントは画面の中央に表示されます。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.DisplayMode">
+      <summary>開いたときにどのようにドキュメントを表示すべきかを指定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.DisplayTitle">
+      <summary>Trueに設定すると、ドキュメントのタイトルが設定されている場合に、ウィンドウのタイトルバーにそのタイトルが表示されます。Falseに設定すると、PDFファイル名が表示されます。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.FitWindow">
+      <summary>Trueに設定すると、ドキュメントのウィンドウ（ビューワの内部ウィンドウ）は必ず初期設定のサイズで表示されます。デフォルト値はFalseです。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.HideMenubar">
+      <summary>Trueに設定すると、ドキュメントを表示するビューワアプリケーションのメニューバーを非表示にします。デフォルト値はFalseです。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.HideToolbar">
+      <summary>Trueに設定すると、ドキュメントを表示するビューワアプリケーションのツールバーを非表示にします。デフォルト値はFalseです。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.Keywords">
+      <summary>ドキュメントに関連したキーワードを設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.OnlyForPrint">
+      <summary>PDFは印刷用のみであるかどうかを示す。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.Subject">
+      <summary>ドキュメントのサブタイトルを設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.Title">
+      <summary>ドキュメントのタイトルを設定します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.String)">
+      <summary>指定したドキュメントをPDFファイルにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="filePath">PDFファイルを保存するファイル名とパス。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.String,System.String)">
+      <summary>指定したドキュメントをPDFファイルにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="filePath">PDFファイルを保存するファイル名とパス。</param>
+      <param name="pageRange">エクスポートするページを、カンマで区切って指定するか、2-8のように開始ページと終了ページを指定します。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.IO.Stream)">
+      <summary>指定したドキュメントをPDFストリームにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="stream">PDFドキュメントを保存するSystem.IO.Stream。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.IO.Stream,System.String)">
+      <summary>指定したドキュメントをPDFストリームにエクスポートします。</summary>
+      <param name="document">エクスポートするActiveReportsのDocumentオブジェクト。</param>
+      <param name="stream">PDFドキュメントを保存するSystem.IO.Stream。</param>
+      <param name="pageRange">エクスポートするページを、カンマで区切って指定するか、2-8のように開始ページと終了ページを指定します。</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.ConvertMetaToPng">
+      <summary>エクスポートされたPDFドキュメント内でWindowsメタファイルをPNGファイルに変換するかどうかを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.ExportBookmarks">
+      <summary>ブックマークをPDFドキュメントにエクスポートするかどうかを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.FontFallback">
+      <summary>
+        <para>コントロールに指定したフォントにおいて出力対象の字体（グリフ）が見つからない場合、検索するフォント名を示すカンマ区切りの文字列を設定または参照します。（Professionalのみ）</para>
+      </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.ImageInterpolation">
+      <summary>画像の補間値を指定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.ImageQuality">
+      <summary>画像ファイルをエクスポートする際の画像の品質を指定します。<br></br>レポートでJPG画像が使用されている場合、それは変換されずにPDFファイルに直接書き込まれることに注意してください。他の画像形式は、変換され、本値に影響を与える可能性があります。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.ImageResolution">
+      <summary>メタファイルを、Pictureコントロールの画像として設定するか、もしくはPage.DrawPictureを使用して設定する場合に、PDFにエクスポートするメタファイルの画像の解像度を設定または取得します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.NeverEmbedFonts">
+      <summary>PDFドキュメントに埋め込む必要のないフォントを示す、一連の値のセミコロン区切りの文字列を取得または設定します。"*"を指定すると、レポート内で使用している全てのフォントを非埋め込みに設定できます。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Options">
+      <summary>エクスポートしたPDFドキュメントをビューワで表示したときの状態やドキュメント情報のオプション指定が行えるオブジェクトを返します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Pagination">
+      <summary>エクスポートされたPDFドキュメントページネーションを使用するかどうかを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.PrintPresets">
+      <summary>PDF印刷プリセットを取得します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Security">
+      <summary>ドキュメントの暗号化とセキュリティを初期化するために PdfSecurity オブジェクトを返します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Signature">
+      <summary>電子証明書を表すPdfSignature オブジェクトを取得します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Version">
+      <summary>エクスポートするドキュメントが保存されるPDFフォーマットのバージョンを取得または設定します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExportException.#ctor(System.String)">
+      <summary>エラー メッセージを指定して、PdfExportExceptionクラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因を説明するエラーメッセージ。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExportException.#ctor(System.String,System.Exception)">
+      <summary>エラーメッセージ、およびこの例外の原因である内部例外への参照を指定して、PdfExportExceptionクラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因を説明するエラーメッセージ。</param>
+      <param name="innerException">
+        <span style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; DISPLAY: inline !important; FONT: 13px arial, sans-serif; WHITE-SPACE: normal; FLOAT: none; LETTER-SPACING: normal; COLOR: rgb(34,34,34); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">現在の例外の原因であるExce</span>
+        <wbr style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 13px arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(34,34,34); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"></wbr>
+        <span style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; DISPLAY: inline !important; FONT: 13px arial, sans-serif; WHITE-SPACE: normal; FLOAT: none; LETTER-SPACING: normal; COLOR: rgb(34,34,34); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">ptionインスタンス。inn</span>
+        <wbr style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 13px arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(34,34,34); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"></wbr>
+        <span style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; DISPLAY: inline !important; FONT: 13px arial, sans-serif; WHITE-SPACE: normal; FLOAT: none; LETTER-SPACING: normal; COLOR: rgb(34,34,34); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">erExceptionパラメー</span>
+        <wbr style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 13px arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(34,34,34); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"></wbr>
+        <span style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; DISPLAY: inline !important; FONT: 13px arial, sans-serif; WHITE-SPACE: normal; FLOAT: none; LETTER-SPACING: normal; COLOR: rgb(34,34,34); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">ターがnull参照(Visua</span>
+        <wbr style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 13px arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(34,34,34); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"></wbr>
+        <span style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; DISPLAY: inline !important; FONT: 13px arial, sans-serif; WHITE-SPACE: normal; FLOAT: none; LETTER-SPACING: normal; COLOR: rgb(34,34,34); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">l Basicの場合はNothin</span>
+        <wbr style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 13px arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(34,34,34); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"></wbr>
+        <span style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; DISPLAY: inline !important; FONT: 13px arial, sans-serif; WHITE-SPACE: normal; FLOAT: none; LETTER-SPACING: normal; COLOR: rgb(34,34,34); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">g)でない場合、現在の例外は、</span>
+        <wbr style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 13px arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(34,34,34); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"></wbr>
+        <span style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; DISPLAY: inline !important; FONT: 13px arial, sans-serif; WHITE-SPACE: normal; FLOAT: none; LETTER-SPACING: normal; COLOR: rgb(34,34,34); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">内部の例外を処理するcatch</span>
+        <wbr style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 13px arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(34,34,34); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"></wbr>
+        <span style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; DISPLAY: inline !important; FONT: 13px arial, sans-serif; WHITE-SPACE: normal; FLOAT: none; LETTER-SPACING: normal; COLOR: rgb(34,34,34); WORD-SPACING: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">ブロック発生します。</span>
+      </param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity.Encrypt">
+      <summary>ドキュメントが暗号化されるかどうかを決定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity.OwnerPassword">
+      <summary>リーダーに入力するオーナーパスワードを設定します。これは指定されたユーザー許可にかかわらずドキュメントへのフルアクセスを許可します。オーナーパスワードを設定しない場合、セキュリティ設定を変更できません。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity.Permissions">
+      <summary>ドキュメントのためのユーザー許可を指定します。PdfPermissions の値は、ビットごとのOR演算を使用してビット フィールドを組み合わせることができます。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity.Use128Bit">
+      <summary>
+        <para>Trueに設定すると、高水準の128ビットRC4暗号方式を使用します。この方式はAcrobat 5.0以上と互換性があります。Falseに設定すると、低水準の40ビットRC4暗号方式を使用します。この方式は、Acrobat 3.0およびAcrobat 4.0と互換性があります。PdfPermissions列挙体のAllowFillIn、AllowAccessibleReadersおよびAllowAssembly許可は、このプロパティ値がTrueに設定されている必要があります。</para>
+      </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity.UserPassword">
+      <summary>リーダーに入力するユーザーパスワードを設定します。このプロパティ値が空白の場合、ドキュメントを開いたときにパスワードを入力するダイアログは表示されません。それ以外の場合、ユーザーはドキュメントを開いたときにパスワードを入力する必要があります。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSigningException.#ctor(System.String)">
+      <summary>エラーメッセージを指定して、PdfSigningException クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因を説明するエラーメッセージ。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSigningException.#ctor(System.String,System.Exception)">
+      <summary>エラーメッセージ、およびこの例外の原因である内部例外の参照を指定して、PdfSigningException クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因を説明するエラーメッセージ。</param>
+      <param name="innerException">現在の例外の原因であるExceptionインスタンス。innerExceptionパラメーターがnull参照(Visual Basicの場合はNothing)でない場合、現在の例外は、内部の例外を処理するcatchブロックで発生します。</param>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.Alignment">
+      <summary>テキストあるいは画像の配置方法を設定します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.Alignment.Right">
+      <summary>署名スタンプ領域の右端に配置します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.Alignment.Left">
+      <summary>署名スタンプ領域の左端に配置します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.Alignment.Center">
+      <summary>署名スタンプ領域の中央に配置します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.CertificationLevel">
+      <summary>Adobe Acrobatの［証明済み文書として保存］で指定できる、「証明後に許可する操作」を指定します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.CertificationLevel.NotCertified">
+      <summary>文書は、許可する操作が指定されません。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.CertificationLevel.NoChangesAllowed">
+      <summary>文書は「変更を許可しない」で証明されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.CertificationLevel.FormFilling">
+      <summary>文書は「フォームフィールドの入力のみを許可」で証明されます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.CertificationLevel.FormFillingAnnotations">
+      <summary>文書は「「注釈の作成、フォームフィールドの入力のみを許可」で証明されます。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.VisibilityType">
+      <summary>PDF文書内で証明を表示するかどうか、表示方法を指定する値を設定します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.VisibilityType.Invisible">
+      <summary>不可視署名：ページ上でデータが表示されませんが、それはリーダの「署名」タブからアクセス可能になります。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.VisibilityType.Text">
+      <summary>テキストのみを表示します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.VisibilityType.Image">
+      <summary>グラフィックのみを表示します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.VisibilityType.ImageText">
+      <summary>テキストとグラフィックの両方を表示します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature">
+      <summary>PDFへ電子署名および証明を設定するのに必要な情報をカプセル化します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp">
+      <summary>PDF文書に電子署名および証明書を付加するのに必要な情報をカプセル化します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField`1">
+      <summary>PDF文書の電子署名フィールドを定義するのに必要な情報をカプセル化します。</summary>
+      <typeparam name="T">generic型。</typeparam>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.TimeStamp">
+      <summary>電子署名にタイムスタンプを含めるために、タイムスタンプ局（TSA:Time Stamping Authority）から受け取る必要な情報をカプセル化します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.Clone">
+      <summary>現在の署名をクローンします。</summary>
+      <returns>現在の署名のコピーを返します。</returns>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.Certificate">
+      <summary>署名で使用するX.509証明書を取得します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.CertificationLevel">
+      <summary>Adobe Acrobatの「証明済み文書として保存」で許可されている操作の列挙値を設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.Contact">
+      <summary>署名者の連絡先情報を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.DistinguishedName">
+      <summary>署名で表示する名前を取得します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.Location">
+      <summary>署名地に関する情報を取得または設定します。例：都道府県名</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.Name">
+      <summary>署名フィールドに表示する名前を取得します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.Reason">
+      <summary>文書に電子署名を付加する理由を追加します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.SignDate">
+      <summary>文書に電子署名が付加された日付を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.Stamp">
+      <summary>署名で使用されたPdfStampオブジェクトを取得します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.TimeStamp">
+      <summary>署名で使用されたTimeStampオブジェクトを取得します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.VisibilityType">
+      <summary>文書で電子証明書を表示するかどうか、表示方法を示す列挙値を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp.Bounds">
+      <summary>証明書を描画する領域を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp.CustomText">
+      <summary>署名に文字列を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp.Font">
+      <summary>署名テキストで使用するフォントを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp.Image">
+      <summary>署名で使用するSystem.Drawing.Imageファイルを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp.ImageAlignment">
+      <summary>署名内の画像の配置を決定するAlignment列挙値を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp.ImageRectangle">
+      <summary>署名内の画像の位置を決定するRectangleF値を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp.PageIndex">
+      <summary>署名を表示するページのインデックスを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp.TextAlignment">
+      <summary>署名内のテキストの配置を決定するAlignment列挙値を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp.TextColor">
+      <summary>署名で使用するテキストの色を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp.TextRectangle">
+      <summary>署名内のテキストの位置を決定するRectangleF値を取得または設定します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField`1.#ctor(`0)">
+      <summary>generic型のSignatureFieldクラスの新しいインスタンスを初期化します。</summary>
+      <param name="value">generic型。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField`1.#ctor(`0,System.Boolean)">
+      <summary>generic型のSignatureField クラスの新しいインスタンスを初期化します。</summary>
+      <param name="value">generic型。</param>
+      <param name="visible">署名を表示するかどうかを指定するブール値。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField`1.#ctor(`0,System.Boolean,System.Boolean)">
+      <summary>generic型のSignatureField クラスの新しいインスタンスを初期化します。</summary>
+      <param name="value">generic型。</param>
+      <param name="visible">署名を表示するかどうかを指定するブール値。</param>
+      <param name="showLabel">署名フィールドにラベルを付けるかどうかを指定するブール値。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField`1.CreateEmpty">
+      <summary>空のgeneric型の署名フィールドを作成します。</summary>
+      <returns>空フィールドを作成する。</returns>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField`1.ToString">
+      <summary>現在のインスタンスの値を文字列表記に変換します。</summary>
+      <returns>Value.ToString()。</returns>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField`1.op_Implicit(`0)~GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField{`0}">
+      <summary>generic型を変換します。</summary>
+      <returns>変換した値。</returns>
+      <param name="value">変換するgeneric型。</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField`1.ShowLabel">
+      <summary>署名フィールドにラベルを付けるかどうかを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField`1.Value">
+      <summary>コンストラクタからgeneric型を取得します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField`1.Visible">
+      <summary>署名フィールドを表示するかどうかを指定する値を取得または設定します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.TimeStamp.#ctor(System.String,System.String,System.String)">
+      <summary>サーバー文字列、ユーザー名とパスワードを指定し、TimeStampクラスの新しいインスタンスを初期化します。</summary>
+      <param name="server">タイムスタンプ局（TSA:Time Stamping Authority）サーバーの場所を指定する文字列。</param>
+      <param name="user">TSAサーバーに渡すユーザー名。タイムスタンプサービスを使用するには、TSAにアカウントがある必要があります。</param>
+      <param name="password">TSAサーバーに渡すパスワード。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.TimeStamp.#ctor(System.Uri,System.String,System.String)">
+      <summary>URI、ユーザー名とパスワードを指定し、TimeStampクラスの新しいインスタンスを初期化します。</summary>
+      <param name="serverUrl">タイムスタンプ局（TSA）サーバーの場所を指定するリソース識別子。</param>
+      <param name="user">TSAサーバーに渡すユーザー名。タイムスタンプサービスを使用するには、TSAにアカウントがある必要があります。</param>
+      <param name="password">TSAサーバーに渡すパスワード。</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.TimeStamp.Password">
+      <summary>タイムスタンプ局（TSA）サーバーに渡すパスワード。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.TimeStamp.ServerUrl">
+      <summary>タイムスタンプを提供するタイムスタンプ局（TSA）の場所を指定するリソース識別子を取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.TimeStamp.UserName">
+      <summary>タイムスタンプ局（TSA）サーバーに渡すユーザーID。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.FontFactorySectionHandler">
+      <summary>FontFolders構成セクションの <see cref="T:System.Configuration.IConfigurationSectionHandler"></see>。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.FontFactorySectionHandler.ReadFolderPath(System.Xml.XmlNode)">
+      <summary>XMLノードからフォルダパスを読み込みます。</summary>
+      <param name="node">XMLノード。</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.ShowBookmarks">
+      <summary>Acrobatビューワでナビゲーションペインを表示するかどうかを示す値を取得または設定します。</summary>
+      <remarks>このプロパティは、<see cref="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Options"></see>プロパティによって廃止されました。</remarks>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExportException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+        <see cref="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExportException"></see>　クラスの新しいインスタンスを初期化します。</summary>
+      <param name="info"></param>
+      <param name="context"></param>
+      <remarks>このコンストラクタはシリアル化をサポートします。</remarks>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSigningException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+        <see cref="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExportException"></see> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="info"></param>
+      <param name="context"></param>
+      <remarks>このコンストラクタはシリアル化をサポートします。</remarks>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Page.ILinkProvider">
+      <summary>ドリル スルーリンクを定義します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.ILinkProvider.BookmarkLink(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IAction,System.Collections.Specialized.NameValueCollection)">
+      <summary>
+        <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IAction"></see>に基づいたブックマークのリンクを返します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.ILinkProvider.DrillthroughLink(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IAction,System.Collections.Specialized.NameValueCollection)">
+      <summary>
+        <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IAction"></see>に基づいたドリルスルーのリンクを返します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.ILinkProvider.Hyperlink(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IAction,System.Collections.Specialized.NameValueCollection)">
+      <summary>
+        <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IAction"></see>に基づいたハイパーリンクを返します。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.PdfRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection)">
+      <summary>
+        <see cref="M:GrapeCity.ActiveReports.Extensibility.Rendering.IRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection)"></see>を実行します。</summary>
+      <param name="report">レンダリングする<see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport"></see> インスタンス。</param>
+      <param name="streams">PDFの出力を書き込みストリーム。</param>
+      <param name="settings">レンダリングに使用された設定。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.PdfRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider)">を実装します。<summary><see cref="M:GrapeCity.ActiveReports.Extensibility.Rendering.IRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider)"></see></summary><param name="report">レンダリングする<see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport"></see> インスタンス。</param><param name="streams">PDFの出力を書き込みストリーム。</param></member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.op_Implicit(GrapeCity.ActiveReports.Export.Pdf.Page.Settings)~System.Collections.Specialized.NameValueCollection">
+      <summary>
+        <see cref="T:GrapeCity.ActiveReports.Export.Pdf.Page.Settings"></see> から <see cref="T:System.Collections.Specialized.NameValueCollection"></see>への暗黙的な変換を行います。</summary>
+      <param name="settings">設定</param>
+      <returns>変換の結果。</returns>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.EmbedFonts">
+      <summary>埋め込みのフォントを取得または設定します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Page.FontEmbedding">
+      <summary>フォントの埋め込みの処理を定義します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.FontEmbedding.All">
+      <summary>すべてのフォントを埋め込みます。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.FontEmbedding.Partial">
+      <summary>「unicode」フォントのみを埋め込みます - デフォルト値。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.FontEmbedding.None">
+      <summary>フォントを埋め込みません。Professionalのライセンスでのみ動作します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Enums">
+      <summary>クラスの列挙型。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.GetPdfRenderingSettings(System.Collections.Specialized.NameValueCollection)">
+      <summary>内部使用のみ。`</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.AdditionalMetadataNamespace.PurlOrg">
+      <summary>Dublin Core のプロパティ（http://purl.org/dc/elements/1.1/）</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.AdditionalMetadataNamespace.NsAdobeComXap">
+      <summary>XMP Core のプロパティ（https://helpx.adobe.com/jp/audition/user-guide.html）</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.AdditionalMetadataNamespace.NsAdobeComPdf">
+      <summary>PDF のプロパティ（https://helpx.adobe.com/jp/acrobat/using/pdf-properties-metadata.html）</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.AdditionalMetadataInfo">
+      <summary>ドキュメントの追加のメタデータの単一エントリ。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.AdditionalMetadataInfo.Namespace">
+      <summary>名前空間。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.AdditionalMetadataInfo.Key">
+      <summary>キー。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.AdditionalMetadataInfo.Value">
+      <summary>値。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.HideWindowUI">
+      <summary>「True」に設定すると、ドキュメントウィンドウのユーザーインタフェース要素（スクロールバーやナビゲーションコントロールなど）を非表示にしてドキュメントの内容だけが表示されます。既定値は「False」です。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.AdditionalMetadata">
+      <summary>このドキュメントに関連した追加のメタデータを指定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.Attachments">
+      <summary>文書レベルのファイル添付を指定します。</summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.AttachmentInfo">
+      <summary>文書レベルのファイル添付を指定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.AttachmentInfo.Name">
+      <summary>添付ファイルの名前を指定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.AttachmentInfo.Content">
+      <summary>ドキュメントの内容を設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.AttachmentInfo.Description">
+      <summary>添付ファイルの説明を設定します。（オプション）</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.AdditionalMetadata">
+      <summary>このドキュメントに関連した追加のメタデータを指定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.Attachments">
+      <summary>文書レベルのファイル添付を指定します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.Pdf20">
+      <summary>PDFバージョン2.0。</summary>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.PdfRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection,System.Threading.CancellationToken)">
+      <summary>
+        <see cref="M:GrapeCity.ActiveReports.Extensibility.Rendering.IRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection)"></see>を実装します。</summary>
+      <param name="report">
+        描画する<see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport"></see> インスタンス。</param>
+      <param name="streams">PDF出力を書き込むためのストリーム。</param>
+      <param name="settings">描画に使用される設定。</param>
+      <param name="cancel">描画の中断を可能にする<see cref="T:System.Threading.CancellationToken"></see>オブジェクト。</param>
+    </member>
+    <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.PdfRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection,System.Threading.CancellationToken,System.IProgress{GrapeCity.ActiveReports.Rendering.Export.ProgressInfo})">
+      <summary>
+        <see cref="M:GrapeCity.ActiveReports.Extensibility.Rendering.ITrackableRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection,System.Threading.CancellationToken,System.IProgress{GrapeCity.ActiveReports.Rendering.Export.ProgressInfo})"></see>メソッドを実装します。</summary>
+      <param name="report">
+        描画する<see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport"></see> インスタンス。</param>
+      <param name="streams">PDF出力を書き込むためのストリーム。</param>
+      <param name="settings">描画に使用される設定。</param>
+      <param name="cancel">描画の中断を可能にする<see cref="T:System.Threading.CancellationToken"></see>オブジェクト。</param>
+      <param name="progress">
+        <see cref="!:IProgress"></see> は、進捗状況の更新を提供します。</param>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.WatermarkFontName">
+      <summary>PDFドキュメントのウォーターマークのフォントを取得または設定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.WatermarkFontSize">
+      <summary>ウォーターマークのフォントサイズを取得または設定します</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.WatermarkFontStyle">
+      <summary>フォントスタイルを指定します。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureStampFontName">
+      <summary>スタンプのテキストのフォントを取得または設定します。</summary>
+      <remarks>この値は文字列から解析されます。 パラメータは、「SignatureStampFontStyle」、「SignatureStampFontName」、「SignatureStampFontSize」フィールドを介して渡されます。</remarks>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureStampFontSize">
+      <summary>スタンプのテキストのフォントを取得または設定します。</summary>
+      <remarks>この値は文字列から解析されます。 パラメータは、「SignatureStampFontStyle」、「SignatureStampFontName」、「SignatureStampFontSize」フィールドを介して渡されます。</remarks>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureStampFontStyle">
+      <summary>スタンプのテキストのフォントを取得または設定します。</summary>
+      <remarks>この値は文字列から解析されます。 パラメータは、「SignatureStampFontStyle」、「SignatureStampFontName」、「SignatureStampFontSize」フィールドを介して渡されます。</remarks>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.Pdf20">
+      <summary>PDFバージョン2.0。</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.SignatureFormat">
+      <summary>
+             署名の形式を取得または設定します。PAdESは、ETSI_CAdES_detached形式をサポートします。
+             </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureFormat">
+      <summary>サポートされている署名形式を定義します。</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureFormat.adbe_pkcs7_detached">
+      <summary>
+            ドキュメントのバイト範囲にわたる元の署名付きメッセージダイジェストは、通常のCMS SignedDataフィールドとして組み込まれます。データは、CMS SignedDataフィールドにカプセル化してはなりません。
+            </summary>
+      <remarks>
+            フィルタ値は<b>/Adobe.PPKLite</b>で、サブフィルタ値は<b>/adbe.pkcs7.detached</b>です。
+            </remarks>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureFormat.ETSI_CAdES_detached">
+      <summary>
+            この形式は、PAdES署名を作成するために使用されます。
+            </summary>
+      <remarks>
+            フィルタ値は<b>/Adobe.PPKLite</b>で、サブフィルタ値は<b>/ETSI.CAdES.detached</b>です。
+            </remarks>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureFormat.adbe_pkcs7_sha1">
+      <summary>
+            ドキュメントのバイト範囲のSHA-1ダイジェストは、ContentInfoデータタイプを含むCMS SignedDataフィールドにカプセル化されます。そのSignedDataのダイジェストは、通常のCMSダイジェストとして組み込まれます。注意：この形式は PDFバージョン2.0で廃止されました。
+            </summary>
+      <remarks>
+            フィルタ値は<b>/Adobe.PPKMS</b>で、サブフィルタ値は<b>/adbe.pkcs7.sha1</b>です。
+            </remarks>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureFormat">
+      <summary>
+             署名の形式を取得または設定します。PAdESは、ETSI_CAdES_detached形式をサポートします。
+             </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.SignatureDigestAlgorithm">
+      <summary>
+            Gets or sets the signature digest algorithm.
+            </summary>
+    </member>
+    <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureDigestAlgorithm">
+      <summary>
+            Defines digest algorithms used to generate signatures.
+            </summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureDigestAlgorithm.SHA1">
+      <summary>The SHA1 algorithm.</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureDigestAlgorithm.SHA256">
+      <summary>The SHA256 algorithm.</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureDigestAlgorithm.SHA384">
+      <summary>The SHA384 algorithm.</summary>
+    </member>
+    <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureDigestAlgorithm.SHA512">
+      <summary>The SHA512 algorithm.</summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureDigestAlgorithm">
+      <summary>
+            Gets or sets the signature digest algorithm.
+            </summary>
+    </member>
+    <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.WatermarkPrintOnly">
+      <summary>
+            Specifies whether the watermark for a PDF document should appears only on printed pages.
+            </summary>
+    </member>
+  </members>
+</doc>

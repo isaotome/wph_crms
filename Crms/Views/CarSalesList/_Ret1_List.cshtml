@@ -1,0 +1,91 @@
+﻿@* //------------------------------------------------------------------------------
+   // 機能：納車リスト（一般）
+   // 作成者：arc nakayama
+   // 作成日：2017/03/09
+   // 更新日：2017/10/14 arc yano #3790 納車リスト　店舗全体の表示の追加 
+   //------------------------------------------------------------------------------
+*@
+@model CrmsDao.CarSalseList
+
+
+
+<br />
+
+<table class="list">
+    <tr>
+        <th class="input-form-title" colspan="14">
+            一般
+        </th>
+    </tr>
+    <tr>
+        <th colspan="2">部門</th>
+        <th>7月</th>
+        <th>8月</th>
+        <th>9月</th>
+        <th>10月</th>
+        <th>11月</th>
+        <th>12月</th>
+        <th>1月</th>
+        <th>2月</th>
+        <th>3月</th>
+        <th>4月</th>
+        <th>5月</th>
+        <th>6月</th>
+
+       
+    </tr>
+    @foreach (var a in Model.RetLine){
+    
+    <tr>
+        <td style="white-space:nowrap">@Html.Encode(a.DepartmentCode)</td>
+        <td style="white-space:nowrap"><a href="javascript:void(0);" onclick="OpenCarSalesDetailEmployee('TargetYear','@a.DepartmentCode', '@a.DepartmentName', document.getElementById('indexid').value)">@a.DepartmentName</a></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '007','@a.DepartmentCode', '@a.DepartmentName', document.getElementById('indexid').value)">@a.Jul_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '008','@a.DepartmentCode', '@a.DepartmentName', document.getElementById('indexid').value)">@a.Aug_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '009','@a.DepartmentCode', '@a.DepartmentName', document.getElementById('indexid').value)">@a.Sep_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '010','@a.DepartmentCode', '@a.DepartmentName', document.getElementById('indexid').value)">@a.Oct_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '011','@a.DepartmentCode', '@a.DepartmentName', document.getElementById('indexid').value)">@a.Nov_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '012','@a.DepartmentCode', '@a.DepartmentName', document.getElementById('indexid').value)">@a.Dec_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '001','@a.DepartmentCode', '@a.DepartmentName', document.getElementById('indexid').value)">@a.Jan_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '002','@a.DepartmentCode', '@a.DepartmentName', document.getElementById('indexid').value)">@a.Feb_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '003','@a.DepartmentCode', '@a.DepartmentName', document.getElementById('indexid').value)">@a.Mar_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '004','@a.DepartmentCode', '@a.DepartmentName', document.getElementById('indexid').value)">@a.Apr_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '005','@a.DepartmentCode', '@a.DepartmentName', document.getElementById('indexid').value)">@a.May_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '006','@a.DepartmentCode', '@a.DepartmentName', document.getElementById('indexid').value)">@a.Jun_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+    </tr>
+    }
+    <!--店舗全体の月別合計 -->
+   <tr>
+        <td style="white-space:nowrap">－</td>
+        <td style="white-space:nowrap"><a href="javascript:void(0);" onclick="OpenCarSalesDetailEmployee('TargetYear','', '', document.getElementById('indexid').value)">全体</a></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '007','', '', document.getElementById('indexid').value)">@Model.TotalJul_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '008','', '', document.getElementById('indexid').value)">@Model.TotalAug_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '009','', '', document.getElementById('indexid').value)">@Model.TotalSep_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '010','', '', document.getElementById('indexid').value)">@Model.TotalOct_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '011','', '', document.getElementById('indexid').value)">@Model.TotalNov_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '012','', '', document.getElementById('indexid').value)">@Model.TotalDec_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '001','', '', document.getElementById('indexid').value)">@Model.TotalJan_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '002','', '', document.getElementById('indexid').value)">@Model.TotalFeb_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '003','', '', document.getElementById('indexid').value)">@Model.TotalMar_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '004','', '', document.getElementById('indexid').value)">@Model.TotalApr_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '005','', '', document.getElementById('indexid').value)">@Model.TotalMay_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '006','', '', document.getElementById('indexid').value)">@Model.TotalJun_Cnt</a></b></td>@*Mod 2020/01/16 yano #4027*@
+    </tr>
+
+     <!--店舗全体の年度合計 -->
+   <tr>
+        <td style="white-space:nowrap">－</td>
+        <td style="white-space:nowrap"><a href="javascript:void(0);" onclick="OpenCarSalesDetailEmployee('TargetYear','', '', document.getElementById('indexid').value)">年度全体</a></td>@*Mod 2020/01/16 yano #4027*@
+        <td style="white-space:nowrap; font-size:20px; text-align:center"><b><a href="javascript:void(0);" onclick="OpenCarSalesDetail('TargetYear', '','', '', document.getElementById('indexid').value)">@Model.TotalCount</a></b></td>
+        <td style="white-space:nowrap; font-size:20px; text-align:center"></td>
+        <td style="white-space:nowrap; font-size:20px; text-align:center"></td>
+        <td style="white-space:nowrap; font-size:20px; text-align:center"></td>
+        <td style="white-space:nowrap; font-size:20px; text-align:center"></td>
+        <td style="white-space:nowrap; font-size:20px; text-align:center"></td>
+        <td style="white-space:nowrap; font-size:20px; text-align:center"></td>
+        <td style="white-space:nowrap; font-size:20px; text-align:center"></td>
+        <td style="white-space:nowrap; font-size:20px; text-align:center"></td>
+        <td style="white-space:nowrap; font-size:20px; text-align:center"></td>
+        <td style="white-space:nowrap; font-size:20px; text-align:center"></td>
+        <td style="white-space:nowrap; font-size:20px; text-align:center"></td>
+   </tr>
+</table>

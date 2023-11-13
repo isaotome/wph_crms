@@ -1,0 +1,98 @@
+﻿/* メニュー */
+#accordion {
+	width:200px;
+	/*margin:0px 0px;
+	border:1px solid #6693cf;
+	border-top:none;
+	border-right:none;
+*/
+	float:left;
+	
+}
+.accordion {
+	font:9pt Verdana, Arial;
+	border-collapse:collapse;
+/*	border:solid 1px #6693cf;*/
+}
+* {
+	margin:0;
+	padding:0;
+}
+html,body {
+	width:99%;
+	height:98%;
+	font-family:'MS UI Gothic';
+	font-size:9pt;
+	background-color:#edf4fc;
+}
+a {
+    color:#069;
+}
+.accordion dt {
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#edf4fc, EndColorStr=#b0d3ff);
+    background: -webkit-gradient(linear, center top, center bottom, from(#edf4fc), to(#b0d3ff)); /* Add 2014/07/07 arc amii chrome対応 ボタンにグラデーションをつける為に追加 */
+	background-repeat:repeat-x;
+	background-color:#ffffff;
+	width:188px;
+	padding:3px 6px;
+	font-weight:bold;
+	background-color:#edf4fc;
+	color:#15428b;
+	border:1px solid #6693cf;
+	border-left:none;
+	border-right:none;
+	/*border-top:none;*/
+	border-bottom:none;
+	cursor:pointer;
+	height:20px;
+	text-align:left;
+	
+}
+.accordion dt:hover 
+{
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffe9d2, EndColorStr=#ffbe78);
+    background-color:#edf4fc;
+}
+
+.accordion dt:hover {
+	background-color:#FFCC99;
+}
+.accordion .open {
+	background-color:#9CF;
+}
+.accordion dd 
+{
+    overflow:hidden;
+}
+.accordion span {
+	display:block;
+	width:180px;
+	border-top:none;
+	padding:2px 10px;
+}
+.accordion a:hover {
+	color:#00F;
+	text-decoration: none;
+}
+.accordion a {
+	color:#069;
+	text-decoration: none;
+	vertical-align:top;
+}
+/* Add 2014/07/24 arc yano chrome対応*/
+div#mask{
+	z-index: 10;
+	overflow: visible;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	filter: alpha(opacity = 50);
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+	display: none;
+	margin: 0px;
+	padding: 0px;
+}
